@@ -1,0 +1,58 @@
+\documentclass[letterpaper]{article}
+\usepackage{fancyhdr}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{comment}
+\usepackage{color}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linktoc=all,
+	linkcolor=black
+}
+
+%Math
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+
+%Figures
+\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{circuitikz}
+
+%Defining \alignedbox command
+\newlength\dlf
+\newcommand\alignedbox[2]{
+	% #1 = before alignment
+	% #2 = after alignment
+	&
+	\begingroup
+	\settowidth\dlf{$\displaystyle #1$}
+	\addtolength\dlf{\fboxsep+\fboxrule}
+	\hspace{-\dlf}
+	\boxed{#1 #2}
+	\endgroup
+}
+
+\title{Physics 204 Notes}
+\date{Fall 2020}
+\author{Cameron Williamson}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\input{Sections/1SIUnits.tex}
+\input{Sections/2ImpEq.tex}
+\input{Sections/3Gasses.tex}
+\input{Sections/4Electricity.tex}
+\input{Sections/5Circuits.tex}
+\input{Sections/6Magnetism.tex}
+\input{Sections/7Optics.tex}
+
+\end{document}
