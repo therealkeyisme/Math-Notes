@@ -1,0 +1,392 @@
+\section{Gasses And Thermodynamics}
+	\subsection{Temperature}
+	The measure of hot and cold. More scientifically this is the measure of microscopic kinetic energy
+	\newline
+	The temperature scales are Kelvin (K) which has a zero point of absolute 0, Celsius (C), which has a zero point of water freezing and has 100 at the boiling point of water, and fahrenheit (F).
+	\newline
+	\begin{align*}
+	T_C &= T_k - 273.15\\
+	T_F &= \frac{9}{5}T_C+32
+	\end{align*}
+	\subsection{Thermal Equilibrium}
+	Two objects are in thermal equilibrium when, while in direct contact, they have the same temperature. When 2 objects have different temperatures, $T_A$ and $T_B$ are brought into thermal contact and they will exchange energy via heat transfer until they reach thermal equilibrium.
+	\newline
+	\newline
+	Heat transfer is the spontaneous exchange of microscopic energy due to molecular or atomic collisions.
+	\subsection{Thermal Expansion}
+	Thermal expansion is when a solid object expands when it receives a raise in temperature
+	\begin{align*}
+	\frac{dL}{dT} = \alpha L\\
+	\frac{dA}{dT} = 2\alpha A\\
+	\frac{dV}{dT} = 3\alpha V
+	\end{align*}
+	Where $\alpha$ is the coefficient of linear expansion
+	\subsection{Calorimetry}
+	Calorimetry is the science of measuring heat transfer. Internal/Thermal energy is the amoung of energy stored in an object as described by its temperature.
+	Heat Transfer = Q
+	\subsection{First Law of Thermodynamics}
+	\begin{align*}
+	\Delta E_{int} &= Q-W\\
+	dE_{int} &= dQ-dQ\\
+	Q &=c \Delta T\\
+	c &= \frac{C}{M}\\
+	Q &= mc\Delta T
+	\end{align*}
+	Where c is the specific heat capacity, m is the mass of the substance, and $\Delta T$ is the change in temperature.
+	\subsection{Phases of Matter}
+	The phases of matter (from hottest to coldest) are Plasma, Gas (condenses to, or evaporates from), Liquid (freezes to, or melts from), Solid, and Condensates. During a phase change $Q=mL_v$ or $Q=mL_v$
+	\subsubsection{Example 1}
+	The U-district bridge has a span of 450ft. How much will it expand in spokane. The bridge is made out of concrete and steel which both have $\alpha = 12*10^{-6}\frac{1}{C\si{\degree}}$. $T_{high}=110\si{\degree}F \to 120\si{\degree}F$, $T_{low}=-30\si{\degree}F \to -40\si{\degree}F$
+	\begin{align*}
+	t_{high}&=489\si{\degree}C\\
+	T_{low}&=-40\si{\degree}C
+	L&=137m
+	\end{align*}
+	\newline
+	\newline
+	\begin{align*}
+	\frac{\Delta L}{\Delta T}&=\alpha L\\
+	\Delta L&=\alpha L\Delta T\\
+	&=\left(12*10^{-6}\frac{1}{C\si{\degree}}\right)(137m)(48.9\si{\degree}C--40\si{\degree}C)\\
+	&=0.146m
+	\end{align*}
+	\subsubsection{Example 2}
+	Your freezer is set to $23\si{\degree}F$, you remove a 26g ice cube and place it in an empty glass. The next day the ice has melted and come to $72\si{\degree}F$. Find the change in energy of the ice.
+	\begin{align*}
+	\Delta E_{int}&=M_{ice}C_{ice} \Delta T_{01}+M_{ice}L_{f_{ice}}+M_{water}C_{water} \Delta T_{12}\\
+	&=M_{ice}(C_{ice}\Delta T_{01}+L_{f_{ice}}+C_{water} \Delta T_{12})
+	\end{align*}
+
+
+	\subsection{Molecular Model of Gasses}
+	We will describe gasses using state variables. State variables are macroscopic quantities used to describe the state of matter. Relative state variables can be used together to make quantitative predictions. This can be done using equations of state. Pressure $P=\frac{F}{A}$, Volume V, temperature T, the number of gas particles N, or the number of moles $n=\frac{N}{N_A}$ where $N_A$ is Avogadros number ($6.022*10^{23}$)
+	\subsection{Simplifying Assumptions of Gaseous Behavior}
+	These are assumptions for an ideal gas that will make math easier:
+	\begin{itemize}
+	\item Distance between the gas molecules is much larger than the diameter of the molecules themselves, thus forces between molecules can be ignored.
+	\item When gas molecules colide we will assume they are perfectly elastic collisions, thus $P$ can be easily derived.
+	\item Due to the large distance between molecules, they are very compressible.
+	\item The temperature of the gas is well above boiling point for given $P$ and V.
+	\end{itemize}
+	When a gas can be accurately described by these rules, the gas is considered an ideal gas. Most gasses experienced everyday are ideal gasses. The equation of state for an ideal gas is the ideal gas law:
+	\begin{equation*}
+	PV=NK_BT \to PV=n(N_AK_B)T \to PV=nRT
+	\end{equation*}
+	Boltons Constant $\to K_B=1.38*10^{-23}\frac{J}{K}$
+	\newline Gas Constant $\to R=8.314\frac{J}{mol*K}$
+	\subsection{Finding the Pressure of an Ideal Gas}
+	Assuming a gas is within a rigid walled cube of length $l$, and when a gas molecule hits a wall it will change direction but conserve kinetic energy:
+	\begin{align*}
+	\Delta P \to \Delta P_x = -2mv_x
+	\vec{F}=m\vec{a}
+	\vec{F}=\frac{d}{dt}\vec{P} = \frac{\Delta \vec{P}}{\Delta t}
+	\end{align*}
+	Average time between colisions is $2L=v_x \Delta t$
+	\begin{align*}
+	\left|\frac{\Delta P_x}{\Delta t}\right| = \frac{2mv_x}{\frac{2L}{V_x}}=\frac{mv^2}{L}=F_x\\
+	P_i=\frac{F}{A}=\frac{F_x}{L^2}=\frac{m_iv_{xi}^2}{L^3}
+	\end{align*}
+	Total Pressure: $P=\sum_{i}{P_i}=\frac{m}{L^3}(\sum_{i}V_x^2)$
+	\begin{align*}
+	\shortintertext{We know: } \vec{v}&=v_x\vec{i}+v_y\vec{j}+v_z\vec{k}\\
+	v^2 &= v_x^2+v_y^2+v_z^2\\
+	v^3 &= v_x^3+v_y^3+v_z^3
+	\end{align*}
+	Therefore we can determine that:
+	\begin{align*}
+	P &= \frac{m}{L^3}N(v_x^2)_{avg}\\
+	P &= \frac{m}{3L^3}N(v^2)_{avg}\\
+	PV &= \frac{m}{3}N(v^2)_{avg}
+	\end{align*}
+	Remember that for ideal gasses, $PV=NK_BT$, therefore  $K_BT=\frac{1}{3}m(v^2)_{avg}$
+	\subsection{Root Mean Squared}
+	Root mean squared is the average velocity for any given particle. It is defined by the equation $v_{rms}=\sqrt{v_{avg}^2}=\sqrt{\frac{3K_BT}{m}}$, where M is the mass of the object (particle) and T is the temperature of the particle.
+	\subsection{Kinetic Average}
+	\begin{equation*}
+	K_{avg}=\frac{1}{2}m(v^2)_{avg}=\frac{3}{2}K_BT
+	\end{equation*}
+	\newline
+	\begin{align*}
+	E_{int}&=K_{tot}=\sum{i}K_i=NK_{avg_i}\\
+	E_{int} &= \frac{3}{2}NK_BT\\
+	\shortintertext{Or }E_{int}&=\frac{3}{2}nRT
+	\end{align*}
+	\subsection{Mean Free Path}
+	The mean free path of a gas is the average distance traveled by a gas molecule between collisions. Considering a room of volume V, that is filled with gas with molecules with diameter d.
+	\begin{align*}
+	\lambda &= \frac{\text{Length of path in time}\Delta T}{\text{Number of collisions within}\Delta T}\\
+	\lambda &= \frac{v \Delta T}{N\frac{V_{Cylinder}}{V}}\\
+	\lambda &= \frac{V}{\sqrt{2}N\pi d^2}\\
+	\text{Number Density } \eta &= \frac{N}{V}\\
+	\lambda &=\frac{1}{\sqrt{2}\eta \pi d^2}\\
+	PV &= nRT = NK_BT \text{, } P=\eta K_BT
+	\end{align*}
+	\subsubsection{Example 1}
+	Find the RMS speed($v_{rms}$) of a $N_2$ molecule in a room at 20$\si{\degree}C$. DiNitrogen has a molecular mass of $14\frac{g}{mol}$, the R constant = $8.314\frac{J}{mol*K}$, M = molar mass and m = mass and T=293K.
+	Recall that $M=mN_A$.
+	\begin{align*}
+	v_{rms}&=\sqrt{(v^2)_{avg}}\\
+	&=\sqrt{\frac{3K_BT}{m}}\\
+	&=\sqrt{\frac{3K_BT}{\frac{M}{N_A}}}\\
+	&=\sqrt{\frac{3N_AK_BT}{M}}=\sqrt{\frac{3RT}{M}}\\
+	v_{rms}&=\sqrt{\frac{3\left(8.314\frac{J}{mol*K}\right)(295K)}{0.028\frac{Kg}{mol}}}
+	\end{align*}
+
+
+	\subsection{Work}
+	How much work will a gas do on its environment? Recall, $P=\frac{F}{A}$.
+	\begin{align*}
+	dW&=\vec{F}d\vec{x}\\
+	&=Fdx-PAdx\\
+	&=PdV
+	\end{align*}
+	\subsection{How The First law of Thermodynamics Relates to Work}
+	\begin{align*}
+	\Delta E_{int} = Q-W \to dE_{int} &=Q-PdV\\
+	d\left(\frac{3}{2}NK_BT\right) &= Q-PdV\\
+	\left(\frac{3}{2}NK_BT\right) &=Q-QdV
+	\end{align*}
+	\begin{itemize}
+	\item Presure thermal equilibrium (quasi-static)
+	\begin{align*}
+		\int{dw}&=\int{PdV}\\
+		W_{1\to2}&=\int_{v_1}^{v^2}{PdV}
+	\end{align*}
+	\item Isoconic case ($\Delta V = 0$)
+	\begin{align*}
+		w=0
+	\end{align*}
+	\item isoboric ($\Delta P=0$)
+	\begin{align*}
+		w_{1\to2}&=P\int_{v_1}^{v_2}{dV}\\
+		&=P(V_2-V_1)
+	\end{align*}
+	\item isothermal ($\Delta T=0$)
+	\begin{align*}
+		w_{1\to2} &= \int_{V_1}^{V_2}{PdV}\\
+		P=\frac{NK_BT}{V}\\
+		w_{1\to2} &=\int_{V_1}^{V_2}{\frac{NK_BT}{V}dV}\\
+		&=NK_BT\int_{V_1}^{V_2}\frac{dV}{V}\\
+		w_{1\to2} &= NK_BTln \left( \frac{V_2}{V_1} \right)
+	\end{align*}
+	\end{itemize}
+	\subsection{Pressure / Volume Diagrams}
+	This is an easy way to interperate the changes due to temperature, pressure, and volume changes.
+	\begin{itemize}
+	\item Adiabatic $(Q=0)\to E_{int}=W$
+	\item isothermal $(\Delta T = 0)$
+	\begin{align*}
+		\Delta E_{int} &= Q-W\\
+		\frac{3}{2}NK_BdT&=Q-PdV \text{, } PdV=Q
+	\end{align*}
+	\item Isocloric $(\Delta V = 0) \to W=0 \to \Delta E_{int}=0$
+	\item isoboric $(\Delta P = 0) \to W=P\Delta V \to \Delta E_{int}=Q-P\Delta V$
+	\end{itemize}
+	\subsubsection{Example 1}
+	A sealed ideal gas is in a rigid container of $0.6m^3$ initially at room temperature $(T_1=20\si{\degree}C\to 293K)$ and pressure $(P_1=1atm\cong 10^5pa)$. If the temp ``doubles'' to $T_2=40\si{\degree}C\to313K$,
+	\newline A.) what is the new pressure$(P_2)$?
+	\begin{align*}
+	\newline
+	PV&=nRT\\
+	\text{Or, }P_1V_1&=n_1RT_1 \text{, }P_2V_2=n_2RT_1\\
+	\frac{P_1}{T_1}&=\frac{n_1R}{V_1} = const\\
+	\frac{P_2}{T_2}&=\frac{n_1R}{V_2} = \frac{n_1R}{V_1}\\
+	\text{therefore:}\\
+	\frac{P_1}{T_1}&=\frac{P_2}{T_2}\\
+	P_2&=P_1\frac{T_2}{T_1}\\
+	&=(10^5pa)\frac{315K}{295K}=1.07*10^5pa
+	\end{align*}
+	B.) How much work did the gas do?
+	\begin{align*}
+	dW&=PdW\\
+	w_{1\to2}&=\int_{V_1}^{V^2}{PdV}\\
+	w_{1\to2}&=0
+	\text{There was no change in volume}
+	\end{align*}
+	C.) How much heat was transfered (Not using $mc\Delta T$)?
+	\begin{align*}
+	\Delta E_{int}&=Q-W (W=\int{PdV}=0)\\
+	\Delta E_{int}&=Q\\
+	Q&=\frac{3}{2}nR(T_2-T_1)=\frac{3}{2}NK_B(T_2-T_1)\\
+	&=\frac{3}{2}(P_2V_2-P_1V_1)\\
+	Q&= \frac{3}{2}V_1(P_2,P_1)\\
+	&=6,140J
+	\end{align*}
+	\subsubsection{Example 2}
+	A sealed ideal gas undergoes an isobaric $(\Delta P=0)$ expansion during which it triples in volume. Then it is isothermically $(\Delta T=0)$ compressed to original volume, after which it cools to its original temperature. Find Q and W in terms of initial pressure and volume for each stage of cucle and the full cycle. Draw a PV diagram as well.
+	\begin{align*}
+	PV&=nRT\\
+	P&=\frac{nRT}{V}\to T=\frac{PV}{nR}\\
+	\Delta E_{int_{cyc}}&=0=Q_{cyc}-W{cyc}\\
+	Q_{cyc}&=W_{cyc}\\
+	\text{A.) Find the work from 1 to 2:}\\
+	W_{1\to2}&=\int_{V_1}^{V_2}{PdV}\\
+	&=\int_{V_1}^{3V_1}{dV}\\
+	&=P_1(3V_1-V_1)\\
+	w_{1\to2}&=2P_1V_1\\
+	\text{B.) Find the work from 2 to 3:}\\
+	W_{2\to3}&=\int_{v_2}^{v_3}PdV \to PV=nRT \to P=\frac{nRT}{V}\\
+	&=\int_{V_2}^{V_1}{\frac{nRT}{V}dV}\\
+	&=n_2RT_2\int_{V_2=3V}^{V_1}{\frac{dv}{V}}\\
+	&=n_2RT_2ln\left(\frac{V_1}{3V_1}\right)=n_2RT_2ln\left(\frac{1}{3}\right)\\
+	w_{2\to3}&=-n_2RT_2ln(3) \to PV=nRT\\
+	&=-P_2V_2ln(3)\\
+	w_{2\to3}&=-3ln(3)P_1V_1=-3.29P_1V_1\\
+	\text{C.) Find the work from 3 to 1:}\\
+	w_{3\to1} &= \int_{v_3}^{v_1}{PdV}=0\\
+	w_{3\to1} &= 0\\
+	\text{D.) Find the heat of the cycle}\\
+	w_{cyc}&=w_{1\to2}+w_{2\to3}+w{2\to3}=P_1V_1(2-3ln3)\\
+	&= -1.30P_1V_1\\
+	\text{Since, } \Delta E_{int_cyc}=0, \text{ then } 0&=Q_{cyc}-W_{cyc}\\
+	Q_{cyc}&=W_{cyc}=-1.30P_1V_1\\
+	\text{And since }2\to3\text{ is an isotherm, we know } Q&=W\\
+	Q_{2\to3}&=W_{2\to3}=-3ln(3)P_1V_1\\
+	\text{For }1\to2 \text{: }\\
+	\Delta E_int_{1\to2} &= Q_{1\to2}-W_{1\to2}\\
+	Q_{1\to2}&=\frac{3}{2}nR(T_2-T_1)+2P_1V_1\\
+	&=\frac{3}{2}n_2RT_2-\frac{3}{2}n_1RT_1+2P_1V_1\\
+	&=\frac{3}{2}P_2V_2-\frac{3}{2}P_1V_1+2P_1V_1\\
+	&=\frac{3}{2}P_13v_2-\frac{3}{2}P_1V_1+2P_1V_1\\
+	&= \left(\frac{9}{2}-\frac{3}{2}+2\right)P_1V_1\\
+	Q_{1\to2}&=5P_1V_1\\
+	Q_{cyc}&=Q_{1\to2}+Q_{2\to3}+Q{3\to1}\\
+	Q{3\to1}&=Q_{cyc}-Q_{1\to2}-Q_{2\to3}\\
+	&=((2-3ln3)-5+3ln3)P_1V_1\\
+	Q_{3\to1}&=-3P_1V_1
+	\end{align*}
+
+
+	\subsection{Using $C_V$ and $C_P$}
+	While considering the first law, $dE_{int}=Q-PdV$, consider a constant volume: $dE_{int}=Q$, also: $E_{int}=\frac{3}{2}nRT$.
+	\begin{align*}
+	\frac{3}{2}nRdT&=Q\\
+	nC_vdT &=Q\\
+	\frac{3}{2}R=C_v \text{ if volume is constant}\\
+	dE_{int}&=nC_vdT\\
+	\end{align*}
+	when $\Delta V=0$, then $Q=nC_V\Delta T$, but in all cases, $\Delta E_{int}= nC_V\Delta T$.
+	\newline
+	\begin{align*}
+	\text{We have introduced } C_V&=\frac{3}{2}R\\
+	\text{But recall: } (v)_{avg}^2&=V_{x_{avg}}^2+V_{y_{avg}}^2+V_{z_{avg}}^2\\
+	\text{which gives us three degrees of translation, which is also why:}\\
+	k_{avg}&=\frac{1}{2}m(v^2)_{avg}\\
+	\text{this leads us to } E_{int}&=\frac{3}{2}nRT\\
+	\end{align*}
+	We can generalize $C_V=\frac{3}{2}R$ to be $C_V=\frac{d}{2}R$ for degrees if freedom. Other degrees of freedom come from both roation and vigration. Most monatomic atoms have 3 degrees of translation, and zero degrees of rotation and vibration. Diatomic atoms on the other hand have 3 degrees of translation, 2 degrees of rotation, and 1 degree of vibration.
+	\newline
+	\newline
+	Consider the case when $(\Delta P=0)$. Let's preserve the form $Q=nC_PdT$
+	\begin{align*}
+	dE_{int}&=Q-Pdv\\
+	\Delta E_{int}&=Q-P\Delta V\\
+	nC_V\Delta T&=Q-P\Delta V\\
+	nC_V\Delta T &= nC_P\Delta T-P\Delta V\\
+	\text{Note that } PV=nRT\\
+	dPV=d(nRT) \text{ therefore }P\Delta V=nR\Delta T\\
+	nC_v\Delta T&=nC_P \Delta T-nR\Delta T\\
+	C_V&=C_P-R\\
+	C_P&=C_V+R\\
+	\end{align*}
+	Now for $(Q=0)$,
+	\begin{align*}
+	dE_{int}&=Q-PdV\\
+	nC_VdT&=-PdV\\
+	ndT&=-\frac{P}{C_V}dT\\
+	\text{because }PV=nRT \text{, we can conclude } ndT&=\frac{V}{R}+\frac{P}{R}dV\\
+	-\frac{P}{C_V}dT&=\frac{V}{R}dP+\frac{P}{R}dV\\
+	\text{divide everything by PV: } -\frac{1}{C_V}\frac{D_V}{V} &=\frac{1}{R}\frac{dP}{P}+\frac{1}{R}\frac{dV}{V}\\
+	\text{Multiply by }C_VR \text{ } -R\frac{dV}{V}&=C_V\frac{dP}{P}+C_V{dV}{V}\\
+	0&=C_V\frac{dP}{P}+(C_V+R)\frac{dV}{V}\\
+	&=C_V\frac{dP}{P}+C_P\frac{dV}{V}\\
+	&=\int{\frac{dP}{P}}+\frac{C_P}{C_V}\int{\frac{dV}{V}}\\
+	\text{const}&=ln\frac{P}{P_o}+\frac{C_P}{C_V}ln\frac{V}{V_o}\\
+	PV^{\left(\frac{C_P}{C_V}\right)}&=\text{const}\\
+	PV^{\gamma}&=\text{const for } \gamma=\frac{C_P}{C_V}\\
+	\end{align*}
+	\subsubsection{Example 1}
+	2.2 moles of Ar gas are in a sealed metal container at room temp $(20\si{\degree}C=68\si{\degree}F)$. We then put the container on the sidewalk on a hot $(35\si{\degree}C=95\si{\degree}C)$ day. Let the gas come to temp $(95\si{\degree}F)$.
+	\newline
+	A.) Was any work done by or on the gas? There was little displacement, so almost 0 work done on the container.
+	\newline
+	B.) was any heat transferred to or from the gas? Heat was transfered to the gas.
+	\newline
+	C.) Find the gass' internal energy. We can always write:
+	\newline
+	\begin{align*}
+	E_{int}&=\frac{3}{2}NK_BT=\frac{3}{2}nRT\\
+	dE_{int}&=\frac{3}{2}K_B(TdV+NdT)\\
+	dE_{int}&=\frac{3}{2}K_BdT\\
+	\Delta E_{int}&=\frac{3}{2}NK_B\Delta T\\
+	\Delta E_{int}&=nR\Delta T\\
+	&=\frac{3}{2}(2.2mol)(8.314\frac{J}{molK})(35\si{\degree}C-20\si{\degree}C)\\
+	&=411J\\
+	\text{More generally } E_{int}=\frac{d}{2}nRT \text{Where d=degrees of translation}\\
+	&=nC_VT \text{for } C_V=\frac{d}{2}R\\
+	\end{align*}
+	\newline
+	Around room temperature for monotimic atoms, $C_V=\frac{3}{2}R$. For diatomic molecules it is $C_V=\frac{5}{2}R$.
+	\subsubsection{Example 2}
+	Solve the same problem where the only difference is the gas is a 2.2 moles of $H_2$. Given the temperatures, we know that $C_V=\frac{5}{2}R$.
+	\begin{align*}
+	\Delta E_{int}&=nC_V\Delta T\\
+	&=n\frac{5}{2}R\Delta T\\
+	&=\frac{5}{2}nR\Delta T\\
+	&=\frac{5}{2}(2.2mol)(8.214\frac{J}{molK})(15K)\\
+	&=687J
+	\end{align*}
+	\subsubsection{Example 3}
+	Calculate work done by a gas during adiabatic expansion from $V_1$ to $V_2=4V_1$ in terms of $V_1$ and $V_2$. Remeber that adiabats result in no heat transfer $(Q=0)$ and $PV^\gamma{}=constant$, which means $\gamma{}=\frac{C_P}{C_V}=const$. Let $PV^\gamma{}=const$.
+	\begin{align*}
+	\text{Always: } w&=\int_{V_1}^{V^2}{PdV}\\
+	&=\int_{V_1}{V_2}\frac{b}{V^\gamma}dv\\
+	&=b\int_{V_1}^{V_2}{V^{-\gamma}}dv\\
+	&=\frac{b}{-\gamma+1}V^{\gamma+1}|_{V_1}{V_2=4V_1}\\
+	&=\frac{b}{1-\gamma}\left[(4V_1)^{1-\gamma}-V_1^{1-\gamma}\right]\\
+	&=\frac{b}{1-\gamma}\left[4^{1-\gamma}V_1^{1-\gamma}-V_1^{1-\gamma}\right]\\
+	&=\frac{b}{1-\gamma}V_1^{1-\gamma}\left[4^{1-\gamma}-1\right]\\
+	&=\frac{4^{1-\gamma}-1}{1-\gamma}bV_1^{1-\gamma}\\
+	&=\frac{4^{1-\gamma}-1}{1-\gamma}P_1V_1^{\gamma}V_1^{1-\gamma}\\
+	W&=\frac{4^{1-\gamma}-1}{1-\gamma}P_1V_1
+	\end{align*}
+	Work done by a gas during an adiabatic expansion from $V_1to4V_1$. Let's find a more simplified answer for monatomic and diatomic gasses. The adiabatic ratio is $\gamma=\frac{C_P}{C_V}$, but it also means $C_P=C_V+R$. At room temperature, $C_V=\frac{3}{2}R$ for monotomic and $C_V=\frac{5}{2}R$.
+	\begin{align*}
+	\gamma_{mon}&=\frac{\frac{3}{2}R+R}{\frac{3}{2}R}=\frac{\frac{5}{2}R}{\frac{3}{2}R}=\frac{5}{3}\\
+	\gamma_{dia}&=\frac{\frac{5}{2}R+R}{\frac{5}{2}R}=\frac{\frac{9}{2}R}{\frac{5}{2}R}=\frac{7}{5}\\
+	\text{We found that } W&=\frac{4^{1-\gamma}-1}{1-\gamma}P_1V_1\\
+	W_{dia}&=\frac{4^{1-\gamma}-1}{1-\gamma}P_1V_1 \text{ for } \gamma_{dia}=\frac{7}{5}\\
+	w_{dia}&=1.06P_1V_1\\
+	W_{mon}&=\frac{4^{\frac{3}{3}-\frac{5}{3}}-1}{\frac{3}{3}\frac{5}{3}}P_1V_1\\
+	&=\frac{-4^{\frac{-2}{3}}-1}{\frac{-2}{3}}P_1V_1\\
+	&=\frac{3}{2}\left(1-4^{\frac{-2}{3}}\right)P_1V_1\\
+	&=.905P_1V_1\\
+	\Delta{}E_{int}&=-1\\
+	\end{align*}
+	\subsection{Entropy}
+	Reversible processes can have their processes reversed in time. When played inr evers, the behavior still looks physical (like a video). Any real system will have disipative forces and thus will not be perfectly reversible. Considering heat transfer, recording an ice cube melt and playing that video in reverse would look nonsensical. According to the second law of thermodynamics, heat always flows spontaneously from a hotter object to a colder object and vice versa. Irreversible process can happen within a closed system.
+	\newline
+	\newline
+	For a reversible system, entropy is given by $dS=\frac{dQ}{T}$. For isothermal processes:
+	\begin{align*}
+	\int{dS}&=\int{\frac{dQ}{T}}\\
+	\int{dS}&=\frac{1}{T}\int{dQ}\\
+	\Delta S &= \frac{Q}{T}
+	\end{align*}
+	Imagine an ice cube melting at $0\si{\degree}C$. Then $Q=mL_f$,
+	\begin{equation*}
+	\Delta S =\frac{mLf}{T}
+	\end{equation*}
+	In general for a reversible process, we know:
+	\begin{align*}
+	dE_{int}&=dQ-dW\\
+	dQ&=dE_{int}+dW\\
+	\text{then entropy is: } ds&=\frac{dQ}{T}=\frac{dE_{int}+dW}{T}\\
+	&=\frac{nC_VdT+PdV}{T}=nC_V\frac{dT}{T}+P\frac{dV}{T}\\
+	\text{from the ideal gas law, } PV&=nRT \text{ or } \frac{P}{T}=\frac{nR}{V}\\
+	\text{then, } \int{dS}&=\int{nC_V\frac{dT}{T}}+\int{\frac{nRdV}{V}}\\
+	\Delta S_{0\to1}&=nC_Vln\frac{T_1}{T_2}+nRln\frac{V_1}{V_2}\\
+	\text{For a reversible complete cycle:}\\
+	\oint dS&=0
+	\end{align*}	
+\newpage

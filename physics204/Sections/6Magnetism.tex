@@ -1,0 +1,311 @@
+\section{Magnetism}
+    This is very similar to electricity. Magnetic fields are created by moving electric charges. Magnetic fields are represented as $\vec{B}$. The force that a $\vec{B}$ field exerts on a charge is $\vec{F}=q\vec{v}\times\vec{B}$, where $q$ is the charge, $\vec{v}$ is the velocity, and $\vec{B}$ is the field the charge is in.
+    \subsubsection{Example 1}
+    An electron is moving with speed v to the right. An external field, $\vec{B}$, points into the page. Find the force on the charge. We are going to be using an x-y axis with z not shown, but it points into the picture. (Figure 6.1)
+    \begin{align*}
+        \vec{v}&=v(-\hat{i})=-v\hat{i}\\
+        \vec{B}&=B\hat{k}\\
+        \vec{F}&=-e\vec{v}\times\vec{B}\\
+        \vec{F}&=F(-\hat{i})\\
+        \shortintertext{Also, let's compute $\vec{F}$}\\
+        \vec{F}&=q\vec{v}\times\vec{B}\\
+        &=(-e)(-\vec{v}\hat{i})\times(B\hat{k})\\
+        &= ev\hat{i}\times B\hat{k}\\
+        &=evB(\hat{i}\times\hat{k})\\
+        &=evB(-\hat{j})\\
+    \end{align*}
+    \subsubsection{Example 2}
+    Find the period of motion of a positive charge Q in an external magnetic field $\vec{B}$. Let $\vec{v} = v\hat{i}$ and $\vec{B}=B\hat{k}$. (Figure 6.2)
+    \begin{align*}
+        \vec{F}=Q\vec{v}\times\vec{B}\\
+        \shortintertext{Cyclotron motion is the circular motion of a charge particle in a $\vec{B}$ field. This is \underline{uniform} circular motion. This means you cannot use a magnetic field to change speed. Magnetic fields do \underline{no work}.}
+        F&=QvBsin\theta\\
+        F&=QvB\\
+        \shortintertext{Let's equate this force with $\vec{F}=ma$}\\
+        QvB&=ma\\
+        QvB&=m\frac{v^2}{R}\\
+        \frac{Q}{m}&=\frac{v}{BR}
+        \shortintertext{The period, $T$, of the field is given by $T=\frac{2\pi R}{v}$}\\
+        T&=\frac{2\pi R}{BR\frac{Q}{m}}\\
+        \alignedbox{T}{=2\pi\frac{m}{BQ}}\\
+        f&=\frac{1}{2\pi}B\frac{Q}{m}\\
+        \shortintertext{This is the cyclotron period and the cyclotron frequency.}\\
+    \end{align*}
+
+
+    \subsection{Creating Magnetic Fields}
+    In the Biot Savart we know that electric chages that are moving create electric fields. In order to determine the direction we still must do the right hand rule. This is easier to visualize with a current (describes electromagnets.) Instead we are going to talk about a piece of charge:
+    \begin{align*}
+        \alignedbox{\vec{B}}{=\frac{\mu_0}{4\pi}\frac{q\vec{v}\times\hat{r}}{r^2}}\\
+        \alignedbox{d\vec{B}}{=\frac{\mu_0}{4\pi}\frac{dq\vec{v}\times\hat{r}}{r^2}}\\
+        \shortintertext{This is the Biot-Savart Law}
+    \end{align*}
+    \subsubsection{Example 1}
+    Find magnetic field $\vec{B}$ a distance d from an infinitely long wire carrying a current I make sure you always place the $d\vec{l}$ so it creates a triangle.
+    \begin{align*}
+        d\vec{B}&=\frac{\mu_0}{4\pi}\frac{dq\frac{d\vec{l}}{dt}\times\hat{r}}{r^2}\\
+        &=\frac{\mu_0}{4\pi}\frac{\frac{dq}{dt}d\vec{l}\times\hat{r}}{r^2}\\
+        &=\frac{\mu_0}{4\pi}\frac{Id\vec{l}\times\hat{r}}{r^2}\\
+        \shortintertext{Because the current changes over time, $\frac{dq}{dt}=I$. Current is moving charges so current moving on a wire thats dl long in a certain direction creates $d\vec{B}$. This is analagous to electric fields and solving for the electric field.}\\
+        \vec{B}&=\frac{\mu_0}{4\pi}I\int_{-\infty}^\infty\frac{d\vec{l}\times\hat{r}}{r^2}\\
+        \shortintertext{We took the right hand rule to find the direction of $\vec{B}$ but this does not tell us the magnitude of the vectors because $d\vec{l}$ is changing. We are going to use $sin\theta$ where theta is the angle between $d\vec{l}$ and $\hat{r}$ to make this easier to computate. $\hat{r}$ is a unit vector so its magnitude is zero. It is only there to help us find the direction.}\\
+        \vec{B}&=\frac{\mu_0}{4\pi}I\int_{-\infty}^\infty\frac{dlsin(\theta)}{r^2}\\
+        \shortintertext{Now we are going to take the $sin\theta$ and change it into the coordinates we are using (xyz). We can figure out that $r^2=x^2+d^2$ and that $sin\theta=\frac{d}{r}$}\\
+        &=\frac{\mu_0}{4\pi}I\int_{-\infty}^\infty\frac{dx}{x^2+d^2}\frac{d}{\sqrt{x^2+d^2}}\\
+        \shortintertext{d is a constant of integration because the current doesn't change along d at all.}
+        &=\frac{\mu_0}{4\pi}Id\int_{-\infty}^\infty\frac{dx}{(x^2+d^2)^\frac{3}{2}}\\
+        &=\frac{\mu_0}{4\pi}Id\left[\frac{x}{d^2}\frac{1}{\sqrt{x^2+d^2}}\right]_{x=-\infty}^{x=\infty}\text{ out of page}\\
+        \shortintertext{We are going to divide both the top and bottom by x because infinity cannot be at the top of a fraction.}\\
+        d\vec{B}&=\frac{\mu_0}{4\pi}Id\left[\frac{1}{d^2}\frac{1}{\sqrt{1+\frac{d^2}{x^2}}}\right]_{x=-\infty}^{x=\infty}\\
+        \shortintertext{This is a problem because if we evaluate it now, we will get 0 as our magnetic field. Because of this we must do the following:}
+        \vec{B}&=2\frac{\mu_0}{4\pi}\frac{I}{d}\frac{1}{\sqrt{1+\frac{d^2}{x^2}}}\Big|_{x=-\infty}^{x=\infty}\\
+        \vec{B}&=\frac{\mu_0}{2\pi}\frac{I}{d}\left[1-0\right]\\
+        \alignedbox{\vec{B}}{=\frac{\mu_0I}{2\pi d}\text{ out of page}}\\
+    \end{align*}
+    There is an additional right hand rule. Put your thumb in the direction of the current wire, then your wrapped fingers will give the direction of $\vec{B}$. 
+    \subsubsection{Example 2}
+    Remember that magnetic force is written as $\vec{F}=q\vec{v}\times\vec{B}$. In scenario 1 we are going to have a positive charge that is going to move initially to the right with some velocity v. It is about to enter a region with a magnetic charge that points into the page. What electric field can we add to the region to prevent the moving charge from deflecting? By the right hand rule, the particle is going to feel a force upward.
+    \begin{align*}
+        \vec{F_B}&=q\vec{v}\times\vec{B}\\
+        \vec{F_B}&=qvB \text{, up}\\
+        \shortintertext{We need $\vec{E}$ to cause an equal force down so that $\vec{F}_{net}=0$}\\
+        \vec{F_E}&=q\vec{E}\\
+        \shortintertext{$\vec{E}$ must point downward.}\\
+        F_E&=F_B\\
+        qE&=qvB\\
+        E&=vB\\
+    \end{align*}
+    Now in scenario 2 we have a negative charge that is going to move initially to the right with a magnetic region pointing into the charge. With a negative charge and right hand rule, we must flip our hand over because of the negativity.
+    \begin{align*}
+        \vec{F_B}&=qvB\text{, Down. we need}\\
+        \vec{F}&=q\vec{E} \text{ to point up.}\\
+    \end{align*}
+    We actually get the same answer as before. This is because they both depend on q, and if the sign on q changes, it changes on both sides of the equation.\newline\newline 
+    In scenario 3, our charged particle will be positive and heading right, but the magnetic field is in line with the charge's movement.
+    \begin{align*}
+        \vec{F_B}&=q\vec{v}\times\vec{B}=0\\
+        \to &=qvBsin(0)=0\\
+    \end{align*}
+    In this case we don't need an $\vec{E}$ field at all to keep the charge from deflecting.\newline\newline
+    With scenario 4, we have a positive charge moving to the right into a magnetic field that has a diagonal vector.
+    \begin{align*}
+        \vec{F_B}&=q\vec{v}\times\vec{B}\\
+        F_B&=qvB_{\perp}\\
+        \shortintertext{We must cross with the vertical component of B because the horizontal is parallel and gives 0}\\
+        \vec{F_B}&=qvBsin(\theta)\text{, out of page}\\
+        \text{$\vec{E}$ is into the page}\\
+        qE&=qvBsin(\theta)\\
+        \to E&=vBsin(\theta)\\
+    \end{align*}
+    \subsubsection{Example 3}
+    Let $\vec{B}=B(-\hat{j})=-B\hat{j}$ and $\vec{v}$ that initially looks like $\vec{v}=v_{0_y}\hat{j}+v_{0_z}\hat{k}$. What will the motion of q look like?
+    \begin{align*}
+        \vec{F}&=q\vec{v}\times\vec{B}\\
+        &=q(v_{0_y)}\hat{k}+v_{0_z)}\hat{k})\times(-B\hat{j})\\
+        &=-q(v_{0_y}B(\hat{j}\times\hat{j})+v_{0_z}B(\hat{k}\times\hat{j}))\\
+        &=-qv_{0_z}B(\hat{k}\times\hat{j})\\
+        &=-qv_{0_z}B(-\hat{i})\\
+        \alignedbox{\vec{F_0}}{=qv_{0_z}B\hat{i}}\\
+    \end{align*}
+    This will cause a helical motion: linear in $\hat{j}$ and cyclotron in the $\hat{i}$ and $\hat{k}$ directions. Basically it creates a spring.
+    \subsubsection{Example 4}
+    Force on a current.
+    \begin{align*}
+        \vec{F}&=q\vec{v}\times\vec{B}
+        \shortintertext{Imagine a small amount of charge dq. The force exerted on this small amount of charge dq by an external field $\vec{B}$ is:}\\
+        d\vec{F}&=dq\vec{v}\times\vec{B}\\
+        d\vec{F}&=dq\frac{d\vec{l}}{dt}\times\vec{B}\\
+        d\vec{F}&=\frac{dq}{dt}d\vec{l}\times\vec{B}\\
+        \alignedbox{d\vec{F}}{=Id\vec{l}\times\vec{B}}\\
+        \shortintertext{If everything is uniform, }\\
+        \int d\vec{F}&=\int Id\vec{l}\times\vec{B}\\
+        \vec{F}&=I\vec{l}\times\vec{B}\\
+    \end{align*}
+    \subsubsection{Example 5}
+    For a uniform external field, $\vec{B}=4mT$ into the page, which way will a free wire move if the current as shown is $I=2A$ CCW. Let $a=10cm$. The force will be \underline{to the right.}
+    \begin{align*}
+        \vec{F}&=I\vec{l}\times\vec{B}\\
+        F&=IlB\\
+        &=(2A)(10cm)(4mT)\\
+        &=(2A)(0.1m)(4\times10^{-3}T)\\
+        \alignedbox{\vec{F}}{=8\times10^{-4}T}\\
+    \end{align*}
+
+
+    \subsection{Holl Effect}
+    Consider a metal plate. We will drive a current through this metal plate (figure 6.3). Let's add $\vec{B}$ into the page. The current will feel a force acting upwards due to the right hand rule. This is because our fingers go to the right and curl to inside the page, the thumb gives us up which is the direction in which the force will move. These two figures are almost the same exact setup, but there is a change in the measured voltage. \newline\newline
+    If the measured voltage is positive, the current is made up of positively charged particles. If the measured voltage is negative, the current is made up of negative charged particles. It turns out that the charge carriers are negative (electrons).
+    \subsubsection{Example 1}
+    This is a Biot Savart example.
+    \begin{align*}
+        d\vec{B}&=\frac{\mu_0}{4\pi}\frac{Id\vec{l}\times\hat{r}}{r^2}\\
+        \shortintertext{Let's find $\vec{B}$ at the center of an arc of current (figure 6.5). Remember that the cross product of $d\vec{l}\times\vec{B}$. For magnetic field, we put our thumb in the direction of the current and wrap our hands around to the direction of the field. The current is going to be going along the rod clockwise. $\hat{r}$ is always going to be perpendicular to $d\vec{l}$ because I is always going to be pointing directly out of the circle, while r always points inward.}\\
+        d\vec{B}&=\frac{\mu_0}{4\pi}I\frac{dl*1*sin(90)}{r^2}\text{ into page}\\
+        \int d\vec{B}&=\int\frac{\mu_0}{4\pi}I\frac{dl}{r^2}\text{ into page}\\
+        \vec{B}&=\frac{\mu_0}{4\pi}I\int\frac{dl}{R^2}\text{ into page}\\
+        \vec{B}&=\frac{\mu_0}{4\pi}\frac{I}{R^2}\int dl\\
+        \vec{B}&=\frac{\mu_0}{4\pi}\frac{I}{R^2}\int Rd\theta\\
+        &=\frac{\mu_0}{4\pi}\frac{I}{R}\int d\theta\\
+        \alignedbox{\vec{B}}{=\frac{\mu_0I}{4\pi R}\theta\text{ into page}}\\
+        \shortintertext{For a full loop of current, $\theta=2\pi$}\\
+        \vec{B}&=\frac{\mu_0I}{4\pi R}2\pi\\
+        \alignedbox{\vec{B}}{=\frac{\mu_0I}{2R}\text{ into page}}\\
+        \shortintertext{If I was variable, then we couldn't pull it out of the integral, but the direction would remain the same.}
+    \end{align*}
+
+
+    \subsection{Ampere's Law}
+    \begin{align*}
+        \shortintertext{Figure 6.6}\\
+        \alignedbox{\oint\vec{B}\cdot d\vec{l}}{=\mu_0I_{th}}\\
+        \shortintertext{Very similar to Gauss' law. We must choose a path in which we can nicely handle the expression above.}\\
+        \oint Bdl&=\mu_0I_{th}\\
+        B\oint dl &=\mu_0I\\
+        B2\pi r &=\mu_0 I\\
+        \alignedbox{\vec{B}}{\frac{\mu_0I}{2\pi r}\text{ CCW}}\\
+        \shortintertext{If you were to pick $d\vec{l}$ to go to the wrong direction, the dot product results in zero so you get: $-\oint Bdl=\mu_0(-I)$. The minuses cancel and you end up getting the same answer: $\vec{B}=\frac{\mu_0I}{2\pi r}$}\\
+    \end{align*}
+    A solenoid is a coil of wire in the shape of a slinky (it stays in place) this is shown in figure 6.7. Magnetic field lines never start or stop and they never diverge, meaning they are always parallel. An ideal solenoid has a length much larger than it's radius ($L>>R$). Solenoids are used in MRI machines, hence the name (Magnetic resistance imaging). They are the tube that people are pushed into.
+    \subsubsection{Example 1}
+    Imagine an infinite perfect solenoid (figure 6.8). Let's find $\vec{B}$ for an ideal solenoid. The $d\vec{l}$ loop must encapsulate some form of current in order to be useful with this equation
+    \begin{align*}
+        \oint \vec{B}\cdot d\vec{l}&=\mu_0 I_{th}\\
+        \shortintertext{It is easiest to split this up into multiple loops because there are four sides for the rectangle we chose. We labeled the sides (1, 2, 3, 4) so we could label our integrals.}\\
+        \int\vec{B}\cdot d\vec{l_{1}}+\int\vec{B}\cdot d\vec{l_{2}}+\int\vec{B}\cdot d\vec{l_{3}}+\int\vec{B}\cdot d\vec{l_{4}}&=\mu_0I_{th}\\
+        \shortintertext{For the first integral, $\vec{B}\cdot d\vec{l_1}$ gives us $bl$. For the second and fourth integrals, the dot product equals zero. For the third segment, $\vec{B}=0$ so we cannot do anything with that. The amount of current all along the loop is the same throughout. I is the current through each of the wires so the current through one wire is going to be I.}\\
+        Bl+0+0+0&=\mu_02I\\
+        \shortintertext{In a more general case, let's say that $N$ currents pierce throguh the Amperian loop.}\\
+        Bl&=\mu_0NI\\
+        \shortintertext{If for the whole solenoid length L:}\\
+        BL_{tot}&=\mu_0N_{tot}I\\
+        B&=\mu_0\frac{N_{tot}}{L_{tot}}I\\
+        \alignedbox{B}{=\mu_0nI}\text{ Where $n$ is turns per length}\\
+    \end{align*}
+    If you want a bigger field you can either increase the current or put more turns in the current.
+
+
+    \subsection{Magnetic Inductance}
+    We will first consider Faraday's Law.
+    \begin{align*}
+        \Phi_B&=\vec{B}\cdot d\vec{A}\\
+        \shortintertext{Where $\Phi_B$ is magnetic flux.}\\
+        \alignedbox{E_{ind}}{=-\frac{d}{dt}\Phi_B}\\
+        \shortintertext{$E_{ind}$ is also known as E.M.F. which is an induced voltage or potential.}\\
+    \end{align*}
+    \subsubsection{Example 1}
+    A $\vec{B}$ field is into the page and increasing linearly in time: $B=b_0\frac{t}{t_0}$. Find the direction and magnitude of current induced on a circular loop of wire with radius, r, and resistance, R, in plane with the page (figure 6.9). Electricity and magnetism are two different expressions of the same thing (electromagnetism). If a voltage is induced on a wire where we can calculate current we can just use Ohm's Law. We need a magnetic field that fluctuates in time. If the flux doesn't change in time then there is no induced electric field. While magnetic field is into the page everywhere, the resistor only cares about the magnetic field that is on the wire. It is okay that our B value does not have area dependence because we are calculating the flux of the magnetic field. We only need to discuss the area of magnetism when we get the flux.
+    \begin{align*}
+        \Phi_B&=\int\vec{B}\cdot d\vec{A}\\
+        &=\int \left(B_0\frac{t}{t_0}\hat{k}\right)\cdot\left(dA\hat{k}\right)\\
+        &=B_0\frac{t}{t_0}\int dA\\
+        &=B_0\frac{t}{t_0}\pi r^2\\
+        \shortintertext{Always find the flux before taking the time derivative. Now we are moving on to the time derivative:}\\
+        \to\frac{t}{dt}\Phi_B&=\frac{d}{dt}B_0\frac{t}{t_0}\pi r^2\\
+        &=B_0\frac{\pi r^2}{t_0}\\
+        \shortintertext{Recall that $E_{ind}=-\frac{d}{dt}\Phi_B$. The negative sign is because of Lenz's law. This basically just helps determind the direction of the magnitude of $E_{ind}$. \underline{Lenz's Law:} The induced current $I_{ind}=\frac{E_ind}{R}$ has a direction such that $B_{ind}$ opposes the change in flux, that is, $\frac{d}{dt}\Phi_B$. For this case, $I_{ind}$ must flow counter-clockwise because it must oppose the change in the flux.}\\
+        |E_{ind}|=|\frac{d}{dt}\Phi_B|=|B_0\frac{\pi r^2}{t_0}|\\
+        \alignedbox{I_{ind}}{=\frac{1}{R}B_0\frac{\pi r^2}{t_0}\text{, ccw}}\\
+    \end{align*}
+    Here are some other Lenz's law cases (figure 6.10). The equation for $\vec{B}$ in this case is $\vec{B}=B\frac{t}{t_0}\hat{k}$. The flux is \underline{decreasing} into the page so the $B_{ind}$ is going to point into the page, which would mean that our $I_{ind}$ is going clockwise. You \underline{oppose the change in the flux}. You do \underline{not} oppose the direction of the magnetic field.\newline\newline
+    Let's now look at figure 6.11. This figure has a square loop in the middle and we know that $I_{int}$ goes clockwise because the magnetic force is going into the page and not out of the page. With $B=B_0e^\frac{t}{t_0}$, there is no real change in this problem compare to the last. We must also understand that we deal with a square loop the same way we dealt with a circular 
+    one.
+
+
+    \subsection{Eddy Currents}
+    Similar to how if you're rowing a boat. As you pull your oar through the water you get little eddy's around the stick. These are magnetically induced currents that appear when Farade's law results in the slowing down of an object. This is a type of induced current. An example of this is sorting recyclables. You have a platform with a bunch of material heading down a slope. If the box is cardboard, then it will have an induced $E_{mf}$, but won't feel an induced current. If the recyclables are made from aluminum such as cans, then they will continue moving downward.
+    \subsubsection{Motional Emf (E)}
+    This goes along with figure 6.12. What direction will the force be in?
+    \begin{align*}
+        \vec{F}&=I\vec{l}\times\vec{B}\\
+        &=I_{ind}\vec{l}\times\vec{B_{ext}}\\
+        \shortintertext{Say we pull such that the speed of the loop is constant. Because we already know the direction we are going to just use the magnitude to determine what $E_{ind}$ is.}\\
+        E_{ind}&=-\frac{d}{dt}\Phi_B\\
+        |E_{ind}|&=|-\frac{d}{dt}\Phi_B|\\
+        |E_{ind}|&=\frac{d}{dt}(BA)\\
+        |E_{ind}|&=B\frac{d}{dt}A+A\frac{d}{dt}B\\
+        &=B\left(L\frac{dx}{dt}+x\frac{dL}{dt}\right)\\
+        &=BL\frac{dx}{dt}\\
+        \shortintertext{We know that the speed is not changing so we can come to the conclusion that:}\\
+        \alignedbox{|E_{ind}|}{=B_{ext}Lv}\\
+        \shortintertext{From Ohm's law:}\\
+        E_{ind}&=I_{ind}R\\
+        I_{ind}&=\frac{B_{ext}Lv}{R}\\
+        P&=I_{ind}E_{ind}\\
+        \alignedbox{P}{=\frac{B_{ext}^2L^2v^2}{R}}\\
+    \end{align*}
+
+
+    \subsection{Induced Electric Field}
+    Farade's Law: $E_{ind}=-\frac{d}{dt}\Phi_B$ (Figure 6.13). This means that $E_{ind}$ points the same direction as $I_{ind}$. This gives us that $\oint\vec{E_{ind}}\cdot d\vec{l}=-\frac{d}{dt}\Phi_B$. These charged particles must be in a loop in order to come to this conclusion. Farade's law helps us further relate the previous equation.
+    \begin{align*}
+        \oint\vec{E_{ind}}\cdot d\vec{l}&=-\frac{d}{dt}\int\vec{B}\cdot d\vec{a}\\
+    \end{align*}
+    A time varying magnetic flux induces an electric field. Electric and magnetic fields are frame dependent. They depend on what inertial frame they are in. An inertial frame is one in which there is no acceleration.
+    \subsubsection{Induction Applied to Circuits}
+    Let's consider a solenoid. If we apply a current then there will be a magnetic field throughout the inside of the solenoid. The best way to solve for the magnetic field within a solenoid is by using Ampere's law, $B=\mu_0nI$. The flux through the solenoid is:
+    \begin{align*}
+        \Phi_B&=\int\vec{B}\cdot d\vec{a}\\
+        \Phi_B&=Ba\\
+        \shortintertext{We can say that because the flux is proportional to the magnetic field, the flux is proportional to the current as well. We now introduce inductance L.}\\
+        \Phi_B&=LI\\
+        \shortintertext{L depends on the solenoid's geometry.}\\
+        N\Phi_B&=LI\\
+        \shortintertext{Where N is the number of turns in the solenoid}\\
+        \alignedbox{L}{=N\frac{\Phi_B}{I}}\\
+        \shortintertext{Let's find the $E_{ind}$ of the solenoid}\\
+        E_{ind}=-\frac{d}{dt}\Phi_B&=-\frac{d}{dt}\left(\frac{LI}{N}\right)\\
+        E_{ind}&=-\frac{L}{N}\frac{d}{dt}I
+    \end{align*}
+    For a self induced emf:
+    \begin{align*}
+        E_{ind}&=-L\frac{dI}{dt}
+    \end{align*}
+    \subsubsection{Example 1}
+    Let's find the amount of energy stored in the magnetic field of a solenoid. First let's find the power.
+    \begin{align*}
+        |P|&=IV=|-LI\frac{dI}{dt}|\\
+        \shortintertext{We know that power is the change of energy over the change in time, this is why we are able to jump to the next step.}\\
+        U&=\int Pdt\\
+        &=\int LI\frac{dI}{dt}dt\\
+        &=\int LIdI\\
+        \alignedbox{U_B}{=\frac{1}{2}LI}\\
+        \shortintertext{Recall from electricity, $U_E=\frac{1}{2}CV^2$. In this case the charges are moving. With the magnetic energy equation, we are changing the energy for already moving charges.}\\
+    \end{align*}
+
+
+    \subsection{List of Maxwell's Equations:}
+    \begin{align*}
+        \int\vec{E}\cdot d\vec{a}=\frac{Q_{enc}}{\epsilon_0}\\
+        \oint\vec{B}\cdot d\vec{l}=\mu_0I_{th}\\
+        \text{also }\oint\vec{B}\cdot d\vec{a}=0\\
+        \shortintertext{There are no magnetic charges/monopoles. Magnetic fields never terminate.}\\
+        \shortintertext{We have recently used Farade's law}\\
+        E_{ind}=-\frac{d}{dt}\Phi_B\\
+        \oint\vec{E}\cdot d\vec{l}=-\frac{d}{dt}\int\vec{B}\cdot d\vec{a}\\
+        \shortintertext{We will update Ampere's law to be:}\\
+        \oint\vec{B}\cdot d\vec{l}=\mu_0I_{th}+\mu_0I_{disp}\\
+        \text{or }\oint\vec{B}\cdot d\vec{l}=\mu_0\int\vec{J}\cdot d\vec{a}+\mu_0\epsilon_0\frac{d}{dt}\Phi_E\\
+        \shortintertext{Where $I_{disp}$ and $\epsilon_0\frac{d}{dt}\Phi_E$ are the displacements of the currents}
+    \end{align*}
+    Example with the new Ampere's Law:
+    Current changing with a capacitor (figure 6.13). We are allowing a bubble to encapsulate the leftmost plate where there is no loop. There must be a changing electric flux to resolve this issue.
+    \begin{align*}
+        \text{Gauss's Law:}\\
+        \oint\vec{E}\cdot d\vec{a}=\frac{Q_{enc}}{\epsilon_0}\\
+        \oint\vec{B}\cdot d\vec{a}=0\\
+        \text{Farade's Law:}\\
+        \oint\vec{E}\cdot d\vec{l}=-\frac{d}{dt}\int\vec{B}\cdot d\vec{a}\\
+        \text{Ampere-Maxwell:}\\
+        \oint\vec{B}\cdot d\vec{l}=\mu_0\int\vec{J}\cdot d\vec{a}+\mu_0\epsilon_0\frac{d}{dt}\int\vec{E}\cdot d\vec{a}\\
+        \text{Lorenty Force Law:}\\
+        \vec{F}=q\vec{E}+q\vec{v}\times\vec{B}
+    \end{align*}
+    Here's the differential form of all of these equations:
+    \begin{align*}
+        \vec{\nabla}&=\frac{\partial}{\partial x}\hat{i}+\frac{\partial}{\partial y}\hat{j}+\frac{\partial}{\partial z}\hat{k}\\
+        \vec{\nabla}\cdot\vec{E}&=\frac{\rho}{\epsilon_0}\\
+        \vec{\nabla}\cdot\vec{B}&=0\\
+        \vec{\nabla}\times\vec{E}&=-\frac{\partial}{\partial t}\vec{B}\\
+        \vec{\nabla}\times\vec{B}&=\mu_0\vec{J}+\mu_0\epsilon_0\frac{\partial}{\partial t}\vec{E}\\
+    \end{align*}
+\newpage

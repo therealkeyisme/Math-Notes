@@ -1,0 +1,459 @@
+\section{Circuits}
+  \subsection{Capacitants}
+  Previously we found that $E=\frac{\sigma}{2\epsilon_0}+\frac{\sigma}{2\epsilon_0}=\frac{\sigma}{\epsilon_0}$ where $\sigma = \frac{Q}{A}$. Let's find potential $V$ between the plates. Recall that $v=-\int\vec{E}\cdot d\vec{s}$.
+  \begin{align*}
+    V&=-\int_0^d\vec{E}\cdot d\vec{s}\\
+    \text{for } \vec{E}&=\frac{\sigma}{\epsilon_0}\\
+    V&=-\int_0^d Eds=-\int_0^d Edx\\
+    &=-E\int_0^d dx\\
+    V&=-Ed \text{ This is from the pos to negative plate}\\
+    \shortintertext{Equivilently from - to + plate:}\\
+    V&=-int_0^d \vec{E}\cdot d\vec{s}\\
+    &=-int_0^d(-Eds)=\int_0^d Edx\\
+    V&=Ed \text{ This is from neg to pos plate}
+    \shortintertext{Now we want to relate our two equations to a charge to find the charge within the plate.}
+  \end{align*}
+  Consider that if there are more charges on the plates, then the potential (difference) between them will be larger. Difference is in paranthesis because we could have had a $\Delta V$ instead of just a V if we wanted. The potential goes with the field, and the field is larger if we have more charges in it.
+  \begin{align*}
+    Q~V\\
+    \shortintertext{Let us introduce capacitance $C$ such that $Q=CV$. In magnitude, we found $V=Ed$, which gives the potential difference accross the plates. And $E=\frac{\sigma}{\epsilon_0}$}\\
+    V&=\frac{\sigma}{\epsilon_0}d=\frac{1}{\epsilon}\frac{Q}{A}d\\
+    \shortintertext{Using our new definition of $V=\frac{Q}{C}$, we find:}\\
+    \frac{1}{\epsilon_0}\frac{Q}{A}d&=\frac{Q}{C}\\
+    C&=\epsilon_0 \frac{A}{d}\\
+    \shortintertext{This is for parallel plate capacitance. This only depends on geometry. Due to the equation $Q=CV$, as soon as we know the charge on the plates we can easily determine the potential energy of the plates. $Q=CV$ is true for all capacitors.}
+  \end{align*}
+  Let's discuss combining capacitors. For a parallel plate capacitor, we found that it's capacitance is $C=\epsilon_0 \frac{A}{d}$. What if we stacked plates together? What would the capacitancebe for this combined system?
+  \begin{align*}
+    A_{new}&=A_1+A_2+A_3\\
+    &=\frac{d}{\epsilon_0}C_1+\frac{d}{\epsilon_0}C_2+\frac{d}{\epsilon_0}C_3\\
+    \frac{d}{\epsilon_0}C_{new}&=\frac{d}{\epsilon_0}C_1+\frac{d}{\epsilon_0}C_2+\frac{d}{\epsilon_0}C_3\\
+    \shortintertext{d is the same everywhere, and $\epsilon_0$ is a constant so they both cancel}\\
+    C_{new}&=C_1+C_2+C-3\\
+    C_{new}&= C_{parallel}\\
+    \shortintertext{Capacitants increase when area is increased.}
+  \end{align*}
+  What if instead we put capacitors one after another (in sequential order)? The area is the same, and the two middle sets of plates are going to have zero charge.
+  \begin{align*}
+    d_{new}&=d_1+d_2+d_3\\
+    \epsilon_0\frac{A}{C_{new}}&=\epsilon_0\frac{A}{C_1}+\epsilon_0\frac{A}{C_2}+\epsilon_0\frac{A}{C_3}\\
+    \frac{1}{C_{series}}&=\frac{1}{C_1}+\frac{1}{C_2}+\frac{1}{C_3}+...\\
+    C_{series}&=\left[\frac{1}{C_1}+\frac{1}{C_2}+\frac{1}{C_3}+...\right]\\
+  \end{align*}
+  Capacitance let's us calculate the energy stored inside of the field between its plates. This is similar to throwing a ball from a lower surface to a hgiher one. The kinetic energy is changed into potential energy. 
+  \begin{align*}
+    \shortintertext{Recall that $U=VQ$.}\\
+    \shortintertext{Consider:}\\
+    dU&=VdQ\\
+    \shortintertext{and $Q=CV$}\\
+    \to dU&=\frac{Q}{C}dQ\\
+    U&=\frac{1}{C}\int QdQ\\
+    &=\frac{1}{C}\frac{1}{2}Q^2\\
+    &=\frac{1}{2}\frac{1}{C}C^2V^2\\
+    \alignedbox{U}{=\frac{1}{2}CV^2}
+    \shortintertext{Or}\\
+    \alignedbox{U}{=\frac{1}{2}\frac{Q^2}{C}}\\
+    U&=\frac{1}{2}Q^2\frac{V}{Q}\\
+    \alignedbox{U}{\frac{1}{2}QV}\\
+  \end{align*}
+  Let's discuss energy density.
+  \begin{align*}
+    u&=\frac{U}{volume}\\
+    \shortintertext{This is always true, but for a parallel-plate capacitor, the volume is:}
+    volume&=Ad\\
+    \shortintertext{Then,}\\
+    U&=\frac{1}{2}CV^2\\
+    \to u&=\frac{1}{2}CV^2\frac{1}{Ad}\\
+    &=\frac{1}{2}\left(\epsilon_0\frac{A}{d}\right)V^2\frac{1}{Ad}\\
+    u&=\frac{\epsilon_0}{2}\frac{V^2}{d^2}\\
+    u&=\frac{\epsilon_0}{2}\left(\frac{V}{d}\right)^2\\
+    \shortintertext{Recall,}\\
+    V&=Ed\\
+    \to E&=\frac{V}{d}\\
+    \shortintertext{We find}\\
+    \alignedbox{u}{=\frac{\epsilon_0}{2}E^2}\\
+    \shortintertext{Energy density relies solely on the energy field between the plates.}\\
+  \end{align*}
+
+  \subsubsection{Example 1}
+  Let's find the capacitance C of the demo capacitor. The area of the capacitor is A ($A=\pi r^2$) for $r=6cm$. $A=\pi 35cm^2$, also d is 2cm. We also need $\epsilon_0$. This number is a constant. i$\epsilon_0 = 8.85\times10^{-12} \frac{F}{m}$, where F stands for ferads. For parallel plates, $C=\epsilon_0\frac{A}{d}$. The units are ferads $(F)$.
+  \begin{align*}
+    C&=\left(8.85\times10^{-12}\frac{F}{m}\right)\left(\frac{\pi 36cm^2}{2cm}\right)\left(\frac{1m}{100cm}\right)\\
+    \alignedbox{C}{=5.00\times10^{-12}F=5pF}\\
+    \shortintertext{C of the other two objects:}\\
+    C_{blue}&=10\mu F=10\times10^{-6}F=10^{-5}F\\
+    C_{brown}&=0.33\mu F=0.33\times10^{-6}F=3.3\times10^{-7}\\
+  \end{align*}
+  The capacitance of a capacitor is typically given within tolerances, not as raw numbers.
+  Let's find the electric field around the first capacitor. If there is no charge on the plates, then there is no electric field between the plates, thus the capacitor is not storing any energy. An analogy to gravity: if there is no mass for two plates you're trying to calculate gravity for, then there is no gravity between the two plates. By adding electric charge to the plates, a field is created between them in which energy is stored.
+  \begin{align*}
+    U&=\frac{1}{2}CV^2\\
+    Q&=CV\\
+    U&=\frac{1}{2}QV\\
+    &=\frac{1}{2}\frac{Q^2}{C}\\
+    \shortintertext{Let's put a 9V battery across our capacitor.}\\
+    U&=\frac{1}{2}CV^2\\
+    &=\frac{1}{2}(5\times10^{-12}F)(9V)^2\\
+    U&=2.03\times10^{-10}J\\
+    \alignedbox{U}{=.203nJ}\\
+  \end{align*}
+  Consider a microwave oven. Many are powered at around 1200 Watts. We run it for 2 minutes. How much energy does this use? How much time is how much energy used?
+  \begin{align*}
+    P&=\frac{\Delta E}{\Delta T}\\
+    \Delta E &= P\Delta T\\
+    &=\left(1200\frac{J}{s}\right)(120s)\\
+    \alignedbox{\Delta E}{=144000J}\\
+    &=144kJ
+  \end{align*}
+  There are some benefits for something using a low amount of power.  Let's recall that $C=5\times10^{-5}$. Q of d would like instead $10\times10^{-17}F$. d can combine capacitors. Consider $C=\epsilon\frac{A}{d}$. If you want more capacitance, you can increase the area. If you double the area you double the capacitance.
+  \begin{align*}
+    C&=C_1+C_2\\
+    &=2C\\
+    &=10\times10^{-12}\\
+  \end{align*}
+  \subsubsection{Example 2}
+  There is a potential across the plates such that if a charge is placed you can easily calculate the potential energy and then the kinetic energy. Let's find the capacitants of something that is not necessarily parallel plates. We still need 2 plates, but they are not going to be flat plates. We are going to calculate the capacitance of a spherical capacitor.
+  \begin{align*}
+    Q&=CV\\
+    C_{parallelplates}=\epsilon_0\frac{A}{d}\\
+    \shortintertext{The capacitance of a capacitor is always fully defined.}\\
+    \shortintertext{For the spherical case, let's find C. Q is the charge on either plate, NOT BOTH. This is to prevent having zero as your Q value. The easiest way to find the voltage is by using Gauss' law to find $\vec{E}$ to find the electric field then using that to solve for the volutage.}\\
+    \vec{E}&=0 \text{ }r<a\\
+    \vec{E}&=0 \text{ }r>b\\
+    \shortintertext{For $a<r<b$:}\\
+    \oint E\cdot d\vec{a}&=\frac{q_{enc}}{\epsilon_0}\\
+    E(4\pi r^2)&=\frac{Q}{\epsilon_0}\\
+    \alignedbox{\vec{E}}{=\frac{1}{4\pi\epsilon_0}\frac{Q}{r^2}\hat{r}}\\
+    V&=-\int\vec{E}\cdot d\vec{l}
+    \shortintertext{From $r=a$ to $r=b$}\\
+    V&=-\int_a^b\frac{1}{4\pi\epsilon_0}\frac{Q}{r^2}\hat{r}\cdot d\vec{r}\\
+    \shortintertext{Potential is always path independent. The dot product enforces it in this situation. It always ends up being $E\cdot dl$ which is in the $r$ direction. Therefore the direction does not matter but the start and endpoints do matter. Analagous to gravity where the potential energy remains the same regardless of the horizontal position of an object.}\\
+    &=-\frac{1}{r\pi\epsilon_0}Q\int_a^b\frac{1}{r^2}\hat{r}\cdot dr\hat{r}\\
+    \shortintertext{This can be done because it is being written in it's direction vector times the magnitude. This will make the computations easier. Now we are able to find the dot product because the unit vectors are being dotted now as well.}\\
+    &=-\frac{1}{4\pi\epsilon_0}Q\int_a^b r^{-2}dr\\
+    V&=-\frac{1}{4\pi\epsilon_0}Q(-r^{-1})\Big|_{r=a}^{r=b}\\
+    V&=\frac{1}{4\pi\epsilon_0}Q\left(\frac{1}{b}-\frac{1}{a}\right)\\
+    \shortintertext{We need to ask ourselves if the sign or the units make sense for the sign. From $a\to b$, the voltage should decrease because it's being taken away from the electric charge. V is always a scalar so our "direction" is correct. We can now use $Q=CV$. $Q$ is not the total charge, it is the charge on either plate.}\\
+    C&=\frac{Q}{V}=\frac{|Q|}{|V|}\\
+    &=\frac{Q}{\frac{1}{4\pi\epsilon_0}Q\left(\frac{1}{a}-\frac{1}{b}\right)}\\
+    &=4\pi\epsilon_0\left(\frac{1}{a}-\frac{1}{b}\right)^{-1}\\
+    \alignedbox{C}{=4\pi\epsilon_0\frac{ab}{b-a}}
+  \end{align*}
+  \subsection{Dialectics}
+  We can nicely build capacitors by placing insulators between the plates. If you can decrease the space between the capacitors, then there is a higher capacitance level. For parallel plates,
+  \begin{align*}
+    \vec{E_{new}}&=\vec{E}+\vec{E_i}\\
+    \vec{E_{new}}&<\vec{E}\\
+    \vec{E_{new}}&=\frac{1}{\kappa}\vec{E}\\
+    C&=\kappa C_0\\
+  \end{align*}
+  \subsection{Current and Resistance}
+  Electric current is the movement of charges in time. $I=\frac{dq}{dt}$ This means that in order to have a current, the mobile charges must be in the presence of an electric field. If you apply a force, then the charges start to move and the movement of charges is an electric current. Imagine a region with some charges and due to external charges, an external electric field affects the charges in the original region. All of the charges are going to move in the direction of the field. Because of this, the motion of the charges is messy. Also, electrons on a conductor. The electrons are all initially going to be spread out along the conductor, but if an electric field is implemented along the surface of the field, all of the charges are going to move the opposite direction of the electric field. The charges end up zigzagging along the path of the conductor.
+  \newline\newline
+  Charge is given in Coulombs (C). The elementary charge is $e=1.602\times 10^{-19}C$. The unit for current is $\frac{C}{s}$. This is also called an ampere or amp (A). \newline\newline Consider a copper wire being influenced by an external electric field (figure 4.9.1). $v_d$ is the drift velocity. This is the average speed of charged particles moving in a current. What about for electrons in a copper wire?
+  \begin{align*}
+    \shortintertext{We've said:}
+    I&=\frac{dq}{dt}\\
+    \shortintertext{Let's break it down into individual charges:}\\
+    I&=\frac{d(eN)}{dt}\\
+    &=e\frac{dN}{dT}\\
+    &=e\frac{ndV}{dt}\\
+    \shortintertext{Where $n$ is the number of electrons in a volume}\\
+    &=e\frac{nAdl}{dt}\\
+    &=enAv_d\\
+    \alignedbox{v_d}{=\frac{I}{enA}}\\
+  \end{align*}
+  For a current of 10A, consider a copper wire of radius 1mm.We know that $e=1.602\times 10^{-19}$, and $A=\pi r^2$ for $r=1mm$. The number density is around $10^{23}\frac{1}{cm}\left(\frac{100cm}{m}\right)^3=10^{29}\frac{1}{m^3}$. Plugging these numbers in we will find a typical drift velocity of about $v_d \approx 10^{-4}\frac{m}{s}$ or $0.1\frac{mm}{s}$. This is very slow.\newline\newline
+  Current dencity is: 
+  \begin{align*}
+    dI&=\vec{J}\cdot d\vec{A}\\
+    I&=\int\vec{J}\cdot d\vec{A}\\
+  \end{align*}
+  Why do I care about $\vec{J}$ in the first place? When the electrons move in the wire, the external electric field forces them down the wire making those electrons move through a volume of the form $V=Al$. A is the crosssectional area of the wire, so current density let's us relate the movement of the electrons to the shape/geometry of the wire. $\vec{J}$ flows through $d\vec{A}$. The stronger the external field, the larger the current density. 
+  \begin{align*}
+    \vec{J}&\approx\vec{E}\\
+    \vec{J}&=\sigma\vec{E}\\
+    \vec{J}&=\frac{1}{\rho}\vec{E}\\
+  \end{align*}
+  $\sigma$ is electric conductance, and $\rho$ is electric resistivity. Further, $\rho=\frac{1}{\sigma}$. Both $\rho$ and $\sigma$ depend of the properties of the materials of the wire. You can think of $\sigma$ as telling us how good of a conductor a given material is. Whereas, $\rho$ tells us how poor of a conductor the material is.
+  \begin{align*}
+    \shortintertext{Figure 4.9.3}
+    \vec{E}=\rho\vec{J}\\
+    \shortintertext{Let's consider uniform $\vec{E}$ considering magnitudes:}\\
+    E&=\rho J\\
+    &=\rho\frac{I}{A}
+    \shortintertext{You can do this substitution because of the following:}\\
+    \int dI&=\int\vec{J}\cdot d\vec{A}\\
+    &=\int JdA\\
+    &=J\int dA\\
+    I&=JA\\
+    \shortintertext{When electric charges are uniform we can calculate the voltage:}\\
+    V&=-\int\vec{E}\cdot d\vec{l}\\
+    &=-\int Edl\\
+    &=-E\int dl\\
+    V&=-El\\
+    \shortintertext{Now substituting for E:}
+    \frac{V}{l}&=\rho\frac{I}{A}\\
+    V&=I\rho\frac{l}{A}\\
+    \text{Where }R&=\rho\frac{l}{A}\text{ called resistance.}\\
+    \shortintertext{Notice that R depends on material $\rho$ and on geometry $\frac{l}{A}$}\\
+    I=\frac{V}{R}=\frac{V}{\rho}\frac{A}{l}\\
+  \end{align*}
+  Resistance depends on geometry and resistivity. Resistivity is a property of a material (intrinsic property). $R=\rho\frac{l}{A}$.
+  \subsubsection{Example 1}
+  Let's find the resistivity $\rho$ for the power resistor. We know that $R=10\Omega$. The length of the resistor is $L=18cm$, and the area is $A=2cm\times1cm$. Using the equation above, we can solve for $\rho$ and find the resistance of the object.
+  \begin{align*}
+    R&=\rho\frac{l}{A}\\
+    \rho&=R\frac{A}{L}\\
+    \rho&=10\Omega\left(\frac{2cm^2}{18cm}\right)\left(\frac{1m}{100cm}\right)\\
+    \alignedbox{\rho}{=0.0111\Omega m}\\
+  \end{align*}
+  For comparison's sake, the resistivity of silver is $\rho_{silver}=1.59\times10^{-8}\Omega m$.
+  \subsubsection{Example 2}
+  Resistors in series. There is a long resistor with another resistor right behind it ($r_1,r_2, r_3$). What is the net (equivalent) resistance? An electron goes from one resistor to the next and so on. 
+  \begin{align*}
+    R&=\rho\frac{L}{A}\to L=R\frac{A}{\rho}\\
+    L_{eq}&=L_1+L_2+L_3\\
+    R_{eq}\frac{A}{\rho}&=R_{1}\frac{A}{\rho}+R_{2}\frac{A}{\rho}+R_{3}\frac{A}{\rho}\\
+    \alignedbox{R_{eq}}{=R_1+R_2+R_3}\\
+  \end{align*}
+  \subsubsection{Example 2}
+  Resistors in parallel. If resistors are in parallel, then the charges see the resistors as one large resistor. Analogous to a river. If a river widens, then the water slows down. Adding up the areas:
+  \begin{align*}
+    A_{eq}&=A_1+A_2+A_3\\
+    A&=\rho\frac{l}{R}\\
+    \rho\frac{L}{R_{eq}}&=\rho\frac{L}{R_{1}}+\rho\frac{L}{R_{2}}+\rho\frac{L}{R_{3}}\\
+    \alignedbox{\frac{1}{R_{eq}}}{=\frac{1}{R_{1}}+\frac{1}{R_{2}}+\frac{1}{R_{3}}}\\
+  \end{align*}
+  In series:\newline
+  $R_{eq}=R_1+R_2+R_3$\newline
+  $C_{eq}=\left(\frac{1}{C_1}+\frac{1}{C_2}+\frac{1}{C_3}+\right)$\newline
+  In parallel:\newline
+  $R_{eq}=\left(\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}+\right)$\newline
+  $C_{eq}=C_1+C_2+C_3$\newline
+  For some capacitors, if there are only two of them
+  \begin{align*}
+    C_{eq}&=\left(\frac{1}{C_1}+\frac{1}{C_2}\right)^{-1}\\
+    &=\frac{1}{\frac{1}{C_1}+\frac{1}{c_2}}\\
+    C_{eq}&=\frac{1}{\frac{1}{C_1}+\frac{1}{c_2}}\frac{C_1C_2}{C_1C_2}\\
+    &=\frac{1}{C_2+C_1}\frac{C_1C_2}{1}\\
+    \alignedbox{C_{eq}}{=\frac{C_1C_2}{C_1+C_2}}\\
+    \alignedbox{R_{eq}}{=\frac{R_1R_2}{R_1+R_2}}\\
+  \end{align*}
+  Electrical Power
+  \begin{align*}
+    P&=\frac{dW}{dt}=\frac{dU}{dt}\\
+    P&=\frac{d(qV)}{dt}\\
+    \shortintertext{For a given voltage, the power output is:}
+    P&=V\frac{dq}{dt}\\
+    P&=VI\\
+    \alignedbox{P}{=IV}\\
+    \shortintertext{For a circuit with a resistance R,}\\
+    V&=IR\\
+    \to P=I^2R \text{ and } P=\frac{V^2}{R}\\
+  \end{align*}
+  Household outlets in America supply 120 Volts. In order to change the power output of an appliance, we must adjust its resistance to change the current. We want $P_{max}=I_{max}V$. We know that $V=IR$.
+  \begin{align*}
+    I_{max}&=\frac{V}{R_{max}}
+  \end{align*}
+  For some resistor of resistance R, the power it outputs is $P=I^2R$. The resistor will disipate energy as heat.
+  \subsubsection{Example 3}
+  Say a wire of diameter $d=4mm$ has a current through it, $I=6mA$. Assume a uniform current density.
+  \begin{align*}
+    dI&=\vec{J}\cdot d\vec{a}\\
+    \int dI &=\int Jda\\
+    I&=J\int da\\
+    I&=JA\\
+    \alignedbox{J}{=\frac{I}{A}}\\
+    \shortintertext{Recall,}\\
+    \vec{E}&=\sigma\vec{J}\\
+    \to V&= IR\\
+  \end{align*}
+  \subsection{Circuits and Circuit Analysis}
+  Let's start with an example and then lets discuss the physical implications of the example after
+  \subsubsection{Example 1}
+  \begin{figure}[!h]
+    \centering
+    \begin{circuitikz} \draw
+    (0,0) to[battery=$V_0$] (0,4)
+          to[resistor=$R_0$, i>_=$I_0$] (4,4)
+          to[resistor=$R_1$, i>_=$I_0$] (4,0)
+          to[resistor=$R_2$, i>_=$I_0$] (0,0)
+    ;
+    \end{circuitikz}
+  \end{figure}
+  There is one current that describes this entire circuit. Let's let $V_0 = 11V$, $R_0=10k\Omega$, $R_1=12k\Omega$, and $R_2=35k\Omega$. To get $I_0$ we need to know $R_eq$. These resistors are all in series with each other. Because they are all in series,we know that:
+  \begin{align*}
+    R_{eq}&=R_0+R_1+R_2\\
+    &=57k\Omega\\
+    \shortintertext{Then with $V=IR$ we set:}\\
+    V_0&=I_0R_{eq}\\
+    \alignedbox{I_0}{=\frac{V_0}{R_{eq}}}\\
+    I_0&=\frac{11V}{57k\Omega}=0.193mA
+  \end{align*}
+  If you start somewhere in a gravatational field, and you move something down, it has changed in its potential energy. Because electric force is conservative, a charge that travels any path and then comes back to its original location has no net change in potential energy
+  \begin{align*}
+    \shortintertext{For a given loop,}\\
+    \sum qV_{loop}&=0\\
+    \sum V_{loop}&=0\\
+  \end{align*}
+  To use this, pick any starting location. Take a complete path that's called a loop and consider the change in voltage across various circuit elements. For a battery or a power supply, if you travel from the negative to the positive, you have an increase in voltage across the battery. Converse also works. For a resistor, if you are traveling \underline{with} the current, voltage will \underline{drop} across the resistor. 
+  \newline\newline
+  Let's try a clockwise loop from the top left corner.
+  \begin{align*}
+    \sum V_{loop} &=\\
+    -I_0R_0-I_0R_1-I_0R_2+V_0&=0\\
+    V_0&=I_0(R_0+R_1+R_2)\\
+    V_{R_0}&=-I_0R_0=(-0.193mA)(10k\Omega)\\
+    V_{R_0}&=-1.93V\\
+    V_{R_1}&=-2.32V\\
+    V_{R_2}&=-6.76V\\
+    \alignedbox{\sum V_{loop}}{=-11.0V}\\
+    P_{R_0}&=IV\\
+    IV&=0.37mW\\
+  \end{align*}
+  \subsubsection{Example 2}
+  \begin{figure}[!h]
+    \centering
+    \begin{circuitikz}
+      \draw
+      (4,4) to[battery=$I_0$] (0,4) 
+            to[short, -*, i=$I_0$] (0,2)
+            node[label={[font=\footnotesize]left:X}] {}
+            to[R=$R_1$, i>_=$I_1$] (4,2) 
+            node[label={[font=\footnotesize]right:Y}] {} -- (4,4)
+      (0,2) -- (0,0)
+            to[R=$R_2$, i>_=$I_2$] (4,0) 
+            to[short, -*] (4,2)
+      ;
+    \end{circuitikz}
+  \end{figure}
+  \begin{align*}
+    \sum V_{loop}&=0\\
+    a&:-V_0+I_1R_1=0\\
+    b&:-I_1R_1+I_2R_2=0\\
+    \alignedbox{\sum I_{in}}{=\sum I_{out}}\\
+    x&:I_0=I_1+I_2\\
+    y&:I_1+I_2=I_0\\
+  \end{align*}
+  \newline
+  There are basically two rules when it comes to circuit analysis. $\sum V_{loop} = 0$ and $\sum I_{in}=I_{out}$. This is essentially conservation of energy and conservation of charge. Let's consider the following circuit.
+  \begin{figure}[!h]
+    \centering
+    \begin{circuitikz}
+      \draw
+      (4,4) to[isource=$I_0$] (0,4) 
+            to[short, -*, i=$I_0$] (0,2)
+            node[label={[font=\footnotesize]left:X}] {}
+            to[R=$R_1$, i>_=$I_1$] (4,2) 
+            node[label={[font=\footnotesize]right:Y}] {} -- (4,4)
+      (0,2) -- (0,0)
+            to[R=$R_2$, i>_=$I_2$] (4,0) 
+            to[short, -*] (4,2)
+      ;
+    \end{circuitikz}
+  \end{figure}
+  Let's let $V_0=11V$, $R_1=12k\Omega$, and $R_2=35k\Omega$. First let's find the current directly out of the battery.
+  \begin{align*}
+    R_{eq}&=\frac{R_1R_2}{R_1+R_2}=8.94k\Omega\\
+    V_0&=I_0R_{eq}\\
+    \alignedbox{I_0}{=\frac{V_0}{R_{eq}}}\\
+    I_0&=\frac{11V}{8.94k\Omega}=1.23mA\\
+    P_0=I_0V_0&=(1.23mA)(11V)=13.5mW\\
+    \shortintertext{Now let's find the current through each resistor. Let's start with going from the batter to $R_1$ and back (a). and then going from $R_2$ through $R_1$. The third loop could go from the battery to $R_2$ and back but it is not important to do so because all of the variables show up in these two equations already.}\\
+    \sum V_{loop}&=0\\
+    a&) V_0-I_1R_1 = 0\\
+    b&) I_1R_1-I_1R_2 = 0\\
+    \sum I_{in}&=\sum I_{out}\\
+    x&)I_0=I_1+I_2\\
+    y&)I_1+I_2=I_0\\
+    \shortintertext{We have already done the physics, and now we must solve for the things that we do not know. This is just basic algebra.}\\
+    \to V_0&=I_1R_1\\
+    I_1&=\frac{V_0}{R_0}\\
+    &=\frac{11V}{12k\Omega}\\
+    \alignedbox{I_1}{=0.917mA}\\
+    \to I_2&=I_0-I_1\\
+    &=1.23mA-0.917mA\\
+    \alignedbox{I_2}{=0.313mA}
+    \shortintertext{Now let's find the power of these two resistors. Remember $V=IV=I^2R=\frac{V^2}{R}$}\\
+    P_1&=I_1^2R_1=(0.917mA)^2(12k\Omega)\\
+    P_1&=10.1mW\\
+    P_2&=I_2^2R_2=(0.313mA)^2(35k\Omega)\\
+    P_2&=3.43mW\\
+    \shortintertext{Notice that $P_1+P_2=13.5mW$, which is the same amount of power that the batter puts out! Now let's find the voltage drops across $R_1+R_2$ from $IV$}\\
+    V_1&=\frac{P_1}{I_1}=\frac{10.1mW}{0.916mA}\\
+    V_1&=11.0V\\
+    V_2&=\frac{P_2}{I_2}=\frac{3.43mW}{0.313mA}\\
+    V_2&=11.0V\\
+    \shortintertext{Notice that $V_1=V_2=V_0$. We get the same voltage across all three.}
+  \end{align*}
+  The voltage drops across parallel segments of circuit are \underline{equal}. $V_0$, $R_1$, and $R_2$ are all in parallel, which means they all have the same voltage. We essentially did it with the first loop but we did not. Energy is conserved, but voltage is \underline{NOT} conservative. To determine how to combine the resistors, you \underline{must} first determine where the charge will flow.
+  \subsubsection{Example (Draw Later)}
+  \begin{figure}[h!]
+    \centering
+    \begin{circuitikz}
+      \draw (10,0) to[isource=$V_0$] (10,8) 
+                   to[R=$R_0$](5,8) -- (0,8)
+                   to[R=$R_4$](0,4) 
+                   to[R=$R_5$](0,0) -- (10,0)
+            (5,8)  to[R=$R_1$] (5,4) -- (7.5, 4) 
+                   to[R=$R_3$](7.5,0)
+            (5,4) -- (2.5, 4) 
+                   to[R=$R_2$](2.5, 0);
+    \end{circuitikz}    
+  \end{figure}
+  There is a short within this circuit, which means it flows without resistance. Even with a short, you still calculate everything the same way. Let's find the current out of the battery and the power output of $R_0$
+  \begin{align*}
+    \sum V_{bat} &=0\\
+    \sum I_{in} &= \sum I_{out}\\
+    \shortintertext{A quick way to get $I_0$ is using $V_0=I_0R_{eq}$. Let's find $R_{eq}$}\\
+    R_{eq}&=R_0\frac{R_{45}R_{123}}{R_{45}+R{123}}\\
+    \text{Also, } R_{45}&=R_4+R_5\\
+    R_{123}&=R_1+\frac{R_2R_3}{R_2+R_3}\\
+    \alignedbox{R_{eq}}{=R_0+\frac{\left(R_4+R_5\right)\left(R_1+\frac{R_2R_3}{R_2+R_3}\right)}{R_4+R_5+R_1+\frac{R_2R_3}{R_2+R_3}}}\\
+  \end{align*}
+  \subsubsection{Using measuring tools}
+  How to measure current using a digital multimeter.\newline\newline
+  To measure current, we must carefullt add the ammeter to the circuit. To use an ammeter you must break the circuit. So in order to add an ammeter, first be sure the circuit is \underline{not} currently powered! Plug the hole with the ammeter and \underline{then} turn on the power supply.\newline\newline
+  How to measure voltage using a DMM.\newline\newline
+  Set the DMM to the voltmeter. Set the DMM to be a voltage. We then add the loads across the element whose voltage drop we want to measure. We must not break the circuit or turn off the power supply to measure the voltage.\newline\newline
+  Ammeters go into circuits and have low internal resistance, while voltmeters go across circuit elements and have high internal resistance.
+  \subsection{Resistors and Capacitors in Circuits}
+  \begin{align*}
+    V_R&=IR\\
+    V_C=\frac{Q}{C}\\
+    \shortintertext{When the swtich is closed:}\\
+    V_R&=V_C=0\\
+    \shortintertext{Let's throw the switch to the position (a):}.\\
+    \shortintertext{There are no junctions and there is only one loop:}\\
+    \sum V_{loop} = 0\\
+    V_0-IR-\frac{Q}{C}&=0\\
+  \end{align*}
+  How much charge acumulates on the plates? What is Q in terms of capacitance, resistance, and the battery. The amount of charge that accumulates within the circuit is a property of the circuit only, wheras battery voltage, resistance, and capacitance are functions of themselves. Using $I=\frac{dQ}{dt}$, we get an equation that's a differential. We must get $dQ$ with $Q$ and we must get $dt$ with $t$.
+  \begin{align*}
+    V_0-R\frac{dQ}{dt}-\frac{Q}{C}&=0\\
+    V_0-\frac{Q}{C}&=R\frac{dQ}{dt}\\
+    CV_0-Q&=RC\frac{dQ}{dt}\\
+    \frac{1}{RC}&=\frac{1}{CV_0-Q}\frac{dQ}{dt}\\
+    \frac{dt}{RC}&=\frac{dQ}{CV_0-Q}\\
+    \int_0^t\frac{dt}{RC}&=\int_0^Q\frac{dQ}{CV_0-Q}\\
+    \shortintertext{Let $U=CV_0-Q$, and $du=-dQ$:}\\
+    \frac{1}{RC}(t-0)&=\int_{CV_0}^{CV_0-Q}\frac{-du}{u}\\
+    \frac{t}{RC}&=-ln\left(\frac{CV_0-Q}{CV_0}\right)\\
+    e^{-\frac{t}{RC}}&=\frac{CV_0-Q}{CV_0}\\
+    CV_0e^{-\frac{t}{RC}}&=CV_0-Q\\
+    Q&=CV_0-CV_0e^{-\frac{t}{RC}}\\
+    \alignedbox{Q(t)}{=CV_0\left(1-e^{-\frac{t}{RC}}\right)}\\
+    \text{Charging} &\text{ a capacitor}\\
+    \shortintertext{At $t=0$}
+    Q(0)&=CV_0\left(1-e^{-\frac{0}{RC}}\right)=0\\
+    \shortintertext{After a long time, $Q=CV_0$}\\
+    V_0&=IR-\frac{CV_0}{C}=0\\
+    V_0-IR&=V_0\\
+    \shortintertext{This is only true if $I=0$. If we take the dervivative of our $Q(t)$ then we can see how current depends on time:}\\
+    I(t)&=\frac{d}{dt}Q(t)\\
+    &=CV_0\left(0-\frac{-1}{RC}e^{-\frac{t}{RC}}\right)\\
+    \alignedbox{I(t)}{=\frac{V_0}{R}e^{-\frac{t}{RC}}}\\
+    \shortintertext{Charging a capacitor. Notice that RC has dimension of time.}
+  \end{align*}
+  \newpage

@@ -1,0 +1,114 @@
+\section{Equations You Need to Know!!!}
+\subsection{Thermodynamics}
+\begin{align}
+\frac{\Delta L}{L}=\alpha\Delta T\\
+Q=mc\Delta T\\
+Q=mL\\
+PV=nRT\\
+PV=Nk_bT\\
+P=\eta k_BT\\
+v_{rms}=\sqrt{\frac{3RT}{M}}=\sqrt{\frac{3k_BT}{M}}\\
+K_{avg}=\frac{3}{2}k_BT\\
+E_{int}=NK_{avg}\\
+\lambda=\frac{1}{\pi d^2 \eta}\\
+E_{int}=nC_VT\\
+\Delta E_{int} = nC_V\Delta T\\
+C_V=\frac{d}{2}R=\left(\frac{3}{2}R\right)_{mon}=\left(\frac{5}{2}R\right)\\
+C_P=C_V+R\\
+\gamma = \frac{C_P}{C_V}\\
+PV^{\gamma}=constant\\
+W=\int{PdV}\\
+\Delta E_{int}=Q-W\\
+\Delta E_{int}=nC_P\Delta T - nR\Delta T\\
+\end{align}
+\newpage
+
+\subsection{Electricity}
+\begin{align}
+\vec{F_{12}}=\frac{1}{4\pi\epsilon_0}\frac{q_1q_2}{r_{12}^2}\hat{r}_{12}\\
+\vec{E_1}=\frac{1}{4\pi\epsilon_0}\frac{q_1}{r^2}\hat{r}\\
+\vec{F_{12}}=q_2\vec{E_1}\\
+dQ=\lambda dl\\
+dQ=\sigma dA\\
+dQ=\rho dV\\
+d\vec{E}=\frac{1}{4\pi\epsilon_0}\frac{dQ}{r^2}\hat{r}\\
+\Phi_E=\int \vec{E}\cdot d\vec{A}\\
+\oint\vec{E}\cdot d\vec{A}=\frac{Q_{enc}}{\epsilon_0}\\
+EA=\frac{Q_{enc}}{\epsilon_0}\\
+U_{12}=\frac{1}{4\pi\epsilon_0}\frac{q_1q_2}{r_{12}}\\
+V_1=\frac{U_{12}}{q_2}\\
+V_1=\frac{1}{4\pi\epsilon_0}\frac{q_1}{r}\\
+dV=\frac{1}{4\pi\epsilon_0}\frac{dQ}{r}\\
+V_f-V_i=-\int_{s_i}^{s_f}\vec{E}\cdot d\vec{s}\\
+E_s=-\frac{dV}{ds}
+\end{align}
+\newpage
+\subsubsection{A little note about Volume Integrals}
+In Cartesian coordinates, $dV=dxdydz$. In Cylindrical coordinates, you have a z axis, a $\Phi$ axis, and an r axis. A differential amount of radius is dr, a differential amount of z is dz, and a differential amount of $\Phi$ is $d\Phi$. $d\Phi$ is really just a certain amount of arclength that is covered. We can call this arclength, $dl_\Phi$.
+\begin{align}
+    dV&=drdl_\Phi dz\\
+    \shortintertext{So we can sub in arclength for $dl_\Phi$}\\
+    &=dr(rd\Phi)dz\\
+    dV&=rdrd\Phi dz\\
+\end{align}
+Now for spherical coordinates, we have 2 angles and a radius. $\theta$ is wrapping around the radius of the circle, where $\Phi$ is going from the north pole to the south pole. The radius is just r.
+\begin{align*}
+    dV&=drdl_\theta dl_\Phi\\
+    &=dr(rd\theta)(rsin\theta d\Phi)\\
+    dV&=r^2sin\theta drd\theta d\Phi\\
+\end{align*}
+\newpage
+
+\subsection{Circuits}
+\begin{align}
+    V=IR\\
+    R_{eq in series}=R_1+R_2+R_3+...\\
+    \frac{1}{R_{eq in para}}=\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}+...\\
+    \shortintertext{Power}\\
+    P=V*I\\
+    P=R*I^2\\
+    P=\frac{V^2}{R}\\
+    \shortintertext{Voltage}\\
+    V=R*I\\
+    V=\frac{P}{I}\\
+    V=\sqrt{P*R}\\
+    \shortintertext{Resisitance}\\
+    R=\frac{V}{I}\\
+    R=\frac{V^2}{P}\\
+    R=\frac{P}{I^2}\\
+    \shortintertext{Current}\\
+    I=\frac{V}{R^2}\\
+    I=\frac{P}{V}\\
+    I=\sqrt{\frac{P}{R}}
+\end{align}
+\newpage
+
+\subsection{Magnetism}
+\begin{align}
+    F=q\vec{v}\times\vec{B}\\
+    F=I\vec{l}\times\vec{B}\\
+    \vec{B}=\frac{\mu_0}{4\pi}\frac{q\vec{v}\times\hat{r}}{r^2}\\
+    \oint\vec{B}\cdot d\vec{l}=\mu_0I_{th}\\
+    E_{ind}=-\frac{d}{dt}\Phi_B\\
+    \oint\vec{E}\cdot d\vec{l}=-\frac{d}{dt}\int\vec{B}\cdot d\vec{a}\\
+\end{align}
+
+\subsection{Optics}
+\begin{align*}
+    E=E_0sin(kx-\omega t +\phi_0)\\
+    B=B_0sin(kx-\omega t +\phi_0)\\
+    \vec{S}=\frac{1}{\mu_0}\vec{E}\times\vec{B}\\
+    c=\frac{1}{\sqrt{\epsilon_0\mu_0}}\\
+    c=\lambda f\\
+    E=cB\\
+    \mathscr{I}=\frac{P}{A}=\frac{\mathscr{E}}{At}\\
+    \mathscr{I}=S_{avg}=\frac{1}{\mu_0}E_{rms}B_{rms}\\
+    E_{rms}^2=\frac{E_0^2}{2}\\
+    B_{rms}=\frac{B_0^2}{2}\\
+    \mathscr{P}=\frac{\mathscr{I}}{c}\text{ or }2\frac{\mathscr{I}}{c}\\
+    \theta_1=\theta_1'\\
+    n_1sin\theta_1=n_2sin\theta_2\\
+    \frac{1}{f}=\frac{1}{d_0}+\frac{1}{d_i}\\
+    m=\frac{h_i}{h_0}=\frac{-d_i}{d_0}\\
+\end{align*}
+\newpage

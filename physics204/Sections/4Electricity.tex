@@ -1,0 +1,288 @@
+\section{Electricity}
+  \subsection{Electrostatics}
+  Electric charge is a property of some objects that allow such objects to feel an electric force. The units for charge are coulombs (C). The smallest amount of charge an object can have is the elementary charge: $e=1.602*10^{-19}C$. For an electron, this is -e, while for a proton it is +e. As everyone knows, like charges repel, and opposite charges attract each other.\par 
+  Any material we use is made of atoms, which themselves are made of charge. There are two different types of materials, insulators and conductors. For insulators, atomic/molecular electrons are stuck in place with their parent atom/molecule and their electrons are immobile. For conductors, the atomic/molecular electrons are shared among the material (these are also known as mobile electrons). Our typical insulators are wood, plastic, and printer paper, while typical conductors are metal, water, and humans.\par
+  \begin{align*}
+    \text{The force that charge } q_1 \text{ exerts on charge} q_2 \text{ is: (Coulombs law)}\\
+    \vec{F_{1\to2}}(r_{1\to2})=\frac{1}{4\pi \epsilon_0}\frac{q_1q_2}{r_{1\to2}^2}\hat{r_{1\to2}}\\
+    \text{Where } \epsilon_0=8.85*10^{-12}\frac{C^2}{Nm^2}
+  \end{align*}
+  \subsubsection{Example}
+  Find the net force on $q_c$ due to $q_a$ and $q_b$ where $q_a+q_b$ are fixed in space. Remeber that forces are vectors.
+  \begin{align*}
+    \vec{F_{net_c}}&=\vec{F_{bc}}+\vec{F_{ac}}\\
+    &=\frac{1}{4\pi\epsilon_0}\frac{q_bq_c}{r_{bc}^2}\hat{r_{bc}}+\frac{1}{4\pi\epsilon_0}\frac{q_bq_c}{r_{ac}^2}\hat{r_{ac}}\\
+    &=\frac{1}{4\pi\epsilon_0}\frac{q_bq_c}{X_0^2}(\hat{+i})+\frac{1}{4\pi\epsilon_0}\frac{q_aq_c}{Y_0^2}(\hat{+j})\\
+    &=\frac{1}{4\pi\epsilon_0}\left(\frac{q_bq_c}{x_0^2}\hat{i}+\frac{q_bq_c}{y_0^2}\hat{j}\right)\\
+    \text{if } q_b=q_a \text{ and } x_0=y_0 \text{, then }\\
+    \vec{F_{net_c}}&=\frac{q_aq_c}{4\pi\epsilon_0x_0^2}(\hat{i}+\hat{j})\\
+  \end{align*}\
+  Coulombs law works with super position:
+  \begin{equation*}
+    \vec{F_{1\to2}}=\frac{1}{4\pi\epsilon_0}\frac{q_1q_2}{r_{1\to2}^2}\hat{r_{1\to2}}
+  \end{equation*}
+  Find the force on charge $Q_A$ due to other stationary charges:
+  \begin{align*}
+    \vec{F_{ba}}&=\frac{1}{4\pi\epsilon_0}\frac{q_aq_b}{r_{ba}}\hat{r_{ba}}\\
+    &=\frac{1}{4\pi\epsilon_0}\frac{q_aq_b}{y_0^2}\hat{j}\\
+    \vec{F_{ca}}&=\frac{1}{4\pi\epsilon_0}\frac{q_aq_c}{r_{ca}^2}\hat{r_{ca}}\\
+    &=\frac{q_cq_a}{4\pi\epsilon_0}\left[\frac{1}{r_{ca}^2}sin(\theta)(\hat{i})+\frac{1}{r_{ca}^2}cos(\theta)(-\hat{j})\right]\\
+    &=\frac{q_cq_a}{r\pi\epsilon_0}\left[\frac{1}{x_0^2+y_0^2}\frac{x_0}{\sqrt{x_0^2+y_0^2}}\hat{i}-\frac{1}{\sqrt{x_0^2+y_0^2}}\frac{y_0}{\sqrt{x_0^2+y_0^2}}\hat{j}\right]\\
+    &=\frac{q_cq_a}{4\pi\epsilon_0}\frac{1}{(x_0^2+y_0^2)^{\frac{3}{2}}}(x_0\hat{i}-y_0\hat{j})\\
+    \text{Now find }f_{net_a}&=F_{ca}+F_{ba}\\
+    &=(F_{ba_x}+F_{ca_x})\hat{i}+(F_{ba_y}+F_{ca_y})\hat{j}\\
+    F_{net_a}&=\frac{1}{4\pi\epsilon_0}\left[\frac{q_cq_a}{(x_0^2+y_0^2)^{\frac{3}{2}}}x_0\hat{i}+\left(\frac{q_bq_a}{y_0}-\frac{q_cq_a}{(x_0^2+y_0^2)^{\frac{3}{2}}}y_o\right)\hat{j}\right]\\
+  \end{align*} 
+  \subsection{Electric Fields}
+  A field is a function that has different values throughout space that can be changed in time. Temperature is a scalar field when looking at the temperature around a room. Wind patterns are a vector field on a weather map. We will study the electric field $\vec{E}$. This field helps us find the force exerted on any charge Q.
+  \begin{equation*}
+    \vec{F}=Q\vec{E}
+  \end{equation*}
+  The field $\vec{E}$ created by a charge q is:
+  \begin{equation*}
+    \vec{E}=\frac{1}{4\pi\epsilon_0}\frac{q}{r^2}\hat{r}\\
+  \end{equation*}
+  This field acts on another charge Q such that:
+  \begin{align*}
+    \vec{F}&=Q\vec{E}\\
+    &=Q\frac{1}{4\pi\epsilon_0}\frac{q}{r^2}\hat{r}\\
+    \vec{F}&=\frac{1}{4\pi\epsilon_0}\frac{qQ}{r^2}\hat{r} \text{ (Coulombs Law)}\\
+  \end{align*}
+  $\vec{E}$ Fields point away from positive cherges and towards negative ones. Since $\vec{E}$ is a vector, if two or more static charges each create a field, the net field is their vector sum (superposition).
+  \begin{equation*}
+    \vec{E_{net}}=\sum_{i=1}^n\vec{E_i}
+  \end{equation*}
+  \subsubsection{Example 1}
+  Two identical charges $q_1=q_2=q$ are equidistant from the origin on the x-axis. Find $\vec{E}$ anywhere on the x-axis.
+  \begin{align*}
+    \vec{E}&=2\left(\frac{1}{4\pi\epsilon_0}\frac{q_2}{r_2^2}cos\theta\right)\hat{k}\\
+    &=2\frac{1}{4\pi\epsilon_0}\frac{2qz}{\left(z^2+\left(\frac{L}{2}\right)^2\right)^{\frac{3}{2}}}\hat{k}\\
+    \vec{E}(z)&=\frac{1}{4\pi\epsilon_0}\frac{2qz}{\left(z^2+\left(\frac{L}{2}\right)^{\frac{3}{2}}\right)}\hat{K}
+  \end{align*}
+  What if the charges that make a field are grouped together closely? Then we will describe those charges as a continuous distribution. Linear charge density is $\lambda=\frac{dq}{dl}\to dq=\lambda dl$. Recall,
+  \begin{align*}
+    \vec{E}&=\frac{1}{4\pi\epsilon_0}\frac{q}{r^2}\hat{r}\\
+    &=\sum_{i=1}^N\frac{1}{4\pi\epsilon_0}\frac{q_i}{r_i^2}\hat{r_i}\to \vec{E}=\frac{1}{4\pi\epsilon_0}\int\frac{dq}{r^2}\hat{r}\\
+    \text{For this problem: }\\
+    E&=\frac{1}{r\pi\epsilon_0}\int_{\frac{-L}{2}}^{\frac{L}{2}}\frac{\lambda dx}{z^2+x^2}\frac{z}{\sqrt{z^2+x^2}}\hat{k}\\
+    &=\frac{1}{r\pi\epsilon_0}\lambda z \int_{\frac{-L}{2}}^{\frac{L}{2}}\frac{dx}{(z^2+x^2)^{\frac{3}{2}}}\hat{k}\\
+    &=\frac{1}{4\pi\epsilon_0}\lambda z \left(\frac{x}{z^2\sqrt{x^2+z^2}}\right)\Big|_{\frac{-L}{2}}^{\frac{L}{2}}\hat{k}\\
+    &=\frac{1}{4\pi\epsilon_0}\lambda z \left[\frac{\frac{L}{2}-\frac{-L}{2}}{z^2\sqrt{\frac{L}{2}^2+z^2}}\right]\hat{k}\\
+    &=\frac{1}{4\pi\epsilon_0}2\lambda z\frac{\frac{L}{2}}{z^2\sqrt{\frac{L}{2}^2+z^2}}\hat{k}
+  \end{align*}
+  If the line of charge is $\inf$ in length, then the only change would be the bounds of the integral.
+  \subsubsection{Example 2}
+  Find $\vec{E}$ where the midpoint of a uniform line of charge as shown. The X components cancel.
+  \begin{align*}
+    d\vec{E}&=\frac{1}{4\pi\epsilon_0}\frac{dq}{r^2}\hat{r}\\
+    \lambda&=\frac{dq}{dl}=\frac{dq}{dx}\\
+    dq&=\lambda dx\\
+    \text{We see that } E_x=0 \text{ while } E_z\neq 0 \text{ then, }\\
+    d\vec{E}&=\frac{1}{4\pi\epsilon_0}\frac{\lambda dx}{x^2+z^2}\frac{z}{\sqrt{x^2+z^2}}\hat{k}\\
+    &=\frac{1}{4\pi\epsilon_0}\frac{\lambda dxz}{(x^2+z^2)^{\frac{3}{2}}}\hat{k}\\
+    E&=\int_{\frac{-L}{2}}^{\frac{L}{2}}\frac{1}{4\pi\epsilon_0}\frac{\lambda dxz}{(x^2+z^2)^{\frac{3}{2}}}\\
+    &=\frac{\lambda z}{4\pi\epsilon_0}\int_{\frac{-L}{2}}^{\frac{L}{2}}(x^2+z^2)^{\frac{-3}{2}}dx\\
+    \vec{E}(z)&=\frac{2\lambda z}{4\pi\epsilon_0}\frac{\frac{L}{2}}{z^2\sqrt{\frac{L}{2}^2+z^2}}\hat{k}
+  \end{align*}
+  \subsubsection{Example 3}
+  Find $\vec{E}$ for the sitution shown:
+  \begin{align*}
+    d\vec{E}&=\frac{1}{4\pi\epsilon_0}\frac{dq}{r^2}\hat{r}\\
+    &=\frac{1}{4\pi\epsilon_0}\frac{\lambda dx}{r^2}\left(cos\theta\hat{i}+sin\theta\hat{k}\right)\\
+    &=\frac{\lambda}{4\pi\epsilon_0}\left[\int_{0}^{L}\frac{dx(x-L)}{(z^2+(x-L))^{\frac{3}{2}}}\hat{i}+\int_0^L\frac{dxz}{(z^2+(x-L))^{\frac{3}{2}}}  \right]\\
+    \shortintertext{We will let x'=x-l } x=0\to x'=0-L=-L\\
+    x=L\to x'=0\\
+    dx'=dx-dL \text{ because } L=const\\
+    &=\frac{\lambda}{4\pi\epsilon_0}\left[\int_{-L}^0\frac{dx'x'}{(z^2+x'^2)^{\frac{3}{2}}}\hat{i}+\int_{-L}^0\frac{dx'z}{(z^2+x'^2)^{\frac{3}{2}}}\hat{k}\right]\\
+    \vec{E}&=\frac{\lambda}{4\pi\epsilon_0}\left[\frac{x'}{x'^2\sqrt{x^2+z^2}}\Big|_{x'=L}^{x'=0}\hat{i}+\frac{-1}{\sqrt{x^2+z^2}}\Big|_{x'=-L}^{x'=0}\hat{k}\right]
+  \end{align*}
+  \subsection{Electric Field Lines}
+  We can draw field lines to represent how an electric field looks in space. Recall that for a point charge, $\vec{E}=\frac{1}{4\pi\epsilon_0}\frac{q}{r^2}\hat{r}$
+  \newline
+  Let's find $\vec{E}$ above the midpoint of two opposite charges +q and -q which are a distance d apart.
+  \begin{align*}
+    r^2&=z^2+\left(\frac{d}{2}\right)^2\\
+    \vec{E}&=\vec{E}_-\vec{E}_+\\
+    &=\frac{1}{4\pi\epsilon_0}\frac{q}{z^2+\frac{d}{2}}\left(-\frac{\frac{d}{2}}{\sqrt{z^2+\frac{d}{2}^2}}\hat{i}-\frac{z}{\sqrt{z^2+\frac{d}{2}^2}}\hat{k}\right)+\frac{1}{4\pi\epsilon_0}\frac{q}{z^2+\frac{d}{2}}\left(-\frac{\frac{d}{2}}{z^2}\hat{i}+\frac{z}{\sqrt{z^2+\frac{d}{2}^2}}\hat{k}\right)\\
+    \vec{E}&=-\frac{1}{4\pi\epsilon_0}\frac{qd}{\left(z^2+\frac{d}{2}^2\right)^{\frac{3}{2}}}\hat{i}\\
+    \shortintertext{Consider $\vec{p}=q\vec{d}$. This is an electric dipole moment.}\\
+    \vec{E}&=-\frac{1}{r\pi\epsilon_0}\frac{\vec{p}}{\left(z^2+\frac{d}{2}^2\right)^{\frac{3}{2}}}\\ 
+    \shortintertext{As you get further from the dipole, z$>>$d:}\\ 
+    \vec{E}&\cong-\frac{1}{4\pi\epsilon_0}\frac{\vec{p}}{(z^2)^{\frac{3}{2}}}\\
+    \shortintertext{If you get very far away: $z\to\infty$ or $\frac{d}{2}\to\infty$}\\
+    \vec{E}&=\frac{-1}{4\pi\epsilon_0}\frac{qd}{\left(z^2+\frac{d}{2}\right)^{\frac{3}{2}}}\hat{i} =\frac{-1}{4\pi\epsilon_0}\frac{q\left(\frac{d}{z}\right)}{\left(1+\frac{d}{2}\right)^{\frac{3}{2}}}\hat{i}\\
+  \end{align*}
+  For dipoles in an external field, $\vec{p}=q\vec{d}$. The net displacement force on $\vec{p}$ is 0, but it will have torque.
+  \begin{align*}
+    \tau=\vec{r}\times\vec{F}=\left(\vec{\frac{d}{2}}\times\vec{F_+}\right)+\left(\vec{\frac{d}{2}}\times\vec{F_-}\right)&=\left(\vec{\frac{d}{2}}\times q\vec{E_{ext}}\right)+\left(-\vec{\frac{d}{2}}\times q\vec{E_{ext}}\right)\\
+    &=2\left(\vec{\frac{d}{2}}\times q\vec{E_{ext}}\right)\\
+    \vec{\tau}&=(\vec{q}d\times \vec{E_{ext}})\\
+    \alignedbox{\vec{\tau}}{=\vec{P}\times\vec{E_{ext}}}\\
+  \end{align*}
+  \subsubsection{Example 1.}
+  The field $\vec{E}$ is above the center of a uniformly charged ring is $\vec{E}=\frac{1}{r\pi\epsilon_0}\frac{Qz}{(z^2+k^2)^{\frac{3}{2}}}\hat{k}$. Now let the ring isntead, be a disk with toal charge Q that is uniformly distributed.
+  \begin{align*}
+    \shortintertext{Total charge Q over a total area of $\pi R^2$}\\
+    \frac{Q}{\pi R^2}&=\sigma\\
+    dQ&=\sigma2\pi rdr\\
+    dE&=\frac{1}{4\pi\epsilon_0}\frac{dQ}{r^2}\hat{r}\\
+    dQ&=\sigma 2\pi r'dr'\\
+    \shortintertext{All of the x and y components vanish, which leaves us with:}\\
+    \int dE&=\int\frac{1}{4\pi\epsilon_0}\frac{\sigma 2\pi r'dr'}{r'^2+z^2}\frac{z}{\sqrt{r'^2+z^2}}\hat{k}\\
+    \vec{E}&=\frac{1}{4\pi\epsilon_0}2\pi\sigma z \int_0^R\frac{r'dr'}{(r'^2+z^2)^{\frac{3}{2}}}\hat{k}\\
+    &=\frac{1}{4\pi\epsilon_0}2\pi\sigma z \left(-\frac{1}{\sqrt{r'^2+z^2}}\right)\Big|_{r'=0}^{r'=R}\\
+    &=\frac{1}{4\pi\epsilon_0}2\pi\sigma z \left[-\frac{1}{R^2+z^2}-\frac{1}{z}\right]\hat{k}\\
+    \alignedbox{\vec{E}}{=\frac{1}{4\pi\epsilon_0}\frac{2Q}{R^2}z\left(\frac{1}{z}-\frac{1}{\sqrt{R^2+z^2}}\right)\hat{k}}
+  \end{align*}
+  \subsection{Flux and Gauss's Law}
+  Flux is the amount of flow of a material or substance through some region. Area vectors point out of the plane of the area itself. Flux is denoted by $\Phi$, and the equation for flux is:
+  \begin{equation*}
+    \Phi=\int\vec{f}\cdot d\vec{a}
+  \end{equation*}
+  \subsubsection{Example 1}
+  Find the flux $\Phi$ of $\vec{E}=\epsilon_0\frac{z}{z_0}\vec{i}$ through an are $y_0+z_0$ in the y-z plane.
+  \begin{align*}
+    \Phi&=\int\vec{E}\cdot d\vec{a}\\
+    &=\int Eda\\ 
+    &=\int_0^{z_0}\int_0^{y_0}Eda\\
+    &=\int_0^{z_0}\int_0^{y_0}\epsilon_0\frac{z}{z_0}dydz\\
+    &=\epsilon_0\frac{y_0}{z_0}\int_0^{z_0}dz\\
+    &=\epsilon_0\frac{y_0}{z_0}\left(\frac{1}{2}z_0^2-\frac{1}{2}0^2\right)\\
+    \alignedbox{\Phi}{=\frac{1}{2}\epsilon_0y_0z_0}\\
+    \shortintertext{First, a single charge Q. We must apply a Gaussian surface to the point charge:}\\
+    \Phi&=\int\vec{E}\cdot d\vec{a}=\int(E\hat{r})\cdot(da\hat{r})\\
+    &=\int\vec{E}\cdot d\vec{a}\\
+    &=\int\frac{1}{4\pi\epsilon_0}\frac{1}{R^2}da\\
+    &=\frac{1}{4\pi\epsilon_0}\int da\\ 
+    &=\frac{q}{\epsilon_0}\\
+    \intertext{More generally, we write:}\\
+    \alignedbox{\Phi_E}{=\oint\vec{E}\cdot d\vec{a}=\frac{q}{\epsilon_0}}
+  \end{align*}
+  This brings us to Gauss's law. This law is always true but it is only useful in certain situations. 1) When $\vec{E}\cdot d\vec{a}$ is an easy dot product (they are parallel vectors). 2) When E is constant in magnatude across the surface. Then we can pull E through the integral. 3) When the total surface area is known. For example, we want the equations to be able to do the following:
+  \begin{align*}
+    &\oint\vec{E}\cdot d\vec{a}\\
+    &\oint Eda\\
+    &E\oint da /to E_a=\frac{q_{inside}}{E_0}
+  \end{align*}
+  \subsubsection{Example 2}
+  A sphere has a uniform charge Q throughout its volume and radius, R. Find E everywhere.
+  \begin{align*}
+    \shortintertext{Outside:}\\
+    \oint\vec{E}\cdot d\vec{a}&=\frac{q_{enc}}{\epsilon_0}\\
+    \oint Eda &= \frac{Q}{\epsilon_0}\\
+    E\oint da &= \frac{Q}{\epsilon_0}\\
+    E4\pi r^2 &=\frac{Q}{\epsilon_0}\\
+    \alignedbox{\vec{E}}{=\frac{1}{4\pi\epsilon_0}\frac{Q}{r^2}\hat{r}\text{ for }r>R}
+    \shortintertext{Now for the inside:}\\
+    \int dq_{enc}&=\int\rho dv\\
+    q_{enc}&=\rho\int dv_{gauss}\\
+    &=\rho\frac{4}{3}\pi r^3\\
+    \text{Also } \rho&=\frac{Q}{\frac{4}{3}\pi R^3}\\
+    E4\pi r^2&=\frac{q_{enc}}{\epsilon_0}\\
+    E&=\frac{1}{4\pi r^2}\frac{1}{\epsilon_0}Q\frac{r^3}{R^3}\\
+    \alignedbox{E}{=\frac{1}{4\pi\epsilon_0}\frac{Qr}{R^3}\hat{r} \text{ for }r<R}
+  \end{align*}
+  \subsubsection{Example 3}
+  Find $\vec{E}$ everywhere for a very long line of charge with a charge density $\lambda$ (constant and uniform charge).
+  \begin{align*}
+    \oint\vec{E}\cdot d\vec{a}&=\frac{q_{enc}}{\epsilon_0}\\
+    \int\vec{E}\cdot d\vec{a}_{curve}+\int\vec{E}\cdot d\vec{a}_{left} +\int\vec{E}\cdot d\vec{a}_{right}&=\int\vec{E}\cdot d\vec{a}_{curve}=\frac{\lambda l}{\epsilon_0}\\
+    \int\vec{E}\cdot d\vec{a}_{curve}&=\frac{\lambda l}{\epsilon_0}\\
+    E\int d\vec{a}_{curve}&=\frac{\lambda L}{\epsilon_0}\\
+    E(2\pi rl)&=\frac{\lambda l}{\epsilon_0}\\
+    \alignedbox{\vec{E}}{=\frac{\lambda}{2\pi\epsilon_0r}\hat{r}}\\
+  \end{align*}
+  \subsubsection{Example 4}
+  A sphere has a non-uniform charge density of $\rho=\rho_0\frac{r}{R}$ for a sphere with a radius, R. Find $\vec{E}$ everywhere.
+  \begin{align*}
+    \int\int\int dxdydz \to \int\int\int r^2sin\theta d\theta dr d\phi\\
+    \shortintertext{First, the outside: } r>R\\
+    \oint\vec{E}\cdot d\vec{a}&=\frac{q_{enc}}{\epsilon_0}\\
+    \oint Eda&=\frac{q_{enc}}{\epsilon_0}\\
+    E\oint da&=\frac{q_{enc}}{\epsilon_0}\\
+    E(4\pi r^2)=\frac{q_{enc}}{\epsilon_0}\\
+    \int dq_{enc} &= \int\rho dV_{enc}\\
+    q_{enc}&=\int \rho_0\frac{r}{R}dV\\
+    &=\frac{\rho_0}{R}\int_0^{2\pi}\int_0^\pi\int_0^Rrr^2sin\theta dr d\theta d\phi\\
+    &=\frac{\rho_0}{R}4\pi\int_0^Rr^3dr\\
+    &=\rho_0\frac{1}{R}4\pi\frac{1}{4}R^4\\
+    q_{enc}&=\pi\rho_0R^3\\
+    E(4\pi r^2)=\frac{1}{\epsilon_0}\pi\rho_0R^3\\
+    \alignedbox{\vec{E}}{=\frac{1}{4\epsilon_0}\frac{\rho_0R^3}{r^2}\hat{r}\text{ for }r>R}\\
+    \shortintertext{What about for $r<R$? Becuase of the boundary, we will have to seperately find $\vec{E}$ for $r<R$:}\\
+    \oint\vec{E}\cdot d\vec{a}&=\frac{q_{enc}}{\epsilon_0}\\
+    \oint Eda &=\frac{q_enc}{\epsilon_0}\\
+    E\oint da&=\frac{q_{enc}}{\epsilon_0}\\
+    E(4\pi r^2)&=\frac{q_{enc}}{\epsilon_0}\\
+    \int dq_{enc}&=\int \rho dV_{gauss}\\
+    q_{enc}&=\int\rho_0\frac{r}{R}dV_{gauss}=\frac{\rho_0}{R}\int_0^{2\pi}\int_0^\pi\int_0^rrr^2sin\theta dr d\theta d\phi\\
+    &=4\pi\frac{\rho_0}{R}\int_0^rr^3dr\\
+    q_{enc}&=\pi\frac{\rho}{R}r^4\\
+    \to \text{Gauss's law } E(4\pi r^2)&=\frac{1}{\epsilon_0}\pi\rho_0\frac{r^4}{R}\\
+    E&=\frac{1}{4\epsilon_0R}\rho_0r^2\\
+    \alignedbox{E}{=\frac{1}{4\epsilon_0}\rho_0\frac{r^2}{R}}\\
+  \end{align*}
+  The equations agree at $r=R$, therefore when greather than or equal to and less than and equal to, the answer also works as $r\to0$ or $r\to\infty$.
+  \subsubsection{Example 4 (Gauss's Law with Conductors)}:
+  Let's consider 2 large conductivity plates that are side by side. Lets put $\pm Q$ on both of the conductivity plates.
+  \begin{align*}
+    \oint\vec{E}\cdot d\vec{a}&=\frac{q_{enc}}{\epsilon_0}\\
+    \int\vec{E}d\vec{a}_{right}+\int\vec{E}d\vec{a}_{left}+\int\vec{E}d\vec{a}_{top}&+\int\vec{E}d\vec{a}_{bottom}+\int\vec{E}d\vec{a}_{top}+\int\vec{E}d\vec{a}_front\\
+    \int\vec{E}d\vec{a}_{right}+\int\vec{E}d\vec{a}_{left}&=\frac{q_{enc}}{\epsilon_0}\\
+    E_a+E_a&=\frac{q_{enc}}{\epsilon_0} \text{ Surface charge density}\\
+    2E_a&=\frac{\sigma a}{\epsilon_0}\hat{i} \text{ Between plates}\\
+    \vec{E}&=\frac{\sigma}{2\epsilon_0}\hat{i} \text{ left of the plates}\\
+    \shortintertext{Now for the right plate:}\\
+  \end{align*}
+
+
+
+  % Notes from 10.05.2020
+  \newpage
+  \subsection{Electric Potential}
+  \subsubsection{Example 1}
+  Find $\vec{E}$ above a disk of charge distribution that is uniform. the disk has radius (R) and total charge (Q). Let's find V then $\vec{E}$
+  \begin{align*}
+    dV&=\frac{1}{4\pi\epsilon_0}\frac{dq}{r}\\
+    \shortintertext{The charge distribution is $\sigma=\frac{Q}{\pi R^2}$}\\
+    dq&=\sigma dA\\
+    &=\sigma 2\pi rdr\\
+    \shortintertext{This r is not the same r as before, so we will call them r'}\\
+    &=\sigma 2\pi r'dr'\\
+    dV&=\frac{1}{4\pi\epsilon_0}\frac{\sigma 2\pi r'dr'}{\sqrt{z^2+r'^2}}\\
+    V&=\frac{1}{4\pi\epsilon_0}2\pi\sigma\int_0^R\frac{r'dr'}{\sqrt{z^2+r'^2}}\\
+    V&=\frac{1}{4\pi\epsilon_0}2\pi\sigma\sqrt{z^2+r'^2}\Big|_{r'=0}^{r'=R}\\
+    \alignedbox{V}{=\frac{1}{4\pi\epsilon_0}2\pi\sigma\left[\sqrt{z^2+R^2}-z\right]}
+    \shortintertext{Now let's find $\vec{E}$}\\
+    E_x&=-\frac{\partial}{\partial x}V=0\\
+    E_y&=\frac{-\partial}{\partial y}V=0\\
+    E_z&=\frac{-\partial}{\partial z}V = -\frac{1}{4\pi\epsilon_0}2\pi\sigma\left[\frac{1}{2}(z^2+R^2)^{\frac{-1}{2}}2z-1\right]\\
+    \alignedbox{\vec{E}}{=\frac{1}{4\pi\epsilon_0}2\pi\sigma\left[1-\frac{z}{\sqrt{z^2+R^2}}\hat{K}\right]}\\
+  \end{align*}
+  What does it mean to have potential charge? Potential doesn't have a proper value. Defining a reference point for V. $E_s = -\frac{\partial}{\partial s}V$. Consider V and $V+V_0$ where $V_0$ is a constant. We get the same $\vec{E}$ value. $E_s=-\frac{\partial}{\partial s}V=\frac{-\partial}{\partial s}(V+v_0)$. This is analogous to choosing an origin. For example, if you are going to calculate the velocity of a marker hitting the ground, you have to keep track of position so you must choose an origin. This is the same way that V is chosen when doing these equations. We need to choose where $V=0$. We choose $V=0$ at infinity. Recall that $V=\frac{1}{4\pi\epsilon_0}\frac{q}{r}$.
+  \subsection{Electrostatic Potential Energy}
+   Electric forces are conservative. This doesn't mean not progressive, it means that they conserve energy. We can do these calculations using energy alone, similar to gravity or $MgH=\frac{1}{2}mv^2$. The law of energy conservation is $\Delta K+\Delta U=0$. Energy is not always conserved though. One physics 103 example is friction (drag). Disipative forces are also a good example of ways energy is not fully conserved. Energy is not lost, it is just converted from translational energy to heat energy. Macroscopically, the energy is not conserved, but at a microscopic level, the energy is fully conserved. We will not consider disipative forces in this course. This means that we can use the law of energy conservation ($\Delta K+\Delta U=0$). We've said previously that the $U=QV$. Very similar to $\vec{F}=Q\vec{E}$.
+  \subsubsection{Example 1}
+  Charge $Q_1=6\mu C$ and $Q_2=4\mu C$ are released from rest at a distance apart of $l=10cm$. Find their final speeds $v_1$ and $v_2$. The forces of point $Q_1$ and $Q_2$ are going to exert forces away from each other. It is possible to take a force approach to this problem, but as they move apart, their acceleration changes. This makes the problem much more difficult, but you can do an energy approach because the stages in between do not matter within this approach. We will solve this using energy.
+  \begin{align*}
+    \Delta K+\Delta U &=0\\
+    K_1-K_0+U_1-U_2&=0\\
+    \shortintertext{We have to change either $Q_1$ and $Q_2$ or change $K_0$ and $K_1$ because they don't mean the same thing. We are going to change Q to be $Q_A$ and $Q_B$. Initially, their kinetic energy is zero:}
+    K_1+U_1-U_0&=0\\
+    \left(\frac{1}{2}m_Av_a^2+\frac{1}{2}m_bv_b^2\right)+\frac{1}{4\pi\epsilon_0}\frac{Q_AQ_B}{r_{AB}}-\frac{1}{4\pi\epsilon_0}\frac{Q_A}{l}&=0\\
+    \shortintertext{Interaction energy is a better term than potential energy. Potential energy goes in pairs. It is how two charges interact, not how a single charge exists. No matter how far apart they are, they will exert a force on each other. $\frac{Q_A}{Q_B}\to0$ because $r_{AB}\to 0$}\\
+    \frac{1}{2}m_Av_A^2+\frac{1}{2}m_Bv_B^2&=\frac{1}{4\pi\epsilon_0}\frac{Q_AQ_B}{l}\\
+    \shortintertext{Let $M_A=M_B=15g$}\\
+    \shortintertext{In this system, $\vec{F_{AB}}=-\vec{F_{AB}}$ Also there are no external forces acting so,}\\
+    \vec{F}_{net}&=\vec{F}_{AB}+\vec{F}_{BA}=0=\frac{d}{dt}\vec{P}\\
+    \Delta P_{01}&=0=P_1-P_0\\
+    0&=m_Av_A+m_Bv_B\\
+    \to v_A^2&=V_B^2\frac{m_B^2}{m_A^2}\\
+    \to \frac{1}{2}m_A\left[v_B^2\frac{m_B^2}{m_A^2}\right]+\frac{1}{2}m_Bv_B^2&=\frac{1}{4\pi\epsilon_0}\frac{Q_AQ_B}{l}\\
+    \frac{1}{2}v_B^2\left[\frac{m_B^2}{m_A}+m_B\right]&=\frac{1}{4\pi\epsilon_0}\frac{Q_AQ_B}{l}\\
+    m_bv_B^2&=\frac{1}{4\pi\epsilon_0}\frac{Q_AQ_B}{l}\\
+    \alignedbox{v_b}{=\sqrt{\frac{1}{m_b}\frac{1}{4\pi\epsilon_0}\frac{Q_AQ_B}{l}}}\\
+    v_a&=-v_B\frac{m_B}{m_A}\\
+    \alignedbox{v_A}{=-v_B}\\
+  \end{align*}
+  \newpage

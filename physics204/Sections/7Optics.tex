@@ -1,0 +1,350 @@
+\section{Optics}
+    \subsection{Traveling Waves}
+    Let's first just consider a sine wave. We see that $y=sin(x)$. Let's say that the y-axis is the vertical displacement vertically, and x-axis is the horizontal displacement. The amplitude is $y_0$ and $-y_0$. Our original equation needs a few fixes. 
+    \begin{align*}
+        y&=y_0sin(x)\\
+        \shortintertext{Because you cannot take the sin of something in meters, we need to change this to be an angle. Pme full oscilation coresponds to $2\pi rad$ or $\lambda$ distance}\\
+        y&=y_0sin\left(2\pi\frac{x}{\lambda}\right)\\
+        \shortintertext{Sometimes we use the parameter called the wave number:}\\
+        k&=\frac{2\pi}{\lambda}\\
+        y&=y_0sin(kx)
+    \end{align*}
+    What if also the wave moves to the right at speed $v$ (figure 6.16)? Let's take advantage of inertial frames. Let the prime axis ($x'$ and $y'$) travel \underline{with} the wave. In the prime frame, $v'=0$. We can write $y'=y_0'sin(kx')$. Now we want to get $y$ based on $y'$. We can see that $y_0=y'_0$. What about $x$ and $x'$?
+    \begin{align*}
+        \Delta x&=v\Delta t=v(t-0)\\
+        x-x'&=vt\\
+        \shortintertext{Both sides of this equation provide a positive displacement. And now to get $y$ from $y'$, we will sub out x' for x.}
+        y'&=y_0sin(kx')\\
+        &=y_0sin(kx')\\
+        y&=y_0sin(k(x-vt))\\
+        y&=y_0sin(kx-kvt)\\
+        \shortintertext{Let's look at $kv$}\\
+        \to kv&=\frac{2\pi}{\lambda}v\\
+        &=\frac{2\pi}{\lambda}\frac{\lambda}{T}\\
+        &=\frac{2\pi}{T}\\
+        y&=y_0sin\left(\frac{2\pi}{\lambda}x-\frac{2\pi}{T}t\right)\\
+        \shortintertext{Notice that $\frac{2\pi}{T}=2\pi f=\omega$ Where $\omega$ is the angular frequency.}\\
+        y&=y_0sin(kx-\omega t)\\
+        \shortintertext{Recall from 1D kinematics: $x=x_0+v_0t+\frac{1}{2}a_xt^2$}
+        \shortintertext{We will add a phase constant $\Phi_0$}\\
+        \to y(x,t)&=y_0sin(kx-wt+\phi_0)
+        \shortintertext{The total phase is:}\\
+        \phi&=kx-\omega t+\phi_0\\
+    \end{align*}
+    \subsubsection{Example 1}
+    The following $\vec{E}$ and $\vec{B}$ fields satisfy this set of four equations (figure 7.1)
+    \begin{align*}
+        \vec{E}&=E_0sin(kz-\omega t)\hat{i}\\
+        \vec{B}1&=B_0sin(kz-\omega t)\hat{j}\\
+        \shortintertext{The pointing vector tells us the direction and magnitude of this combined electromagnetic wave. We must cross $\vec{B}$ and $\vec{E}$ in order to get the correct direction. In this case we are going to to $\vec{E}\times\vec{B}$}\\
+        \vec{S}&\approx\vec{E}\times\vec{B}\\
+        \shortintertext{In order to make this an equality we must add $\frac{1}{\mu_0}$.}\\
+        \alignedbox{\vec{S}}{=\frac{1}{\mu_0}\vec{E}\times\vec{B}}\\
+        \shortintertext{This means that electric fields do not need a median in order to move. Now let's figure out how fast this electromagnetic wave moves. We recently saw in class that $kv=\omega$. For this case we do find that $v=\frac{\omega}{k}=\frac{1}{\sqrt{\mu_0\epsilon_0}}$. It was immediately noticed that light traveled at exactly this value. This is denoted as:}\\
+        c&=\frac{1}{\sqrt{\mu_0\epsilon_0}}\approx3\times10^8\frac{m}{s}\\
+        \shortintertext{It turns out that light is an electromagnetic wave! Optics is the applied study of electromagnetic waves.}
+    \end{align*}
+
+
+    \subsection{Electromagnetic Spectrum}
+    For light,
+    \begin{align*}
+        c=\frac{\omega}{k}=\frac{2\pi f}{\frac{2\pi}{\lambda}}\\
+        c=\lambda f\\
+        \shortintertext{Notice that we can change the wavelength or the frequency but the product must result in c. This gives us a spectrum or wavelengths we can choose.}
+    \end{align*}
+    In terms of wavelength, humans can see from violet $(\sim400nm)$ up to red $(\sim600nm)$.  In terms of frequency, red is about $1.21\times10^34$ and violet is around $7.86\times10^31$
+
+
+    \subsection{Creating EM waves}
+    Figure 7.2. I flip the switch up and change the capacitor to $Q_0=cv_0$. Then I flip the switch to exclude the battery. The new circuit just excludes the battery. The charges are going to flow cw through the inductor, which rejects the current. The charges are going to equilibriate and the current is going to weaken. This is an oscilating current.
+    \begin{align*}
+        \omega&=\frac{1}{\sqrt{lc}}\\
+        f&=\frac{1}{2\pi}\frac{1}{\sqrt{lc}}\\
+    \end{align*}
+
+    
+    \subsection{Pointing Vectors}
+    Recall that was saw that we can make an EM wave with an LC oscillator circuit. The energy stored in an electric field in a capacitor is:
+    \begin{equation*}   
+        U_E=\frac{1}{2}CV^2
+    \end{equation*}
+    The energy density can be written more generally as, where $u_E$ is the energy density and $U_B$ is the potential energy:
+    \begin{equation*}
+        u_E=\frac{U_E}{volume}=\frac{1}{2}\epsilon_0E^2
+    \end{equation*}
+    The energy stored in a magnetic field in an inductor is:
+    \begin{equation*}
+        U_B=\frac{1}{2}LI^2
+    \end{equation*}
+    The energy density can be writted more generally as:
+    \begin{equation*}
+        u_B=\frac{U_B}{volume}=\frac{1}{2}\frac{1}{\mu_0}B^2
+    \end{equation*}
+    Consider figure 7.1 again. On the EM wave, the energy density is:
+    \begin{align*}
+        u&=u_E+u_B\\
+        u&=\frac{1}{2}\epsilon_0E^2+\frac{1}{2}\frac{1}{\mu_0}B^2\\
+        u&=\frac{1}{2}\epsilon_0(cB)^2+\frac{1}{2}\frac{1}{\mu_0}B^2\\
+        \shortintertext{Recall that $c=\frac{1}{\sqrt{\epsilon_0\mu_0}}$}\\
+        u&=\frac{1}{2}\epsilon_0\frac{1}{\epsilon_0}B^2+\frac{1}{2}\frac{1}{\mu_0}B^2\\
+        u&=\frac{1}{\mu_0}B^2\\
+        \shortintertext{Equivalently, because $B=\frac{E}{c}$:}\\
+        \to u&=\frac{1}{\mu_0}\frac{E^2}{c^2}\\
+        &=\frac{1}{\mu_0}\epsilon_0\mu_0E^2\\
+        \alignedbox{u}{=\epsilon_0E^2}\\
+        &\text{Energy density in EM wave}
+    \end{align*}
+    An electromagnetic wave transports energy in its EM fields. This energy transport is called the pointing vector $\vec{S}$.
+    \begin{align*}
+        S&=\frac{energyfluxthroughareaintime\Delta t}{A\Delta t}\\
+        &=\frac{1}{\mu_0}EB\\
+        \alignedbox{\text{In Vector Form, }\vec{s}}{=\frac{1}{\mu_0}\vec{E}\times\vec{B}}
+    \end{align*}
+    $u(z,t)$ is the wave's energy density, so if i want the energy transport in time, we must multiply it by the volume to get energy.
+    \begin{align*}
+        u*volume&=u*A\\
+        S&=\frac{uAc\Delta t}{A\Delta t}=uc\\
+        &=\epsilon_0E^2c=\epsilon_0(cE)(E)
+    \end{align*}
+    When we see light, our eye is detecting the EM waves in the pointing vector. Our brain arranges out the fast oscillations. So essentially, the intensity of light we see is the time-average pointing vector. Intensity is script i:
+    \begin{align*}
+        i&=S_{avg}=\left(\frac{1}{\mu_0}EB\right)_{avg}\\
+        &=\left(\frac{1}{\mu_0}E\frac{E}{c}\right)_{avg}\\
+        &=\frac{1}{\mu_0c}(E^2)_{avg}\\
+        &\neq\frac{1}{\mu_0}(E_{avg})^2\\
+        E&=E_0sin(kz-\omega t)\\
+        E_{avg}&=0\\
+        (E^2)_{avg}&=E_0^2(sin^2(kz-\omega t))_{avg}=\frac{1}{2}E_0^2\\
+        i&=\frac{1}{\mu_0c}\frac{E_0^2}{2}\\
+        \shortintertext{We can also write:}\\
+        \sqrt{(E^2)}_{avg}&=E_{rms}\\
+        E_{rms}&=\frac{E_0}{\sqrt{2}}
+    \end{align*}
+    More on intensity. The general definition of intensity is:
+    \begin{equation*}
+        \mathscr{I}=\frac{P}{A}
+    \end{equation*}
+    Light has no mass, and there is no mass in electromagnetic fields. Although it doesn't have math, it had momentum and pressure. Radiation pressure $(P_{rad}$):
+    % First PRAD below is power radiation, after \frac{F_{rad}c}{A} P_rad changes to rad pressure
+    \begin{align*}
+        P_{rad}&=\frac{dW}{d}=\frac{\vec{F_rad}\cdot d\vec{z}}{dt}=\frac{F_{rad}dz}{dt}\\
+        P_{rad}&=F_{rad}c\\
+        \mathscr{I}&=\frac{P}{A}\\
+        &=\frac{F_{rad}c}{A}\\
+        &=\mathscr{P}_{rad}c\\
+        \to P_{rad}&=\frac{\mathscr{I}}{c}\\
+    \end{align*}
+    Note: $F=ma$ does not apply here, but Newton's second law, $\vec{F}_{net}=\frac{d}{dt}\vec{p}$. For a massive object,
+    \begin{align*}
+        \vec{p}&=m\vec{v}\\
+        \vec{F}_{net}&=\frac{d}{dt}(m\vec{v})\\
+        &=m\frac{d}{dt}\vec{v}\\
+        &=m\vec{a}\\
+    \end{align*}
+    Here, we do not have mass in the EM wave. We cannot use $\vec{F}=m\vec{a}$ in any calculations.\newline\newline
+    Let's consider an EM wave that is incident on a surface. How much force will be exerted on the surface when the wave hits it? This depends on whether the wave is absorbed or reflected.
+    \begin{align*}
+        \vec{F}&=\frac{\Delta \vec{p}}{\Delta t}\\
+        \shortintertext{If the wave is reflected, how must $\Delta\vec{p}$ look? Let's call the initial momentum $\vec{p}_0$.}\\
+        \Delta\vec{p}&=\vec{p}_+-\vec{p}_0\\
+        &=-2\vec{p}_0\\
+        \shortintertext{By contrast, during an absorbtion,}
+        \Delta\vec{p}&=\vec{p}_f-\vec{p}_i\\
+        \Delta\vec{p}&=-\vec{p}_0\\
+    \end{align*}
+    With this, consider:
+    \begin{align*}
+        \mathscr{P}_{rad}&=\frac{\mathscr{I}}{c}\\
+        \frac{F_{rad}}{A}&=\frac{\mathscr{I}}{c}\\
+        \alignedbox{F_{rad}}{=\frac{\mathscr{I}A}{c}=\frac{S_{avg}A}{c}\text{ Absorbtion}}\\
+        \shortintertext{For reflection we can just update the derivation:}\\
+        \alignedbox{F_{rad}}{=2\frac{\mathscr{I}A}{c}=2\frac{S_{avg}A}{c}\text{Reflection}}\\
+    \end{align*}
+    If you would like to use EM waves to exert a force on something, it is twice as efficient to have the wave reflect instead of absorb. For example, a solar sail. Consider a satalite in space that has a solar sail that is being pushed by the electromagnetic waves of the sun. The sunlight will exert a force with reflection. Keep in mind that $A$ is the sail's cross sectional area.
+    \begin{align*}
+        F_{rad}&=2\frac{\mathscr{I}A}{c}\\
+        \shortintertext{This is exerted on the sail}\\
+        2\frac{\mathscr{I}A}{c}&=ma\\
+        a&=\frac{2\mathscr{I}A}{mc}\\
+    \end{align*}
+
+
+    \subsection{Polarization of Light}
+    With a normal electromagnetic wave, $\vec{E}=E\hat{i}=E_0sin(kz-\omega t+\mathscr{P}_0)\vec{i}$ and $\vec{B}=B\hat{j}=B_0sin(kz-\omega t+\mathscr{P}_0)\hat{j}$. When such a wave $\left(\vec{S}=\frac{1}{\mu_0}\vec{E}\times\vec{B}\right)$ reaches a surface, that surface can polarize the light. Light from the sun and lightbulds are unpolarized. A \underline{polaroid} is a thin material that polarizes light. It does so by building long parallel chains of molecules. When sunlight reflects of the road, it is largely polarized in plane with the road. So windshields are polarized vertically to block thin horizontal glare.
+    \subsubsection{Example 1}
+    This is an intensity example. A $18W$ light bulb is 1m away from a tennis ball (diameter of 12cm). How much energy has the tennis ball absorbed. Assume that the ball absorbs 70 percent of incident energy (figure 7.3). Let's assume the light bulb is isotropic (the same in all directions). Let's assume theres no reflection off the table for simplicity. How do we determine how much light goes towards the ball? First lets determine which variables cover which units. r is going to be the distance from the ball, and $r_{ball}$ is the radius of the ball. $P_{light} = 18W$, $r=1m$, $r_{ball}=6cm=0.06m$, $t=1hr=3600s$. More generally, let's say that $P_{light}=P_{src}=18W$. First we need to determine the amount of power incident on the ball ("absorbed") is $P_{inc}=P_{src}\frac{a_{ball}}{a_{shell}}$. This is where $a_{ball}$ is the cross sectional area and $a_{shell}$ is the surface area of the sphere.
+    \begin{align*}
+        P_{inc}&=P_{src}\frac{a_{ball}}{a_{shell}}\\
+        &=P_{src}\frac{\pi r_{ball}^2}{4\pi r^2}\\
+        \alignedbox{P_{inc}}{=\frac{1}{4}P_{src}\frac{r_{ball}^2}{r^2}}\\
+        \shortintertext{This is the power incident on the tennis ball, but how intense is the light at the tennis ball?}\\
+        \mathscr{I}_{attheball}=\frac{P_{src}}{A_{shellattheball}}=\frac{P_{src}}{4\pi r^2}\\
+        \shortintertext{Notice that $P_{inc}=\mathscr{I}_{src}a_{ball}$. The energy absorbed in one hour is $\mathscr{E}=P_{inc}t$}\\
+        \mathscr{E}&=\frac{0.7}{4}P_{src}\frac{r_{ball}^2}{r^2}t\\
+        \mathscr{E}&=\frac{0.7}{4}(18W)\frac{(0.6m)^2}{(1m)^2}(3600s)\\
+        \alignedbox{\mathscr{E}}{=40.8J}\\
+    \end{align*}
+
+
+    \subsection{Geometric or Ray Optics}
+    Reflection: consider a bullet. If we shoot a gun such that it hits the floor, it will bounce back (reflect off the surface) at a 90 degree angle from the angle it came in at. This is due to Newton's second law, every action must have an equal and opposite reaction (figure 7.4).
+    \begin{align*}
+        \vec{F}&=m\vec{a}\\
+        \vec{F}&=\frac{\Delta\vec{p}}{\Delta t}\\
+    \end{align*}
+    The law of reflection states that $\theta_1=\theta_1'$. Let's now consider light incident on a still surface of water (figure 7.5). The law of refraction is known as snell's law:
+    \begin{align*}
+        n_1sin\theta_1&=n_2sin\theta_2\\
+        \shortintertext{n is the index of refraction. The value of n depends on the medium}\\
+        n&=\frac{c}{v}\\
+        \shortintertext{For gasses a good approximation for n is 1. This also applies in a vaccum}\\
+        n_{water}&=1.333\\
+        n_{diamonds}&=2.42\\
+    \end{align*}
+    The incident angle at which light will totally internally reflect is called the critical angle $(\theta_c)$. Now we are going to figure out what $\theta_c$ is.
+    \begin{align*}
+        n_1sin\theta_c&=n_2sin90^o\\
+        \theta_c&=arcsin\frac{n_2}{n_1}\\
+        \shortintertext{For diamond to air,}\\
+        \theta_c&=arcsin\frac{1}{2.42}\\
+        &=24.4\si{\degree}\\
+    \end{align*}
+    A great application of this idea is fiber optic cables. For wavelets in Refraction we will wait some time $(\Delta t)$ for the wavelength to travel into the water. Keep in mind that light travels faster in air than in water.
+
+
+    \subsection{Thin Lens Refraction}
+    Look at figure 7.7. Here are the rules for ray diagrams (thin lenses):
+    \begin{itemize}
+        \item A raythrough the center of the lenz from the object goes straight through the lens.
+        \item Parallel rays go through the focal point.
+    \end{itemize}
+    The crossing point from any two rays gives the image location. Real images are inverted. The thin lens equation is the following:
+    \begin{equation*}
+        \frac{1}{f}=\frac{1}{d_0}+\frac{1}{d_i}
+    \end{equation*}
+    For this problem, let's find $d_i$.
+    \begin{align*}
+        \frac{1}{f}-\frac{1}{d_0}&=\frac{1}{d_i}\\
+        d_i&=\left(\frac{1}{f}-\frac{1}{d_0}\right)^{-1}\\
+        &=\left(\frac{1}{f}+\frac{1}{-d_0}\right)^{-1}\\
+        &=\frac{f(-d_0)}{f+(-d_0)}\\
+        d_i&=\frac{fd_0}{d_0-f}\\
+        &=\frac{(15cm)(46cm)}{46cm-15cm}=22.3cm\\
+    \end{align*}
+    With my ray diagram, I get 21.5cm, which is pretty close to 22.3cm
+    \subsubsection{Example 1}
+    Here $f=15cm$ and $d_0=10cm$. This is figure 7.8. This gives is a virtual image. Virtual images are upright and cannot be seen/projected on a screen. Again, $\frac{1}{f}=\frac{1}{d_0}+\frac{1}{d_i}$ gives:
+    \begin{align*}
+        d_i&=\frac{fd_0}{d_0-f}\\
+        d_i&=\frac{(15cm)(10)}{(10cm)-(15cm)}=-30cm
+    \end{align*}
+    By hand on the board, we got -33cm. With a pen on gridpaper, we should be within 0.5cm.
+    \newline\newline
+    The ratio of image height to object (with a minus sign) is called magnification.
+    \begin{equation*}
+        m=\frac{h_i}{h_0}=\frac{-d_i}{d_0}
+    \end{equation*}
+    Here we have $m=\frac{h_i}{h_0}=\frac{37cm}{11.5cm}=3.2$ also, if we calculate using $d_i$ and $d_0$, $m=-\frac{-33cm}{10cm}=3.3$
+    \newline\newline
+    Diverging lens ray diagram (figure 7.9). Must treat f as negative. 
+    \begin{align*}
+        d_i=\frac{fd_0}{d_0-f}=\frac{(-15cm)(47cm)}{47cm-(-15cm)}
+    \end{align*}
+    I measure -11.4cm. This matches exactly. Now to calculate the magnification:
+    \begin{align*}
+        m&=\frac{h_i}{h_0}=\frac{-d_i}{d_0}\\
+        &=\frac{2.5cm}{10cm}\text{ or }-\frac{-11.4cm}{47cm}\\
+        &= 0.25
+    \end{align*}
+    
+    \subsection{Wave Interference}
+    Let's recall from last class that we treated light as particle-like. For example, ray tracing. However at times, light acts like a wave. For context, let's consider water waves. Both waterwaves and light waves have interference. Let's think about an interferometer (figure 7.10). The interference equation is the following:
+    \begin{equation*}
+        differenceinpathlength=integernumberof\lambda s
+    \end{equation*}
+    For our laser interferometer, this equation will give constructive interference.
+    \begin{equation*}
+        2d_1-2d_2=m\lambda
+    \end{equation*}
+    Where $m$ is the integer from above. Now for destructive interference:
+    \begin{align*}
+        2d_1-2d_2=m\lambda+\frac{1}{2}\lambda\\
+        2d_1-2d_2=\left(m+\frac{1}{2}\right)\lambda
+    \end{align*}
+    let's discuss more of what happens at an interface. Consider again light refracting from air to water. We know that $n_{air}=1$ and $n_{water}=1.33$. $n=\frac{c}{v}$. In waves, $v=\lambda f$. If in air or a vacuum, $c=\lambda f$, but in water $v=\lambda f$. Either $\lambda$ or $f$ needs to change because of the change in medium.
+    \begin{align*}
+        \frac{c}{n}&=\frac{\lambda f}{n}\\
+        \shortintertext{Do we want $\frac{c}{n}=\frac{\lambda}{n}f$ or $\frac{c}{n}=\lambda\frac{f}{n}$?}\\
+        \shortintertext{We cannot have the second option because frequency \underline{must} be constant across the boundary. There is no way for the frequency to change as it goes through an interface. If this were the case then the frequency would increase when it comes back in contact with air.}
+    \end{align*}
+    \subsubsection{Example 2}
+    This involes thin film interference. On a soap bubble there are many different colors that reflect off of the bubble. We are going to assume that the soapy water has $n= 1.4$. Some of the light will reflect and some of the light will refract and then reflect off the inner surface. Recall that the interference equation is $difinpathlength=integernumberof\lambda s$.
+    \begin{align*}
+        2t&=m\lambda\\
+        \shortintertext{This is on the right track but an important detail is missing.}
+    \end{align*}
+    In order to determine what this important detail thats missing is, we must consider first a wave phase shift. With a heavy rope knotted with a light rope, we can see that the wave from the rope is refracted, not reflected.\newline\newline
+    The following is true for light:
+    \begin{itemize}
+        \item From high n to low n, there is no phase change upon reflection.
+        \item From low n to high n, there is a $180\si{\degree}$ or $\pi rad$ or flip in phase, or $\frac{1}{2}\lambda$
+        \item For refraction/transmission, there is never a phase change.
+    \end{itemize}
+    Earlier, we found $2t=m\lambda$. But we must still account for phase flips for reflections.
+    \begin{align*}
+        difinpathlength&=integernumberof\lambda s\\
+        2t+\frac{1}{2}\lambda&=m\lambda\\
+        \shortintertext{Because the changeing of the color of the light occurs within the soapy bubble, we are going to use the wavelength of light in soapy water on both sides of our equation.}
+        \to 2t+\frac{1}{2}\frac{\lambda_0}{n_{s.w.}}&=m\frac{\lambda_0}{n_{s.w.}}\\
+        2t&=\left(m-\frac{1}{2}\right)\frac{\lambda_0}{n_{s.w.}}\text{ constructive}\\
+        2t&=\left(m-\frac{1}{2}\right)\frac{\lambda_0}{n_{s.w.}}+\frac{1}{2}\frac{\lambda_0}{n_{s.w.}}\\
+        2t&=m\frac{\lambda_0}{n_{s.w.}}\text{ destructive}
+        \shortintertext{Both the constructive and destructive are for $m=1,2,3,4,$.}
+    \end{align*}
+
+    \subsection{Slit Interference}
+    For a single slit diffraction, $\frac{a}{2}sin\theta=m\lambda$ for construction, $m=0,1,2$. For destructino, it is $asin\theta=m\lambda$, $m=0,1,2$. For double slit interference, the contructive equation is $dsin\theta=m\lambda$ for $m=0,1,2$. Destructive is $dsin\theta=\left(m+\frac{1}{2}\right)\lambda$. Notice that $sin\theta=\frac{y_m}{\sqrt{y_m^2+D^2}}$.
+
+    \subsection{Crystallography}
+    Also called Xr-ray diffraction or bragg diffration. The following is a basic crystal (figure 7.11). 
+    \begin{align*}
+        differenceinpathlength&=intnum\lambda\\
+        \alignedbox{2dsin\theta}{=m\lambda}
+    \end{align*}
+    \subsection{Electron Diffraction}
+    Consider a single-slit setup. When shooting electrons at the slit, we also see an interference pattern. Electrons, then must also have wave characteristics. deBroglie:
+    \begin{equation*}
+        \lambda_c=\frac{h}{p}
+    \end{equation*}
+    Where $h$ is the Planchs constant.
+
+    \subsection{Special Relativity}
+    \begin{itemize}
+        \item 1860s Maxwell unifies electricity and magnetism.
+        \item Light is an electromagnetic wave
+        \item Waves require a medium
+        \item In 1877, Nichelsen and mosley try to measure the luminous ether, the medium in which light must travel. They measured no change.
+    \end{itemize}
+    Einstein came up with two postulates to try to understand everythign that doesn't make sense (1905). The Principle of Relativity: The laws of physice are the same in all inertial (non-accelerating) frames. Invariance of c. Signals don't arrive instantaneously but propogate. Thus, there must be a maximum universal speed.
+    \subsubsection{Example}
+    Let's look at a light clock (figure 7.12). The left side of the figure is when the light clock is at rest. We can derive that $t_0=\frac{2L_0}{c}$. The right side of the figure is when the light clock is at speed. We know that the light is moving at $\sqrt{c^2 + u^2}$. Now let's put this into terms of light:
+    \begin{align*}
+        t&=\frac{2\sqrt{L_0^2+\left(\frac{ut}{2}\right)^2}}{\sqrt{c^2+u^2}}\\
+        &=\frac{2\sqrt{\left(\frac{ct}{2}\right)^2+\left(\frac{ut}{2}\right)^2}}{\sqrt{c^2+u^2}}\\
+        &=\frac{2\sqrt{\left(\frac{1}{2}\right)^2\left[(ct)^2+(ut)^2\right]}}{\sqrt{c^2+u^2}}\\
+        t&=\frac{t\sqrt{c^2+u^2}}{\sqrt{c^2+u^2}}\\
+        t&=t\\
+        \shortintertext{However, this is \underline{NOT} reality. From a special relativity (SR) approach things are different. Light always travels at c in \underline{all} inertial reference frames. We can use the same figure as before but we much do a different analysis. Becuase the speed of light is always c, our analysis triangles from before does not work. The way the velocity vectors combine is differnet.}\\
+        t&=\frac{2\sqrt{L_0^2+\left(\frac{ut}{2}\right)^2}}{c}\\
+        t&=\frac{2\left(\frac{ct_0}{2}\right)^2\left(\frac{ut}{2}\right)^2}{c}\\
+        (ct)^2&=(ct_0)^2+(ut)^2\\
+        (ct)^2-(ut)^2&=(ct_0)^2\\
+        t^2(c^2-u^2)&=(ct_0)^2\\
+        t^2&=\frac{(ct_0)^2}{c^2-u^2}\\
+        t&=\frac{ct_0}{\sqrt{c^2-u^2}}\\
+        \alignedbox{t}{=t_0\frac{1}{\sqrt{1-\frac{u^2}{c^2}}}}
+        \shortintertext{This is called Time Dilation. Time panes move slowly for moving objects.}
+    \end{align*}
+    Now let's say the clokc ticks at rest with a time of $t_0=1sec$. In order to make the clock tick one percent slower, that is, $t=1.01sec$, the clock must move at a speed of $42,000,000\frac{m}{s}$!
+\newpage
