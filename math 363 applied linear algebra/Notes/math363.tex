@@ -1,0 +1,63 @@
+% The project can be found at 
+% https://github.com/dev-aditya/LaTeX-template
+
+
+\documentclass{package/notes}
+
+%%%%%%%%%% Default Package %%%%%%%%%%%%%
+\usepackage{package/color-env}
+%%%%%%%%%% %%%%%%%%%%%%%%% %%%%%%%%%%%%%
+
+%%%%%%%%%% Required Packages %%%%%%%%%%%%%
+% \usepackage{background}
+\usepackage[object=vectorian]{pgfornament} %% used in title.tex
+\usepackage{calligra} %%% (optional) to make the Title text beautiful 
+
+%%%%%% Optional Packages %%%%%%%
+\usepackage{lettrine} %% for nice looking 
+\usepackage{GoudyIn} %% first Letter of the paragraph
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{lipsum}  %% for dummy text 
+\usepackage{amssymb,amsmath,amsfonts}  %%% for maths
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{subcaption} %% for subfigures
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\LettrineFontHook}{\color{black}\GoudyInfamily{}}
+\LettrineTextFont{\itshape}
+\setcounter{DefaultLines}{3}%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% Bibliography %%%%%%%%%
+% Required packages are included in notes class
+% Can be tweaked in the notes.cls file itself
+
+\addbibresource{resource/references.bib}
+
+\includeonly{chapters/2.tex}
+
+\begin{document}
+
+\newpage
+
+\include{package/title-page.tex}
+\tableofcontents
+
+\include{chapters/1.tex}
+\include{chapters/2.tex}
+\include{chapters/3.tex}
+\include{chapters/4.tex}
+\include{chapters/5.tex}
+\include{chapters/6.tex}
+\include{chapters/7.tex}
+\include{chapters/8.tex}
+\include{chapters/9.tex}
+\include{chapters/10.tex}
+\pagebreak
+
+\medskip
+
+\printbibliography[heading=bibintoc,title={\centering Bibliography}]
+
+\end{document}
