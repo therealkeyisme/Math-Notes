@@ -1,7 +1,3 @@
-% The project can be found at 
-% https://github.com/dev-aditya/LaTeX-template
-
-
 \documentclass{package/notes}
 
 %%%%%%%%%% Default Package %%%%%%%%%%%%%
@@ -9,36 +5,36 @@
 %%%%%%%%%% %%%%%%%%%%%%%%% %%%%%%%%%%%%%
 
 %%%%%%%%%% Required Packages %%%%%%%%%%%%%
-% \usepackage{background}
+\usepackage{background}
 \usepackage[object=vectorian]{pgfornament} %% used in title.tex
 \usepackage{calligra} %%% (optional) to make the Title text beautiful 
-
-%%%%%% Optional Packages %%%%%%%
-\usepackage{lettrine} %% for nice looking 
-\usepackage{GoudyIn} %% first Letter of the paragraph
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{lipsum}  %% for dummy text 
 \usepackage{amssymb,amsmath,amsfonts}  %%% for maths
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{subcaption} %% for subfigures
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Optional Packages %%%%%%%
+\usepackage{lettrine} %% for nice looking 
+\usepackage{GoudyIn} %% first Letter of the paragraph
+
 \renewcommand{\LettrineFontHook}{\color{black}\GoudyInfamily{}}
-\LettrineTextFont{\itshape}
+% \LettrineTextFont{\itshape}
 \setcounter{DefaultLines}{3}%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fourier-orns}
 
-%%%% Bibliography %%%%%%%%%
-% Required packages are included in notes class
-% Can be tweaked in the notes.cls file itself
+\backgroundsetup{contents={}}
 
-\addbibresource{resource/references.bib}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand\SmallMatrix[1]{{%
+  \tiny\arraycolsep=0.3\arraycolsep\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}}
 
-\includeonly{chapters/2.tex}
+% \includeonly{chapters/2.tex}
 
 \begin{document}
-
 \newpage
 
 \include{package/title-page.tex}

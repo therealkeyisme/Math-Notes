@@ -10,7 +10,7 @@
 
 `\begin{theorem}` : creates a new theorem within which you can write text and math equations
 
-`\begin{lemma}` : I have no clue what this is
+`\begin{lemma}` : creates a new lemma
 
 `\begin{proposition}` : creates a new proposition within which you can write text and math equations
 
