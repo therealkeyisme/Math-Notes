@@ -2,12 +2,287 @@
 
 \section{Inner Products}
 
+	Dot products are a form of inner product.
+
+	Let's apply the dot product to the vectors $<v_1,v_2,\ldots,v_n>\cdot<w_1,w_2,\ldots,w_3>$ to show that the dot product is an inner product.
+
+	\begin{equation}
+		=v_1w_1+v_2w_2+\ldots+v_nw_n
+	\end{equation}
+
+	Therefore, $v\times v$ goes to $\R$. So we know that 
+
+	\begin{equation}
+		\vec{v}\cdot\vec{v}=v_1^2+v_2^2+\ldots+v_n^2
+	\end{equation}
+
+	In general, we can assume that $ | | \vec{v} | | = \sqrt{\vec{v}\vec{v}}$. We should also keep in mind that $\vec{v}\cdot\vec{w}= | | \vec{v} | | | | \vec{w} | | \cos\theta$ 
+
+	\begin{definition}
+		AAn inner product of $V$ is a function $<,>:v\times v\to\R$ such that
+
+		\begin{itemize}
+			\item\begin{align}
+					<c\vec{u}+d\vec{v},w> &= c<\vec{u},\vec{v}>+d<\vec{v},\vec{u}>\\
+				<\vec{u},c\vec{v}+d\vec{w}&=c<\vec{u},\vec{v}>+d<\vec{u},\vec{w}>
+			\end{align}
+			\item $<\vec{v},\vec{w}> = <\vec{w}, \vec{v}>$
+			\item $<\vec{v},\vec{v}>\ge_0$ while $<0,0> = \vec{0}$.	
+		\end{itemize}
+	\end{definition}
+
+	A vector space with an inner product is an inner product space.
+
+	\begin{definition}
+		IIf $V$ is an inner product space, then it's magnitude is 
+		
+		\begin{equation}
+			| | \vec{v} | | = \sqrt{<\vec{v},\vec{v}>} 
+		\end{equation}
+	\end{definition}
+
+	Let's take a look at a weighted inner product on $\R^3$. We are going to let $r_1,r_2,r_3>0$. We can define $<\vec{v},\vec{w}>$ as $r_1v_1w_1+r_2v_2w_2+r_3v_3w_3$
+
+	\begin{problem}
+		Let's define $[a,b]\le\R$. Consider $\mathbb{C}^0[a,b]$. This is a vector space. Define 
+		\begin{equation}
+			<f(x),g(x)> = \int_a^bf(x)g(x)dx
+		\end{equation}
+
+		This is an inner product, so we also know that
+
+		\begin{equation}
+			| | f | | = \sqrt{\int_a^b\left(f(x)\right)^2dx}
+		\end{equation}
+
+		This equation is the $L^2$ norm.
+	\end{problem}
+
 \section{Inequalities}
+
+	Recall that $\vec{v}\cdot\vec{w} = | | \vec{v} | | | | \vec{w} | |\cos\theta$, where $\theta$ is the angle between $\vec{v}$ and $\vec{w}$. Now $-1\le\cos\theta\le_1$, so we know that 
+	
+	\begin{equation}
+		| | \vec{v}\cdot\vec{w} | | \le | | \vec{v} | | | | \vec{w} | |
+	\end{equation}
+
+	This is the Cauchy-Shuartz inequality.
+
+	\begin{theorem}
+		FFor any inner product space
+
+		\begin{equation}
+			||<\vec{v},\vec{w}>||\le | | \vec{v}  | | | | \vec{w} | |
+		\end{equation}
+	\end{theorem}
+
+	\begin{definition}
+		IIf $\vec{v},\vec{w}\in V$, we say $\vec{v}$ and $\vec{w}$ are orthogonal if $<\vec{v},\vec{w}> = 0$
+	\end{definition}
+
+	\begin{problem}
+		Let's look at an example of checking orthogonality of two equations $x,x^2-y\in\mathbb{C}^0[0,1]$. In order to do this we need to find the $L^2$ norm of the equations.
+		\begin{align*}
+			\left<x,x^2-\frac{1}{2}\right> &= \int_0^1x\left(x^2-\frac{1}{2}\right)dx\\
+					    &=\int_0^1\left(x^3-\frac{1}{2}x\right)dx\\
+					    &=\left.\frac{1}{4}x^4-\frac{1}{4}x^2\right|_0^1=0
+		.\end{align*}	
+		Because the result of the inner product was zero, we know that $x,x^2-\frac{1}{2}$ are orthogonal in the $L^2$ norm.
+	\end{problem}
+
+	\begin{theorem}
+		TThe triangle inequality states that if $V$ is an inner product space,
+
+		\begin{equation}
+			| | <\vec{v},\vec{w}> | | = | | \vec{v} | | + | | \vec{w} | |
+		\end{equation}
+	\end{theorem}
+
+	Because we know that if we take the dot product of the same vector itself, $<a,b,c>\cdot<a,b,c>$, we get all of the items squared $<a^2,b^2,c^2>$, and because we know that $| | \vec{v} | | = \sqrt{<\vec{v},\vec{v}>}$, we get an idea of size. So we can define the unit ball to be 
+	\begin{equation}
+		\{\vec{v}\in V\Big| | | \vec{v} | | = 1\}		
+	\end{equation}
 
 \section{Norms}
 
+	Equation (3.5) gives us the "size" of $\vec{V}$.
+
+	\begin{definition}
+		AA norm on $V$ is a function $ | | \cdot | |:V\to\R$ such that 
+		\begin{itemize}
+			\item $| | \vec{v} | | = 0$ if and only if $\vec{v}=0$
+			\item $| | c\vec{v} | | = |c|\cdot| | \vec{v} | |$
+			\item $| | \vec{v}+\vec{w} | | \le | | \vec{v} | | + | | \vec{w} | |$
+		\end{itemize}
+
+		If $||<\vec{v},\vec{w}>||\le | | \vec{v}  | | | | \vec{w} | |$, then that is a norm. There are other norms to learn about. 
+			
+	\end{definition}
+
+	\begin{problem}
+		Consider $V=\R^n$. We know that the magnitude of $\vec{V}_p$ is 
+		\begin{equation}
+			\sqrt[p]{|\vec{v_1}|^p+|\vec{v_2}|^p+|\vec{v_3}|^p}.
+		\end{equation}
+		So if $v=\R^2$, $p=2$ we have 
+		\begin{equation}
+			| |<x,y>| | _2=\sqrt{x^2+y^2}. 
+		\end{equation}
+		But if we were to have $p=3$, we would have 
+		\begin{equation}
+			| | <x,y> | |_3=\sqrt[3]{x^3+y^3}
+		\end{equation}
+		
+		In $| | \cdot | |_3$, the size is $\sqrt[3]{3^3+4^3} \approx_4.5$
+	\end{problem}
+
+	In the 4 term, $| | \cdot | |_4$, the unit circle is the $(x,y)$'s such that $\sqrt[4]{x^4\cdot Y_4} =1$
+
+	\begin{equation}
+		\boxed{x^4+y^4=1}
+	\end{equation}
+
+	Another norm on $R^n$ is the super-norm. This is where
+
+	\begin{equation}
+		| |<x_1,x_2,\ldots,x_n>| |_\infty = max\{|x_1|,|x_2|,\ldots,|x_n|\}	
+	\end{equation}
+
+	Here's a quick example: The super-norm for $<3,4>$ is 
+
+	\begin{equation}
+		| | <3,4> | |_\infty=4
+	\end{equation}
+
+	because the maximum value in the set is $4$.
+
+	Something to keep in mind is $| | <x,y> | |=|x|+|y|$.
+
+	\begin{theorem}
+		LLet $| | \cdot | |_A$ and $| | \cdot | |_B$ be two norms on $\R^n$. Then there exists positive numbers $0<c<k$ such that 
+		\begin{equation}
+			c\cdot| | \vec{v} | |_A<| | \vec{v} | |_B<k \cdot | | \vec{v} | |_A
+		\end{equation}
+	\end{theorem}
+		Let's consider $V\in\R^2$. Let's take a look at $| | \cdot | |_2$ and $| | \cdot | | _\infty$. Where $\vec{V}= <v_1,v_2>$.
+
+	\begin{equation}
+		\frac{1}{\sqrt{2} }\cdot | | \vec{v} | |_2\le | | \vec{v} | | _\infty < 1\cdot | | \vec{v} | |_2
+	\end{equation}
+
+	We can also define norms on matrices.
+
+	\begin{theorem}
+		IIf $| | \cdot | |$ is a norm on $\R^2$ and $A$ is an $m\times n$ matrix, then
+
+		\begin{equation}
+			| | A | | = max\{| | A\cdot\vec{u}| | \Big| | |\vec{u} | | = 1
+		\end{equation}
+	\end{theorem}
+
+	These matrix norms satisfy the following:
+
+	\begin{enumerate}
+		\item $| | A\cdot\vec{v} | | \le | | A | | \cdot | | \vec{v} | |$
+		\item $ | | A\cdot B | | \le | | A | | \cdot | | B | |$
+		\item $| | A^k| | \le | | A | | ^k$
+	\end{enumerate}
+
+	Let's take a quick look at $| | A | |_\infty$
+
+	\begin{definition}
+		TThe $i^{th}$ absolute row sum of $A$ is the sum of the absolute values of the entries in the $i^{th}$ row.
+	\end{definition}
+
+	\begin{theorem}
+		y$| | A | |_\infty$ the maximum absolute row sum.
+	\end{theorem}
+
+	Here's an example of using the $| | A | |_\infty$ value. Let $A=\SmallMatrix{-3&2\\5&4}$. We can determine that the maximum absolute row sum of $A$ is 8. This is because we can do 
+
+	\begin{align}
+		|-3|+|2|&=5\\
+		|5|+|3|&=\boxed{8}
+	\end{align}
 \section{Positive Definite Matrices}
 
-\section{Completing the Square}
+	Consider the following two equations:
 
-\section{Complex Vector Spaces}
+	\begin{align}
+		\vec{x}=x_1\vec{e_1}+x_2\vec{e_2}+\ldots+x_n\vec{e_n}\\
+		\vec{y}=y_1\vec{e_1}+y_2\vec{e_2}+\ldots+v_n\vec{e_n}
+	\end{align}
+
+	We can analyze this as 
+
+	\begin{equation}
+		<\vec{x},\vec{y}> = [x_1,x_2,\ldots,x_n]\cdot \begin{bmatrix} k_{11}&\ldots&k_{1n}\\ \vdots&\ddots&\vdots\\ k_{n_1}&\ldots&k_{nn} \end{bmatrix} \begin{bmatrix} y_1\\y_2\\ \vdots \y_n \end{bmatrix} 
+	\end{equation}
+
+	\begin{align}
+		k_{ij}&= <e_i,e_j>\\
+		&=\vec{x}^Tk\vec{y}\\
+		k&=k^T
+	\end{align}
+
+	This means that $k$ is symmetrical across the diagonal.
+
+	\begin{equation}
+		\begin{bmatrix} k_{11}&k_{12}&k_{13}\\ k_{12}&k_{22}&k_{23}\\ k_{13}&k_{23}&k_{33} \end{bmatrix} 
+	\end{equation}
+
+	\begin{definition}
+		AA $n\times n$ matrix $A$ is a symmetrical positive definite matrix if $A=A^{T}$ and $x^{t}k<x>0$.
+	\end{definition}
+
+	\begin{theorem}
+		EEvery inner product on $\R^{n}$ is given by $<x,y> = \vec{x}^{T}k\vec{y}$ where $k$ is a symmetrical positive definite matrix. So $<\vec{x},\vec{y}>$ is a dot product or a weighted product.
+		\begin{align}
+			<\vec{x},\vec{y}> &= \vec{x}^{T}k\vec{y}\\
+			k^{T}&=k\\
+			\vec{v}^{T}k\cdot\vec{v} &>0\\
+			\vec{v}\neq_0
+		\end{align}
+	\end{theorem}
+
+	Let's take a look at an example for this:
+
+	\begin{problem}
+		Let $k=\left[\begin{smallmatrix}2&0\\0&3\end{smallmatrix}\right]$. First we need to check to see if $k^T=k$. By just looking at $k$, we can see that $k^{T}=k$. Next we need to do the following calculation to see if $\left[\begin{smallmatrix}x\\y\end{smallmatrix}\right]$ is the weighted inner product of the matrix $k$.
+
+		\begin{align}
+			\begin{bmatrix} x&y \end{bmatrix} \begin{bmatrix} 2&0\\0&3 \end{bmatrix} \begin{bmatrix} x\\y \end{bmatrix} &= \begin{bmatrix} x&y \end{bmatrix} \begin{bmatrix} 2x\\3x \end{bmatrix} \\
+					 =2x^2+2y^2&>0\\
+			\begin{bmatrix} x\\y \end{bmatrix} &\neq\begin{bmatrix} 0\\0 \end{bmatrix} 
+		\end{align}
+		Therefore we know that 
+	\end{problem}
+
+	\begin{problem}
+		Let's consider the following problem
+
+		\begin{equation}
+			\begin{bmatrix} x&y \end{bmatrix} \begin{bmatrix} 4&-2\\-2&3 \end{bmatrix} \begin{bmatrix} x\\y \end{bmatrix} 
+		\end{equation}
+
+		If we let $A$ be the numerical matrix, we can see that $A^{T}=A$. Let's simplify the equation from before
+
+		\begin{align}
+			\begin{bmatrix} x&y \end{bmatrix} \begin{bmatrix} 4x-2y\\-2x+3y \end{bmatrix}&=4x^2-2xy-2xy+3x^2\\
+					 &=4x^2-4xy+3y^2\\
+			(2x-y)^2+2y^2&>0\begin{bmatrix} x\\y \end{bmatrix} \neq\begin{bmatrix} 0\\0 \end{bmatrix} 
+		\end{align}
+		Now we can see that this is a positive definite matrix.
+	\end{problem}
+	If we are given a symmetric matrix, $k$, the polynomial $x^{T}kx$ is a quadratic form of $k$.
+
+	\begin{problem}
+		Let's consider $k=\begin{bmatrix} 1&-3\\-3&2 \end{bmatrix}$. Let's find the quadratic form of $k$. First we need to write $k$ like so:
+
+		\begin{align}
+			\begin{bmatrix} x&y \end{bmatrix} \begin{bmatrix} 1&-3\\-3&2 \end{bmatrix} \begin{bmatrix} x\\y \end{bmatrix} &=\begin{bmatrix} x&y \end{bmatrix} \begin{bmatrix} x-3y\\-3x+2y \end{bmatrix} \\
+					 &=x^3-3xy-3xy+2y^2\\
+					 &=x^3-6xy+2y^2\\
+		\end{align}
+		 Therefore we know that the quadratic form of $k$ is $x^3-6xy-2y^2$.
+	\end{problem}
