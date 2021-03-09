@@ -1,0 +1,96 @@
+\chapter{Second-order Differential Equations}
+
+\section{General Theory of Homogeneous Linear Equations}
+  The standard form for a general second order ordinary differential equation is
+
+  \begin{equation}
+    x''(t)+p(t)x'(t)+q(t)x(t)=f(t).
+  \end{equation}
+  
+  For us, $p(t)$ and $q(t)$ are typically going to be constants. Also we know that if $f(t)=0$, the equation is homogenous.
+
+  \begin{lemma}
+    GGiven an equation in the form 
+
+    \begin{equation}
+      x''(t)+p(t)x'(t)+q(t)x(t)=0,
+    \end{equation}
+
+    if $x_1(t)$ and $x_2(t)$ are solutions to equation (3.2), then 
+
+    \begin{equation}
+      x(t)=C_1x_1(t)+C_2x_2(t)
+    \end{equation}
+
+    is also a solution to equation (3.1) for all $C_1,C_2$'s. Equation (3.3) is the general solution to a homogeneous ODE
+  \end{lemma}
+
+  Let's take a look at an application of lemma (3.1.1).
+
+  \begin{problem}
+    Consider the equation
+
+    \begin{equation}
+    t^2x'''+2tx''-6x'=0.
+    \end{equation}
+
+    This equation is a third order, linear and homogeneous, but not autonomous ordinary differential equation. Let's put this differential equation into standard form:
+
+    \begin{equation}
+    x''+\frac{2}{t}x''+\frac{6}{t^2}x'=0
+    \end{equation}
+
+    As long as $t_0\neq0$, we have a unique solution if given 3 initial conditions. The domain of this ordinary differential equation is $t>0,t<0$. Earlier, in section 3.1, we showed that $1,t^3,\frac{1}{t^2}$ were all solutions. Because this ordinary differential equation is linear and homogeneous, we know that 
+
+    \begin{equation}
+    x(t)=C_11+C_2t^3+C_3\frac{1}{t^2},
+    \end{equation}
+
+    is also a solution for all $C_1,C_2,C_3$. Just note, equation (3.6) is a linear combination of $1,t^3,\frac{1}{t^2}$. So, this is a \underline{general solution} as long as the functions, $1,t^3,\frac{1}{t^2}$ are all “different” from each other.
+  \end{problem}
+
+  What is "different"? Different means no one function in a set can be written as a linear combination of other functions in the set. Different means that all of the functions are linearly independent. More generally, if 
+
+  \begin{equation}
+    C_1f_1(t)+C_2f_2(t)+\dots+C_nf_n(t)=0
+  \end{equation}
+
+  \begin{theorem}
+    WWe can instead test for linear independence by using the wronskian,
+
+    \begin{equation}
+      w(f_1,f_2)(t)=det\begin{vmatrix}
+        f_1(t)&&f_2(t)\\f'_1(t)&&f'_2(t)\\
+      \end{vmatrix}
+    \end{equation}
+
+    \begin{itemize}
+      \item If $w(t)=0$ for all $t$'s, then $\{f_1,f_2\}$ are linearly dependent.
+      \item If $w(t)=0$ for all $t$'s, then $\{f_1,f_2\}$ are linearly independent.
+    \end{itemize}
+  \end{theorem}
+
+  Now, if we try to use the wronskian on problem 16, we do it like so:
+
+  \begin{align}
+    w(t)=
+    \begin{vmatrix}
+      1&&t^3&&\frac{1}{t^2}\\
+      0&&3t^2&&-\frac{2}{t^2}\\
+      0&&6t&&\frac{6}{t^4}\\
+    \end{vmatrix}\\
+    \to 1\times
+    \begin{vmatrix}
+      3t^2&&-\frac{2}{t^2}\\
+      6t&&\frac{6}{t^4}\\
+    \end{vmatrix}\\
+    =\frac{18}{t^2}+\frac{12}{t^2}=\frac{30}{t^2}\neq0
+  \end{align}
+
+  So we know that $\{1,t^3,\frac{1}{t^3}\}$ are linearly independent. 
+
+\section{Homogeneous Linear Equations with Constant Coefficients}
+
+  \subsection{Second-order Equation with Constant Coefficients}
+
+  \subsection{Equations of Order Greater Than Two}

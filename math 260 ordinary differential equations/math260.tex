@@ -1,7 +1,3 @@
-% The project can be found at 
-% https://github.com/dev-aditya/LaTeX-template
-
-
 \documentclass{package/notes}
 
 %%%%%%%%%% Default Package %%%%%%%%%%%%%
@@ -9,24 +5,30 @@
 %%%%%%%%%% %%%%%%%%%%%%%%% %%%%%%%%%%%%%
 
 %%%%%%%%%% Required Packages %%%%%%%%%%%%%
-% \usepackage{background}
+\usepackage{background}
 \usepackage[object=vectorian]{pgfornament} %% used in title.tex
 \usepackage{calligra} %%% (optional) to make the Title text beautiful 
-
-%%%%%% Optional Packages %%%%%%%
-\usepackage{lettrine} %% for nice looking 
-\usepackage{GoudyIn} %% first Letter of the paragraph
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{lipsum}  %% for dummy text 
 \usepackage{amssymb,amsmath,amsfonts}  %%% for maths
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{subcaption} %% for subfigures
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Optional Packages %%%%%%%
+\usepackage{lettrine} %% for nice looking 
+\usepackage{GoudyIn} %% first Letter of the paragraph
+
 \renewcommand{\LettrineFontHook}{\color{black}\GoudyInfamily{}}
-\LettrineTextFont{\itshape}
+% \LettrineTextFont{\itshape}
 \setcounter{DefaultLines}{3}%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fourier-orns}
+
+\backgroundsetup{contents={}}
+
+% \newcommand{\ornamento}{\vspace{2em}\noindent \textcolor{darkgray}{\hrulefill~ \raisebox{-2.5pt}[10pt][10pt]{\leafright \decofourleft 
+% \decothreeleft  \aldineright \decotwo \floweroneleft \decoone   \floweroneright 
+% \decotwo \aldineleft\decothreeright \decofourright \leafleft} ~  \hrulefill \\ \vspace{2em}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%% Bibliography %%%%%%%%%
@@ -35,7 +37,7 @@
 
 \addbibresource{resource/references.bib}
 
-% \includeonly{package/title-page.tex, chapters/2FirstOrderDifferentials.tex}
+%\includeonly{chapters/3SecondOrderDifferentials.tex}
 
 \begin{document}
 
@@ -48,6 +50,7 @@
 \include{chapters/Theorems.tex}
 \include{chapters/1Introduction.tex}
 \include{chapters/2FirstOrderDifferentials.tex}
+\include{chapters/3SecondOrderDifferentials.tex}
 
 \pagebreak
 

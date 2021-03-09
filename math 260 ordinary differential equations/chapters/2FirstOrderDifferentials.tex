@@ -6,7 +6,7 @@ In this chapter, methods will be given for solving first- order differential equ
   x'=f(t,x)
 \end{equation}
 
-where $f$ denotes an arbitrary function of two variables. To see why such an assumption makes sense,supposed the differential equation is:
+where $f$ denotes an arbitrary function of two variables. To see why such an assumption makes sense, supposed the differential equation is:
 
 \begin{equation}
   (x'(x))^2+4x'(t)+3x(t)=t.
@@ -129,15 +129,14 @@ The material in this chapter will cover several analytic methods for solving fir
     \end{itemize}
   \end{theorem}
 
-\section{}
-\section{}
+\section{}\section{}
 
 \section{Existence and Uniqueness of Initial Value Problems}
 
   Given an initial value problem, how can I know that a solution exists, and if so, the uniqueness of that solution.
 
   \begin{problem}
-    $\frac{dx}{dt}=\sqrt{x}$, $x(0)=0$ has two solutions. These solutions are $x(t)=\frac{t^2}{4}$ and $0$. We can change the initial condition to be $x(0)=5$. we can separate our values to get:
+    $\frac{dx}{dt}=\sqrt{x}$, $x(0)=0$ has two solutions. These solutions are $x(t)=\frac{t^2}{4}$ and $0$. We can change the initial condition to be $x(0)=5$. We can separate our values to get:
 
     \begin{equation}
       x(t) =\left(\frac{t}{2} + \sqrt{5}\right)^2
@@ -167,7 +166,7 @@ The material in this chapter will cover several analytic methods for solving fir
       M(x,y) + N(x,y)\frac{dy}{dx} = 0
     \end{equation}
 
-    Now we ask the question, does $f(x,y)$ exist such that $\frac{\partial F}{\partial x} =  M(x,y)$ and $\frac{\partial F}{\partial y} = N(x,y)$? We can test this by checking to see if we can do the following:
+    Now we ask, does $f(x,y)$ exist such that $\frac{\partial F}{\partial x} =  M(x,y)$ and $\frac{\partial F}{\partial y} = N(x,y)$? We can test this by checking to see if we can do the following:
 
     \begin{equation}
       \frac{\partial^2F}{\partial x\partial y}=\frac{\partial^2 F}{\partial y\partial x}\rightarrow\boxed{\frac{\partial M}{\partial y}=\frac{\partial N}{\partial x}}
@@ -193,7 +192,7 @@ The material in this chapter will cover several analytic methods for solving fir
         \frac{\partial}{\partial y}(2y+4x)\stackrel{?}{=}\frac{\partial}{\partial x}(2x-5y)
       \end{equation}
   
-      And we can solve that equation algebraicly and get $2=2$, therefore this is the solution to the ordinary differential equation
+      And we can solve that equation algebraically and get $2=2$, therefore this is the solution to the ordinary differential equation
   
     \end{problem}
 
@@ -258,7 +257,7 @@ The material in this chapter will cover several analytic methods for solving fir
         \boxed{x^3y+xe^y-y^2=C}\\
       \end{equation}
 
-      Now we need to find a solution that satisfies the initial value proble, $y(-2)=1$.
+      Now we need to find a solution that satisfies the initial value problem, $y(-2)=1$.
       
       \begin{align}
         (-2)^3(1)+(-2)e^1-(1)^2&=C\\
@@ -299,7 +298,7 @@ The material in this chapter will cover several analytic methods for solving fir
         \end{aligned}
       \end{equation}
 
-      Where the initial condition determines the last equation above. Now we need to solve for the initial condition of $y(6)=4$, and we can do this by just pluggin in the values, and determining the sign on the square root:
+      Where the initial condition determines the last equation above. Now we need to solve for the initial condition of $y(6)=4$, and we can do this by just plugging in the values, and determining the sign on the square root:
 
       \begin{equation}
         \begin{aligned}
@@ -312,7 +311,7 @@ The material in this chapter will cover several analytic methods for solving fir
 
   \subsection{Bernoulli Ordinary Differential Equations}
 
-    We use Bernoulli's solution to an ordinary differential equation if the equation can be written in the form $\frac{dx}{dt}+p(t)x=q(t)x^n$, where if $n=0$, the equation is linear and where if $n=1$, the equation is both linear and separable. We can do a substitution for Bernoulli ordinary differential equations where we let $v=x^{1-n}$, and we trade out $x(t)\to v(t)$ to turn the differential into a linear differential. Another formula we can use for pluggin in to find the separable ordinary differential equation is $\frac{du}{dx}+(1-n)p(x)u=(1-n)q(x)$, but we do not have an example to show for that method. 
+    We use Bernoulli's solution to an ordinary differential equation if the equation can be written in the form $\frac{dx}{dt}+p(t)x=q(t)x^n$, where if $n=0$, the equation is linear and where if $n=1$, the equation is both linear and separable. We can do a substitution for Bernoulli ordinary differential equations where we let $v=x^{1-n}$, and we trade out $x(t)\to v(t)$ to turn the differential into a linear differential. Another formula we can use for plugging in to find the separable ordinary differential equation is $\frac{du}{dx}+(1-n)p(x)u=(1-n)q(x)$, but we do not have an example to show for that method. 
 
     \begin{problem}
       Consider the Ordinary differential equation $t\frac{dy}{dt}+y=\frac{1}{y^2}$, and solve. Our first step for this problem is to divide both sides by $t$ to rearrange it into the Bernoulli form:
@@ -321,7 +320,7 @@ The material in this chapter will cover several analytic methods for solving fir
         \frac{dy}{dt}+\frac{1}{t}y=\frac{1}{t}y^-2
       \end{equation}
 
-      Because $y$ is our dependent variable, we will be looking for our $n$ value, and we will find it on the $y$ on the right hand side. This gives us $n=-2$. Now we need to let $v(t)=y^{1-(-2)}=y^3$ and this means that $y(t)=(v(t))^{1/3}$. Now wee need to take the differential of this equation in order to find a substitution for $\frac{dy}{dt}$:
+      Because $y$ is our dependent variable, we will be looking for our $n$ value, and we will find it on the $y$ on the right-hand side. This gives us $n=-2$. Now we need to let $v(t)=y^{1-(-2)}=y^3$ and this means that $y(t)=(v(t))^{1/3}$. Now wee need to take the differential of this equation in order to find a substitution for $\frac{dy}{dt}$:
 
       \begin{align}
         \frac{dy}{dt}=\frac{1}{3y^2}\frac{dv}{dt}\\
@@ -338,7 +337,7 @@ The material in this chapter will cover several analytic methods for solving fir
         \frac{t}{3}\frac{dv}{dt}+y^3=1
       \end{equation}
 
-      We solve for $v(t)$ and then we can use the integrating factors method to solve the ordinary differential equation:
+      We solve for $v(t)$, and then we can use the integrating factors method to solve the ordinary differential equation:
 
       \begin{equation}
         \begin{aligned}
@@ -354,22 +353,22 @@ The material in this chapter will cover several analytic methods for solving fir
       Now we just need to let $v(t)=y^3$ and plug this back into the equation to get $y(t)=\left(1+\frac{C}{t^3}\right)^{\frac{1}{3}}$ as our final solution.
     \end{problem}
 
-    Homogenius ordinary differential equations can be written in the form $\frac{dx}{dt}=f\left(\frac{x}{t}\right)$. This means that if we just substitute $v$ for $\frac{x}{t}$, we will turn the Homogenius equation into a separable ordinary differential equation.
+    Homogenous ordinary differential equations can be written in the form $\frac{dx}{dt}=f\left(\frac{x}{t}\right)$. This means that if we just substitute $v$ for $\frac{x}{t}$, we will turn the Homogenous equation into a separable ordinary differential equation.
 
     \begin{problem}
-      Consider the homogenius ODE, $(5y-2x)\frac{dy}{dx}=4x+2y$. We can divide the $5y-2x$ so we will end up with the equation
+      Consider the homogenous ODE, $(5y-2x)\frac{dy}{dx}=4x+2y$. We can divide the $5y-2x$, so we will end up with the equation
 
       \begin{equation}
         \frac{dy}{dx}=\frac{4x+2y}{5y-2x}=\frac{4+\frac{2y}{x}}{5\frac{y}{x}-2}
       \end{equation}
 
-      The reason we can make this change is because we are dividing everything on the left side by $x$ to get it in the form $\frac{y}{x}$. Our next step is to trade out $y(x)$ for $v(x)$:
+      The reason we can make this change is that we are dividing everything on the left side by $x$ to get it in the form $\frac{y}{x}$. Our next step is to trade out $y(x)$ for $v(x)$:
 
       \begin{equation}
         \frac{4+2v}{5v+2}=v+x\frac{dv}{dx}\\
       \end{equation}
 
-      Which we can further simplify into $\frac{dv}{dx}=\frac{1}{x}\left(\frac{4+2v}{5v-2}-v\right).$. Now, we are able to solve this as a separable ordinary differential equation:
+      Which we can further simplify into $\frac{dv}{dx}=\frac{1}{x}\left(\frac{4+2v}{5v-2}-v\right)$. Now, we are able to solve this as a separable ordinary differential equation:
 
       \begin{equation}
         \begin{aligned}
@@ -418,7 +417,7 @@ The material in this chapter will cover several analytic methods for solving fir
 
       
 
-    The arrows in this diagram indiciate wether $\frac{dy}{dx}$ is above or below $0$. We can see that the long term behavior of the solution:
+    The arrows in this diagram indicate whether $\frac{dy}{dx}$ is above or below $0$. We can see that the long term behavior of the solution:
 
     \begin{equation}
       \begin{aligned}
@@ -454,21 +453,21 @@ The material in this chapter will cover several analytic methods for solving fir
     \end{align}
   \end{problem}
 
-  \subsection{Biforcations}
+  \subsection{Bifurcations}
 
   For ordinary differential equations with a parameter, there are times that a small change in the value of the parameter results in a huge change in the behavior of the solutions. It causes a change in the number or stability of the equilibrium solutions.
 
   \begin{problem}
-    Find the biforcation value for 
+    Find the bifurcation value for 
 
     \begin{equation}
       \frac{dp}{dt}=0.5p\left(1-\frac{p}{100}\right)-H
     \end{equation}
 
-    The first step for finding a biforcation for an equation is finding the equilibrium solutions. In order to do that, we set equation (2.69) equal to 0 and then rearrange it so it is in the form
+    The first step for finding a bifurcation for an equation is finding the equilibrium solutions. In order to do that, we set equation (2.69) equal to 0 and then rearrange it, so it is in the form
 
     \begin{equation}
-      p^2=-100p+250H=0
+      p^2-100p+250H=0
     \end{equation}
 
     In this case, we are going to need to use the quadratic formula to find the equilibrium points:
@@ -477,5 +476,9 @@ The material in this chapter will cover several analytic methods for solving fir
       p=\frac{100\pm\sqrt{10000-1000H}}{2}\\
       =50\pm5\sqrt{100-10H}
     \end{align}
-    hihihihihi
+    We can determine that our bifurcation value is $H=10$, because if we take what's under the square root, and set it equal to zero we can find those values.
+    Now we can plot our bifurcations:
+    \begin{center}
+      \includegraphics{resource/images/2.7 Example 3 1.jpg}
+    \end{center}
   \end{problem}
