@@ -1,0 +1,12 @@
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qwhere \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q denotes an arbitrary function of two variables.\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qwhere the arbitrary constants on each side have been collected on the right.\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qand by taking the partial derivatives of each of the equations, we can see that \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"SENTENCE_FRAGMENT","sentence":"^\\QWhere the initial condition determines the last equation above.\\E$"}
+{"rule":"CONFUSION_OF_OUR_OUT","sentence":"^\\QWe can do a substitution for Bernoulli ordinary differential equations where we let \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, and we trade out \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q to turn the differential into a linear differential.\\E$"}
+{"rule":"SENTENCE_FRAGMENT","sentence":"^\\QWhich we can further simplify into \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q..\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Q.\\E$"}
+{"rule":"SENTENCE_FRAGMENT","sentence":"^\\QWhich we can further simplify into \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qand we need to look for the roots of \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q\\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q harvested population growth \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q spring mass equation \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q RCL circuit showing beats \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q ban der Pol equation \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q Laplace's equation\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qwhich is identically equal to \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q wherever \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q and \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q are both defined.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QGGiven an equation in the form\\E$"}

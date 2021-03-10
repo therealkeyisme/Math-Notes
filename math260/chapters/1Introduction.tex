@@ -1,0 +1,143 @@
+\chapter{Introduction to Ordinary Differential Equations}
+
+Differential equations come from real-world problems and problems in applied mathematics. When mathematics is applied to real-world problems, it is often the case that finding a relation between a function and its rate of change is easier than finding a formula for the function itself; it is this relation between an unknown function and its derivatives that produces a differential equation.\newline
+To give a very simple example, a biologist studying the growth of a population with size at time $t$ given by the function $P(t)$, might make the very simple, but logical, assumption that a population grows at a rate directly proportional to its size. In mathematical notation, the equation for $P(t)$ could then be written as:
+
+\begin{equation}
+  \frac{dp}{dt} = rP(t)
+\end{equation}
+
+Where the constant of proportionality, $r$ would probably be determined experimentally by biologists working in the field. Equations used for modeling population growth can be much more complicated than this, sometimes involving scores of interacting populations with different properties.
+
+\section{Basic Terminology}
+
+  \begin{definition}
+    A differential equation is any equation involving an unknown function and one or more if its derivatives.
+  \end{definition}
+
+  The following are examples of differential equations:
+
+    \begin{enumerate}
+      \item $P'(t)=rP(t)(1-P(t)/N)-H$ harvested population growth
+      \item $\frac{d^2x}{d\tau^2}+0.9\frac{dx}{d\tau}+2x=0$ spring mass equation
+      \item $I''(t)+4I(t)=sin(\omega t) $ RCL circuit showing beats
+      \item $y''(t) + \mu(y^2(t)-1)y'(t)+y(t)$ ban der Pol equation
+      \item $\frac{\partial^2}{\partial x^2}u(x,y)+\frac{\partial^2}{\partial y^2}u(x,y) = 0$ Laplace's equation
+    \end{enumerate}
+
+  \subsection{Ordinary vs. Partial Differential Equations}
+
+    Differential equations fall into two very broad categories, called ordinary differential equations and partial differential equations. If the unknown function in the equation is a function of only one variable, the equation is called an ordinary differential equation. If the unknown function in the equation depends on more than one independent variable, the equation is called a partial differential equation, and in this case, the derivatives appearing in the equation will be partial derivatives.
+
+  \subsection{Independent Variables, Dependent Variables, and Parameters}
+
+   Three different types of quantities can appear in a differential equation. The unknown function, for which the equation is to be solved, is called the dependent variable, and when considering ordinary differential equations, the dependent variable is a function of a single independent variable. In addition to the independent and dependent variables, a third type of variable, called a parameter, may appear in the equation. A parameter is a quantity that remains fixed in any specification of the problem, but can very from problem to problem.
+  
+  \subsection{Order of a Differential Equation}
+
+    Another important way in which differential equations are classified is in terms of their order.
+
+    \begin{definition}
+      The order of a differential equation is the order of the highest derivative of the unknown function that appears in the equation.
+    \end{definition}
+
+    The differential equation 1 is a first-order equation and the others are all second-order. Even though equation 5 is a partial differential equation, it is still said to be of second order since no derivatives of order higher than two appear in the equation.
+
+  \subsection{What is a solution}
+
+    Given a differential equation, what is a solution? We must realize that we are looking for a function, and therefore it needs to be defined on some interval of its independent variable.
+
+    \begin{definition}
+      An analytic solution of a differential equation is a sufficiently differentiable function that, if substituted into the equation, together with the necessary derivatives, makes the equation an identity (a true statement for all values of the independent variable) over some interval of the independent variables.
+    \end{definition}
+
+    \begin{problem}
+      Show that the function $p(t)=e^{-2t}$ is a solution to the differential equation:
+
+      \begin{equation}
+        x'' + 3x' + 3x = 0
+      \end{equation}
+  
+      Solution. To show that it is a solution, compute the first and second derivatives of $p(t)$:
+  
+      \begin{align}
+        p'(t) &=- 2e^{ - 2t}\\
+        p''(t) &= 4e^{ - 2t}
+      \end{align}
+  
+      When the three functions $p(t)$, $p'(t)$, and $p''(t)$ are substituted into the differential equation in place of $x$, $x'$, and $x''$, it becomes:
+  
+      \begin{align}
+        (4e^{ - 2t}) + 3( - 2e^{ - 2t}) + 2(e^{ - 2t})&\equiv 0\\
+        (4 - 6 + 2)(e^{ - 2t})&\equiv0\\
+        (0)(e^{ - 2t})&\equiv0
+      \end{align}
+  
+      which is an identity (in the independent variable $t$ for all real values of $t$).
+      When showing that both sides of an equation are identical for all values of the variables, we will use the equivalence sign $\equiv$.
+    \end{problem}
+
+    \begin{problem}
+      Show that the function $\phi(t)=(1-t^2)^{1/2}\equiv\sqrt{1-t^2}$ is a solution of the differential equation $x'=-t/x$.
+
+      Solution. First, notice that $\phi(t)$ is not even defined outside the interval $-1\le t\le 1$. In the interval $-1<t<1$, $\phi(t)$ can be differentiated by the chain rule (for powers of functions):
+
+      \begin{equation}
+        \phi'(t) =\frac{1}{2}(1 - t^2)^{ - \frac{1}{2}}( - 2t) =- \frac{t}{(1 - t^2)^{\frac{1}{2}}}
+      \end{equation}
+
+      The right-hand side of the equation $x'=-t/x$, with $phi(x)$ substituted for $x$, is 
+
+      \begin{equation}
+        - \frac{t}{\phi (t)} =- \frac{t}{(1 - t^2)^{\frac{1}{2}}}
+      \end{equation}
+
+      which is identically equal to $\phi(t)$ wherever $\phi$ and $\phi'$ are both defined. Therefore, $\phi(t)$ is a solution to the differential equation $x'=-t/x$ on the interval (-1, 1).
+    \end{problem}
+
+\section{Systems of Differential Equations}
+
+  \begin{problem}
+    Show that the functions $x(t)=e^{-t},y(t)=-4e^{-t}$ form a solution of the system of differential equations
+
+    \begin{equation}
+      x'(t) = 3x + y\newline
+      y'(t) =- 4x - 2y
+    \end{equation}
+
+    Solution. The derivatives that we need are $x'(t)=-e^-t$ and $y'(t)=-(-4e^{-t})=4e^{-t}$. Then substitution into the second equation gives:
+
+    \begin{align}
+      3x+y=(2e^{-t})+(-4e^{-t})=(3-4)e^{-t}=-e^{-t}\equiv x'(t),\\
+      -4x-2y=-4(e^{-t})-2(-4e^{-t})=(-4+8)e^{-t}=4e^{-t}\equiv y'(t);
+    \end{align}
+
+    therefore, the given functions of x and y form a solution for the system.
+  \end{problem}
+
+\section{Families of Solutions, Initial-Value Problems}
+  In this section the solutions of some very simple differential equations will be examined in order to give us an understanding of the terms $n$-parameter family of solutions and general solution of a differential equation. We will also be shown how to use certain types of information to pick one particular solution out of a set of solutions.
+
+  While we do not yet have any formal methods for solving differential equations, there are some very simple equations that can be solved by inspection. One of these is:
+
+  \begin{equation}
+    x' = x
+  \end{equation}
+
+  This first-order differential equation asks you to find a function $x(t)$ which is equal to its own derivative at every value of $t$.
+
+  \begin{definition}
+    A first-order differential equation with one initial condition specified is called an initial-value problem, usually abbreviated as an IVP. The solution of an IVP will be called a particular solution of the differential equation.
+  \end{definition}
+
+  \begin{problem}
+    Solve the IVP $x'=x, x(0)=\frac{1}{2}$.
+
+    Solution. Since we just found that the general solution of $x'=x$ is $x(t)=Ce^t$, we only need to use the initial condition to determine the value of C. This will pick out one particular curve in the family. Substituting $t=0$ and $x(0)=\frac{1}{2}$ into the general solution,
+
+    \begin{equation}
+      x(0)=Ce^0=C=\frac{1}{2}.
+    \end{equation}
+
+    With $C=\frac{1}{2}$, the solution of the IVP is $x(t)=\frac{1}{2}e^t$. This particular solution is the dotted curve shown in Figure 1.1, with the initial point $(0,\frac{1}{2})$ circled.
+  \end{problem}
