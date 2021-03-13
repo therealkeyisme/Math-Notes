@@ -1,1 +1,82 @@
 \chapter{Orthogonality}
+
+\section{}
+
+  Recall that 
+
+  \begin{equation}
+    \vec{v}\cdot\vec{w}=v_1\cdot w_1+\ldots+v_n\cdot w_n = | | \vec{v} | | | | \vec{w} | | \cos(\theta)
+  ,\end{equation}
+
+  where $\theta$ is the angle between $\vec{v}$ and $\vec{w}$. Because $\cos\left(\frac{\pi}{2}\right)=0$, we know that $\vec{v}\cdot\vec{w}=0$ if and only if $\vec{v}$ is orthogonal to $\vec{w}$. In general, given $\vec{v},\vec{w}\in\R^n$, $\vec{v}$ is orthogonal to $\vec{w}$ if and only if the angle between them is $\frac{\pi}{2}$.
+
+  \begin{definition}
+    Let $U$ be any inner product space. A basis $\vec{u},\ldots,\vec{u_h}\in V$ is orthogonal if $\vec{u_j}\cdot \vec{u_i} = 0$ whenever $i\neq j$.\newline
+    In addition, if $| |u_i| |=1$ for all $i$'s, the basis is orthonormal.
+  \end{definition}
+  
+  Here are a few examples of orthonormal and orthogonal basis's:
+
+  \begin{enumerate}
+    \item $\SmallMatrix{1\\0}\SmallMatrix{0\\1}$ is an orthonormal basis.
+    \item $\SmallMatrix{2\\0}\SmallMatrix{0\\1}$ is an orthogonal basis.
+    \item $\SmallMatrix{1\\0\\0}\SmallMatrix{0\\1\\0}\SmallMatrix{0\\0\\1}$ is an orthonormal basis.
+  \end{enumerate}
+
+  If $\vec{v_1},\ldots,\vec{v_n}$ is an orthogonal basis, then 
+
+  \begin{equation}
+    \frac{\vec{v_1}}{| |\vec{v_1}| |},\frac{\vec{v_2}}{| | \vec{v_2} | |},\ldots,\frac{\vec{v_n}}{| | v_n | |}
+  \end{equation}
+  is an orthonormal basis.
+
+  \begin{problem}
+    Consider $\vec{u_1}=\SmallMatrix{1\\2}$ and $\vec{u_2}=\SmallMatrix{2\\-1}$. We know that these two matrices are not linearly dependent because $\vec{u_1}$ is not a multiple of $\vec{u_2}$. We can see that this is an orthogonal basis.
+    \begin{equation}
+      | | \vec{u_1} | | = \sqrt{1^2+2^2} =\sqrt{5} 
+    \end{equation}
+
+    so we know
+
+    \begin{equation}
+      v_1=\begin{pmatrix} \frac{1}{\sqrt{5} }\\\frac{1}{\sqrt{5} } \end{pmatrix} ,v_2=\begin{pmatrix} \frac{1}{\sqrt{5} }\\\frac{1}{\sqrt{5} } \end{pmatrix} 
+    \end{equation}
+  \end{problem}
+
+  \begin{proposition}
+    Assume $\vec{v_1},\ldots,\vec{v_n}\in V$ with $\vec{v_i}\neq \vec{0}$ for all $i$. Assume that $<v_i,v_j\ge 0$ whenever $i\neq j$, then $\{v_1,\ldots,v_n\}$ is linearly independent.
+    \begin{proof}
+      Assume that $c_1\vec{v_1}+\ldots+c_n\vec{n}=0$. Let $i\in\{1,\ldots,n\}$
+      \begin{align*}
+        <c_1\vec{v_1}+\ldots+c_n \vec{v_n}, v_i> = <0,\vec{v_i}>\\
+        c_1<v_1,v_i> + c_2<v_2,v_i>+\ldots+ c_i<v_i,v_i>+\ldots+c_n<v_i,v_n>\\
+        c_i<v_i,v_i> = 0\\
+        c_i = 0
+      .\end{align*}
+      Now we know that $v_1,\ldots,v_n$ are linearly independent.
+    \end{proof}
+  \end{proposition}
+
+  \begin{corollary}
+    If $dim(v)=n$ and $\vec{v_1},\ldots,\vec{v_n}$ are $n$ vectors such that $<v_i,v_j> = 0$ wherever $i\neq j$, then $\{\vec{v_1},\ldots,\vec{v_n}\}$ is a basis.
+  \end{corollary}
+
+  \begin{theorem}
+    Let $\vec{u_1},\ldots,\vec{u_n}$ be an orthonormal basis for $v$. Let $\vec{v}\in V$. Then we know $\vec{v}=c_1\vec{u_1}+\ldots+c_n \vec{u_n}$. In fact, $c_i=<\vec{v},\vec{u_i}>$ and 
+    \begin{equation}
+      | |\vec{v} | | = \sqrt{<\vec{v},\vec{u_1},>^2+<\vec{v},\vec{u_2}^2 + <\vec{v},\vec{u_n}>^2}
+    \end{equation}
+  \end{theorem}
+
+  \begin{problem}
+    $\mathbb{P}^2$ polynomials of degree $\le 2$ on [0,1]. Use the $L^2$ norm.
+    \begin{equation}
+      <p,q> = \int_0^{1}p(x)q(x)dx
+    \end{equation}
+    Let $p_1=1,p_2=x-\frac{1}{2},p_3=x^2-x+\frac{1}{6}$.
+    \begin{align}
+      <p_1,p_2> &= \int_0^{1}x-\frac{1}{2}dx=0\\
+      <p_1,p_3>&=\int_0^{1}x^2-x+\frac{1}{6}dx=0.
+    \end{align}
+    We have an orthogonal basis because of this. In order to check to see if it is orthonormal we must also do $<p_1,p_1>,<p_2,p_2>,<p_3,p_3>$
+  \end{problem}
