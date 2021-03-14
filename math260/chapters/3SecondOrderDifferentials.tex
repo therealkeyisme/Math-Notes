@@ -154,6 +154,146 @@
 
 \section{Homogeneous Linear Equations with Constant Coefficients}
 
-  \subsection{Second-order Equation with Constant Coefficients}
+  Homogeneous ordinary differential equations are ones that come in the form 
+  \begin{equation}
+    ay''+by'+cy=0
+  \end{equation}
 
-  \subsection{Equations of Order Greater Than Two}
+  The first method of solving homogeneous linear equations with constant coefficients is the method of lucky guess. In this method, we let $y(x)=e^{rx}$. If we take the multiple derivatives of $e^{rx}$, we can find what $y'(x)$ and $y''(x)$ equal. Now we can plug in the $e^{rx}$ into our equation to get 
+
+  \begin{align*}
+    ar^2e^{rx}+bre^{rx}+ce^{rx}=0\\
+    e^{rx}[ar^2+br+c]=0
+  .\end{align*}
+  \begin{equation}
+    \boxed{ar^2+br+c=0}
+  \end{equation}
+  
+  There are 3 distinct cases for the roots of this equation.
+  \begin{enumerate}
+    \item 2 real distinct roots.
+    \item 1 repeated root.
+    \item 2 complex conjugate roots ($A+Bi$).
+  \end{enumerate}
+
+  Let's take a look at an example of this method in action.
+
+  \begin{problem}
+    Consider the equation 
+    \[
+    y''-5y'-6y=0
+    .\] 
+    We are going to let $y(x)=e^{rx}$. We can skip adding $e^{rx}$ to the beginning of each term because we can just divide that over in our minds. After going through that we get 
+    \begin{align*}
+      r^2-5r-6&=0\\
+      (r-6)(r+1)&=0\\
+      r&=6,-1
+    .\end{align*}
+    
+    From this, we know that our two solutions are $y_1(x)=e^{6x},y_2(x)=e^{-x}$. Our general solution is 
+    \begin{equation}
+      \boxed{y(x)=C_1 e^{6x}+C_2e^{-x}}
+    \end{equation}
+    Now all we need to do is check the wronskian $W(x)$ to make sure that $\{e^{r_1x},e^{r_2x}\}$ are linearly independent.
+  \end{problem}
+
+  Let's explore a case of a real repeated root. Let's look at the equation
+  \[
+  y''-8y'+16=0 
+  .\] 
+  We can let $y(t)=e^{rt}$, to get
+  \[
+  r^2-8r+16=0
+  .\] 
+  Our roots for $r$ are 4 and 4. One of our solutions should be $y_1(t)=e^{4t}$, but because we have a repeated root, I claim that $y_2(t)=te^{4t}$. We can verify that this is a repeated root by putting it in a wronskian:
+    \begin{align*}
+      w(t)&=\left| 
+      \begin{matrix}
+        e^{4t}&te^{4t}\\
+        4e^{4t}&e^{4t}+4te^{4t}
+      \end{matrix}
+      \right|\\
+          &=e^{8t}+4te^{8t}-4te^{8t}\\
+          &=e^{8t}\neq 0
+    .\end{align*}
+    Because the wronskian result was not equal to zero, we know that these are two linearly independent solutions. Our general solution in this case would be
+    \[
+      y(t)=C_1e^{4t}+C_2te^{4t}
+    .\] 
+    If we were to solve a 4th order ordinary differential equation, our general solution would look something like this:
+    \[
+      y(t)=C_1e^{2t}+C_2e^{-3t}+C_3te^{-3t}+C_4t^2e^{-3t}
+    .\] 
+    As you can see, the main difference between the second and third order ordinary differential equations is the amount of roots you need to take. Let's take a look at the third case, having 2 complex conjugate values for $r=\alpha\pm i\beta$.\newline\newline
+    Consider the equation
+    \[
+    y''-2y'+5y=0
+    .\] 
+    Let $y(t)=e^{rt}$. Our previous equation will turn into $r^2-2r+5=0$, and we will need to use the quadratic formula for this case.
+
+    \begin{align*}
+      r&=\frac{2\pm\sqrt{4-20} }{2}\\
+       &=\frac{2\pm\sqrt{-16} }{2}\\
+       &=1\pm 2i
+    .\end{align*}
+
+    Because of Euler's identity,
+    \[
+      e^{i\theta}=\cos(\theta)+i\sin(\theta)
+    ,\]
+    we can determine that the general solution of this ordinary differential equation is
+    \[
+    y(t)=C_1e^{1t}\cos(2t)+C_2e^{1t}\sin(2t)
+    .\] 
+    \begin{problem}
+      Solve the homogeneous linear ordinary differential equation,
+      \[
+      x'''+3x''-4x'-12x=0
+      .\] 
+      Let $x(t)=e^{rt}$, this means that 
+      \begin{align*}
+        x'&=re^{rt}\\
+        x''&=r^2e^{rt}\\
+        x'''=r^3e^{rt}
+      .\end{align*}
+    Our expanded out equation is 
+    \[
+      e^{rt}[r^3+3r^2-4r-12]=0
+    .\] 
+    From this, we can see that our roots are $r=2,-2,-3$, which means that our general solution is
+    \[
+      x(t)=C_1e^{2t}+C_2e^{-2t}+C_3e^{-3t}
+    .\] 
+    \end{problem}
+
+\section{The Spring-Mass Equation}
+
+  The spring-mass equation is a variation of Hooke's law, which states
+  \[
+    F_{spring}=-kx(k>0)
+  .\] 
+  This tries to bring mass back to equilibrium where $x(t)$ is the distance of the mass from its equilibrium position at time $t$. The differential version of the equation is
+  \[
+    mx''+bx'+kx=F(t)
+  .\] 
+  Where $mx''$ is the acceleration, $bx'$ is the resistance friction, $kx$ is the spring force and $F(t)$ is any extra force acting on the system. Where is gravity within this equation? It drops out because the stretching of the string due to gravity puts the block attached to the string into equilibrium.\newline\newline
+  When you first attach the mass and the mass stops moving,
+  \[
+    m(0)=-k(s)-b(0)-mg\to mg=ks\to k
+  .\] 
+  \begin{problem}
+    A mass weighing 10 pounds stretches a string $\frac{1}{4}ft$. Assuming no dampening, find the amplitude period of oscillations of the mass if it is released from a point $\frac{1}{10}ft$below it's equilibrium position with an initial upward velocity of $\frac{1}{20}\frac{ft}{s}$.\newline
+    Because the mass weighs 10 pounds, $mg=10$, which means that $m=\frac{10}{32}=\frac{5}{16}\frac{lbs^2}{ft}$. The first thing we need to do is find K. This can be done by setting $mg=ks$ and solving for $k$.
+    \begin{align*}
+      10&=\frac{1}{4}k\\
+      k=\frac{10}{\frac{1}{4}}=40\\
+      [k]=\frac{10lb}{\frac{1}{ft}}=\left[\frac{lb}{ft}\right]
+    .\end{align*}
+    Our ordinary differential equation is going to be 
+    \[
+    \frac{5}{16}x''+40x=0
+    .\] 
+  \end{problem}
+\section{Non homogeneous Linear Equations}
+
+\section{The Forced Spring-Mass System}
