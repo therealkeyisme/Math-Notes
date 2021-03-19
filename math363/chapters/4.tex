@@ -138,29 +138,86 @@
     This equation is the Fourier series.
   \end{problem}
 
+\section{}
+\section{Orthogonal Matrices}
 
+  \begin{definition}
+    AA square matrix $Q$ is orthogonal if $Q^{t}Q=Q\cdot Q^{T}=I$
+  \end{definition}
 
+  If $Q$ is orthogonal, then
+  \begin{itemize}
+    \item $Q^{-1}=Q^{T}$
+    \item $det(Q)=\pm 1$
+    \item $Q\cdot Q^{t}=I$
+    \item $det(Q)det(Q^{T})=det(I)$
+    \item $(det(Q))^2=1$
+    \item $det(Q)=\pm 1$
+  \end{itemize}
 
+  Let $A=\begin{pmatrix} a_{11}&a_{12}\\a_{21}&a_{22} \end{pmatrix} $. Suppose that $A$ is orthogonal, then 
+  \begin{align*}
+    \begin{pmatrix} A_{11}&A_{12}\\A_{21}&A_{22} \end{pmatrix}\cdot\begin{pmatrix} A_{11}&A_{21}\\A_{12}&A_{22} \end{pmatrix} &=\begin{pmatrix} 1&0\\0&1 \end{pmatrix} \\
+    a_{11}^2+a_{12}^2&=1\\
+    a_{11}a_{21}+a_{12}a_{22}&=0\\
+    a_{21}a_{11}+a_{22}a_{12}&=0\\
+    a_{21}^2+a_{22}^2&=1
+  .\end{align*}
+  
+  If we plot $(a_{11},a_{12})$ on a graph, we can see that $\cos\left( \theta \right) =a_{12}$ and $\sin(\theta)=a_{11} $
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  \begin{proposition}
+    q $Q$ is orthogonal if and only if its columns form an orthonormal basis.
+    \begin{proof}
+      Let $Q=[U_1\vdots U_2 \vdots\ldots\vdots U_n]$.
+      \[
+      Q^{T}=\begin{bmatrix} U_1^{T}\\U_2^{T}\\ \vdots \\ U_n^{T} \end{bmatrix} 
+      .\] 
+      In $Q^{T}Q$, the $i,j^{th}$ entry is $U_1^{T}\cdot Uj$.
+      \[
+      U_i^{T}\cdot U_j =
+      \begin{cases}
+        0&i\neq j\\
+        1&i=j
+      \end{cases}
+      .\] 
+      So the $U_i$'so form an orthonormal basis.
+    \end{proof}
+  \end{proposition}
+  \begin{problem}
+    Let $A=\begin{bmatrix} 3&5\\7&\frac{1}{2} \end{bmatrix} $, and let $A$ be orthonormal. We know that $A\cdot A^{T}=A^{T}\cdot A=I$. Let's see if $A$ is an orthonormal basis.
+    \[
+      \begin{bmatrix} 3&7\\5&\frac{1}{2} \end{bmatrix} \begin{bmatrix} 3&5\\7&\frac{1}{2} \end{bmatrix} \neq \begin{bmatrix} 1&0\\0&1 \end{bmatrix} 
+    .\] 
+      This is not equal because $3\times 7+3\times 5\neq0$. Now let's try letting $A=\begin{bmatrix} 3&-7\\7&3 \end{bmatrix} $.
+      \[
+        \begin{bmatrix} 3&7\\-7&3 \end{bmatrix} \begin{bmatrix} 3&-7\\7&3 \end{bmatrix} =\begin{bmatrix} 1&0\\0&1 \end{bmatrix} 
+      .\] 
+      This vector works with the zero values, but not the ones values, so we need to normalize this vector.
+      \begin{align*}
+        \left| \left| \begin{bmatrix} 3\\7 \end{bmatrix}  \right|  \right|=\sqrt{4^2+7^2} =\sqrt{58} && \left| \left| \begin{bmatrix} -7\\3 \end{bmatrix}  \right|  \right|=\sqrt{(-7)^2+3^2} =\sqrt{58}
+      \end{align*}
+      \[
+        A=\begin{bmatrix} \frac{3}{58}&-\frac{7}{58}\\\frac{7}{58}&\frac{3}{58} \end{bmatrix} 
+      .\] 
+  \end{problem}
+  
+        Let's let $B=\begin{pmatrix} a&b\\c&d \end{pmatrix} $, and suppose $Q$ is orthogonal.
+        \[
+          Q^{T}\cdot Q=\begin{pmatrix} a&c\\b&d \end{pmatrix} \begin{pmatrix} a&b\\c&d \end{pmatrix} =\begin{pmatrix} 1&0\\0&1 \end{pmatrix} 
+        .\] 
+        \begin{align*}
+          a^2+c^2=1\\
+          ab+cd=0\\
+          ab+cd=0\\
+          b^2+d^2=1
+        .\end{align*}
+        Given that the vectors $\begin{bmatrix} a\\c \end{bmatrix} ,\begin{bmatrix} b\\d \end{bmatrix} $ lie on the unit circle, we can determine that
+        \begin{align*}
+          a=\cos\theta&&c=\sin \theta\\
+          b=\cos\phi&&d=\sin\phi
+        ,\end{align*}
+        and we can determine that 
+        \[
+          0=ab+cd=\cos\theta\cos\phi + \sin \theta\sin\phi=\cos(\theta-\phi)
+        .\] 
