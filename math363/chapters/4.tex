@@ -70,13 +70,97 @@
 
   \begin{problem}
     $\mathbb{P}^2$ polynomials of degree $\le 2$ on [0,1]. Use the $L^2$ norm.
+
     \begin{equation}
       <p,q> = \int_0^{1}p(x)q(x)dx
     \end{equation}
+
     Let $p_1=1,p_2=x-\frac{1}{2},p_3=x^2-x+\frac{1}{6}$.
+
     \begin{align}
       <p_1,p_2> &= \int_0^{1}x-\frac{1}{2}dx=0\\
       <p_1,p_3>&=\int_0^{1}x^2-x+\frac{1}{6}dx=0.
     \end{align}
+
     We have an orthogonal basis because of this. In order to check to see if it is orthonormal we must also do $<p_1,p_1>,<p_2,p_2>,<p_3,p_3>$
   \end{problem}
+  INSERT NOTES FROM 03.08 HERE
+
+  So if we have the basis $\{\SmallMatrix{1\\2},\SmallMatrix{2\\1}\}, v_1=\SmallMatrix{1\\2}$. $v_2$ is equal to 
+
+  \begin{align*}
+    \begin{pmatrix} 2\\1 \end{pmatrix} -\frac{\Big<\begin{pmatrix} 2\\1 \end{pmatrix} , \begin{pmatrix} 1\\2 \end{pmatrix} \Big>}{| | \begin{pmatrix} 1\\2 \end{pmatrix} }\cdot \begin{pmatrix} 1\\2 \end{pmatrix} \\
+    \begin{pmatrix} 2\\1 \end{pmatrix} -\frac{4}{\left(\sqrt{1^2+2^2} \right)^2 }\\
+    \begin{pmatrix} 2\\1 \end{pmatrix} -\frac{4}{5}\begin{pmatrix} 1\\2 \end{pmatrix}\\ 
+    \begin{pmatrix} 2\\1 \end{pmatrix} -\begin{pmatrix} \frac{4}{5}\\ \frac{8}{5} \end{pmatrix} = \begin{pmatrix} \frac{10}{5}\\\frac{5}{5} \end{pmatrix} -\begin{pmatrix} \frac{4}{5}\\\frac{8}{5} \end{pmatrix} \\
+    =\begin{pmatrix} \frac{6}{3} \\ -\frac{3}{5}\end{pmatrix} 
+    \SmallMatrix{2\\1}-\frac{<\SmallMatrix{2\\1}, \SmallMatrix{1\\2}>}{| | \SmallMatrix{1\\2}| | ^2}\cdot \SmallMatrix{1\\2}
+    \SmallMatrix{2\\1}-\frac{4}{(\sqrt{1^2+2^2} )^2}\\
+    \SmallMatrix{2\\1} - \frac{4}{5}\SmallMatrix{1\\2}\\
+    \SmallMatrix{2\\1}-\SmallMatrix{\frac{4}{5}\\\frac{8}{5}}=\SmallMatrix{\frac{10}{5}\\\frac{5}{5}}-\SmallMatrix{\frac{4}{5}\\\frac{8}{5}}\\
+    \SmallMatrix{\frac{6}{3}\\-\frac{3}{5}}\\
+  .\end{align*}
+
+  We can conclude that our basis is $\{\SmallMatrix{1\\2},\SmallMatrix{\frac{6}{5}\\-\frac{3}{5}}\}$. Let's now use our basis and rewrite it as
+  \[
+  \begin{pmatrix} 2\\3 \end{pmatrix} =c_1\begin{pmatrix} 1\\2 \end{pmatrix} +c_2\begin{pmatrix} \frac{6}{5}\\-\frac{3}{5} \end{pmatrix} 
+  .\] 
+  We can simplify this and solve for $c_1,c_2$
+
+  \begin{align*}
+    c_1&=<\begin{pmatrix} 2\\3 \end{pmatrix} ,\begin{pmatrix} 1\\2 \end{pmatrix}> = 2+6=8\\
+    c_2&=<\begin{pmatrix} 2\\3 \end{pmatrix} ,\begin{pmatrix} \frac{6}{5}\\-\frac{3}{5} \end{pmatrix}> = \frac{12}{5}-\frac{9}{5}=\frac{3}{5}\\
+  .\end{align*}
+  Using Theorem 4.9 from the book, we do the following with an orthogonal basis to get its norm:
+
+  \begin{align*}
+    a_1=\frac{8}{| | v_1| |^2}=\frac{8}{(\sqrt{1^2+2^2} )^2}=\frac{8}{5}\\
+    a_2=\frac{\frac{3}{5}}{| | v_2 | |^2}=\frac{\frac{3}{5}}{\left(\frac{6}{5}\right)^2+\left(-\frac{3}{5}\right)^2}\\
+    =\frac{\frac{3}{5}}{\frac{36}{25}+\frac{9}{25}}=\frac{15}{25}\ldots\\
+    \begin{pmatrix} 2\\3 \end{pmatrix} =a_1\begin{pmatrix} 1\\2 \end{pmatrix} +a_2\begin{pmatrix} \frac{6}{5}\\-\frac{3}{5} \end{pmatrix} \\
+    \frac{8}{5}\begin{pmatrix} 1\\2 \end{pmatrix} + \frac{1}{3}\begin{pmatrix} \frac{6}{5}\\-\frac{3}{5} \end{pmatrix} \\
+    =\begin{pmatrix} \frac{8}{5}\\\frac{16}{5} \end{pmatrix} +\begin{pmatrix} \frac{2}{5}\\-\frac{1}{5} \end{pmatrix} =\begin{pmatrix} 2\\3 \end{pmatrix} 
+  .\end{align*}
+
+  \begin{problem}
+    Example of an orthogonal basis. Let $\mathbb{T}^{n}$ be the vector space of trigonometric polynomials.
+    \[
+      \mathbb{T}^{n}=\sum_{0\le j+k\le n}a_{jk}\sin^{j}(x)\cos^k(x)\\
+    .\] 
+    Using the $L^2$ norm:
+    \[
+      <f,g> = \int_{-\pi}^{\pi}f\cdot g
+    .\] 
+    An orthogonal basis is $\{1,\cos(x),\sin(x),\cos(2x),\sin(2x),\cos(3x),\sin(3x),\ldots\}$. If we were going to do the $L^2$ norm for any of these equations we would need to do the following
+    \[
+      \int_{-\pi}^{\pi}\sin(2x)\cos(4x)dx
+    .\] 
+    This equation is the Fourier series.
+  \end{problem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
