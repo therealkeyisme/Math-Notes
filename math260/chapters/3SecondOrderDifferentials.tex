@@ -3,24 +3,25 @@
 \section{General Theory of Homogeneous Linear Equations}
   The standard form for a general second order ordinary differential equation is
 
-  \begin{equation}
+  \[
     x''(t)+p(t)x'(t)+q(t)x(t)=f(t).
-  \end{equation}
+  \]
   
   For us, $p(t)$ and $q(t)$ are typically going to be constants. Also we know that if $f(t)=0$, the equation is homogenous.
 
   \begin{lemma}
     GGiven an equation in the form 
 
-    \begin{equation}
+    \[
       x''(t)+p(t)x'(t)+q(t)x(t)=0,
-    \end{equation}
+    \]
 
     if $x_1(t)$ and $x_2(t)$ are solutions to equation (3.2), then 
+    \[\]
 
-    \begin{equation}
+    \[
       x(t)=C_1x_1(t)+C_2x_2(t)
-    \end{equation}
+    \]
 
     is also a solution to equation (3.1) for all $C_1,C_2$'s. Equation (3.3) is the general solution to a homogeneous ODE
   \end{lemma}
@@ -30,39 +31,39 @@
   \begin{problem}
     Consider the equation
 
-    \begin{equation}
+    \[
     t^2x'''+2tx''-6x'=0.
-    \end{equation}
+    \]
 
     This equation is a third order, linear and homogeneous, but not autonomous ordinary differential equation. Let's put this differential equation into standard form:
 
-    \begin{equation}
+    \[
     x''+\frac{2}{t}x''+\frac{6}{t^2}x'=0
-    \end{equation}
+    \]
 
     As long as $t_0\neq0$, we have a unique solution if given 3 initial conditions. The domain of this ordinary differential equation is $t>0,t<0$. Earlier, in section 3.1, we showed that $1,t^3,\frac{1}{t^2}$ were all solutions. Because this ordinary differential equation is linear and homogeneous, we know that 
 
-    \begin{equation}
+    \[
     x(t)=C_11+C_2t^3+C_3\frac{1}{t^2},
-    \end{equation}
+    \]
 
     is also a solution for all $C_1,C_2,C_3$. Just note, equation (3.6) is a linear combination of $1,t^3,\frac{1}{t^2}$. So, this is a \underline{general solution} as long as the functions, $1,t^3,\frac{1}{t^2}$ are all “different” from each other.
   \end{problem}
 
   What is "different"? Different means no one function in a set can be written as a linear combination of other functions in the set. Different means that all of the functions are linearly independent. More generally, if 
 
-  \begin{equation}
+  \[
     C_1f_1(t)+C_2f_2(t)+\dots+C_nf_n(t)=0
-  \end{equation}
+  \]
 
   \begin{theorem}
     WWe can instead test for linear independence by using the wronskian,
 
-    \begin{equation}
+    \[
       w(f_1,f_2)(t)=det\begin{vmatrix}
         f_1(t)&&f_2(t)\\f'_1(t)&&f'_2(t)\\
       \end{vmatrix}
-    \end{equation}
+    \]
 
     \begin{itemize}
       \item If $w(t)=0$ for all $t$'s, then $\{f_1,f_2\}$ are linearly dependent.
@@ -72,7 +73,7 @@
 
   Now, if we try to use the wronskian on problem 16, we do it like so:
 
-  \begin{align}
+  \begin{align*}
     w(t)=
     \begin{vmatrix}
       1&&t^3&&\frac{1}{t^2}\\
@@ -85,7 +86,7 @@
       6t&&\frac{6}{t^4}\\
     \end{vmatrix}\\
     =\frac{18}{t^2}+\frac{12}{t^2}=\frac{30}{t^2}\neq0
-  \end{align}
+  \end{align*}
 
   So we know that $\{1,t^3,\frac{1}{t^3}\}$ are linearly independent. 
 
@@ -94,10 +95,10 @@
   \begin{problem}
     Let's consider the equation $y''(x)=-9y$, which has the solutions $\{\cos(3x),\sin(3x)\}$ and let's show that the two solutions are linearly independent:
 
-  \begin{equation}
+  \[
     w(x)=\begin{bmatrix} \cos(3t)&\sin(3t)\\-3\sin(3t)&3\cos(3t) \end{bmatrix}
     =3\cos^2(3x)+3\sin^2(3x)=3\neq0
-  \end{equation}
+  \]
   
   Which means that both solutions are valid for this ordinary differential equation. We can turn our original equation into $y''(x)+9y=0$ which is a homogeneous ordinary differential equation. Our $p(x)=0$, and because we know that $w(x)=Ce^{-\int p(x)dx}$, we know that the solution to our equation is 0.
   \end{problem}
@@ -111,9 +112,9 @@
 
     The general solution to the original nonhomogeneous ODE is 
 
-    \begin{equation}
+    \[
       x(t)=x_h(t)+x_p(t)
-    \end{equation}
+    \]
   \end{theorem}
 
   Let's try out this new theorem on an example problem.
@@ -121,23 +122,23 @@
   \begin{problem}
     Consider the differential equation $y''-5y'-6y=4x$. We claim that 
 
-    \begin{equation}
+    \[
       y(x)=c_1e^{-x}+c_2e^{6x}-\frac{2}{3}+\frac{5}{9}
-    \end{equation}
+    \]
 
     Are $\{e^{-x},e^{6x}\}$ linearly independent? Verify both solutions to equation (3.14).
 
-    \begin{align}
+    \begin{align*}
       w(x)&=\begin{bmatrix} e^{-x}&e^{6x}\\-e^{-x}&6e^{6x} \end{bmatrix} \\
           &=6e^{5x}+e^{5x}=7e^{5x}
-    \end{align}
+    \end{align*}
 
     Now we need to verify that this is a solution:
 
-    \begin{align}
+    \begin{align*}
       y'(x)&=-C_1e^{-x}+6C_2e^{6x}-\frac{2}{3}\\
       y''(x)&=C_1e^{-x}+36C_2e^{6x}
-    \end{align}
+    \end{align*}
 
      Let's see if the left hand side is equal to $4x$ like it was above.
 
@@ -155,9 +156,9 @@
 \section{Homogeneous Linear Equations with Constant Coefficients}
 
   Homogeneous ordinary differential equations are ones that come in the form 
-  \begin{equation}
+  \[
     ay''+by'+cy=0
-  \end{equation}
+  \]
 
   The first method of solving homogeneous linear equations with constant coefficients is the method of lucky guess. In this method, we let $y(x)=e^{rx}$. If we take the multiple derivatives of $e^{rx}$, we can find what $y'(x)$ and $y''(x)$ equal. Now we can plug in the $e^{rx}$ into our equation to get 
 
@@ -165,9 +166,9 @@
     ar^2e^{rx}+bre^{rx}+ce^{rx}=0\\
     e^{rx}[ar^2+br+c]=0
   .\end{align*}
-  \begin{equation}
+  \[
     \boxed{ar^2+br+c=0}
-  \end{equation}
+  \]
   
   There are 3 distinct cases for the roots of this equation.
   \begin{enumerate}
@@ -191,9 +192,9 @@
     .\end{align*}
     
     From this, we know that our two solutions are $y_1(x)=e^{6x},y_2(x)=e^{-x}$. Our general solution is 
-    \begin{equation}
+    \[
       \boxed{y(x)=C_1 e^{6x}+C_2e^{-x}}
-    \end{equation}
+    \]
     Now all we need to do is check the wronskian $W(x)$ to make sure that $\{e^{r_1x},e^{r_2x}\}$ are linearly independent.
   \end{problem}
 

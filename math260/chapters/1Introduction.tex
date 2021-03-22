@@ -3,9 +3,9 @@
 Differential equations come from real-world problems and problems in applied mathematics. When mathematics is applied to real-world problems, it is often the case that finding a relation between a function and its rate of change is easier than finding a formula for the function itself; it is this relation between an unknown function and its derivatives that produces a differential equation.\newline
 To give a very simple example, a biologist studying the growth of a population with size at time $t$ given by the function $P(t)$, might make the very simple, but logical, assumption that a population grows at a rate directly proportional to its size. In mathematical notation, the equation for $P(t)$ could then be written as:
 
-\begin{equation}
+\[
   \frac{dp}{dt} = rP(t)
-\end{equation}
+\]
 
 Where the constant of proportionality, $r$ would probably be determined experimentally by biologists working in the field. Equations used for modeling population growth can be much more complicated than this, sometimes involving scores of interacting populations with different properties.
 
@@ -54,24 +54,24 @@ Where the constant of proportionality, $r$ would probably be determined experime
     \begin{problem}
       Show that the function $p(t)=e^{-2t}$ is a solution to the differential equation:
 
-      \begin{equation}
+      \[
         x'' + 3x' + 3x = 0
-      \end{equation}
+      \]
   
       Solution. To show that it is a solution, compute the first and second derivatives of $p(t)$:
   
-      \begin{align}
+      \begin{align*}
         p'(t) &=- 2e^{ - 2t}\\
         p''(t) &= 4e^{ - 2t}
-      \end{align}
+      \end{align*}
   
       When the three functions $p(t)$, $p'(t)$, and $p''(t)$ are substituted into the differential equation in place of $x$, $x'$, and $x''$, it becomes:
   
-      \begin{align}
+      \begin{align*}
         (4e^{ - 2t}) + 3( - 2e^{ - 2t}) + 2(e^{ - 2t})&\equiv 0\\
         (4 - 6 + 2)(e^{ - 2t})&\equiv0\\
         (0)(e^{ - 2t})&\equiv0
-      \end{align}
+      \end{align*}
   
       which is an identity (in the independent variable $t$ for all real values of $t$).
       When showing that both sides of an equation are identical for all values of the variables, we will use the equivalence sign $\equiv$.
@@ -82,15 +82,15 @@ Where the constant of proportionality, $r$ would probably be determined experime
 
       Solution. First, notice that $\phi(t)$ is not even defined outside the interval $-1\le t\le 1$. In the interval $-1<t<1$, $\phi(t)$ can be differentiated by the chain rule (for powers of functions):
 
-      \begin{equation}
+      \[
         \phi'(t) =\frac{1}{2}(1 - t^2)^{ - \frac{1}{2}}( - 2t) =- \frac{t}{(1 - t^2)^{\frac{1}{2}}}
-      \end{equation}
+      \]
 
       The right-hand side of the equation $x'=-t/x$, with $phi(x)$ substituted for $x$, is 
 
-      \begin{equation}
+      \[
         - \frac{t}{\phi (t)} =- \frac{t}{(1 - t^2)^{\frac{1}{2}}}
-      \end{equation}
+      \]
 
       which is identically equal to $\phi(t)$ wherever $\phi$ and $\phi'$ are both defined. Therefore, $\phi(t)$ is a solution to the differential equation $x'=-t/x$ on the interval (-1, 1).
     \end{problem}
@@ -100,17 +100,17 @@ Where the constant of proportionality, $r$ would probably be determined experime
   \begin{problem}
     Show that the functions $x(t)=e^{-t},y(t)=-4e^{-t}$ form a solution of the system of differential equations
 
-    \begin{equation}
+    \[
       x'(t) = 3x + y\newline
       y'(t) =- 4x - 2y
-    \end{equation}
+    \]
 
     Solution. The derivatives that we need are $x'(t)=-e^-t$ and $y'(t)=-(-4e^{-t})=4e^{-t}$. Then substitution into the second equation gives:
 
-    \begin{align}
+    \begin{align*}
       3x+y=(2e^{-t})+(-4e^{-t})=(3-4)e^{-t}=-e^{-t}\equiv x'(t),\\
       -4x-2y=-4(e^{-t})-2(-4e^{-t})=(-4+8)e^{-t}=4e^{-t}\equiv y'(t);
-    \end{align}
+    \end{align*}
 
     therefore, the given functions of x and y form a solution for the system.
   \end{problem}
@@ -120,9 +120,9 @@ Where the constant of proportionality, $r$ would probably be determined experime
 
   While we do not yet have any formal methods for solving differential equations, there are some very simple equations that can be solved by inspection. One of these is:
 
-  \begin{equation}
+  \[
     x' = x
-  \end{equation}
+  \]
 
   This first-order differential equation asks you to find a function $x(t)$ which is equal to its own derivative at every value of $t$.
 
@@ -135,9 +135,9 @@ Where the constant of proportionality, $r$ would probably be determined experime
 
     Solution. Since we just found that the general solution of $x'=x$ is $x(t)=Ce^t$, we only need to use the initial condition to determine the value of C. This will pick out one particular curve in the family. Substituting $t=0$ and $x(0)=\frac{1}{2}$ into the general solution,
 
-    \begin{equation}
+    \[
       x(0)=Ce^0=C=\frac{1}{2}.
-    \end{equation}
+    \]
 
     With $C=\frac{1}{2}$, the solution of the IVP is $x(t)=\frac{1}{2}e^t$. This particular solution is the dotted curve shown in Figure 1.1, with the initial point $(0,\frac{1}{2})$ circled.
   \end{problem}
