@@ -129,7 +129,32 @@ The material in this chapter will cover several analytic methods for solving fir
     \end{itemize}
   \end{theorem}
 
-\section{}\section{}
+\section{Solving Linear ODEs}
+
+ \begin{definition}
+   AAn ODE is linear for the dependent variable $y$ if it is homogeneous when $g(x)=0$ and otherwise it is non-homogeneous.
+   \[
+     a_1(x)\frac{dy}{dx}+a_0(x)y=g(x)
+   .\] 
+   The standard form of a linear ODE is
+   \[
+     \frac{dy}{dx}+P(x)y=f(x)
+   .\] 
+ \end{definition}
+ 
+ If the homogeneous ODE is separable: $y=e^{-\int P(x)dx}$, and $y_c=cy_1(x)$ where $y_1=e^{-\int P(x)dx}$. For a nonhomogeneous ODE, we need to use the process of "variation of parameters". First we need to find the function $u$ so that $y_p=u(x)y_1(x)=u(x)e^{-\int P(x)dx}$, and then we follow the following steps
+
+ \begin{enumerate}
+   \item Put in standard form
+   \item Determine $P(x)$ and integrating factor $e^{\int P(x)dx}$.
+   \item Multiply std form by integrating factor.
+   \item Write \[
+       \frac{d}{dx}\left[e^{\int P(x)dx}y\right]=e^{\int P(x)dx}f(x)
+   .\] 
+  \item Integrate both sides.
+ \end{enumerate}
+
+\section{}
 
 \section{Existence and Uniqueness of Initial Value Problems}
 

@@ -293,7 +293,227 @@
     \[
     \frac{5}{16}x''+40x=0
     .\] 
+    We are given the initial values of $x'(0)=-\frac{1}{20}$ and $x(0)=-\frac{1}{10}$. We get the ordinary differential  equation 
+    \begin{align*}
+      \to x''+128x=0\\
+    .\end{align*}
+    We are going to let $x(t)=e^{rt}$. This gives us 
+    \begin{align*}
+      r^2+128&=0\\
+      r^2&=-128\\
+      r&=\pm\sqrt{-128}=\pm_8\sqrt{2i} 
+    .\end{align*}
+    The general solution to our ordinary differential equation in this situation is 
+    \[
+      x(t)=C_1\cos\left( 8\sqrt{2} t \right) +C_2\sin\left( 8\sqrt{2} t \right) 
+    .\]
+    This gives us that the angular frequency of our system, $\beta=8\sqrt{2} \left[ \frac{1}{s} \right] $, and the period of our system, $T=\frac{\pi}{4\sqrt{2} }s$.\newline
+    NOTE: In general, the natural frequency of a spring mass system is $\omega_0=8\sqrt{2} $.\newline
+    Now we need to apply our initial conditions to find $C_1,C_2 $.
+    \begin{align*}
+      x'(t)&=-8\sqrt{2} C_1\sin\left( 8\sqrt{2} t \right) +8\sqrt{2} C_2\cos\left( 8\sqrt{2} t \right) \\
+      x(0)&=C_1=-\frac{1}{10}\\
+      x'(0)&=8\sqrt{2} C_2=\frac{1}{10}
+    .\end{align*}
+    This gives us that our equation of motion is 
+    \begin{align*}
+      x(t)&=-\frac{1}{10}\cos\left( 8\sqrt{2} t \right) +\frac{1}{160\sqrt{2} }\sin\left( 8\sqrt{t}  \right) \\
+          &=R\sin\left( \beta t+\phi \right) \\
+      C_1&=R\sin\phi\\
+      C_2&=R\cos\phi\\
+      C_1^2+C_2^2&=R^2\\
+      \sqrt{\left( -\frac{1}{10} \right) ^2+\left( \frac{1}{160\sqrt{2} } \right) ^2} &= R\\
+      \sqrt{\frac{513}{51200}} &=R
+    \end{align*}
+    \[
+      \boxed{R\approx0.100ft}
+    .\] 
+    \begin{align*}
+      \phi&=tan^{-1}\left( \frac{C_1}{C_2} \right)+\frac{1}{60}\sqrt{2} \sin(8\sqrt{2} t) \\
+          &=tan^{-1}\left( -16\sqrt{2}  \right) \\
+      \phi&=-1.4226rad\\
+      x(t)&= -\frac{1}{10}\cos\left( 8\sqrt{2}t  \right)+\frac{1}{160\sqrt{2} }\sin\left( 8\sqrt{2}t  \right) \\
+          &\approx 0.1001\sin\left( 8\sqrt{2} t-1.5266 \right) 
+    .\end{align*}
   \end{problem}
+
+  $x(t)$ is the displacement of mass from equilibrium at time $t$. The following is the general formula for a mass-spring system.
+  \[
+    mx''+bx'+kx=0 \text{ where $mbk>0$}
+  .\] 
+  Let's consider a dampening situation. If we let $x(t)=e^{rt}$, then 
+  \begin{align*}
+  mr^2+br+k=0\\
+  \to r=\frac{-b\pm\sqrt{b^2-4mk} }{2m}
+  .\end{align*}
+  \begin{itemize}
+    \item Repeated $r$ values.
+      For this case, we are going to get $b^2-4mk=0$, which is a critically dampened system. This would make $r=-\frac{b}{2m},-\frac{b}{2m}$, which would make our general solution 
+      \[
+        x(t)=C_1e^{-\frac{b}{2m}t}+C_2te^{-\frac{b}{2m}t}
+      .\] 
+      If we take the $\lim_{t \to \infty} x(t) $, we can see that this equation goes to zero.
+    \item 2 real distinct roots.
+      \[
+        r_1=\frac{-b+\sqrt{b^2-4mk} }{2m}<b, r_2=\frac{-b-\sqrt{b^2-4mk} }{2m} <0 
+      .\] 
+      If $b^2-4mk > 0,$ we have an over dampened system. $r<r_1<0$. The solution to this equation would be 
+      \[
+        x(t)=C_1e^{r_1t}+C_2e^{r_2t}
+      .\] 
+      The limit as this ordinary differential equation goes to infinity is zero.
+    \item 2 real complex conjugate roots. If 
+      \[
+      r=-\frac{b}{2m}\pm i \frac{\sqrt{4mk-b^2} }{2m}
+      .\] 
+      Our $\alpha = -\frac{b}{2m}$, and our $\beta=i \frac{\sqrt{4mk-b^2} }{2m}$. Our general solution in this scenario would be 
+      \[
+        x(t)=C_1e^{-\frac{b}{2m}t}\cos\left( i \frac{\sqrt{4mk-b^2} }{2m}t \right) +C_2e^{-\frac{b}{2m}t}\sin\left( i \frac{\sqrt{4mk-b^2} }{2m}t \right) 
+      .\] 
+      \[
+        \lim_{t \to \infty} x(t)=0
+      .\] 
+  \end{itemize}
 \section{Non homogeneous Linear Equations}
 
+\subsection{Method of Undetermined Coefficients}
+
+When can we use the method of undetermined coefficients? This method can be used with
+\begin{itemize}
+  \item Most constant coefficient ordinary differential equations
+  \item Nonhomogeneous term must be of the form:
+    \begin{itemize}
+      \item Polynomials.
+      \item $e^{cx}$
+      \item $\sin(bx),\cos(bx)$
+    \end{itemize}
+\end{itemize}
+
+\begin{theorem}
+  AAfter finding the homogeneous function $y_h(x):$
+  \begin{enumerate}
+    \item Make your first guess at the form of $y_p(x)$ with unknown constants based on $f(x)$.
+    \item Plug $y_p(x)$ into ordinary differential equation. (Left hand side equals right handside for all $x$'s).
+    \item Solve linear system.
+    \item Plug back into the guess $y_p(x)$.
+    \item General solution is $y(x)=y_h(x)+y_p(x)$.
+  \end{enumerate}
+\end{theorem}
+
+\begin{problem}
+  Consider the following ordinary differential equation.
+  \[
+  x''-3x'-4x=-7t
+  .\] 
+  In order to solve for $x_h(t)$, we set the right hand side equal to zero and let $x(t)=re^{rt}$.
+  \begin{align*}
+    r^2-3r-4&=0\\
+    (r-4)(r+1)&=0\\
+    r&=4,1
+  .\end{align*}
+  This gives us that our general homogeneous solution is 
+  \[
+    x_h(t)=C_1e^{4t}+C_2e^{-t}
+  .\] 
+  \begin{enumerate}
+    \item Now we make our initial guess of $x_p(t)=At+B$. Then we need to make sure that it does not match one of the homogeneous solutions from above.
+    \item $x_p'(t)=A$, $x_p''(t)=0$
+  
+  Now we must plug our $x_p(t)$ and $x_p''(t)$ into our original ordinary differential equation. This gives us 
+  \[
+    0-3A-4(At+B)=-7t
+  .\] 
+  Now We need to separate all of the terms that have a $t$ attached to them, and all of the solutions that are constant as 
+  \begin{align*}
+    t&:-4A=-7\\
+    1&:-3A-4B=0
+  .\end{align*}
+  \item Now we must simply solve for both $A$ and $B$. After solving, we get that 
+  \[
+    x_p(t)=\frac{7}{4}t-\frac{21}{16}
+  .\] 
+  This gives us the general solution as
+  \[
+  C_1e^{4t}+C_2e^{-t}+\frac{7}{4}t-\frac{21}{16}
+  .\] 
+  \end{enumerate}
+  Just a caution, we need to make sure that we apply our initial and boundary conditions to our general solution only.
+\end{problem}
+
+\begin{problem}
+  Consider the ordinary differential equation
+  \[
+  x''-3x'-4x=6e^{-4t}
+  .\] 
+  We can see that $x_h(t)=C_1e^{4t}+C_2e^{-t} $. Our initial guess is going to be $x_p(t)=Ae^{-4t}$. Using our initial guess we can do the following 
+  \begin{align*}
+    x_p''-3x_p-4x_p=6e^{-4t}\\
+    16Ae^{-4t}+12Ae^{-4t}-4Ae^{-4t}=6e^{-4t}\\
+    24A=6\therefore A=\frac{1}{4}
+    x_p(t)=\frac{1}{4}e^{-4t}
+  .\end{align*}
+  Because our initial guess matched on of the solutions in the homogeneous equation we need to modify our equation or else we will be incorrect, but how do we know how to modify our guess? We need to add a $t$ and check again to make sure that our solution is not matching. Let's try again with $Ate^{-4t}$
+  \begin{align*}
+    x_p'&=4e^{4t}+4Ate^{4t}\\
+    x_p''&=8Ae^{4t}+16Ae^{4t}
+  .\end{align*}
+  After plugging $x_p$ and $x_p''$ into our ordinary differential equation and solving the system at the end, we get the general result as
+  \[
+    x(t)=C_1e^{4t}+C_2e^{-t}+\frac{6}{5}te^{4t}
+  .\] 
+\end{problem}
+
+\subsection{Variation of Parameters}
+
+  This method is more tedious and difficult than the method described in section (3.4.1), but it is more universal and will find a particular solution to any non-homogeneous linear ordinary differential equation.
+  \begin{theorem}
+    To solve something using variation of parameters,
+    \begin{enumerate}
+      \item Find $y_h(x)=C_1y_1(x)+C_2y_2(x)$.
+      \item Let $y(x)=v_1(x)y_1(x)+v_2(x)y_2(x)$, where $y_1(x),y_2(x)$ are from the homogeneous solution. Our goal is to find $v_1,v_2$.
+      \item Solve system for $v_1',v_2'$. In order to do this, we can use the following system 
+        \begin{align*}
+          y_1'(x)v_1'(x)+y_2'(x)v_2'(x)=f(x)\\
+          y_1(x)v_1'(x)+y_2(x)v_2'(x)=0
+        .\end{align*}
+        In order to do this, we need to use Cramer's rule. Cramer's rule tells us to find 
+        \begin{align*}
+          w(x)&=\left| \begin{matrix} y_1(x)&y_2(x)\\y_1'(x)&y_2'(x) \end{matrix} \right|\\
+          v_1'(x)&= \frac{\left| \begin{matrix} 0&y_2\\f(x)&y_2' \end{matrix} \right|}{w(x)} \\
+          v_2'(x)&=\frac{\left| \begin{matrix} y_1&0\\y_1'&f(x) \end{matrix} \right| }{w(x)}
+        .\end{align*}
+      \item Integrate to find $v_1(x)$ and $v_2(x)$. $v_1(x)=\boxed{}+c,v_2(x)=\boxed{}+c$.
+      \item Simplify.
+    \end{enumerate}
+  \end{theorem}
+
+  \begin{problem}
+    Solve the ordinary differential equation $x''-2x'+x=\frac{e^{t}}{t}$. First we need to find the homogeneous ordinary differential equation by letting $x_h(t)=e^{rt}$ and solving for $r$. When all is done we end up with $x_1(t)=e^{t},x_2(t)=te^{t}$.
+    \begin{enumerate}
+      \item Let $x(t)=v_1(t)e^{t}+v_2(t)te^{t}$
+      \item Set up a system of equations.
+        \begin{align*}
+          e^{t}v_1'+te^{t}v_2'&=0\\
+          e^{t}v_1'+\left( e^{t}+te^{t} \right)v_2'=\frac{e^{t}}{t} 
+        .\end{align*}
+        Now we can solve this to get $v_1'=-1,v_2'=\frac{1}{t}$.
+      \item Now we need to integrate both $v_1(t)$ and $v_2(t) $ like so
+        \begin{align*}
+          v_1(t)&=\int -1dt=-t+C_1\\
+          v_2(t)&=\int \frac{1}{t}dt=\ln|t|+C_2
+        .\end{align*}
+      \item So,
+        \begin{align*}
+          x(t)&=(-t+C_1)e^{t}+\left( \ln|t|+C_2 \right) te^{t}\\
+              &=-te^{t}+te^{t}\ln|t|+C_1e^{t}+C_2te^{t}
+        .\end{align*}
+    \end{enumerate}
+    Another way we can solve this is using the wronskian,
+    \begin{align*}
+      w(t)&= \left| \begin{matrix} e^{t}&te^{t}\\e^{t}&te^{t}+e^{t} \end{matrix} \right| = \ldots=e^{2t}\\
+      v_1'(t)&=\frac{\left| \begin{matrix} 0&te^{t}\\\frac{e^{t}}{t}&te^{t}+e^{t} \end{matrix} \right| }{w(t)}=\ldots=-1\\
+      v_2'(t)&=\frac{\left| \begin{matrix} e^{t}&0\\e^{t}&\frac{e^{t}}{t} \end{matrix} \right| }{w(t)}=\ldots=\frac{1}{t}
+    .\end{align*}
+  \end{problem}
 \section{The Forced Spring-Mass System}
+\section{Solving Cauchy Euler Ordinary Differential Equations}
