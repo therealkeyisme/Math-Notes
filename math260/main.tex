@@ -1,59 +1,15 @@
-\documentclass{package/notes}
+\documentclass[a4paper]{article}
+\input{preamble.tex}
 
-%%%%%%%%%% Default Package %%%%%%%%%%%%%
-\usepackage{package/color-env}
-%%%%%%%%%% %%%%%%%%%%%%%%% %%%%%%%%%%%%%
-
-%%%%%%%%%% Required Packages %%%%%%%%%%%%%
-\usepackage{background}
-\usepackage[object=vectorian]{pgfornament} %% used in title.tex
-\usepackage{calligra} %%% (optional) to make the Title text beautiful 
-%%%%%%%%%%%%%%%%%%%%%%%%
-
-\usepackage{lipsum}  %% for dummy text 
-\usepackage{amssymb,amsmath,amsfonts}  %%% for maths
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%% Optional Packages %%%%%%%
-\usepackage{lettrine} %% for nice looking 
-\usepackage{GoudyIn} %% first Letter of the paragraph
-
-\renewcommand{\LettrineFontHook}{\color{black}\GoudyInfamily{}}
-% \LettrineTextFont{\itshape}
-\setcounter{DefaultLines}{3}%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{fourier-orns}
-
-\backgroundsetup{contents={}}
-
-% \newcommand{\ornamento}{\vspace{2em}\noindent \textcolor{darkgray}{\hrulefill~ \raisebox{-2.5pt}[10pt][10pt]{\leafright \decofourleft 
-% \decothreeleft  \aldineright \decotwo \floweroneleft \decoone   \floweroneright 
-% \decotwo \aldineleft\decothreeright \decofourright \leafleft} ~  \hrulefill \\ \vspace{2em}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%% Bibliography %%%%%%%%%
-% Required packages are included in notes class
-% Can be tweaked in the notes.cls file itself
-
-\addbibresource{resource/references.bib}
 
 \begin{document}
 
+\maketitle
+\tableofcontents
 \newpage
 
-\include{package/title-page}
-\tableofcontents
-
-\include{chapters/Definitions}
-\include{chapters/Theorems}
-\include{chapters/1Introduction}
-\include{chapters/2FirstOrderDifferentials}
-\include{chapters/3SecondOrderDifferentials}
-
-\pagebreak
-
-\medskip
-
-\printbibliography[heading=bibintoc,title={\centering Bibliography}]
+\input{chapters/1.tex}
+\input{chapters/2.tex}
+\input{chapters/3.tex}
 
 \end{document}

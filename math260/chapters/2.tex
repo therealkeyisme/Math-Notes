@@ -1,4 +1,4 @@
-\chapter{First-Order Differential Equations}
+\section{First-Order Differential Equations}
 
 In this chapter, methods will be given for solving first- order differential equations. First-order means that the first derivative of the unknown function is the highest derivative appearing in the equation. This implied that the most general first-order differential equation has the form $F(t,x,t')=0$ for some function $F$, in this chapter, we will assume that the equation can be solved explicitly for $x'$. This means that our first-order differential equations can always be put in the form:
 
@@ -16,7 +16,7 @@ It would be messy, but not impossible to use the quadratic formula to extract tw
 
 The material in this chapter will cover several analytic methods for solving first-order differential equations, each requiring the function $f$ to have a special form. Two different graphical methods are also described; one for the general equation depending only on $x$. Numerical methods for first-order equations are introduced and theoretical issues of existence and uniqueness of solutions are discussed.
 
-\section{Separable First-Order Equations}
+\subsection{Separable First-Order Equations}
 
   The first analytic method we will consider applies to first-order equations that can be written in the form
 
@@ -129,7 +129,7 @@ The material in this chapter will cover several analytic methods for solving fir
     \end{itemize}
   \end{theorem}
 
-\section{Solving Linear ODEs}
+\subsection{Solving Linear ODEs}
 
  \begin{definition}
    AAn ODE is linear for the dependent variable $y$ if it is homogeneous when $g(x)=0$ and otherwise it is non-homogeneous.
@@ -154,9 +154,9 @@ The material in this chapter will cover several analytic methods for solving fir
   \item Integrate both sides.
  \end{enumerate}
 
-\section{}
+\subsection{}
 
-\section{Existence and Uniqueness of Initial Value Problems}
+\subsection{Existence and Uniqueness of Initial Value Problems}
 
   Given an initial value problem, how can I know that a solution exists, and if so, the uniqueness of that solution.
 
@@ -175,7 +175,7 @@ The material in this chapter will cover several analytic methods for solving fir
     \end{align*}
   \end{problem}
 
-\section{Exact Ordinary Differential Equations}
+\subsection{Exact Ordinary Differential Equations}
 
   This highlights an analytic technique to find the solutions to an ordinary differential equation. This technique depends on if we are able to write an ODE in the form $\frac{d}{dx}(F(x,y(x)))=0$. How can we tell if this is possible? 
 
@@ -297,7 +297,7 @@ The material in this chapter will cover several analytic methods for solving fir
       \]
     \end{problem}
 
-  \subsection{Substitution}
+  \subsubsection{Substitution}
     Sometimes we can make a substitution that turns one ordinary differential equation into one that we can solve.
     
     \begin{problem}
@@ -334,7 +334,7 @@ The material in this chapter will cover several analytic methods for solving fir
       \]
     \end{problem}
 
-  \subsection{Bernoulli Ordinary Differential Equations}
+  \subsubsection{Bernoulli Ordinary Differential Equations}
 
     We use Bernoulli's solution to an ordinary differential equation if the equation can be written in the form $\frac{dx}{dt}+p(t)x=q(t)x^n$, where if $n=0$, the equation is linear and where if $n=1$, the equation is both linear and separable. We can do a substitution for Bernoulli ordinary differential equations where we let $v=x^{1-n}$, and we trade out $x(t)\to v(t)$ to turn the differential into a linear differential. Another formula we can use for plugging in to find the separable ordinary differential equation is $\frac{du}{dx}+(1-n)p(x)u=(1-n)q(x)$, but we do not have an example to show for that method. 
 
@@ -420,8 +420,8 @@ The material in this chapter will cover several analytic methods for solving fir
       \]
     \end{problem}
 
-\section{}
-\section{Phase Lines and Equilibrium Solutions}
+\subsection{}
+\subsection{Phase Lines and Equilibrium Solutions}
 
   This is a qualitative technique for autonomous ordinary differential equations. This is used for finding the long term behavior of solutions for various initial conditions. An equilibrium solution is a constant function satisfying the ODE:
 
@@ -478,7 +478,7 @@ The material in this chapter will cover several analytic methods for solving fir
     \end{align*}
   \end{problem}
 
-  \subsection{Bifurcations}
+  \subsubsection{Bifurcations}
 
   For ordinary differential equations with a parameter, there are times that a small change in the value of the parameter results in a huge change in the behavior of the solutions. It causes a change in the number or stability of the equilibrium solutions.
 

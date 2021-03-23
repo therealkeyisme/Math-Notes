@@ -1,6 +1,6 @@
-\chapter{Second-order Differential Equations}
+\section{Second-order Differential Equations}
 
-\section{General Theory of Homogeneous Linear Equations}
+\subsection{General Theory of Homogeneous Linear Equations}
   The standard form for a general second order ordinary differential equation is
 
   \[
@@ -28,7 +28,7 @@
 
   Let's take a look at an application of lemma (3.1.1).
 
-  \begin{problem}
+  \begin{eg}
     Consider the equation
 
     \[
@@ -48,7 +48,7 @@
     \]
 
     is also a solution for all $C_1,C_2,C_3$. Just note, equation (3.6) is a linear combination of $1,t^3,\frac{1}{t^2}$. So, this is a \underline{general solution} as long as the functions, $1,t^3,\frac{1}{t^2}$ are all “different” from each other.
-  \end{problem}
+  \end{eg}
 
   What is "different"? Different means no one function in a set can be written as a linear combination of other functions in the set. Different means that all of the functions are linearly independent. More generally, if 
 
@@ -92,7 +92,7 @@
 
   Let's consider another problem where we need to show that the solutions are linearly dependent.
 
-  \begin{problem}
+  \begin{eg}
     Let's consider the equation $y''(x)=-9y$, which has the solutions $\{\cos(3x),\sin(3x)\}$ and let's show that the two solutions are linearly independent:
 
   \[
@@ -101,7 +101,7 @@
   \]
   
   Which means that both solutions are valid for this ordinary differential equation. We can turn our original equation into $y''(x)+9y=0$ which is a homogeneous ordinary differential equation. Our $p(x)=0$, and because we know that $w(x)=Ce^{-\int p(x)dx}$, we know that the solution to our equation is 0.
-  \end{problem}
+  \end{eg}
 
   \begin{theorem}
     What to we do when solving linear non-homogeneous ordinary differential equations?
@@ -119,7 +119,7 @@
 
   Let's try out this new theorem on an example problem.
 
-  \begin{problem}
+  \begin{eg}
     Consider the differential equation $y''-5y'-6y=4x$. We claim that 
 
     \[
@@ -151,9 +151,9 @@
        &=0+0+4x
      .\end{align*}
 
-  \end{problem}
+  \end{eg}
 
-\section{Homogeneous Linear Equations with Constant Coefficients}
+\subsection{Homogeneous Linear Equations with Constant Coefficients}
 
   Homogeneous ordinary differential equations are ones that come in the form 
   \[
@@ -179,7 +179,7 @@
 
   Let's take a look at an example of this method in action.
 
-  \begin{problem}
+  \begin{eg}
     Consider the equation 
     \[
     y''-5y'-6y=0
@@ -196,7 +196,7 @@
       \boxed{y(x)=C_1 e^{6x}+C_2e^{-x}}
     \]
     Now all we need to do is check the wronskian $W(x)$ to make sure that $\{e^{r_1x},e^{r_2x}\}$ are linearly independent.
-  \end{problem}
+  \end{eg}
 
   Let's explore a case of a real repeated root. Let's look at the equation
   \[
@@ -246,7 +246,7 @@
     \[
     y(t)=C_1e^{1t}\cos(2t)+C_2e^{1t}\sin(2t)
     .\] 
-    \begin{problem}
+    \begin{eg}
       Solve the homogeneous linear ordinary differential equation,
       \[
       x'''+3x''-4x'-12x=0
@@ -265,9 +265,9 @@
     \[
       x(t)=C_1e^{2t}+C_2e^{-2t}+C_3e^{-3t}
     .\] 
-    \end{problem}
+    \end{eg}
 
-\section{The Spring-Mass Equation}
+\subsection{The Spring-Mass Equation}
 
   The spring-mass equation is a variation of Hooke's law, which states
   \[
@@ -282,7 +282,7 @@
   \[
     m(0)=-k(s)-b(0)-mg\to mg=ks\to k
   .\] 
-  \begin{problem}
+  \begin{eg}
     A mass weighing 10 pounds stretches a string $\frac{1}{4}ft$. Assuming no dampening, find the amplitude period of oscillations of the mass if it is released from a point $\frac{1}{10}ft$below it's equilibrium position with an initial upward velocity of $\frac{1}{20}\frac{ft}{s}$.\newline
     Because the mass weighs 10 pounds, $mg=10$, which means that $m=\frac{10}{32}=\frac{5}{16}\frac{lbs^2}{ft}$. The first thing we need to do is find K. This can be done by setting $mg=ks$ and solving for $k$.
     \begin{align*}
@@ -336,7 +336,7 @@
       x(t)&= -\frac{1}{10}\cos\left( 8\sqrt{2}t  \right)+\frac{1}{160\sqrt{2} }\sin\left( 8\sqrt{2}t  \right) \\
           &\approx 0.1001\sin\left( 8\sqrt{2} t-1.5266 \right) 
     .\end{align*}
-  \end{problem}
+  \end{eg}
 
   $x(t)$ is the displacement of mass from equilibrium at time $t$. The following is the general formula for a mass-spring system.
   \[
@@ -375,9 +375,9 @@
         \lim_{t \to \infty} x(t)=0
       .\] 
   \end{itemize}
-\section{Non homogeneous Linear Equations}
+\subsection{Non homogeneous Linear Equations}
 
-\subsection{Method of Undetermined Coefficients}
+\subsubsection{Method of Undetermined Coefficients}
 
 When can we use the method of undetermined coefficients? This method can be used with
 \begin{itemize}
@@ -401,7 +401,7 @@ When can we use the method of undetermined coefficients? This method can be used
   \end{enumerate}
 \end{theorem}
 
-\begin{problem}
+\begin{eg}
   Consider the following ordinary differential equation.
   \[
   x''-3x'-4x=-7t
@@ -439,9 +439,9 @@ When can we use the method of undetermined coefficients? This method can be used
   .\] 
   \end{enumerate}
   Just a caution, we need to make sure that we apply our initial and boundary conditions to our general solution only.
-\end{problem}
+\end{eg}
 
-\begin{problem}
+\begin{eg}
   Consider the ordinary differential equation
   \[
   x''-3x'-4x=6e^{-4t}
@@ -462,9 +462,9 @@ When can we use the method of undetermined coefficients? This method can be used
   \[
     x(t)=C_1e^{4t}+C_2e^{-t}+\frac{6}{5}te^{4t}
   .\] 
-\end{problem}
+\end{eg}
 
-\subsection{Variation of Parameters}
+\subsubsection{Variation of Parameters}
 
   This method is more tedious and difficult than the method described in section (3.4.1), but it is more universal and will find a particular solution to any non-homogeneous linear ordinary differential equation.
   \begin{theorem}
@@ -488,7 +488,7 @@ When can we use the method of undetermined coefficients? This method can be used
     \end{enumerate}
   \end{theorem}
 
-  \begin{problem}
+  \begin{eg}
     Solve the ordinary differential equation $x''-2x'+x=\frac{e^{t}}{t}$. First we need to find the homogeneous ordinary differential equation by letting $x_h(t)=e^{rt}$ and solving for $r$. When all is done we end up with $x_1(t)=e^{t},x_2(t)=te^{t}$.
     \begin{enumerate}
       \item Let $x(t)=v_1(t)e^{t}+v_2(t)te^{t}$
@@ -515,6 +515,270 @@ When can we use the method of undetermined coefficients? This method can be used
       v_1'(t)&=\frac{\left| \begin{matrix} 0&te^{t}\\\frac{e^{t}}{t}&te^{t}+e^{t} \end{matrix} \right| }{w(t)}=\ldots=-1\\
       v_2'(t)&=\frac{\left| \begin{matrix} e^{t}&0\\e^{t}&\frac{e^{t}}{t} \end{matrix} \right| }{w(t)}=\ldots=\frac{1}{t}
     .\end{align*}
-  \end{problem}
-\section{The Forced Spring-Mass System}
-\section{Solving Cauchy Euler Ordinary Differential Equations}
+  \end{eg}
+\subsection{The Forced Spring-Mass System}
+
+The equations from a forced spring-mass system are in the form 
+\[
+  mx''+bx'+kx=f(x)
+.\] 
+In this section we are going to examine the effects of $f(t)$ on the system. There are three cases for the dampening of a system, undamped, overdamped, and critically dampened. We are going to be looking at the undamped case first.
+\begin{eg}
+  Consider the equation 
+  \[
+    x''+w_0^2x=A\cos(\omega t) \text{ where $\omega_0=\sqrt{\frac{k}{m}} $}
+  .\] 
+  If we were to make our guess based off of this information, we should guess that $x_p(t)=B\cos(\omega t) + C\sin(\omega t)$. $x_h(t)=C_1\cos(\omega_0 t)+C_2\sin(\omega_0 t)$, which is the natural frequency of this equation. If $\omega\neq\omega_0$, then we don't have to modify. Otherwise we will need to modify our equation to 
+  \[
+    x_p(t)=Bt\cos(\omega_0 t)+Ct\sin(\omega_0 t)
+  .\] 
+  Beats happen when $\omega$ is close, but not equal to $\omega_0$. Through a trigonometric identity,
+  \begin{align*}
+    x(t)&=\frac{-2A}{\omega_0^2-\omega^2}\sin\left( \frac{\omega+\omega_0}{2}\cdot t \right) \sin\left( \frac{\omega-\omega_0}{2}t \right)
+  .\end{align*}
+\end{eg}
+\begin{eg}
+  A mass of $5kg$ stretches a spring $10cm$ and is acted on by an external force of $10\sin\left( \frac{t}{2} \right) N$ and moves in a viscous medium that imparts a force of 2N when the speed is $4 \frac{cm}{s}$. Find the initial value problem that models setting the mass in motion from its equilibrium position with an upward velocity of $3 \frac{cm}{s}$.\par
+  Let $t$ be time since the mass in set in motion in seconds. Let $x$ be displacement (where up is positive) of the mass from equilibrium.
+  \begin{align*}
+    mg&=ks\\
+    5.98&=k(0.1m)\\
+    \to k&=490 \frac{kg}{s^2}
+  .\end{align*}
+  \begin{align*}
+    5x''+bx'+490x&=10\sin\left( \frac{t}{2} \right) \\
+    x(0)&=0\\
+    x'(0)=0.03
+  .\end{align*}
+  They told us that $f_{damping}=-bx'$. We know that the force damping when at a velocity of $0.4 \frac{m}{s^2}$, so we can solve for $b$ and see that $b=50$. This makes our ordinary differential equation 
+  \[
+  x''+10x'+98x=2\sin\left( \frac{t}{2} \right) 
+  .\] 
+  We should expect to see trigonometric functions because of the value of $f(x)$. Let's try the equation
+  \[
+    x_p(t)=A\cos\left( \frac{t}{2} \right) +B\sin\left( \frac{t}{2} \right) 
+  .\] 
+  We can use $b-4mk$ to determine the numbers required for our homogeneous solution.
+\end{eg}
+
+\begin{theorem}
+  Here is the outline for solving this problems.
+  \begin{enumerate}
+    \item Find $x_h(t)=C_1e^{\alpha t}\cos\left( \beta t \right) +C_2e^{\alpha}\sin\left( \beta t \right) $
+    \item Find $x_p(t)=A\cos\left( \beta t \right) +B\sin\left( \beta t \right) $
+    \item State general solutions.
+    \item Apply initial conditions to find $C_1,C_2$.
+    \item Find the particular solution
+  \end{enumerate}
+\end{theorem}
+
+\begin{note}
+  The maximum amplitude occurs when 
+  \begin{align*}
+    \omega=\sqrt{\omega_0^2-2\lambda}\\
+    \omega_0=\sqrt{\frac{k}{m}} 
+  .\end{align*}
+\end{note}
+\subsection{Solving Cauchy Euler Ordinary Differential Equations}
+\subsubsection{Method of Lucky Guess}
+
+If an equation is not in the form 
+\[
+ax^2y'' + bxy'+cy=0
+,\] then we cannot use the method of lucky guess. This method is common in polar, cylindrical, and spherical coordinates. The first thing we need to do when using this method is put it in standard form,
+\[
+y''+\frac{b}{a}\frac{1}{x}y'+\frac{c}{ax^2}y=0
+.\] 
+Now, we just need to let $y(x)=x^{r}$ to find our $r$-values.
+\begin{eg}
+  Solve the following ordinary differential equation.
+  \[
+  x^2y'''+2xy''-6y'=0
+  .\] 
+  Let $y(x)=x^{r}$. Using this we can find that $y'=rx^{r}, y''=r(r-1)x^{r-2},y'''=r(r-1)(r-2)x^{r-3}$. Now let's plug our $y$'s into our ordinary differential equation and solve for $r$ like the following.
+  \begin{align*}
+    x^2r(r-1)(r-2)x^{r-3}+2xr(r-1)x^{r-2}-6rx^{r-1}&=0\\
+    x^{r-1}\left[ \left( r^{3}-3r^2+2r \right) + \left( 2r^2-2r \right) -6r  \right]&=0\\
+    r\left[ r^2-3r+2+2r-2-6 \right] &=0\\
+    r\left[ r^2-r-6 \right]&=0\\
+    r(r-3)(r+2)&=0\\
+    \to r&=0,3,-2.
+  .\end{align*}
+  From here we can determine the following.
+  \begin{align*}
+    y_1(x)&=x^{0}=1\\
+    y_2(x)&=x^{3}\\
+    y_3(x)&=x^{2}
+  .\end{align*}
+  So the general solution of our ordinary differential equation is 
+  \[
+    y(x)=C_1+C_2x^{3}+\frac{C_3}{x^2} 
+  .\] 
+\end{eg}
+  If $r$ is repeated, then $y_1(x)=x^{r},y_2=x^{r}\ln x,y_{n}(\ln x)^n$. If $r=\alpha\pm i\beta$, then we need to set 
+  \begin{align*}
+    y_1(x)&=e^{\alpha}\cos(\beta\ln x)\\
+    y_2(x)&=x^{\alpha}\sin(\beta\ln x)
+  .\end{align*}
+  This gives us two equations,
+  \begin{align*}
+    ay''+by'+cy=0 && ax^2y''+bxy+cy=0
+  .\end{align*}
+  Let's take a look at an example for this.
+\begin{eg}
+  Consider the equation $4x^2y''+y=0$
+  \begin{enumerate}
+    \item Let $y(x)=e^{r}$, after taking the derivatives we can see that 
+      \begin{align*}
+        x^{r}[4r(r-1)+1]&=0\text{ for all $x$'s}\\
+        4r^2-4r+1&=0\\
+        (2r-1)^2=0\to r=\frac{1}{2},\frac{1}{2}
+      .\end{align*}
+      This gives us that our general solution is 
+      \[
+      C_1x^{\frac{1}{2}}+C_2x^{\frac{1}{2}}\ln x, x>0
+      .\] 
+    \item Let's consider a different approach.
+      \begin{align*}
+        x^{r}[4r(r-1)+17]&=0\\
+        4r^2-4r+17&=0\\
+        (2r-1)^2&=1-17\\
+        |2r-1|&=4i\\
+        2r-1&=\pm_4i\\
+        r=\frac{1}{2}\pm 2i
+      .\end{align*}
+      This tells us that the general solution is 
+      \[
+        y(x)=C_1x^{\frac{1}{2}}\cos(2\ln x)+C_2x^{\frac{1}{2}}(2\ln x),x>0
+      .\] 
+  \end{enumerate}
+\end{eg}
+The equation $ax^2 \frac{d^2y}{dt^2}+bx \frac{dy}{dt}+cy=0$ can be transformed via $x=e^{t},t=\ln x$ to 
+\[
+  a \frac{d^2y}{dt^2}+(b-a) \frac{dy}{dt}+cy=0
+.\] 
+Let's take a look at another example.
+\begin{eg}
+  Consider the following ordinary differential equation,
+  \[
+  \rho \frac{d^2u}{d\rho^2}+2 \frac{du}{d\rho}=0
+  .\] 
+  Let $u(a)=A,u(b)=B$. We can see that $u(\rho)=\rho^{r}, u'=r\rho^{r-1}, u''=r(r-1)\rho^{r-2}$. Now in order to solve this ordinary differential equation, we need to determine the roots of $r$, and we need to solve for both $C_1,C_2$.
+  \begin{align*}
+    \rho^{r-1}[r(r-1)+2r]&=0\\
+    r^2-r+2r&=0\\
+    r^2+r&=0\\
+    r(r+1)&=0\\
+    r&=0,1
+  .\end{align*}
+  Now, we can determine that $u(\rho)=C_1+C_2\rho^{-1}$ as long as $\rho>0$. We can now use the following system to solve for $C_1,C_2$,
+\begin{align*}
+  \begin{cases}
+    \rho(a)=C_1+\frac{C_2}{a}=A & C_2=\frac{A-B}{\frac{1}{a}-\frac{1}{b}}=\frac{ab(B-A)}{a-b}\\
+    \rho(b)=C_1+\frac{C_2}{b}=B & C_1=\frac{aA-bB}{a-b}
+  \end{cases}
+\end{align*}
+\end{eg}
+
+Let's take a look at another example.
+\begin{eg}
+  Consider the ordinary differential equation 
+  \[
+    x^2y''-2xy'+2y=-x\text{, where }x>0
+  .\] 
+  From here, we need to put our equation into standard form so it looks like 
+  \[
+    y''-\frac{2}{x}y'+\frac{2}{x^2}y=-\frac{1}{x}\text{, where $-\frac{1}{x}=f(x)$}
+  .\] 
+  The first thing we need to do nowis solve for $y_h(x)$, which means we have to do the following
+  \begin{align*}
+    x^2y''-2xy'+2y&=0\\
+    r&=2,1\\
+    y_1(x)=x^2\\
+    y_2(x)=x\\
+    y_h(x)=C_1x^2+C_2x
+  .\end{align*}
+  Now we are going to use variation of parameters to solve for $C_1,C_2$. In order to do this, let $y(x)=v_1(x)x^2+v_2(x)x$. We can either use a linear system to solve this, or we can use the wronskian. Using the linear system, we end up with 
+  \begin{equation*}
+    \begin{cases}
+      x^2v_1'+xv_2'=0\\
+      2xv_1'+1v_2'=-\frac{1}{x}
+    \end{cases}
+  \end{equation*}
+  If we were to use the wronskian we would do the following
+  \begin{align*}
+    w(x)&=\left| \begin{matrix} x^2&x\\2x&1 \end{matrix} \right| =x^2-2x^2=-x^2\\
+    v_1'&= \frac{\left| \begin{matrix} 0&x\\-\frac{1}{x}&1 \end{matrix} \right| }{-x^2}=-\frac{1}{x^2}\\
+    v_2'&=\frac{\left| \begin{matrix} x^2&0\\2x&-\frac{1}{x} \end{matrix} \right| }{-x^2}=-\frac{x}{x^2}=\frac{1}{x}\\
+    v_1=\int-\frac{1}{x^2}dx=\frac{1}{x}+C_1\\
+    v_2=\int \frac{1}{x}dx=\ln|x|+C_2
+  .\end{align*}
+  So $y(x)=v_1x^2+v_2x$. After simplification we end up with 
+  \[
+    y(x)=C_1x^2+C_3x+x\ln|x|
+  .\] 
+\end{eg}
+\subsubsection{Taylor and Frobenius Series Solutions to Linear Ordinary Differential Equations}
+
+This is a backup strategy if the method of lucky guess does not work. In this strategy, the main point is to let
+\[
+  y(x)=\sum_{n=0}^{\infty}C_n(x-x_0)^{n}
+.\] 
+Our goal is to use our initial conditions to solve the ordinary differential equation and find $C_n$'s. Sometimes we need a more generalized series, and that is when we are going to use the frobenius series. Here is the general pathway through one of these problems.
+\begin{align*}
+  y(x)&=(x-x_0)^{r}\sum_{n=0}^{\infty} C_n(x-x_0)^{n}\\
+  x_0&\to 0\\
+  y(x)&=\sum_{n=0}^{\infty} C_nx^{n+r}
+.\end{align*}
+Given an ordinery differential equation with initial conditions, $y(0)=y_0,y'(0)=v_0$, let 
+\begin{align*}
+  y(x)&=C_0+C_1x+C_2x^2+C_3x^3\\
+  y'(x)&=C_1+2C_2x+3C_3x^2
+.\end{align*}
+Now we apply our initial conditions, which tell us the first two terms in the solution.
+There are three main ordinary differential equations that we need to know that force us to use the Taylor or Frobenius series solutions,
+\begin{itemize}
+  \item Legendre's ODE
+    \[
+      (1-t^2)x''-2tx'+\lambda(\lambda+1)x=0
+    .\] 
+  \item Bessel's ODE
+    \[
+      t^2x''+tx'+(t^2-v^2)x=0
+    .\] 
+  \item Airy's ODE
+    \[
+    x''-tx=0
+    .\] 
+\end{itemize}
+\begin{theorem}
+  Consider the equation 
+  \[
+    x''+p(t)x'+q(t)x=0
+  ,\] where $f(x)=0$. A singular point of the ordinary differential equation is a value of $t$ where $p,q,\text{ or }f$ is not analytic (cannot be written as taylor series). If we attempt to solve a singular point ODE, we will end up dividing by 0. An ordinary point are non-singular points. 
+\end{theorem}
+Consider Bessel's ordinary differential equation, $x''+\frac{1}{t}x'+\left( 1-\frac{2^2}{t^2} \right) = 0 $ This equation has a singular point of $t=0$. A point is regular if $tp$ (in this case $t-t_0$) and $t^2q$ ($\left( t-t_0 \right) ^2$) are analytic. Otherwise, they are irregular points. In the case of Bessel's ordinary differential equation, there is a regular singular point.
+\begin{theorem}
+  If you expect a taylor series at $t=t_0$ (ordinary point) and the radius of convergence is at least as big as the distance to the nearese singular point (can be complex), then there exist 2 linearly independent series solutions. If $t=t_0$ is a singular point, you need to use a frobenius series.
+\end{theorem}
+\begin{eg}
+  Consider Airy's ordinary differential equation, $x''-t=0$. The two linearized solutions are $A_i(t)$ and $B_i(t)$. We are given the initial conditions $x(0)=1,x'(0)=-2$. From here, let $x(t)=1-2t+C_2t^3+C_4t^{4}$, this gives us that 
+  \begin{align*}
+    x'(t)&=-2+2C_2t+3C_3t^2+4C_4t^3\\
+    x''&=C_2+6C_3t+12C_4t^2
+  .\end{align*}
+  If we plug the equations above into Airy's equation, we get
+  \[
+  \left[ 2C_2+6C_3t+12C_4t^2+\ldots \right]-t\left[ 1-2t+C_2t^2+C_3t^3+C_4t ^{4}+\ldots \right] =0
+  .\] 
+  We can pull out specific values in order to solve for $C_2,C_3,C_4$, like the following 
+  \begin{align*}
+    1&:2C_2=0 &&\to C_2=0\\
+    t&:6C_3-1=0&&\to C_3=\frac{1}{6}\\
+    t^2&:12C_4+2=0&&\to C_3=-\frac{1}{6}
+  .\end{align*}
+  From here, we can determine that our general solution is 
+  \begin{equation*}
+    \boxed{x(t)=1-2t+\frac{1}{6}t^3-\frac{1}{6}t ^{4}+\ldots}
+  \end{equation*}
+\end{eg}

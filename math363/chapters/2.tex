@@ -1,6 +1,6 @@
-\chapter{Vector Spaces and Bases}
+\section{Vector Spaces and Bases}
 
-\section{Real Vector Spaces}
+\subsection{Real Vector Spaces}
   A vector space is the abstract reformulation of the quintessential properties of $n$-dimensional Euclidean Space $\R^n$, which is defined as the set of all real (column) vectors with $n$ entries. The basic laws of vector addition and scalar multiplication in $\R$
 
   \begin{definition}
@@ -73,7 +73,7 @@
   $\R^3$ only has 4 kinds of subspaces. $\R^3$, $\{\vec{0}\}$, planes passing through the origin and lines that are passing through the origin.
 
   
-\section{Subspaces}
+\subsection{Subspaces}
 
   \begin{definition}
     LLet $I$ be an interval in $\R$. Let $\mathbb{F}(I)$ be the vector space of functions $\mathbb{F}=I\to\R$.
@@ -112,14 +112,14 @@
     \end{itemize}
   \end{problem}
 
-\section{Span and Linear Independence}
+\subsection{Span and Linear Independence}
 
   If we let $V$ be a vector space over $\R$ and let $\vec{v_1},\dots,\vec{v_n}\in V$, then we can determine that the 
   \begin{equation}
     span(\{\vec{v_1},\dots,\vec{v_n}\})=\{c_1\vec{v_1}+\dots+c_n\vec{v_n}|c_1,\dots,c_n\in\R\}
   \end{equation}
 
-  \begin{proposition}
+  \begin{prop}
     TThe span of $\{\vec{v_1},\vec{v_2}\}$ is a subspace of $V$.
     \begin{proof}
       \begin{align}
@@ -135,7 +135,7 @@
         =rc_1\vec{v_1}+\dots+rc_n\vec{v_n}\in span
       \end{align}
     \end{proof}
-  \end{proposition}
+  \end{prop}
 
   \begin{problem}
     Let $V\in\R^3$. Also we are going to let
@@ -245,9 +245,9 @@
     Because we have this relationship where $c_1,c_2,c_3$ all depend on each other, we can tell that this is linearly independent.
   \end{problem}
 
-  \subsection{Linear Independence and Dependence}
+  \subsubsection{Linear Independence and Dependence}
   
-\section{Basis and Dimension}
+\subsection{Basis and Dimension}
   \begin{definition}
     AA basis of a vector space $v$ is a collection of vectors $\vec{v_1},\dots,\vec{v_n}$ that 1. span $v$ and 2. are linearly dependent.
   \end{definition}
@@ -413,7 +413,7 @@
     \end{align}
   \end{problem}
   
-\section{The fundamental Matrix Subspaces (Kernel and Image)}
+\subsection{The fundamental Matrix Subspaces (Kernel and Image)}
 
   \begin{definition}
     TThe image of an $m\times n$ matrix $A$ is the subspace spanned by the columns of A.
@@ -475,7 +475,7 @@
     AAssume $\vec{x_1}$ solves $A\vec{x}=\vec{b}$. Then, $\vec{x_2}$ is another solution to $A\vec{x}=\vec{b}$ if and only if $\vec{x_2}=\vec{x_1}+\vec{z}$, where $z\in Ker(A)$
   \end{theorem}
 
-  \begin{proposition}
+  \begin{prop}
     LLet $A$ be an $m\times n$ matrix. The following are true:
 
     \begin{enumerate}
@@ -485,7 +485,7 @@
       \item $A\vec{x}=\vec{b}$ has no free variables.
       \item $A$ is non-singular.
     \end{enumerate}
-  \end{proposition}
+  \end{prop}
 
   \begin{definition}
     LLet A be $m\times n$. 

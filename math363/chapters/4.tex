@@ -1,6 +1,6 @@
-\chapter{Orthogonality}
+\section{Orthogonality}
 
-\section{}
+\subsection{}
 
   Recall that 
 
@@ -43,7 +43,7 @@
     \end{equation}
   \end{problem}
 
-  \begin{proposition}
+  \begin{prop}
     Assume $\vec{v_1},\ldots,\vec{v_n}\in V$ with $\vec{v_i}\neq \vec{0}$ for all $i$. Assume that $<v_i,v_j\ge 0$ whenever $i\neq j$, then $\{v_1,\ldots,v_n\}$ is linearly independent.
     \begin{proof}
       Assume that $c_1\vec{v_1}+\ldots+c_n\vec{n}=0$. Let $i\in\{1,\ldots,n\}$
@@ -55,7 +55,7 @@
       .\end{align*}
       Now we know that $v_1,\ldots,v_n$ are linearly independent.
     \end{proof}
-  \end{proposition}
+  \end{prop}
 
   \begin{corollary}
     If $dim(v)=n$ and $\vec{v_1},\ldots,\vec{v_n}$ are $n$ vectors such that $<v_i,v_j> = 0$ wherever $i\neq j$, then $\{\vec{v_1},\ldots,\vec{v_n}\}$ is a basis.
@@ -138,8 +138,8 @@
     This equation is the Fourier series.
   \end{problem}
 
-\section{}
-\section{Orthogonal Matrices}
+\subsection{}
+\subsection{Orthogonal Matrices}
 
   \begin{definition}
     AA square matrix $Q$ is orthogonal if $Q^{t}Q=Q\cdot Q^{T}=I$
@@ -166,7 +166,7 @@
   
   If we plot $(a_{11},a_{12})$ on a graph, we can see that $\cos\left( \theta \right) =a_{12}$ and $\sin(\theta)=a_{11} $
 
-  \begin{proposition}
+  \begin{prop}
     q $Q$ is orthogonal if and only if its columns form an orthonormal basis.
     \begin{proof}
       Let $Q=[U_1\vdots U_2 \vdots\ldots\vdots U_n]$.
@@ -183,7 +183,7 @@
       .\] 
       So the $U_i$'so form an orthonormal basis.
     \end{proof}
-  \end{proposition}
+  \end{prop}
   \begin{problem}
     Let $A=\begin{bmatrix} 3&5\\7&\frac{1}{2} \end{bmatrix} $, and let $A$ be orthonormal. We know that $A\cdot A^{T}=A^{T}\cdot A=I$. Let's see if $A$ is an orthonormal basis.
     \[
