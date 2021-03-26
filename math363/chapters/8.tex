@@ -1,1 +1,45 @@
 \section{Eigenvalues and Singular Values}
+
+\begin{definition}
+  Let $A$ be an $nxn$ matrix. A scalar $\lambda$ is an eigenvalue of $A$ if 
+  \[
+  A\vec{v}=\lambda\vec{v}
+  .\] 
+  For some nonzero vector $\vec{v}\cdot\vec{v}$ is called the eigen vector corresponding to lambda.
+\end{definition}
+\begin{eg}
+  Consider $A=SmallMatrix{2&1\\1&2}$. Let's find the eigenvalues of this matrix.
+  \begin{align*}
+    0 &= det\left( \begin{pmatrix} 2&1\\1&2 \end{pmatrix} -\left( \lambda&0\\ 0&\lambda \right)  \right) \\
+      &=det\begin{pmatrix} 2-\lambda&1\\1&2-\lambda \end{pmatrix} \\
+      &=(2-\lambda)^2-1\\
+    0&=(3-\lambda)(1-\lambda)
+  .\end{align*}
+  Our eigenvalues are 3 and 1. Remember that $(A-\lambda I)\vec{v}=\vec{0}$. Consider $\lambda = 3$
+  \begin{align*}
+    \begin{pmatrix} -1&1\\1&-1 \end{pmatrix} \begin{pmatrix} x\\y \end{pmatrix} =\begin{pmatrix} 0\\0 \end{pmatrix} \\
+    -x+y=0\\
+    x=y\\
+    \begin{pmatrix} x\\x \end{pmatrix} =x\begin{pmatrix} 1\\1 \end{pmatrix} 
+  .\end{align*}
+  Now consider $\lambda = 1$.
+  \begin{align*}
+    A(\lambda I)\vec{v}=\vec{0}\\
+    (A-\lambda I)\vec{v}\\
+    \begin{pmatrix} 1&1\\1&1 \end{pmatrix} \begin{pmatrix} x\\y \end{pmatrix} =\begin{pmatrix} 0\\0 \end{pmatrix} \\
+    x+y=0\\
+    y=-x\\
+    \begin{pmatrix} x\\-x \end{pmatrix} =x\begin{pmatrix} 1\\-1 \end{pmatrix} 
+  .\end{align*}
+\end{eg}
+\begin{eg}
+  Consider $A=SmallMatrix{1&1&2\\0&1&2\\0&0&3}$. For eigenvalues, $0=det(A-\lambda I)$.
+  \begin{align*}
+    0 = det \begin{pmatrix} 1-\lambda&1&2\\0&1-\lambda&2\\0&0&3-\lambda \end{pmatrix} \\
+    0=(1-\lambda)(1-\lambda)(3-\lambda)
+  .\end{align*}
+  This makes our eigenvalues 1 and 3. For $\lambda=3$,
+  \begin{align*}
+    \begin{pmatrix} -2&1&2\\0&-2&2\\0&0&0&0 \end{pmatrix} 
+  .\end{align*}
+\end{eg}
