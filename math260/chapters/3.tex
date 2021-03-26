@@ -1,3 +1,4 @@
+\newpage
 \section{Second-order Differential Equations}
 
 \subsection{General Theory of Homogeneous Linear Equations}
@@ -7,7 +8,7 @@
     x''(t)+p(t)x'(t)+q(t)x(t)=f(t).
   \]
   
-  For us, $p(t)$ and $q(t)$ are typically going to be constants. Also we know that if $f(t)=0$, the equation is homogenous.
+  For us, $p(t)$ and $q(t)$ are typically going to be constants. Also, we know that if $f(t)=0$, the equation is homogeneous.
 
   \begin{lemma}
     GGiven an equation in the form 
@@ -50,14 +51,14 @@
     is also a solution for all $C_1,C_2,C_3$. Just note, equation (3.6) is a linear combination of $1,t^3,\frac{1}{t^2}$. So, this is a \underline{general solution} as long as the functions, $1,t^3,\frac{1}{t^2}$ are all “different” from each other.
   \end{eg}
 
-  What is "different"? Different means no one function in a set can be written as a linear combination of other functions in the set. Different means that all of the functions are linearly independent. More generally, if 
+  What is “different”? Different means no one function in a set can be written as a linear combination of other functions in the set. Different means that all the functions are linearly independent. More generally, if 
 
   \[
     C_1f_1(t)+C_2f_2(t)+\dots+C_nf_n(t)=0
   \]
 
   \begin{theorem}
-    WWe can instead test for linear independence by using the wronskian,
+    We can instead test for linear independence by using the wronskian,
 
     \[
       w(f_1,f_2)(t)=det\begin{vmatrix}
@@ -107,10 +108,10 @@
     What to we do when solving linear non-homogeneous ordinary differential equations?
     \begin{enumerate}
       \item Solve the associated homogeneous ODE $\to X_h(t)$, which will have many unknown constants
-      \item Find one solution to nonhomogeneous ODE $\to X_p(t)$
+      \item Find one solution to non-homogeneous ODE $\to X_p(t)$
     \end{enumerate}
 
-    The general solution to the original nonhomogeneous ODE is 
+    The general solution to the original non-homogeneous ODE is 
 
     \[
       x(t)=x_h(t)+x_p(t)
@@ -140,7 +141,7 @@
       y''(x)&=C_1e^{-x}+36C_2e^{6x}
     \end{align*}
 
-     Let's see if the left hand side is equal to $4x$ like it was above.
+     Let's see if the left-hand side is equal to $4x$ like it was above.
 
      \begin{align*}
        y''-5y'-6y=\left[C_1e^{-x}+36C_2e^{6x}\right]&-5\left[-C_1e^{-x}+6C_2e^{6x}-\frac{2}{3}\right]\\
@@ -298,7 +299,7 @@
     \begin{align*}
       \to x''+128x=0\\
     .\end{align*}
-    We are going to let $x(t)=e^{rt}$. This gives us 
+    Furthermore, we are going to let $x(t)=e^{rt}$. This gives us 
     \begin{align*}
       r^2+128&=0\\
       r^2&=-128\\
@@ -375,14 +376,14 @@
         \lim_{t \to \infty} x(t)=0
       .\] 
   \end{itemize}
-\subsection{Non homogeneous Linear Equations}
+\subsection{Non-homogeneous Linear Equations}
 
 \subsubsection{Method of Undetermined Coefficients}
 
 When can we use the method of undetermined coefficients? This method can be used with
 \begin{itemize}
   \item Most constant coefficient ordinary differential equations
-  \item Nonhomogeneous term must be of the form:
+  \item Non-homogeneous term must be of the form:
     \begin{itemize}
       \item Polynomials.
       \item $e^{cx}$
@@ -391,10 +392,10 @@ When can we use the method of undetermined coefficients? This method can be used
 \end{itemize}
 
 \begin{theorem}
-  AAfter finding the homogeneous function $y_h(x):$
+  After finding the homogeneous function $y_h(x):$
   \begin{enumerate}
     \item Make your first guess at the form of $y_p(x)$ with unknown constants based on $f(x)$.
-    \item Plug $y_p(x)$ into ordinary differential equation. (Left hand side equals right handside for all $x$'s).
+    \item Plug $y_p(x)$ into ordinary differential equation. (Left-hand side equals right-hand side for all $x$'s).
     \item Solve linear system.
     \item Plug back into the guess $y_p(x)$.
     \item General solution is $y(x)=y_h(x)+y_p(x)$.
@@ -406,7 +407,7 @@ When can we use the method of undetermined coefficients? This method can be used
   \[
   x''-3x'-4x=-7t
   .\] 
-  In order to solve for $x_h(t)$, we set the right hand side equal to zero and let $x(t)=re^{rt}$.
+  In order to solve for $x_h(t)$, we set the right-hand side equal to zero and let $x(t)=re^{rt}$.
   \begin{align*}
     r^2-3r-4&=0\\
     (r-4)(r+1)&=0\\
@@ -424,7 +425,7 @@ When can we use the method of undetermined coefficients? This method can be used
   \[
     0-3A-4(At+B)=-7t
   .\] 
-  Now We need to separate all of the terms that have a $t$ attached to them, and all of the solutions that are constant as 
+  Now We need to separate all the terms that have a $t$ attached to them, and all the solutions that are constant as 
   \begin{align*}
     t&:-4A=-7\\
     1&:-3A-4B=0
@@ -522,13 +523,13 @@ The equations from a forced spring-mass system are in the form
 \[
   mx''+bx'+kx=f(x)
 .\] 
-In this section we are going to examine the effects of $f(t)$ on the system. There are three cases for the dampening of a system, undamped, overdamped, and critically dampened. We are going to be looking at the undamped case first.
+In this section we are going to examine the effects of $f(t)$ on the system. There are three cases for the dampening of a system, under damped, over damped, and critically dampened. We are going to be looking at the under damped case first.
 \begin{eg}
   Consider the equation 
   \[
     x''+w_0^2x=A\cos(\omega t) \text{ where $\omega_0=\sqrt{\frac{k}{m}} $}
   .\] 
-  If we were to make our guess based off of this information, we should guess that $x_p(t)=B\cos(\omega t) + C\sin(\omega t)$. $x_h(t)=C_1\cos(\omega_0 t)+C_2\sin(\omega_0 t)$, which is the natural frequency of this equation. If $\omega\neq\omega_0$, then we don't have to modify. Otherwise we will need to modify our equation to 
+  If we were to make our guess based off of this information, we should guess that $x_p(t)=B\cos(\omega t) + C\sin(\omega t)$. $x_h(t)=C_1\cos(\omega_0 t)+C_2\sin(\omega_0 t)$, which is the natural frequency of this equation. If $\omega\neq\omega_0$, then we don't have to modify. Otherwise, we will need to modify our equation to 
   \[
     x_p(t)=Bt\cos(\omega_0 t)+Ct\sin(\omega_0 t)
   .\] 
@@ -538,7 +539,7 @@ In this section we are going to examine the effects of $f(t)$ on the system. The
   .\end{align*}
 \end{eg}
 \begin{eg}
-  A mass of $5kg$ stretches a spring $10cm$ and is acted on by an external force of $10\sin\left( \frac{t}{2} \right) N$ and moves in a viscous medium that imparts a force of 2N when the speed is $4 \frac{cm}{s}$. Find the initial value problem that models setting the mass in motion from its equilibrium position with an upward velocity of $3 \frac{cm}{s}$.\par
+  A mass of $5kg$ stretches a spring $10cm$ and is acted on by an external force of $10\sin\left( \frac{t}{2} \right) N$ and moves in a viscous medium that imparts a force of 2 N when the speed is $4 \frac{cm}{s}$. Find the initial value problem that models setting the mass in motion from its equilibrium position with an upward velocity of $3 \frac{cm}{s}$.\par
   Let $t$ be time since the mass in set in motion in seconds. Let $x$ be displacement (where up is positive) of the mass from equilibrium.
   \begin{align*}
     mg&=ks\\
@@ -562,7 +563,7 @@ In this section we are going to examine the effects of $f(t)$ on the system. The
 \end{eg}
 
 \begin{theorem}
-  Here is the outline for solving this problems.
+  Here is the outline for solving these problems.
   \begin{enumerate}
     \item Find $x_h(t)=C_1e^{\alpha t}\cos\left( \beta t \right) +C_2e^{\alpha}\sin\left( \beta t \right) $
     \item Find $x_p(t)=A\cos\left( \beta t \right) +B\sin\left( \beta t \right) $
@@ -617,7 +618,7 @@ Now, we just need to let $y(x)=x^{r}$ to find our $r$-values.
 \end{eg}
   If $r$ is repeated, then $y_1(x)=x^{r},y_2=x^{r}\ln x,y_{n}(\ln x)^n$. If $r=\alpha\pm i\beta$, then we need to set 
   \begin{align*}
-    y_1(x)&=e^{\alpha}\cos(\beta\ln x)\\
+    y_1(x)&=x^{\alpha}\cos(\beta\ln x)\\
     y_2(x)&=x^{\alpha}\sin(\beta\ln x)
   .\end{align*}
   This gives us two equations,
@@ -686,11 +687,11 @@ Let's take a look at another example.
   \[
     x^2y''-2xy'+2y=-x\text{, where }x>0
   .\] 
-  From here, we need to put our equation into standard form so it looks like 
+  From here, we need to put our equation into standard form, so it looks like 
   \[
     y''-\frac{2}{x}y'+\frac{2}{x^2}y=-\frac{1}{x}\text{, where $-\frac{1}{x}=f(x)$}
   .\] 
-  The first thing we need to do nowis solve for $y_h(x)$, which means we have to do the following
+  The first thing we need to do now is solve for $y_h(x)$, which means we have to do the following
   \begin{align*}
     x^2y''-2xy'+2y&=0\\
     r&=2,1\\
@@ -713,7 +714,7 @@ Let's take a look at another example.
     v_1=\int-\frac{1}{x^2}dx=\frac{1}{x}+C_1\\
     v_2=\int \frac{1}{x}dx=\ln|x|+C_2
   .\end{align*}
-  So $y(x)=v_1x^2+v_2x$. After simplification we end up with 
+  So $y(x)=v_1x^2+v_2x$. After simplification, we end up with 
   \[
     y(x)=C_1x^2+C_3x+x\ln|x|
   .\] 
@@ -730,7 +731,7 @@ Our goal is to use our initial conditions to solve the ordinary differential equ
   x_0&\to 0\\
   y(x)&=\sum_{n=0}^{\infty} C_nx^{n+r}
 .\end{align*}
-Given an ordinery differential equation with initial conditions, $y(0)=y_0,y'(0)=v_0$, let 
+Given an ordinary differential equation with initial conditions, $y(0)=y_0,y'(0)=v_0$, let 
 \begin{align*}
   y(x)&=C_0+C_1x+C_2x^2+C_3x^3\\
   y'(x)&=C_1+2C_2x+3C_3x^2
@@ -755,11 +756,11 @@ There are three main ordinary differential equations that we need to know that f
   Consider the equation 
   \[
     x''+p(t)x'+q(t)x=0
-  ,\] where $f(x)=0$. A singular point of the ordinary differential equation is a value of $t$ where $p,q,\text{ or }f$ is not analytic (cannot be written as taylor series). If we attempt to solve a singular point ODE, we will end up dividing by 0. An ordinary point are non-singular points. 
+  ,\] where $f(x)=0$. A singular point of the ordinary differential equation is a value of $t$ where $p,q,\text{ or }f$ is not analytic (cannot be written as Taylor series). If we attempt to solve a singular point ODE, we will end up dividing by 0. An ordinary point are non-singular points. 
 \end{theorem}
 Consider Bessel's ordinary differential equation, $x''+\frac{1}{t}x'+\left( 1-\frac{2^2}{t^2} \right) = 0 $ This equation has a singular point of $t=0$. A point is regular if $tp$ (in this case $t-t_0$) and $t^2q$ ($\left( t-t_0 \right) ^2$) are analytic. Otherwise, they are irregular points. In the case of Bessel's ordinary differential equation, there is a regular singular point.
 \begin{theorem}
-  If you expect a taylor series at $t=t_0$ (ordinary point) and the radius of convergence is at least as big as the distance to the nearese singular point (can be complex), then there exist 2 linearly independent series solutions. If $t=t_0$ is a singular point, you need to use a frobenius series.
+  If you expect a Taylor series at $t=t_0$ (ordinary point) and the radius of convergence is at least as big as the distance to the nearest singular point (can be complex), then there exist 2 linearly independent series solutions. If $t=t_0$ is a singular point, you need to use a frobenius series.
 \end{theorem}
 \begin{eg}
   Consider Airy's ordinary differential equation, $x''-t=0$. The two linearized solutions are $A_i(t)$ and $B_i(t)$. We are given the initial conditions $x(0)=1,x'(0)=-2$. From here, let $x(t)=1-2t+C_2t^3+C_4t^{4}$, this gives us that 
@@ -781,4 +782,155 @@ Consider Bessel's ordinary differential equation, $x''+\frac{1}{t}x'+\left( 1-\f
   \begin{equation*}
     \boxed{x(t)=1-2t+\frac{1}{6}t^3-\frac{1}{6}t ^{4}+\ldots}
   \end{equation*}
+  For general initial conditions ($x(0)=C_0, x'(0)=C_1$).
+  \begin{align*}
+    x''-tx\\
+    [2C_2+6C_3t+12C_4t^2+\ldots]-t[C_0+C_1t+C_2t^2+\ldots]\\
+  .\end{align*}
+  \begin{align*}
+    1&:2C_2=0&&\to C_2=0\\
+    t&:6C_3-C_0=0&&\to C_3=\frac{1}{6}C_0\\
+    t^2&:12C_4-C_1=0&&\to C_4=\frac{1}{12}C_1\\
+  .\end{align*}
+  This would make our particular solution 
+  \begin{align*}
+    x(t)&=C_0+C_1t+\left( \frac{1}{6}C_0 \right) t^3+\left( \frac{1}{12}C_1 \right) t ^{4}\\
+  .\end{align*}
+\end{eg}
+
+Another important skill that plays in with Taylor series ordinary differential equations is re-indexing. This is basically just an u-substitution for a series. Our goal is to rewrite
+\[
+  \sum_{n=2}^{\infty} n(n-1)a_nt ^{n-2}
+.\] 
+In order to have $t ^{k}$, we need to let $k=n-2\to n=k+2$, which gives us a series that looks like 
+\[
+  \sum_{k=0}^{\infty} (k+2)(k+1)a_{k+2}t ^{k}
+.\] 
+Let's take a look at re indexing  when it comes to Airy's equation.
+\[
+x''-tx=0
+.\] 
+\begin{eg}
+  \begin{align*}
+    x(t)&=\sum_{n=0}^{\infty} C_nt^n\\
+    x'(t)&=\sum_{n=1}^{\infty} C_nnt ^{n-1}\\
+    x''(t)&=\sum_{n=2}^{\infty} C_nn(n-1)t ^{n-2}=
+  .\end{align*}
+  We can rewrite Airy's ODE as 
+  \[
+    \sum_{n=2}^{\infty} C_nn(n-1)t ^{n-2}-t \sum_{n=0}^{\infty} C_nt ^{n}=0
+  .\] 
+  Because we have a difference of 3 in the exponents, let $n-2 = k + 1, n=k+3 \text{ or } k=n-3$. This makes our Taylor series 
+  \[
+    \sum_{k=-1}^{\infty} C_{k+3}(k+3)(k+2)t ^{k+1}-\sum_{n=0}^{\infty} C_nt ^{n+1}=0
+  .\] 
+  Now if we choose another variable $m$ and take both $k,n$ and put them in terms of $m$, we get
+  \[
+    C_2(2)(1)t ^{0}+\sum_{m=0}^{\infty} \left[ C_{m+3}(m+3)(m+2)-C_m \right] t ^{m+1}=0
+  .\] 
+  From here, we can solve for $C_2$ using $2C_2=0$ for the 1's values. This leaves us with 
+  \[
+    m\ge 0:C_{m+3}(m+3)(m+2)-C_m=0\\
+  .\] 
+  Our general recursion relation is 
+  \[
+    C_{m+3}=\frac{C_m}{(m+3)(m+2)}
+  .\] 
+  If we follow our recursion relationship
+  \begin{align*}
+    m=0:&&C_3=\frac{C_0}{3\times2}=\frac{1}{6}C_0\\
+    m=1:&&C_4=\frac{C_1}{4\times 3}=\frac{1}{12}C_1\\
+    m=2&&C_5=\frac{C_2}{5\times 4}=0\\
+    m=3:&&C_6=\frac{C_3}{6\times 3}=\frac{1}{18}C_3=\frac{1}{18}\times \frac{1}{6}C_0=\frac{1}{108}C_0
+  .\end{align*}
+  Every third coefficient is 0, all other coefficients can be expressed in terms of $C_1,C_2$.
+  \begin{align*}
+    x(t)&=C_0+C_1t+C_2t^2+\ldots\\
+        &=C_0+C_1t+\frac{1}{6}C_0t^3+\frac{1}{16}c_1t ^{4}+\ldots\\
+        &=C_0\left[ 1+\frac{1}{6}t^3+\frac{1}{108}t ^{6}+\ldots \right] + C_1\left[ t+\frac{1}{12}t ^{4}+\ldots \right]  
+  .\end{align*}
+\end{eg}
+Let's take a look at another example to solidify understanding.
+\begin{eg}
+  Consider the equation $(x+2)y''+3y'+4y=0$. Let $y(x)=\sum_{n=0}^{\infty} C_nx^{n}$. This makes our differential 
+  \[
+    (x+2)\sum_{n=2}^{\infty} C_nn(n-1)x^{n-2}+3 \sum_{n=1}^{\infty} C_nnx^{n-1}+4 \sum_{n=0}^{\infty} C_nx^{n}=0
+  .\] 
+  Let $n-2=k-1$, which would make $n=k+1,k=n-1$. Also let $n=j-1,j=n+1$ After changing our values, our ordinary differential equation, our equation is 
+  \[
+    \sum_{n=2}^{\infty} C_nn(n-1)x^{n-1}+\sum_{k=1}^{\infty} 2C_{k+1}(k+1)kx^{k-1}+\sum_{n=1}^{\infty} 3c_nnx^{n-1}+\sum_{j=1}^{\infty} 4C_{j-1}x^{j-1}=0
+  .\] 
+  Now rewrite $n,k,j\to m$. Let  $k,n,j=1$. This makes our differential 
+  \begin{align*}
+    0=&2C_2\times 2\times 1\times x^{0}+3C_1\times 1\times x^{0}+4C_0\times x^{0}\\
+    +&\sum_{m=2}^{\infty} \left[ C_m\left[ m(m-1)+3m \right] +2C_{m+1}(m+1)m+4C_m-1 \right]x^{m} 
+  .\end{align*}
+  After simplification, we can pull out like terms to solve for $C_2$ and the recursion relation.
+  \begin{align*}
+    1&:4C_2+3C_1+4C_0=0&&\to C_2=\frac{-3C_1-4C_0}{4}\\
+    x^{m-1}&:C_m(m^2+2m)+2C_{m+1}(m+1)m+4C_m-1 = 0
+  .\end{align*}
+  Our general recursion relation as long as $m\ge 2$ is 
+  \[
+    C_{m+1}=\frac{-m(m+2)C_m-4C_m-1}{m(m+1)}
+  .\] 
+  If we set $m=2$, we can solve and get results for $C_1, C_2$. One approach to finding two linearly independent solutions is to set $y(x)=C_0+C_1x+C_2x^2$, and then use the values calculated from $C_{m+1}$ to get
+  \begin{align*}
+    &=C_0+C_1x+\left( -\frac{3}{4}C_1-C_0 \right)x^2+(\text{from above})x^3\\
+    &=C_0\left[ 1-x^2+\boxed{}x^3+\ldots \right] +C_1\left[ x-\frac{3}{4}x^2+1 \right] x^3
+  .\end{align*}
+\end{eg}
+
+An alternative for finding two linearly independent solutions is solving with $C_0=1,C_1=0$. This makes our initial conditions $x(0)=1,x'(0)=0$. This makes our $C_2=-1,C_3=\frac{2}{3},C_4=-\frac{1}{4}$. We also need to solve with the initial conditions $x(0)=0,x'(0)=1$. This makes our solutions 
+\begin{align*}
+  y_1(x)&=1+0x-1x^2+\frac{2}{3}x^3-\frac{1}{4}x^{4}\\
+  y_2(x)&=0+1x-\frac{3}{4}x^2+\frac{1}{6}x^3+\frac{1}{48}x^{4}
+.\end{align*}
+The general solution is 
+\[
+  y(x)=C_1y_1(x)+C_2y_2(x)
+,\] 
+where $C_1=x(0),C_2=x'(0)$. A Frobenius series is when you expand around a singular point (a point that is hard for the equation). Consider Bessel's ordinary differential equation.
+\begin{eg}
+  \[
+  x^2y''+xy'+\left( x^2-\frac{1}{4} \right) y=0\text{ with }\nu=\frac{1}{2}
+  .\] 
+  Here we are going to let $y(x)=\sum_{n=0}^{\infty} C_nx^{n+r}$, and our goal is to find $n$ and $c_n$. We can easily find that 
+  \begin{align*}
+    y'&=\sum_{n=0}^{\infty} C_n(n+r)x^{n+r-1}\\
+    y''&=\sum_{n=0}^{\infty} C_n(n+r)(n+r-1)x^{n+r-2}
+  .\end{align*}
+  Our ordinary differential equation written out is 
+  \[
+    \sum_{n=0}^{\infty} C_n(n+r)(n+r-1)x^{n+r}+\sum_{n=0}^{\infty} C_n(n+r)x^{n+r}+\sum_{n=0}^{\infty} C_nx^{n+r+2}-\sum_{n=0}^{\infty} \frac{1}{4}C_nx^{n}=0
+  .\] 
+  Let $k+r=n+r+2$. This gives us that
+  \[
+    \sum_{n=0}^{\infty} C_n\left[ (n+r)(n+r-1)+(n+r)-\frac{1}{4} \right] x^{n+r}+\sum_{k=2}^{\infty} C_{k-2}x^{k+r}=0
+  .\] 
+  If we transform the $k$  into an $n$ , we get that 
+  \begin{align*}
+    &\sum_{n=2}^{\infty} \left( C_n\left[ (n+r)(n+r-1+1)-\frac{1}{4} \right] +C_n-2 \right) x^{n+r}+\\&C_0\left( r(r-1)+r-\frac{1}{4} \right) x^{r}+C_1\left[ (r+1)(r)+(r+1)-\frac{1}{4} \right] x^{r+1}
+  .\end{align*}
+  Now we can pull out like terms to create a system of equations to solve for $C$ values:
+  \begin{align*}
+    x^{r}&:&&r^2-\frac{1}{4}=0\text{ or }C_0=0\\
+    x^{r+1}&:&&(r+1)^2-\frac{1}{4}=0\text{ or }C_1=0\\
+    x^{r+h}&:&&C_n=\frac{-C_n-2}{(n+r)^2-\frac{1}{4}}
+  .\end{align*}
+  If $C_0\neq 0, r=\pm \frac{1}{2}$ or if $C_1\neq 0, r+1=\pm \frac{1}{2}$. There are two linearly dependent solutions
+  \begin{itemize}
+    \item $r=\frac{1}{2}$
+    \item $r=-\frac{1}{2}$
+  \end{itemize}
+  If we take $r=\frac{1}{2}$ and simplify $C_n$, we can see that 
+  \[
+    C_n=\frac{-C_n-2}{n(n+1)}, n\ge 2
+  .\] 
+  Using this, we can solve for a certain number of terms to get that
+  \[
+    y_1(x)=x^{\frac{1}{2}}\left[ C_0-\frac{1}{3!}C_0x^2+\frac{1}{5!}x^{4}+\ldots \right] 
+  .\] 
+  This equation simplifies down to 
+  $\frac{C_0}{\sqrt{x} }\sin (x)$.
 \end{eg}

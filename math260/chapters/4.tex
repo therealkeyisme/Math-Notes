@@ -1,0 +1,26 @@
+\newpage
+\section{Systems of Ordinary Differential Equations}
+Systems of ordinary differential equations have 1 dependent variable and 1 independent variable. Let's look at an example.
+
+\begin{eg}
+  Here is a system of 3 first order ordinary differential equations of dimension 3 
+  \begin{align*}
+    x'&=4x-7y+z^2\\
+    y'&=2t-e^{t}y-z\\
+    z'&=z^2+y^2-yx
+  .\end{align*}
+\end{eg}
+
+We can also turn higher order ODE's into systems of first-order ODEs.
+\begin{eg}
+  Consider the equation $x''+7x''+7tx'+6x=t^2$. If we let $y=x',z=x''=y',x'''=z'$, then using the ODE,
+  \[
+  z'=t^2-6x+7ty-7z
+  ,\]
+  we can make a system of nonlinear, nonautonomous, nonhomogeneous ordinary differential equations.\footnote{After this system we went to chapter 2.6}
+  \begin{align*}
+    x'&=y\\
+    y'&=z\\
+    z'&=t^2-6x+ty-7z
+  .\end{align*}
+\end{eg}

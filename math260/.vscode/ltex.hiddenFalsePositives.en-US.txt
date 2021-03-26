@@ -10,3 +10,8 @@
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q\\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q harvested population growth \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q spring mass equation \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q RCL circuit showing beats \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q ban der Pol equation \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q Laplace's equation\\E$"}
 {"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qwhich is identically equal to \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q wherever \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q and \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q are both defined.\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QGGiven an equation in the form\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qis also a solution to equation (3.1) for all \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q's.\\E$"}
+{"rule":"SENTENCE_FRAGMENT","sentence":"^\\QAfter going through that we get \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"SENTENCE_FRAGMENT","sentence":"^\\QWhen all is done we end up with \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"BEEN_PART_AGREEMENT","sentence":"^\\QThe first thing we need to do now is solve for \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, which means we have to do the following \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"SENTENCE_FRAGMENT","sentence":"^\\QIf we follow our recursion relationship \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
