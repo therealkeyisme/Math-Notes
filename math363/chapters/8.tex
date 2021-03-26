@@ -8,13 +8,13 @@
   For some nonzero vector $\vec{v}\cdot\vec{v}$ is called the eigen vector corresponding to lambda.
 \end{definition}
 \begin{eg}
-  Consider $A=SmallMatrix{2&1\\1&2}$. Let's find the eigenvalues of this matrix.
-  \begin{align*}
-    0 &= det\left( \begin{pmatrix} 2&1\\1&2 \end{pmatrix} -\left( \lambda&0\\ 0&\lambda \right)  \right) \\
+  Consider $A=\SmallMatrix{2&1\\1&2}$. Let's find the eigenvalues of this matrix.
+    \begin{align*}
+    0 &= det\left( \begin{pmatrix}2&1\\1&2\end{pmatrix}-\begin{pmatrix}\lambda&0\\0&\lambda\end{pmatrix}\right) \\
       &=det\begin{pmatrix} 2-\lambda&1\\1&2-\lambda \end{pmatrix} \\
       &=(2-\lambda)^2-1\\
-    0&=(3-\lambda)(1-\lambda)
-  .\end{align*}
+    0&=(3-\lambda)(1-\lambda).
+    \end{align*}
   Our eigenvalues are 3 and 1. Remember that $(A-\lambda I)\vec{v}=\vec{0}$. Consider $\lambda = 3$
   \begin{align*}
     \begin{pmatrix} -1&1\\1&-1 \end{pmatrix} \begin{pmatrix} x\\y \end{pmatrix} =\begin{pmatrix} 0\\0 \end{pmatrix} \\
@@ -32,14 +32,41 @@
     \begin{pmatrix} x\\-x \end{pmatrix} =x\begin{pmatrix} 1\\-1 \end{pmatrix} 
   .\end{align*}
 \end{eg}
+
 \begin{eg}
-  Consider $A=SmallMatrix{1&1&2\\0&1&2\\0&0&3}$. For eigenvalues, $0=det(A-\lambda I)$.
+  Consider $A=\SmallMatrix{1&1&2\\0&1&2\\0&0&3}\begin{pmatrix}1&1&2\\0&1&2\\0&0&3\end{pmatrix}$. For eigenvalues, $0=det(A-\lambda I)$.
   \begin{align*}
     0 = det \begin{pmatrix} 1-\lambda&1&2\\0&1-\lambda&2\\0&0&3-\lambda \end{pmatrix} \\
     0=(1-\lambda)(1-\lambda)(3-\lambda)
   .\end{align*}
   This makes our eigenvalues 1 and 3. For $\lambda=3$,
   \begin{align*}
-    \begin{pmatrix} -2&1&2\\0&-2&2\\0&0&0&0 \end{pmatrix} 
+    \begin{pmatrix} -2&1&2\\0&-2&2\\0&0&0 \end{pmatrix} \begin{pmatrix} x\\y\\z \end{pmatrix} &=\begin{pmatrix} 0\\0\\0 \end{pmatrix} \\
+    -2y+2z&=0\\
+    y&=0\\
+    -2x+z+2z&=0\\
+    -2x+3z&=0\\
+    3z&=2x\\
+    y&=z=\frac{2}{3}
   .\end{align*}
+  This would make our eigenvector 
+  \[
+  \begin{pmatrix} x\\\frac{2}{3}x\\\frac{2}{3}x \end{pmatrix} =x\begin{pmatrix} 1\\\frac{2}{3}\\\frac{2}{3} \end{pmatrix} 
+  .\] 
 \end{eg}
+\begin{definition}
+  Given an eigenvalue $\lambda$ of $A$, the corresponding eigenvectors form a subspace denoted $v_\lambda$. Note that $v_\lambda=ker(A-\lambda I)$
+\end{definition}
+\begin{note}
+  $\lambda=0$ is an eigenvalue of $A$ if and only if the $ker(A-\lambda I)=ker(A)=v_0\neq \{0\}$. This is true if and only if $A$ is singular ($det(A)=0$).
+\end{note}
+\begin{eg}
+  Consider $\begin{pmatrix} 1&1\\1&1 \end{pmatrix} $. The determinant of 
+  \[
+    \begin{pmatrix} 1-\lambda&1\\1&1-\lambda \end{pmatrix} 
+  \] 
+  is equal to zero. We can see that when $\lambda =0$, the determinant is zero.
+\end{eg}
+\begin{prop}
+  If $A$ is a real matrix and $\lambda+i\mu$ is an eigenvalue of $A$ with eigenvector $\vec{v}=\vec{x}+i\vec{y}$, then $\lambda-i\mu$ is an eigenvalue of $A$ with eigenvector $\vec{x}-i\vec{y}$.
+\end{prop}

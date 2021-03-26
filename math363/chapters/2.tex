@@ -1,7 +1,7 @@
 \section{Vector Spaces and Bases}
 
 \subsection{Real Vector Spaces}
-  A vector space is the abstract reformulation of the quintessential properties of $n$-dimensional Euclidean Space $\R^n$, which is defined as the set of all real (column) vectors with $n$ entries. The basic laws of vector addition and scalar multiplication in $\R$
+  A vector space is the abstract reformulation of the quintessential properties of $n$-dimensional Euclidean Space $\R^n$, which is defined as the set of all real (column) vectors with $n$ entries. The basic laws of vector addition and scalar multiplication in $\R$.
 
   \begin{definition}
     AA vector space is a set of $V$ equipped with two operations:
@@ -14,16 +14,16 @@
     \begin{itemize}
       \item Commutativity of Addition: v + w = w + v.
       \item Associativity of Addition: u + (v + w) = (u + v) + w.
-      \item Additive Identity: There is a zero element $0\in V$ satisyfing v + 0 = v = 0 + v.
+      \item Additive Identity: There is a zero element $0\in V$ satisfying v + 0 = v = 0 + v.
       \item Additive Inverse: For each v $\in V$ there is an element -v $\in V$ such that v+(-v)=0=(-v)+v.
       \item Distributivity: $(c+d)$v=($c$v) + ($d$v), and $c$(v+w)=($c$v)+($c$w).
-      \item Assosiativity of Scalar Multiplication: $c$($d$v) = ($cd$)v.
+      \item Associativity of Scalar Multiplication: $c$($d$v) = ($cd$)v.
       \item Unit for Scalar Multiplication: the scalar 1$\in\R$ satisfies 1v=v.
     \end{itemize}
   \end{definition}
 
   \begin{theorem}
-    LLet $V$ be a vector space.
+    Let $V$ be a vector space.
     \begin{itemize}
       \item $0\times\vec{V}=\vec{0}$
       \item $-1\vec{V}=-\vec{V}$
@@ -41,7 +41,7 @@
   \end{itemize}
 
   \begin{definition}
-    LLet $V$ be a vector space over $F$. $W\le V$ is a subspace of $V$ if $W$ is a vector space over $F$ under the same operation as $V$.
+    Let $V$ be a vector space over $F$. $W\le V$ is a subspace of $V$ if $W$ is a vector space over $F$ under the same operation as $V$.
   \end{definition}
 
   An example of definition (2.1.2). Let $V=\R^3=\left\{\left.\left(\begin{smallmatrix}a\\b\\c\end{smallmatrix}\right)\right|a,b,c\in\R\right\}$. $V$ is a vector space. If we let $W=\left\{\left.\left(\begin{smallmatrix}a\\b\\0\\\end{smallmatrix}\right)\right|a,b\in\R\right\}$, then $W$ is a subspace of $V$.
@@ -49,9 +49,9 @@
   \begin{theorem}
     Let $V$ be a vector space. Let $W\le V$. $W$ is a subspace of $V$ if 
     \begin{itemize}
-      \item $w\neq0$
-      \item $\forall w_1w_2\in W;w_1+w_2\in W$
-      \item $\forall c\in F;\vec{W}\in W;c\cdot\vec{W}\in W$
+      \item $w\neq0$.
+      \item $\forall w_1w_2\in W;w_1+w_2\in W$.
+      \item $\forall c\in F;\vec{W}\in W;c\cdot\vec{W}\in W$.
     \end{itemize}
   \end{theorem}
 
@@ -65,7 +65,7 @@
       \item $\left(\begin{smallmatrix}0\\0\\0\end{smallmatrix}\right)\in W$ so $W\neq0$.
       \item $\left(\begin{smallmatrix}x\\x\\0\end{smallmatrix}\right),\left(\begin{smallmatrix}y\\y\\0\end{smallmatrix}\right)\in W$. Then $\left(\begin{smallmatrix}x\\x\\0\end{smallmatrix}\right)+\left(\begin{smallmatrix}y\\y\\0\end{smallmatrix}\right)=\left(\begin{smallmatrix}x+y\\x+y\\0\end{smallmatrix}\right)$
       \item $\left(\begin{smallmatrix}x\\x\\0\end{smallmatrix}\right)\in W$, then $c\times\left(\begin{smallmatrix}x\\x\\0\end{smallmatrix}\right)=\left(\begin{smallmatrix}cx\\cx\\0\end{smallmatrix}\right)\in W$.
-      \item Therefore we know that $W$ is a subspace of $V$ with respect to scalar multiplication and addition.
+      \item Therefore, we know that $W$ is a subspace of $V$ with respect to scalar multiplication and addition.
     \end{itemize}
     \item $W=\left\{\left.\left(\begin{smallmatrix}x\\y\\2x+3y\end{smallmatrix}\right)\right|x,y\in\R\right\}$. $W$ is a subspace of $V$.
   \end{itemize}
@@ -76,7 +76,7 @@
 \subsection{Subspaces}
 
   \begin{definition}
-    LLet $I$ be an interval in $\R$. Let $\mathbb{F}(I)$ be the vector space of functions $\mathbb{F}=I\to\R$.
+    Let $I$ be an interval in $\R$. Let $\mathbb{F}(I)$ be the vector space of functions $\mathbb{F}=I\to\R$.
 
     \begin{itemize}
       \item $\mathbb{C}^0(I)=$ the continuous functions from $I\to\R$ is a subspace.
@@ -84,7 +84,7 @@
       \item $\P^\infty(I)=$ all polynomials on $I$. This is a subspace of $\mathbb{F}(I)$.
       \item $\mathbb{C}^n (I)=$ the set of functions $f:I\to\R$ such that $f',f''...f^{(n)}$ all exist and are continuous.
       \item $\mathbb{C}^\infty(I)=$ functions from $I\to\R$ such that $f',f'',f'''$ all exist and are smooth functions.
-      \item $A(I)=$ the functions in $\mathbb{C}^\infty(I)$ such that all $A\in I$, the power series $f(a)+\frac{f'(a)(x-a)}{1!}+\frac{f''(a)(x-a)^2}{2!}+\dots$ converges for all $x\in I$ sufficiently close to a.
+      \item $A(I)=$ the functions in $\mathbb{C}^\infty(I)$ such that all $A\in I$, the power series $f(a)+\frac{f'(a)(x-a)}{1!}+\frac{f''(a)(x-a)^2}{2!}+\dots$ converges for all $x\in I$ sufficiently close to $a$.
     \end{itemize}
   \end{definition}
 
@@ -94,7 +94,7 @@
     \begin{itemize}
       \item Because $\left(\begin{smallmatrix}0\\0\\2(0)+0\end{smallmatrix}\right)=\left(\begin{smallmatrix}0\\0\\0\end{smallmatrix}\right)$ is in $v$, $v$ is not empty.
       \item Let $\vec{v_1}=\left(\begin{smallmatrix}x_1\\y_1\\2x_1+y_1\end{smallmatrix}\right),\vec{v_2}=\left(\begin{smallmatrix}x_2\\y_2\\2x_2+y_1\end{smallmatrix}\right)\in V$
-        \begin{equation}
+        \[
           v_1+v_2=\begin{pmatrix}
             x_1+x_2\\
             y_1+y_2\\
@@ -106,55 +106,55 @@
             2(x_1+x_2)+(y_1+y_2)
           \end{pmatrix}
           \in V
-        \end{equation}
+        \]
         so $v$ is closed with respect to addition.
-      \item Let $r\in\R$ and $\left(\begin{smallmatrix}x\\y\\2x+y\end{smallmatrix}\right)=\vec{v}\in v$
+      \item Let $r\in\R$ and $\left(\begin{smallmatrix}x\\y\\2x+y\end{smallmatrix}\right)=\vec{v}\in v$.
     \end{itemize}
   \end{problem}
 
 \subsection{Span and Linear Independence}
 
   If we let $V$ be a vector space over $\R$ and let $\vec{v_1},\dots,\vec{v_n}\in V$, then we can determine that the 
-  \begin{equation}
+  \[
     span(\{\vec{v_1},\dots,\vec{v_n}\})=\{c_1\vec{v_1}+\dots+c_n\vec{v_n}|c_1,\dots,c_n\in\R\}
-  \end{equation}
+  \]
 
   \begin{prop}
-    TThe span of $\{\vec{v_1},\vec{v_2}\}$ is a subspace of $V$.
+    The span of $\{\vec{v_1},\vec{v_2}\}$ is a subspace of $V$.
     \begin{proof}
-      \begin{align}
+      \begin{align*}
         c_1\vec{v_1}+\dots+c_n\vec{v_n}\\
         k_1\vec{v_1}+\dots+k_n\vec{v_n}\in span\\
-      \end{align}
+      \end{align*}
 
       If we add together both of the equations above we get
 
-      \begin{align}
+      \begin{align*}
         (c_1+k_1)\vec{v_1}+\dots+(c_n+k_n)\vec{v_n}\in span.\\
         r(c_1\vec{v_1}+\dots+c_n\vec{v_n})\\
         =rc_1\vec{v_1}+\dots+rc_n\vec{v_n}\in span
-      \end{align}
+      \end{align*}
     \end{proof}
   \end{prop}
 
   \begin{problem}
-    Let $V\in\R^3$. Also we are going to let
+    Let $V\in\R^3$. Also, we are going to let
 
-    \begin{equation}
+    \[
       \vec{v_1}=\begin{pmatrix}
         1\\2\\0
       \end{pmatrix}
       ,span(\vec{v_1})=\left\{c\left.\begin{pmatrix}1\\2\\0\end{pmatrix}\right|c\in\R\right\}
-    \end{equation}
+    \]
     $\left(\begin{smallmatrix}1\\2\\0\end{smallmatrix}\right)$ is a vector in 3-space. $c\times\left(\begin{smallmatrix}1\\2\\0\end{smallmatrix}\right)$ expands, contracts, changes direction. This is a line which goes through $\left(\begin{smallmatrix}0\\0\\0\end{smallmatrix}\right)$.
-    \begin{equation}
+    \[
       c\begin{pmatrix}
         1\\2\\0 
       \end{pmatrix}
-    \end{equation}
-    is in the xy-plane, let's solve for $y$ to find the equation of the line that is drawn by the vector:
+    \]
+    is in the $xy$-plane, let's solve for $y$ to find the equation of the line that is drawn by the vector:
 
-    \begin{align}
+    \begin{align*}
       \begin{pmatrix}
         c\\2c\\0
       \end{pmatrix}\\
@@ -163,7 +163,7 @@
       \frac{1}{2}y&=c\\
       \to x=\frac{1}{2}y\\
       \to y=2x\\
-    \end{align}
+    \end{align*}
     Now we are going to let $\vec{v_2}=\left(\begin{smallmatrix}1\\1\\0\end{smallmatrix}\right)$. Consider the span of $(\{\vec{v_1},\vec{v_2}\})$. The span of $(\{\vec{v_1}\vec{v_2}\})$ is a plane.
   \end{problem}
 
@@ -179,14 +179,14 @@
 
   \end{problem}
   \begin{definition}
-    LLet $v$ be a vector space. $\vec{v_1},\dots,\vec{v_n}$ are linearly dependant if there exists $c_1,\dots,c_n$ are not all zero, such that $c_1\vec{v_1}+\dots+c_n\vec{v_n}=\vec{0}$, otherwise, $\vec{v_1},\dots,\vec{v_n}$ are linearly independent.
+    Let $v$ be a vector space. $\vec{v_1},\dots,\vec{v_n}$ are linearly dependent if there exists $c_1,\dots,c_n$ are not all zero, such that $c_1\vec{v_1}+\dots+c_n\vec{v_n}=\vec{0}$, otherwise, $\vec{v_1},\dots,\vec{v_n}$ are linearly independent.
   \end{definition}
   
   If we let $\vec{v_1}=\SmallMatrix{1\\2},\vec{v_2}=\SmallMatrix{2\\4}$, we can do a simple test to see if they are linearly independent. We know that $2\vec{v_1}=\vec{v_2}$, which means that $2\vec{v_1}+-1\vec{v_2}=0$. Because we can make $\vec{v_1}+\vec{v_2}$ by using a simple scalar value, these functions are linearly dependent.
 
   \begin{problem}
     Consider the following three matrices
-    \begin{equation}
+    \[
       \vec{v_1}=\begin{pmatrix}
         1\\2\\1
       \end{pmatrix}
@@ -196,16 +196,16 @@
       ,\vec{v_3}=\begin{pmatrix}
         8\\1\\11
       \end{pmatrix}
-    \end{equation}
-    Are these matrices linearly dependent or independent from each other? The following equation will let us set up a matrix to determine the results:
+    \]
+    Are these matrices linearly dependent or independent of each other? The following equation will let us set up a matrix to determine the results:
 
-    \begin{equation}
+    \[
       c_1\vec{v_1}+c_2\vec{v_2}+c_3\vec{v_3}=\vec{0}
-    \end{equation}
+    \]
 
     We must try to see if there are any $c_n$ values that are not zero to make this true.
 
-    \begin{equation}
+    \[
       \begin{pmatrix}
         1&2&8\\2&-1&1\\1&3&11
       \end{pmatrix}
@@ -215,32 +215,32 @@
       =\begin{pmatrix}
         0\\0\\0
       \end{pmatrix}
-    \end{equation}
-    \begin{equation}
+    \]
+    \[
       = \begin{pmatrix}
         1&2&8&\vdots&0\\
         2&-1&1&\vdots&0\\
         1&3&0&\vdots&0\\
       \end{pmatrix}
-    \end{equation}
+    \]
     By doing some elementary row operations, we can find that in row echelon form, the matrix from equation (2.21) can be written as
 
-    \begin{equation}
+    \[
       \begin{pmatrix}
         1&2&8&\vdots&0\\
         9&1&3&\vdots&0\\
         0&0&0&\vdots&0\\
       \end{pmatrix}
-    \end{equation}
+    \]
     And from here we can solve for the different $c_n$ values.
 
-    \begin{align}
+    \begin{align*}
       1c_1+2c_2+8c_3&=0\\
       c_1+3c_3&=0\\\\
       c_3=-3c_3\\
       c_1=-2c_3\\
       c_3=c_3  
-    \end{align}
+    \end{align*}
 
     Because we have this relationship where $c_1,c_2,c_3$ all depend on each other, we can tell that this is linearly independent.
   \end{problem}
@@ -249,25 +249,25 @@
   
 \subsection{Basis and Dimension}
   \begin{definition}
-    AA basis of a vector space $v$ is a collection of vectors $\vec{v_1},\dots,\vec{v_n}$ that 1. span $v$ and 2. are linearly dependent.
+    AA basis of a vector space $v$ is a collection of vectors $\vec{v_1},\dots,\vec{v_n}$ that (1) span $v$ and (2) are linearly dependent.
   \end{definition}
 
   \begin{problem}
     If we are looking at $\mathbb{R}^2$, with $e_1=\left(\begin{smallmatrix}1\\0\end{smallmatrix}\right)$, and $e_2=\left(\begin{smallmatrix}0\\1\end{smallmatrix}\right)$
     We can tell that this is a basis of $\mathbb{R}^2$. We can tell this because the span of $v$ is linearly independent. We can also see this because:
 
-    \begin{equation}
+    \[
       a\times e_1+b\times e_2=\begin{pmatrix}a\\b\end{pmatrix}
-    \end{equation}
+    \]
   \end{problem}
 
   \begin{problem}
     Now we are going to look at an example in $\mathbb{R}^3$, with $e_1=\left(\begin{smallmatrix}1\\0\\0\end{smallmatrix}\right)$, $e_2=\left(\begin{smallmatrix}0\\1\\0\end{smallmatrix}\right)$, and $e_3=\left(\begin{smallmatrix}0\\0\\1\end{smallmatrix}\right)$. We can figure out that this is a basis by doing the same technique as we did before:
 
-    \begin{align}
+    \begin{align*}
       c_1\vec{e_1}+c_2\vec{e_2}+c_3\vec{e_3}=0\\
       c_1=c_2=c_3=0
-    \end{align}
+    \end{align*}
 
     Because $c_1$, $c_2$, and $c_3$ are all equal to zero, $\vec{e_1}$, $\vec{e_2}$, and $\vec{e_3}$ form a basis.
   \end{problem}
@@ -275,15 +275,15 @@
   \newpage
 
   \begin{theorem}
-    IIf a vector space $v$ has a basis with $n$ elements, then every basis of $v$ has $n$ elements. We say $v$ has dimension $n$. We write down $v=n$
+    If a vector space $v$ has a basis with $n$ elements, then every basis of $v$ has $n$ elements. We say $v$ has dimension $n$. We write down $v=n$.
   \end{theorem}
 
   \begin{theorem}
-    IIf the dimension of $v$ is $n$, then any collection of $n+1$ or more vectors must be linearly dependent.
+    If the dimension of $v$ is $n$, then any collection of $n+1$ or more vectors must be linearly dependent.
   \end{theorem}
 
   \begin{theorem}
-    SSuppose $v=n$
+    Suppose $v=n$
     
     \begin{enumerate}
       \item Every collection of more than $n$ vectors is linearly dependent.
@@ -296,11 +296,11 @@
   \begin{problem}
     Assume $1,x,x^2$ is a basis for $\mathbb{P}^2$. We are going to multiply $1\times5$, $x\times6$, and $x^2\times2$.
 
-    \begin{align}
+    \begin{align*}
       5+6x+2x^2&\\
       c_1\times1+c_2\times x+c_3\times x^2&=0\\
       dim(\mathbb{P}^2)&=3\\
-    \end{align}
+    \end{align*}
   \end{problem}
 
   \begin{theorem}
@@ -310,7 +310,7 @@
   \begin{problem}
     Let $v=\mathbb{R}^2$. Let $\vec{v}=\left(\begin{smallmatrix}4\\3\end{smallmatrix}\right)$. We know from previous problems that $\left(\begin{smallmatrix}1\\0\end{smallmatrix}\right)\left(\begin{smallmatrix}0\\1\end{smallmatrix}\right)$ is a basis of $\mathbb{R}^2$. We can also figure out what our basis is by trying to figure out what our $c_1$ and $c_2$ values should be. Because the matrices we know are a basis consist of 1's and 0's, we can see that 
 
-    \begin{equation}
+    \[
       4
       \begin{pmatrix}
         1\\0
@@ -323,10 +323,10 @@
       \begin{pmatrix}
         4\\3
       \end{pmatrix}.
-    \end{equation}
+    \]
     The coordinates of $\vec{v}$ with respect to this basis, are $(4,3)$. Let's consider a different basis. We are now going to look at the basis,
 
-    \begin{equation}
+    \[
       \left\{
         \begin{pmatrix}
           1\\-3
@@ -335,11 +335,11 @@
           2\\-1
         \end{pmatrix}
       \right\}
-    \end{equation}
+    \]
 
     Now we need to figure out the $a$ and $b$ values for this basis respectively.
 
-    \begin{align}
+    \begin{align*}
       a
       \begin{pmatrix}
         1\\-3 
@@ -353,10 +353,10 @@
         4\\3
       \end{pmatrix}
       \\
-    \end{align}
+    \end{align*}
     The coordinates of $\vec{v}$ with respect to this basis are $(4,3)$. Let's consider the same problem but with the following basis:
 
-    \begin{equation}
+    \[
       \left\{
         \begin{pmatrix}
           1\\-3
@@ -366,10 +366,10 @@
           2\\-1
         \end{pmatrix}
       \right\}
-    \end{equation}
+    \]
     Now, we are going to do the same thing as before, where we solve for $a$ and $b$ in the following equation
 
-    \begin{equation}
+    \[
       a
       \begin{pmatrix}
         1\\-3\
@@ -382,11 +382,11 @@
       \begin{pmatrix}
         4\\3
       \end{pmatrix}
-    \end{equation}
+    \]
 
-    We can setup this to be a system of equations that we can turn into a matrix
+    We can set up this to be a system of equations that we can turn into a matrix
 
-    \begin{equation}
+    \[
       \begin{cases}
         1a+2b=4\\
         -3a+(-1)b=3\\
@@ -396,34 +396,34 @@
         1&2&\vdots&4\\
         -3&-1&\vdots&3\\
       \end{bmatrix}
-    \end{equation}
+    \]
     And now we can use the basic row operation $R_2=R_2+3R_1$ in order to solve for $a$ and $b$:
 
-    \begin{equation}
+    \[
       \begin{bmatrix}
         1&2&\vdots&4\\
         0&5&\vdots&5
       \end{bmatrix}
-    \end{equation}
+    \]
 
-    \begin{align}
+    \begin{align*}
       5b=15 && a+2b=4\\
       b=3 && 1+2*3=4\\
       && a=-2
-    \end{align}
+    \end{align*}
   \end{problem}
   
 \subsection{The fundamental Matrix Subspaces (Kernel and Image)}
 
   \begin{definition}
-    TThe image of an $m\times n$ matrix $A$ is the subspace spanned by the columns of A.
+    The image of an $m\times n$ matrix $A$ is the subspace spanned by the columns of A.
   \end{definition}
 
   \begin{problem}
 
     Let's consider the following equation. 
 
-    \begin{equation}
+    \[
       \begin{bmatrix}
         1&2&3\\4&5&6\\
       \end{bmatrix}
@@ -434,30 +434,30 @@
       \begin{bmatrix}
         x\\y
       \end{bmatrix}
-    \end{equation}
+    \]
 
     When we multiply our the matrix, we see that the span of the columns give us all the possible $\left[\begin{smallmatrix}x\\y\end{smallmatrix}\right]$ values. The span of the matrix 
 
-    \begin{equation}
+    \[
       \begin{bmatrix}
         1\times r_1&2\times r_2&3\times r_3\\
         4\times r_1&5\times r_2&6\times r_3\\
       \end{bmatrix}
-    \end{equation}
+    \]
     would be the values $\left[\begin{smallmatrix}1\\4\end{smallmatrix}\right]$, $\left[\begin{smallmatrix}2\\5\end{smallmatrix}\right]$, and $\left[\begin{smallmatrix}3\\6\end{smallmatrix}\right]$
   \end{problem}
 
   \begin{definition}
     AA space, $A$, is an $m\times m$ matrix, The kernel of $A$ is 
-    \begin{align}
+    \begin{align*}
       A&=Ker(A)\\
       &=\{\vec{x}|A\vec{x}=\vec{0}\}
-    \end{align}
+    \end{align*}
   \end{definition}
 
   Using definition (2.5.2), if $A=\left[\begin{smallmatrix}1&0\\5&0\\\end{smallmatrix}\right]$, then 
 
-  \begin{equation}
+  \[
     \vec{x_1}=
     \begin{bmatrix}
       0\\0
@@ -467,16 +467,16 @@
     \begin{bmatrix}
       0\\5
     \end{bmatrix}.
-  \end{equation}
+  \]
 
   Something to keep in mind: If $\vec{x_1},\vec{x_2}\in Ker(A)$, then $r_1\vec{x_1}+r_2\vec{x_2}\in Ker(A)$. So the kernel of $A$ is a subspace of the domain of the function.
 
   \begin{theorem}
-    AAssume $\vec{x_1}$ solves $A\vec{x}=\vec{b}$. Then, $\vec{x_2}$ is another solution to $A\vec{x}=\vec{b}$ if and only if $\vec{x_2}=\vec{x_1}+\vec{z}$, where $z\in Ker(A)$
+    Assume $\vec{x_1}$ solves $A\vec{x}=\vec{b}$. Then, $\vec{x_2}$ is another solution to $A\vec{x}=\vec{b}$ if and only if $\vec{x_2}=\vec{x_1}+\vec{z}$, where $z\in Ker(A)$
   \end{theorem}
 
   \begin{prop}
-    LLet $A$ be an $m\times n$ matrix. The following are true:
+    Let $A$ be an $m\times n$ matrix. The following are true:
 
     \begin{enumerate}
       \item $Ker(A)=\{\vec{0}\}$
@@ -488,83 +488,83 @@
   \end{prop}
 
   \begin{definition}
-    LLet A be $m\times n$. 
-    \begin{align}
+    Let $A$ be $m\times n$. 
+    \begin{align*}
       coimg(A)=img(A^T)\\
       coker(A)=ker(A^T)\\
-    \end{align}
+    \end{align*}
   \end{definition}
 
-  The image of $A$ is the span of its collumns. Thus the coimage is the span of its radius. Also the $\vec{r^T}$ in the cokernel of $A$ are those $\vec{r}$ such that $r\times A=\vec{0^T}$ since
+  The image of $A$ is the span of its columns. Thus, the coimage is the span of its radius. Also, the $\vec{r^T}$ in the cokernel of $A$ are those $\vec{r}$ such that $r\times A=\vec{0^T}$ since
 
-  \begin{align}
+  \begin{align*}
     (r\cdot A)^T=(\vec{0^T})^T\\
     A^T\cdot r^T=\vec{0}
-  \end{align}
+  \end{align*}
 
   \begin{theorem}
-    TThe Fundamental Theorem of Linear Algebra: Let $A$ be an mxn matrix and let r be its rank. Then
+    The Fundamental Theorem of Linear Algebra: Let $A$ be an $m\times n$ matrix and let r be its rank. Then
 
-    \begin{equation}
+    \[
       dim(coimg(A))=dim(img(A))=rank(A)=rank(A^T)=r\\
-    \end{equation}
-    \begin{equation}
+    \]
+    \[
       span(A_{rows})=span(A_{columns})\\
-    \end{equation}
-    \begin{equation}
+    \]
+    \[
       dim(ker(A))=n-r\\
-    \end{equation}
-    \begin{equation}
+    \]
+    \[
       dim(coker(A))=m-r\\
-    \end{equation}
+    \]
   \end{theorem}
 
   Let's take a look at an example using the fundamental theorem of linear algebra. Let
 
-  \begin{equation}
+  \[
     A=\begin{bmatrix}
       1&2&3&-1\\
       1&-1&0&2\\
       -1&1&0&-2\\
       2&1&3&1
     \end{bmatrix}
-  \end{equation}
+  \]
 
   Let's do some row operations to get this matrix into row echelon form:
 
-  \begin{equation}
+  \[
     A=\begin{bmatrix}
       1&2&3&-1\\
       0&-3&-3&3\\
       0&0&0&0\\
       0&0&0&0\\
     \end{bmatrix}
-  \end{equation}
+  \]
 
   From this form, we can tell that $v_3$ and $v_4$ both depend on $v_1$ and $v_2$. Because there are only two pivot points within $A$ that are filled with values other than 0, $rank(A)=0$. We also know that the dimension of the column space is equal to the dimension of the row space. Let's find the dimension of the kernel of $A$:
 
-  \begin{align}
+  \begin{align*}
     dim(ker(A))+rank=n\\
     dim(key(A))+2=4\\
-  \end{align}
+  \end{align*}
 
   From here, we know that both $y$ and $z$ are free variables.
 
-  \begin{align}
+  \begin{align*}
     w+2x+3y-z&=0\\
     -3x-3y+3z&=0\\
     x+y-z&=0\\
     x&=-y+z
-  \end{align}
-  \begin{align}
+  \end{align*}
+  \begin{align*}
     w&=-2x-3y+z\\
     &=-2(-y+z)-3y+z\\
     &=-y-z
-  \end{align}
+  \end{align*}
 
   Now we need to determine the basis for $ker(A)$.
 
-  \begin{equation}
+  \[
     \begin{pmatrix}
       -y-z\\-y+z\\y\\z
     \end{pmatrix}
@@ -580,6 +580,6 @@
     +z\begin{pmatrix}
       -1\\1\\0\\1
     \end{pmatrix}
-  \end{equation}
+  \]
   
   Our basis for $ker(A)$ is $\SmallMatrix{-1\\-1\\1\\0}$ and $\SmallMatrix{-1\\1\\0\\1}$.
