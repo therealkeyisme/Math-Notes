@@ -221,3 +221,74 @@
         \[
           0=ab+cd=\cos\theta\cos\phi + \sin \theta\sin\phi=\cos(\theta-\phi)
         .\] 
+        If we use $\cos(\theta-\phi),$ we can determine that $\phi = \theta\pm\pi$, so $b=-\sin \theta, d=\cos\theta$ or $b=\sin \theta, d=-\cos\theta$. We either have $Q$ in one of two forms.
+        \[
+          \begin{pmatrix} \cos\theta&&-\sin \theta\\ \sin \theta&&\cos\theta \end{pmatrix}\text{ or }\begin{pmatrix} \cos\theta && \sin \theta \\ \sin \theta &&-\cos\theta \end{pmatrix}  
+        .\] 
+        The determinant of the left matrix is 1, and the determinant of the right matrix is -1. They both give us a counter clockwise rotation by $\theta$, gives a reflection across the line with angle $\frac{\theta}{2}$
+
+orthogonal matrices are square and $Q^{t}\cdot Q=Q Q^{t}=I$. Every $2\times 2$ orthogonal matrix has the form 
+\[
+  \begin{pmatrix} \cos\theta&&-\sin \theta\\ \sin \theta && \cos \theta \end{pmatrix} \text{ or } \begin{pmatrix} \cos\theta&& \sin \theta\\ \sin \theta && -\cos\theta \end{pmatrix} .
+.\] 
+
+In general, if $Q$ is orthogonal, then $det(Q)=\pm 1$
+
+\begin{theorem}
+  The product of two orthogonal matrices is orthogonal.
+  Recall, if $Q$ is orthogonal, then $Q^{-1}=Q^{T}$. The orthogonal $n\times n$ matrices satisfy 
+  \begin{itemize}
+    \item Closed under the dot product.
+    \item Multiplication is associative.
+    \item They all have inverses.
+    \item The identity matrix is orthogonal.
+  \end{itemize}
+
+\end{theorem}
+\subsection{Vector Spaces}
+Up until now we've been trying to get a basis to be able to establish a location of vectors. Once we have determined an inner product, we can find an angle. Let $V$ be a subspace. Let $W \le V$ be a finite dimensional subspace.
+\begin{definition}
+  $\vec{z}\in V$ is orthogonal to $w$ if it is orthogonal to every vector in $w$.
+\end{definition}
+\begin{note}
+  If $\vec{w_1},\ldots,\vec{w_n}$ is a basis for $w$, then $\vec{z}$ is orthogonal to $w$ if and only if $\vec{z}$ is orthogonal to $w_1,\ldots,w_n$.
+\end{note}
+\begin{definition}
+  The orthogonal projection of $\vec{V}$ onto $w$ is the vector $\vec{w}$ such that $\vec{z}=\vec{v}-\vec{w}$, where $\vec{z}$ is orthogonal to $w$.
+\end{definition}
+\begin{theorem}
+  Let $\vec{u_1},\ldots,\vec{u_n}$ be an orthogonal basis for $w$. Let $\vec{v}\in V$. The orthogonal projection of $\vec{v}$ onto $w$ is 
+  \[
+    \vec{w}=c_1\vec{u_1}+\ldots+c_n \vec{u_n}\text{ where $c_i<v,v_i>$}
+  .\] 
+\end{theorem}
+\begin{note}
+  If $\vec{v_1},\ldots,\vec{v_n}$ is an orthogonal basis for $w$ then 
+  \begin{align*}
+    w=a_1\vec{v_1}+\ldots+a_n \vec{v_n}\\
+    a_i=\frac{\left<\vec{v},\vec{v_i} \right>}{\|v_i\|^2}
+  .\end{align*}
+\end{note}
+\begin{definition}
+  Let $w,z\le V$ be subspaces. $w$ is orthogonal to $z$ if every vector in $w$ is orthogonal to every vector in $z$. For example,
+    \[
+    <\vec{w},\vec{z}> = 0
+    \] 
+   for every $\vec{w}\in w, \vec{z}\in z$ .
+\end{definition}
+\begin{note}
+  We only need to show this is true on the bases of $w$ and $z$.
+\end{note}
+\begin{definition}
+  Let $w\in v$ be a subspace. The orthogonal compliment of $w$, written $w^{T}$ is the set of vectors in $v$ orthogonal to $w$.
+  \[
+  w^{T}=\left\{ \vec{v}\in v | \left<\vec{v},\vec{w} \right> =0, \forall w\in w \right\} 
+  .\] 
+\end{definition}
+\begin{theorem}
+  Let $w<v$ be a finite dimensional subspace. Every $\vec{v}\in v$ can be written uniquely as 
+  \[
+  \vec{v}=\vec{w}+\vec{z}
+  \] 
+  where $\vec{w}\in w$ and $\vec{z}\in w^{T}$.
+\end{theorem}
