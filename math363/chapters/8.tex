@@ -95,7 +95,7 @@
   \begin{pmatrix} 1\\0 \end{pmatrix} -i\begin{pmatrix} 0\\1 \end{pmatrix} 
   .\] 
 \end{eg}
-\lecture {8.2, 8.3}{Monday March 29, 2021}
+\lecture{1}{Monday March 29, 2021}{8.2, 8.3}
 If $A$ is an $n\times n$ matrix with real entries, then 
 \[
   det(A-\lambda I) = p(\lambda)= \text{The characteristic polynomial}
@@ -202,3 +202,47 @@ Let $V, W$ be vector spaces over $\R$. We know that $\R^3\begin{pmatrix} a\\0\\0
   f(\vec{v_1}+\vec{v_2})&=f(\vec{v_1})+f(\vec{v_2})\\
   f(r\cdot \vec{v})&=rf(\vec{v})
 .\end{align*}
+\lecture{2}{Wednesday, March 31st}{8.3}
+Recall that $\lambda=0$ is an eigenvalue of $A$, if and only if
+\[
+  (A-0\cdot I)\vec{v}=\vec{0}
+\] has a $\vec{v}\neq \vec{0}$ solution if and only if 
+\[
+  ker(A)\neq\{0\}
+\] if and only if  $A^{-1}$ does not exist.
+\begin{theorem}
+  If $\lambda_1,\ldots,\lambda_k$ are distinct eigenvalues of $A$, then the corresponding eigenvectors are linearly independent.
+\end{theorem}
+\begin{eg}
+  Consider $A=\begin{pmatrix} 2&1\\1&2 \end{pmatrix} $. The eigenvalues for this matrix are $\lambda=3,1$. The eigenvector for $\lambda=3$ is $\begin{pmatrix} 1\\1 \end{pmatrix} $, and the eigenvector for $\lambda=1$ is $\begin{pmatrix} -1\\1 \end{pmatrix} $.
+\end{eg}
+\begin{eg}
+  Consider $A=\begin{pmatrix} 1&1&2\\0&1&2\\0&0&3 \end{pmatrix} $. The characteristic polynomial is $P(\lambda)=(1-\lambda)^2(3-\lambda)$. For $ \lambda = 1$, the eigenvector is $\begin{pmatrix} 1\\0\\0 \end{pmatrix} $, and for $\lambda = 3$, the eigenvector is $\begin{pmatrix} 3\\2\\2 \end{pmatrix} $ 
+\end{eg}
+\begin{theorem}
+  If $A $ is $n\times n$ and $A$ has $n$ distinct real (or complex) eigenvalues, then the corresponding eigenvectors $\vec{v_1},\ldots,\vec{v_n}$ form a basis for $\R^{n}$.
+\end{theorem}
+  Consider $A=\begin{pmatrix} 1&-1\\2&4 \end{pmatrix} $. $A$ defines a map from $\R^{2}$ to $\R^2$. Our map is 
+  \begin{align*}
+    L: \begin{pmatrix} x\\y \end{pmatrix}\to A\begin{pmatrix} x\\y \end{pmatrix}\\
+    L\left( r\vec{v} \right) =rL(\vec{v})
+  .\end{align*}
+  $L$ is a linear transformation.
+
+\begin{eg}
+  Consider $A=\begin{pmatrix} 1&-1\\2&4 \end{pmatrix} $. What happens if we multiply $A$ by $\begin{pmatrix} 2\\1 \end{pmatrix} $?
+  \begin{align*}
+    A\begin{pmatrix} 2\\1 \end{pmatrix} =\begin{pmatrix} 1&-1\\2&4 \end{pmatrix} \begin{pmatrix} 2\\1 \end{pmatrix} \\
+    =\begin{pmatrix} 1\\8 \end{pmatrix} 
+  .\end{align*}
+  Let's think of $\begin{pmatrix} 2\\1 \end{pmatrix} $ as $2e_1+1e_2$. This would make our equation \[
+  2\begin{pmatrix} 1\\0 \end{pmatrix} +\begin{pmatrix} 0\\1 \end{pmatrix} 
+  .\] 
+  Let's also think about $\begin{pmatrix} 1\\8 \end{pmatrix} $ as \[
+  1\begin{pmatrix} 1\\0 \end{pmatrix} +8\begin{pmatrix} 0\\1 \end{pmatrix} 
+  .\] 
+  We can change the basis to 
+  \begin{align*}
+    v_1=\begin{pmatrix} 1\\-1 \end{pmatrix} && v_2=\begin{pmatrix} 1\\-2 \end{pmatrix} 
+  .\end{align*}
+\end{eg}
