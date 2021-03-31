@@ -27,27 +27,27 @@ We can also turn higher order ODE's into systems of first-order ODEs.
 \subsection{Matrix Algebra}
 A matrix is a rectangular array of numbers. 
 \begin{eg}
-  Consider $A=\begin{bmatrix} 2&3&1\\4&5&0 \end{bmatrix} $. $A$ has 2 rows and 3 columns, so its size is $2\times 3$. The $a_{ij}$ is an entry in $A$'s $i^{th}$ row and $j^{th}$ column.
+  Consider $A=\begin{pmatrix} 2&3&1\\4&5&0 \end{pmatrix} $. $A$ has 2 rows and 3 columns, so its size is $2\times 3$. The $a_{ij}$ is an entry in $A$'s $i^{th}$ row and $j^{th}$ column.
 \end{eg}
 \begin{eg}
-  Consider $B=\begin{bmatrix} 5&0&0\\0&-1&0\\0&0&3 \end{bmatrix} $, which is a $3\times 3$ matrix. This is also a square matrix, due to the size. $B$ is also a diagonal matrix, because it's only nonzero entries are on the main diagonals.
+  Consider $B=\begin{pmatrix} 5&0&0\\0&-1&0\\0&0&3 \end{pmatrix} $, which is a $3\times 3$ matrix. This is also a square matrix, due to the size. $B$ is also a diagonal matrix, because it's only nonzero entries are on the main diagonals.
 \end{eg}
 An upper triangular matrix looks like 
 \[
-  \begin{bmatrix} 5&2&0\\0&-1&3\\0&0&3 \end{bmatrix} 
+  \begin{pmatrix} 5&2&0\\0&-1&3\\0&0&3 \end{pmatrix} 
 .\] 
 A lower triangular matrix looks like
 \[
-  \begin{bmatrix} 5&0&0\\ \pi&-1&0\\-1&-\frac{1}{2}&3 \end{bmatrix} 
+  \begin{pmatrix} 5&0&0\\ \pi&-1&0\\-1&-\frac{1}{2}&3 \end{pmatrix} 
 .\] 
 \end{eg}
 We can add and subtract matrices element-wise, but only if the matrices have the same size. We can also multiply a matrix by a scalar
 \[
-  3\begin{bmatrix} 4&5\\6&7 \end{bmatrix} =\begin{bmatrix} 12&15\\18&21 \end{bmatrix} 
+  3\begin{pmatrix} 4&5\\6&7 \end{pmatrix} =\begin{pmatrix} 12&15\\18&21 \end{pmatrix} 
 .\] 
-A row vector is $\begin{bmatrix} 2&3&1 \end{bmatrix} $, in this case the size would be $1\times 3$. A column vector looks like $\begin{bmatrix} 2\\3\\1 \end{bmatrix} $ with the size $3\times 1$. The zero vector is of size $n\times n$, and has $0$ in every index in the matrix. The transpose of a matrix reverses all of the columns and rows. Consider
+A row vector is $\begin{pmatrix} 2&3&1 \end{pmatrix} $, in this case the size would be $1\times 3$. A column vector looks like $\begin{pmatrix} 2\\3\\1 \end{pmatrix} $ with the size $3\times 1$. The zero vector is of size $n\times n$, and has $0$ in every index in the matrix. The transpose of a matrix reverses all of the columns and rows. Consider
 \[
-  \begin{bmatrix} 2&3&1\\4&5&6 \end{bmatrix} ^{T}=\begin{bmatrix} 2&4\\3&5\\1&6 \end{bmatrix} 
+  \begin{pmatrix} 2&3&1\\4&5&6 \end{pmatrix} ^{T}=\begin{pmatrix} 2&4\\3&5\\1&6 \end{pmatrix} 
 .\] 
 Here are the properties of a transpose:
 \begin{itemize}
@@ -58,6 +58,86 @@ Here are the properties of a transpose:
 \end{itemize}
 Now we are going to start talking about matrix multiplication. Matrix multiplication is like the dot product. The $(i,j)^{th}$ entry of $AB$ is the dot product of the $i^{th}$ row of $A$ w/ $j^{th}$ column of $B$. Consider the following
 \[
-  \begin{bmatrix} 1&2&3 \end{bmatrix} \begin{bmatrix} 4\\5\\6 \end{bmatrix} =(1\times 4)+(2\times 5)+(3\times 6)= 32
+  \begin{pmatrix} 1&2&3 \end{pmatrix} \begin{pmatrix} 4\\5\\6 \end{pmatrix} =(1\times 4)+(2\times 5)+(3\times 6)= 32
 .\] 
-In order to do matrix multiplication, rows of $A$ must match the columns of $B$ and vice versa.
+In order to do matrix multiplication, rows of $A$ must match the columns of $B$ and vice versa. Matrix multiplication is not commutative. 
+\begin{eg}
+  If we let $A=\begin{pmatrix} 1&4\\5&10\\8&12 \end{pmatrix}$ and $B=\begin{pmatrix} -4&7&-3\\1&-3&2 \end{pmatrix} $. Does $AB=BA$? This is not true, because matrices are equal if and only if all entries are equal. If we just multiply $BA$, we get \[
+  \begin{pmatrix} -4&7&-3\\1&-3&2 \end{pmatrix}\begin{pmatrix} 1&4\\5&10\\7&12 \end{pmatrix}  = \begin{pmatrix}2&8\\2&-2\end{pmatrix} 
+  .\] 
+\end{eg}
+Here are some properties of matrices. 
+\begin{note}
+  We must maintain the order from left to right.
+\end{note}
+\begin{itemize}
+  \item $A(B+C)=AB+BC$
+  \item $(A+B)C=AC+BC$
+  \item $k(AB)=(kA)B=A(kB)$
+  \item $ABC=(AB)C=A(BC)$
+\end{itemize}
+The identity matrix is a square diagonal matrix with ones on the diagonal. For example, the identity matrix of dimension 3 and 4 are the following 
+\begin{align*}
+  I_3&=\begin{pmatrix} 1&0&0\\0&1&0\\0&0&1 \end{pmatrix} \\
+  I_4&=\begin{pmatrix} 1&0&0&0\\0&1&0&0\\0&0&1&0\\0&0&0&1 \end{pmatrix} 
+.\end{align*}
+With the identity matrix, if we multiply any matrix by the identity matrix, then we get the same answer. Back in lesson 2, we were given the general solution to a Cauchy-Euler ordinary differential equation as \[
+  x(t)=C_1(1)+C_2t^3+C_3 \frac{1}{t^2}
+.\] Let's find a particular solution satisfying $x(1)=2,x'(1)=4,x'(1)=0$. We can do this by taking the derivative and second derivative of our functions to get 
+\begin{align*}
+  x'(t)=3C_2t^2-2C_3t ^{-3}\\
+  x''(t)=6C_2t+6C_3t ^{-4}
+.\end{align*}
+Now using our initial conditions
+\begin{align*}
+  x(1)=C_1+C_2+C_3=2\\
+  x'(1)=3C_2-2C_3=4\\
+  x''(1)=6C_2+6C_3=0
+.\end{align*}
+We can rewrite this in matrix form as \[
+  \begin{pmatrix} 1&1&1\\0&3&-2\\0&6&6 \end{pmatrix} \begin{pmatrix} C_1\\C_2\\C_3 \end{pmatrix} =\begin{pmatrix} 2\\4\\0 \end{pmatrix} 
+.\] We will call the first matrix, $A$, the second matrix, $\vec{x}$, and the third matrix, $\vec{b}$, so we must solve $A\vec{x}=\vec{b}$ for $\vec{x}$. We can solve this by doing the following techniques
+\begin{enumerate}
+  \item Cramer's Rule (See book appendix)
+  \item Gaussian elimination
+  \item (Left)-multiply by $A^{-1}$
+  \item MATLAB: rref or $A / B$
+\end{enumerate}
+
+\begin{theorem}
+  This is the invertible matrix theorem. If $A$ is square, either all of case 1 or all of case 2 statements are true. Either $A$ is non-singular [good] or $A$ is singular [bad]. \newline Considering case 1
+  \begin{itemize}
+    \item $det(A)\neq 0$
+    \item $A\vec{x}=\vec{b}$ has exactly one solution $\vec{x}$ for each $\vec{b}$.
+    \item $A\vec{x}=\vec{0}$ has only the trivial solution, $\vec{x}=\vec{0}$.
+    \item The rows (and columns) are linearly independent.
+    \item $A^{-1}$ exists.
+  \end{itemize}
+  Considering Case 2
+  \begin{itemize}
+    \item $det(A)=0$
+    \item $A\vec{x}=\vec{b}$ has zero or infinite solutions
+    \item $A\vec{x}=\vec{0}$ has infinite solutions.
+    \item The rows (and columns) are linearly dependent.
+    \item $A^{-1}$ does not exist.
+  \end{itemize}
+\end{theorem}
+$A^{-1}$ is a square matrix such that \[
+A^{-1}A=A A^{-1}=I
+.\] We find $A^{-1}$ through the following methods
+\begin{enumerate}
+  \item $rref(A|I)\to(I|A^{-1})$
+  \item $A^{-1}=\frac{1}{det(A)}\cdot adj(A)$ where $adj(A)$ is the transpose of the cofactor matrix.
+\end{enumerate}
+How do we use $A^{-1}$? Given $A\vec{x}=\vec{b}$, we must solve for $x$. In order to do this, we left multiply by $A^{-1}$ to get 
+\begin{align*}
+  A^{-1}A\vec{x}&=A^{-1}\vec{b}\\
+  I\vec{x}&=A^{-1}\vec{b}\\
+  \vec{x}=A^{-1}\vec{b}
+.\end{align*}
+If given a general $2\times 2$ matrix, $A=\begin{pmatrix} a&b\\c&d \end{pmatrix} $, we can find the inverse by doing 
+\begin{align*}
+  A^{-1}&=\frac{1}{ad-bc}\begin{pmatrix} d&-c\\-b&a \end{pmatrix} ^{T}\\
+        &=\frac{1}{ad-bc}\begin{pmatrix} d&-b\\-c&a \end{pmatrix} 
+.\end{align*}
+The trace of $A$ ($trace(A)$) is the sum along the diagonal.
