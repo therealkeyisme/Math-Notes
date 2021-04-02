@@ -1,0 +1,8 @@
+{"rule":"PUNCTUATION_PARAGRAPH_END","sentence":"^\\QBecause the matrices we know are a basis consist of 1's and 0's, we can see that\\E$"}
+{"rule":"PUNCTUATION_PARAGRAPH_END","sentence":"^\\QThe span of the matrix\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QDistributivity: \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Qv=(\\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Qv) + (\\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Qv), and \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q(v+w)=(\\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Qv)+(\\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Qw).\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QThus, the coimage is the span of its radius.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QAlso, the \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q in the cokernel of \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q are those \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q such that \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q since\\E$"}
+{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QAssume that \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Q.\\E$"}
+{"rule":"SENTENCE_FRAGMENT","sentence":"^\\QSo if we have the basis \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
