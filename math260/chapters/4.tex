@@ -141,3 +141,83 @@ If given a general $2\times 2$ matrix, $A=\begin{pmatrix} a&b\\c&d \end{pmatrix}
         &=\frac{1}{ad-bc}\begin{pmatrix} d&-b\\-c&a \end{pmatrix} 
 .\end{align*}
 The trace of $A$ ($trace(A)$) is the sum along the diagonal.
+\newline
+Let's write a linear system of first order differential equations in matrix form. If the equation is not first order, use Sect (4.1) technique to turn into 1st order system.
+\begin{eg}
+  Consider the following system 
+  \begin{align*}
+    x'&=x-y+z\\
+    y'&=4x+y-5z+7\\
+    z'&=7x-8y-9z
+  .\end{align*}
+  The $+7$ in the second equation makes this a nonhomogeneous ordinary differential equation with constant coefficients. We can rewrite this as $\vec{x}'(t)=A(t)\vec{x}+\vec{b}(t)$, where $\vec{x}(t)=$ a vector of dependent variables. In order to do this, let $\vec{x}(t)=\begin{bmatrix} x(t)\\y(t)\\z(t) \end{bmatrix} $. Using the equation from before, we can set \[
+  \begin{bmatrix} x'\\y'\\z'\\ \end{bmatrix} =\begin{bmatrix} 1&-1&1\\4&1&-5\\7&-8&-9 \end{bmatrix} +\begin{bmatrix} 0\\7\\0 \end{bmatrix} 
+.\] We can notice that all of our nonhomogeneous terms get moved into the $\vec{b}(t)$ matrix.
+\begin{note}
+  We might have $\begin{bmatrix} c \end{bmatrix} \vec{x}'=A\vec{x}+\vec{b}$. From here we would need to do the following 
+  \begin{align*}
+    c^{-1}c\vec{x}'=c^{-1}(A\vec{x}+\vec{b})\\
+    \vec{x}'=c^{-1}A\vec{x}+c^{-1}\vec{b}
+  .\end{align*}
+\end{note}
+\end{eg}
+\begin{eg}
+  Consider the following ordinary differential equation and put it into matrix form.
+  \begin{align*}
+    x''+4x'-4x+4y&=0\\
+    y''-4y'+5y-2x'+3x&=\sin(t)
+  .\end{align*}
+  In order to solve this we need to let $u=x'$, which makes $u'=x''$, and we need to let $v=y'$, which lets $u'=-4x'+4x-4y$ and $v'=y''=4y'-5y+2u-3x+\sin(t)$. This makes our system 
+  \begin{align*}
+    u'&=-4u+4x-4y\\
+    v'&=4v-5y+2u-3x+\sin(t)\\
+    x'&=u\\
+    y'&=v
+  .\end{align*}
+  Now we can turn this into our $\vec{x'}=A\vec{x}+\vec{b}$. This makes our equation \[
+    \begin{bmatrix} u'\\v'\\x'\\y'\\ \end{bmatrix} =\begin{bmatrix} -4&0&4&-4\\2&4&-3&-5\\1&0&0&0\\0&1&0&0 \end{bmatrix} +\begin{bmatrix} 0\\ \sin(t)\\0\\0 \end{bmatrix} 
+  .\] 
+\end{eg}
+
+\subsection{Eigenvalues and Eigenvectors of Square Matrices}
+We are going to be using $\lambda$ for the eigenvalues and $\vec{v}$ for the eigenvectors.
+\begin{definition}
+  $\lambda$ and $\vec{v}$ are an eigenvalue/eigenvector of $A$ if \[
+  A\vec{v}=\lambda\vec{v}, v\neq 0
+  .\] 
+\end{definition}
+
+Our steps to find the eigenvector are the following:
+\begin{enumerate}
+  \item Find $\lambda$'s with $det(A-\lambda I)=0$ (polynomial in $\lambda$).
+  \item For each $\lambda$ find its eigenvector $\vec{v}$ using $A\vec{v}=\lambda\vec{v}$ or $(A-\lambda I)\vec{v}=0$
+\end{enumerate}
+We need to make sure that $\vec{v}$ is a non-zero solution to the equation. This means that we will have infinite solutions because every multiple of an eigenvector is also an eigenvector.
+\begin{eg}
+  For $A=\begin{bmatrix} 4&2\\5&1 \end{bmatrix}$, find eigenvalues and eigenvectors. In order to find the eigen vector we take the deteminant of $A-\lambda I$ and set it equal to zero.
+  \begin{align*}
+    det(\begin{bmatrix} 4&2\\5&1 \end{bmatrix} -\lambda\begin{bmatrix} 1&0\\0&1 \end{bmatrix} )&=0\\
+    \left| \begin{matrix} 4-\lambda&2\\5&1-\lambda \end{matrix} \right| &=0\\
+    (4-\lambda)(1-\lambda)-10&=0\\
+    4-5\lambda+\lambda^2-10&=0\\
+    \lambda^2-5\lambda-6&=0\\
+    \lambda&=6,-1
+  .\end{align*}
+  Now we need to solve for the eigenvectors. First, let $\lambda=6$. Let $\vec{v}=\begin{bmatrix} v_1\\v_2 \end{bmatrix}$.
+  \begin{align*}
+    \begin{bmatrix} 4-6&2\\5&1-6 \end{bmatrix} \begin{bmatrix} v_1\\v_2 \end{bmatrix} &=\begin{bmatrix} 0\\0 \end{bmatrix} \\
+    \begin{bmatrix} -2&2\\5&-5 \end{bmatrix} \begin{bmatrix} v_1\\v_2 \end{bmatrix} =\begin{bmatrix} 0\\0 \end{bmatrix} 
+  .\end{align*}
+  If we put this back into equation form we get 
+  \begin{align*}
+    -2v_1+2v_2&=0\\
+    5v_1-5v_2&=0\\
+    \to v_1=v_2
+  .\end{align*}
+  So this means that $v_2\begin{bmatrix} 1\\1 \end{bmatrix} $ is an eigenvalue for $\lambda=6$ for all $v_2\neq 0$. Let's now solve for $\lambda=1:$
+  \begin{align*}
+    \begin{bmatrix} 5&2\\5&2 \end{bmatrix} \begin{bmatrix} v_1\\v_2 \end{bmatrix} &=\begin{bmatrix} 0\\0 \end{bmatrix} \\
+    5v_1-1v_2=0\to v_2=\frac{-5}{2}v_1
+  .\end{align*}
+  This means that any multiple of the vector $\begin{bmatrix} 1\\-\frac{5}{2} \end{bmatrix}$ is an eigenvector for $\lambda=1$
+\end{eg}
