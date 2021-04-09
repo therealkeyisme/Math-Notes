@@ -219,5 +219,93 @@ We need to make sure that $\vec{v}$ is a non-zero solution to the equation. This
     \begin{bmatrix} 5&2\\5&2 \end{bmatrix} \begin{bmatrix} v_1\\v_2 \end{bmatrix} &=\begin{bmatrix} 0\\0 \end{bmatrix} \\
     5v_1-1v_2=0\to v_2=\frac{-5}{2}v_1
   .\end{align*}
-  This means that any multiple of the vector $\begin{bmatrix} 1\\-\frac{5}{2} \end{bmatrix}$ is an eigenvector for $\lambda=1$
+  This means that any multiple of the vector $\begin{bmatrix} 1\\-\frac{5}{2} \end{bmatrix}$ is an eigenvector for $\lambda=1$.
+\end{eg}
+
+Let's show that if $\vec{v}$ is an eigenvector for $A$ with $\lambda$, then $c\vec{v}$ is an eigenvector for $A$ with $\lambda$ if $c\neq 0.$. We know that $A\vec{v}=\lambda\vec{v}$. Is $A(c\vec{v})=\lambda(c\vec{v})$? Yes.
+Let $X(t)=\begin{bmatrix} x(t)\\y(t) \end{bmatrix} $. If we solve for $\vec{X}'=A\vec{x}$, 
+\begin{align*}
+  \begin{bmatrix} x\\y \end{bmatrix} '=\begin{bmatrix} 4&2\\5&1 \end{bmatrix} \begin{bmatrix} x\\y \end{bmatrix} \\
+  x'=4x+2y\\
+  y'=5x+y
+.\end{align*}
+We can now write down our solutions as 
+\begin{align*}
+  \vec{X}_1(t)=e^{6t}\begin{bmatrix} 1\\1 \end{bmatrix} =\begin{bmatrix} e^{6t}\\e^{6t} \end{bmatrix} \\
+  \vec{X}_2(t)=e^{-t}\begin{bmatrix} -2\\5 \end{bmatrix} =\begin{bmatrix} -2e^{-t}\\5e^{-t} \end{bmatrix} 
+.\end{align*}
+This means that we can determine that \[
+  \vec{X}(t)=c_1\vec{x}_1+c_2\vec{x}_2
+\] is also a solution for all $c_1,c_2$. This means that our general solution is going to be \[
+\vec{X}=c_1e^{6t}\begin{bmatrix} 1\\1 \end{bmatrix} +c_2e^{-t}\begin{bmatrix} -2\\5 \end{bmatrix} 
+.\] We can also take our $c_1,c_2$ and distribute them to get \[
+\vec{X}(t)=\begin{bmatrix} c_1e^{6t}-2c_2e^{-2}\\c_2e^{6t}+5c_2e^{-t} \end{bmatrix} 
+,\] with $x(t)$ being the top equation and $y(t)$ being the bottom equation. We can verify the solutions in order to convince ourselves that this works. We can verify by using our $\begin{bmatrix} -2e^{-t}\\5e^{-t} \end{bmatrix} $. Our left hand side of the equation is going to be \[
+\vec{X}_2'=-e^{-t}\begin{bmatrix} -2\\5 \end{bmatrix} =e^{t}\begin{bmatrix} 2\\-5 \end{bmatrix} 
+.\] Our right hand side of the original equation is going to be \[
+A\vec{X}_2 = \begin{bmatrix} 4&2\\5&1 \end{bmatrix} e^{t}\begin{bmatrix} -2\\5 \end{bmatrix} 
+.\] After simplification of this equation, we get that the result is $e^{t}\begin{bmatrix} 2\\-5 \end{bmatrix} $.
+\begin{eg}
+  Find the particular solution satisfying $x(0)=2,y(0)=-2$ for the general solution above. Now we just go through the following steps.
+  \begin{align*}
+    \vec{X}(0)=\begin{bmatrix} 2\\-2 \end{bmatrix} =c_1\begin{bmatrix} 1\\1 \end{bmatrix} +c_2\begin{bmatrix} -2\\5 \end{bmatrix} \\
+    2&=c_1-2c_2\\
+    -2&=c_1+5c_2
+  .\end{align*}
+  Now we just solve for $c_1,c_2$ to get $c_1=\frac{6}{7},c_2=-\frac{4}{7}$, so our general solution is \[
+    \vec{X}(t)=\frac{6}{7}e^{6t}\begin{bmatrix} 1\\1 \end{bmatrix} -\frac{4}{7}e^{-t}\begin{bmatrix} -2\\5 \end{bmatrix} 
+  .\] 
+\end{eg}
+
+How can we verify that two solutions are linearly independent\footnote{This is a 4.4 idea but we are not quite there yet.}? We can solve this by using the wronskian. For the last equation we can check this by doing \[
+  w(t)=\left| \begin{matrix} e^{6t}&-2e^{-t}\\e^{6t}&5e^{-t} \end{matrix} \right| = 5e^{5t}+2e^{5t}\neq 0 
+.\] Because the wronskian does not equal zero, the solutions are linearly independent.\newline 
+
+\begin{eg}
+  \begin{enumerate}
+    \item Is $\vec{v}=\begin{bmatrix} 3\\2 \end{bmatrix}$ an eigenvector for $A=\begin{bmatrix} 2&3\\2&1 \end{bmatrix} $. This can be tested by checking to see if $A\vec{v}=\lambda\vec{v}$ for some $\lambda$?\[
+      A\vec{v}=\begin{bmatrix} 2&3\\2&1 \end{bmatrix} \begin{bmatrix} 3\\2 \end{bmatrix} =\begin{bmatrix} 12\\8 \end{bmatrix} =\lambda\begin{bmatrix} 3\\2 \end{bmatrix} 
+    .\] This is true for all $\lambda=4$
+    \item Is $\lambda=-1$ and eigenvalue for $A=\begin{bmatrix} 2&3\\2&1 \end{bmatrix} $? We can check this by asking if $det(A-(-1)I)=0$?\[
+      \left| \begin{matrix} 2+1&3\\2&1+1 \end{matrix} \right| =\left| \begin{matrix} 3&3\\2&2 \end{matrix} \right| =6-6=0
+    .\] Because this determinant equals zero, $\lambda=-1$ is an eigenvalue of $A$
+  \end{enumerate}
+\end{eg}
+
+For repeated (real) eigenvalues, we can have many different options that can come out. For a $2\times 2, \lambda_1=\lambda_2$. Here are our options 
+\begin{enumerate}
+  \item Only one eigenvector (and its multiples).
+  \item 2 linearly independent eigenvectors.
+\end{enumerate}
+For option 2, an example would be 
+\begin{align*}
+  \vec{X}_1=e^{\lambda t}\begin{bmatrix} 2\\3 \end{bmatrix} \\
+  \vec{X}_2=e^{\lambda t}\begin{bmatrix} 4\\0 \end{bmatrix} 
+.\end{align*}
+Our general solution is going to be \[
+  \vec{X}(t)=C_1\vec{X}_1+C_2\vec{X}_2=e^{2t}\begin{bmatrix} 2C_1+4C_2\\3C_1 \end{bmatrix} 
+.\] This means that every vector is an eigenvector. This only occurs if our eigenvector is a multiple of the identity matrix.
+ \begin{eg}
+  Find all eigenpairs of the matrix $A=\begin{bmatrix} 4&5\\-2&6 \end{bmatrix} $. First we need to find the eigenvalues by doing 
+  \begin{align*}
+    \left| \begin{matrix} 4-\lambda&5\\-2&6-\lambda \end{matrix} \right| &=(4-\lambda)(6-\lambda)+10\\
+                                   &=24-10\lambda+\lambda^2+10\\
+                                   &=\lambda^2-10\lambda+34=0
+  .\end{align*}
+  We can solve this by completing the square by doing 
+  \begin{align*}
+    (\lambda^2-10\lambda+25)&=-34+25\\
+    (\lambda-5)^2&=-9\\
+    |\lambda-5|&=3i\\
+    \lambda-5&=\pm 3i\\
+    \lambda &= 5\pm 3i
+  .\end{align*}
+  Now we need to find the eigenvectors by solving $A\vec{v}=\lambda\vec{v}$ or doing $(A-\lambda I)\vec{v}=\vec{0}$. Now solving for $\lambda_1=5+3i$.
+  \begin{align*}
+    \begin{bmatrix} 4-(5+3i)&5\\-2&6-(5+3i) \end{bmatrix} \begin{bmatrix} v_1\\v_2 \end{bmatrix} &=\begin{bmatrix} 0\\0 \end{bmatrix} \\
+    \begin{bmatrix} -1-3i&5\\-2&1-3i \end{bmatrix} \begin{bmatrix} v_1\\v_2 \end{bmatrix} &=\begin{bmatrix} 0\\0 \end{bmatrix} \\
+    (-1-3i)v_1+5v_2=0\\
+    -2v_1+(1-3i)v_2=0
+  .\end{align*}
+  The two last equations above are equivalent so we can work with either of them, we are going to be working with $5v_2=(1+3i)v_1$. If we choose $v_1=5,v_2=1+\lambda i$ we can solve $v_2=\frac{1+3i}{5}v_1$ for all $v_1$.
 \end{eg}
