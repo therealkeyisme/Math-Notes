@@ -309,3 +309,55 @@ Our general solution is going to be \[
   .\end{align*}
   The two last equations above are equivalent so we can work with either of them, we are going to be working with $5v_2=(1+3i)v_1$. If we choose $v_1=5,v_2=1+\lambda i$ we can solve $v_2=\frac{1+3i}{5}v_1$ for all $v_1$.
 \end{eg}
+\begin{eg}
+  Show that $\vec{v}=\begin{bmatrix} 2+2i\\-1 \end{bmatrix} $ is an eigenvector of $A=\begin{bmatrix} 2&8\\-1&-2 \end{bmatrix} $ We can set $A\vec{v}=\lambda\vec{v}$ for some $\lambda$ to get \[
+  \begin{bmatrix} 2&8\\-1&-2 \end{bmatrix} \begin{bmatrix} 2+2i\\-1 \end{bmatrix} =\begin{bmatrix} 4+4i-8\\-2-2i+3 \end{bmatrix} =\begin{bmatrix} 4i-4\\-2i \end{bmatrix} \stackrel{?}{=}\lambda\begin{bmatrix} 2+2i\\-1 \end{bmatrix} 
+  .\] 
+  We can check to see if $\lambda=2i$ by doing 
+  \begin{align*}
+    2i&=(2+2i)\stackrel{?}{=}4i-4\\
+    4i-4&=4i-4
+  .\end{align*}
+  This means that $\vec{v}$ is an eigenvector for $A$ with $\lambda=2i$.
+\end{eg}
+How can we turn a complex eigenpair of $A$ into a solution of $\vec{x}'=A\vec{x}$? Last time we found that $\lambda_1=5+3i$ had $\vec{v}_1=\begin{bmatrix} 5\\1+3i \end{bmatrix} \text{ or }\begin{bmatrix} 1-3i\\2 \end{bmatrix} $
+\begin{note}
+  We know that $\vec{x}_1(t)=e^{(5+3i)t}\begin{bmatrix} 5\\1+3i \end{bmatrix} $ is a solution, and so is $\vec{x}_1(t)=e^{5-3i)t}\begin{bmatrix} 5\\1-3i \end{bmatrix} $ is a solution, so \[
+  \vec{x}(t)=C_1\vec{x}_1(t)=C_2\vec{x}_2(t)
+  .\] 
+\end{note}
+How are we able to turn these into real-valued solutions? The real and imaginary parts of a solution must also be solutions. We can do the following calculations
+\begin{align*}
+  \vec{x}_1(t)&=e^{5t}e^{3it}\begin{bmatrix} 5\\1+3i \end{bmatrix} \\
+              &=e^{5t}\left( \cos(3t)+i\sin(3t) \right)\begin{bmatrix} 5\\1+3i \end{bmatrix} \\
+              &=e^{5t}\begin{bmatrix} 5\cos(3t)+5i\sin(3t)\\ \cos(3t)+i\sin(3t)+3i\cos(3t)-3\sin(3t) \end{bmatrix}\\
+              &=e^{5t}\begin{bmatrix} 5\cos(3t)\\ \cos(3t)-3\sin(3t) \end{bmatrix} +ie^{5t}\begin{bmatrix} 5\sin(3t)\\3\cos(3t)+\sin(3t) \end{bmatrix} 
+.\end{align*}
+The two sides of the addition are considered $\vec{x}_3(t),\vec{x}_4(t)$ respectively. ($x_4$ does not include the $i$). This makes our general solution \[
+  \vec{x}(t)=C_3\vec{x}_3(t)+C_4\vec{x}_4(t)
+.\] 
+\begin{eg}
+  Find the eigenvalues of $A=\begin{bmatrix} 2&-7&0\\5&10&4\\0&5&2 \end{bmatrix} $. First we need to find the eigenvalues by doing $det(A-\lambda I)=0.$ 
+  \begin{align*}
+    \left| \begin{matrix} 2-\lambda&-7&0\\5&10-\lambda&4\\0&5&2-\lambda \end{matrix} \right| &= (2-\lambda)\left| \begin{matrix} 10-\lambda&4\\5&2-\lambda \end{matrix} \right| + (7) \left| \begin{matrix} 5&4\\0&2-\lambda \end{matrix} \right| \\
+                                   &=(2-\lambda)[(10-\lambda)(2-\lambda)-20]+7.5(2-\lambda)\\
+                                   &=(2-\lambda)[20-12\lambda+\lambda^2-20+35]\\
+                                   &=(2-\lambda)(\lambda^2-12\lambda+35)\\
+                                   &=(2-\lambda)(\lambda-5)(\lambda-7)=0\\
+    \lambda&=2,5,7
+  .\end{align*}
+\end{eg}
+How can we find a second linearly independent solution to $\vec{x}'=A\vec{x}$ if $A$ only had 1 eigenpair?
+\begin{eg}
+  Consider the equation $B=\begin{bmatrix} 3*-18\\2&-9 \end{bmatrix} $, which has the eigenvalues $\lambda=-3,-3$ with an eigenvector of $\vec{v}=\begin{bmatrix} 3\\1 \end{bmatrix} $. We know that $\vec{x}_1=(t)e^{-3t}\begin{bmatrix} 3\\1 \end{bmatrix} $ is one solution. We need to find $\vec{x}_2$. We can say that $\vec{x}_2(t)=te^{\lambda t}\vec{v}+e^{\lambda t}\vec{w}$, where $(B-\lambda I)\vec{w}=\vec{v}$ Let's find our $\vec{w}$.
+  \begin{align*}
+    \begin{bmatrix} 3-(-3)&-18\\2&-9-(-3) \end{bmatrix} \begin{bmatrix} w_1\\w_2 \end{bmatrix} =\begin{bmatrix} 3\\1 \end{bmatrix} \\
+    \begin{bmatrix} 6&-18\\2&-6 \end{bmatrix} \begin{bmatrix} w_1\\w_2 \end{bmatrix} =\begin{bmatrix} 3\\1 \end{bmatrix} \\
+    6w_1-18w_2&=3\\
+    2w_1-6w_2&=1
+  .\end{align*}
+  We can choose any of the $w_1,w_2$ combinations that work. If we choose that $w_2=0,w_1=\frac{1}{2}$. This makes our general solution \[
+    \vec{x}(t)=Ce^{-3t}\begin{bmatrix} 3\\1 \end{bmatrix} +C_2e^{-3t}\left( t\begin{bmatrix} 3\\1 \end{bmatrix} +\begin{bmatrix} 0\\\frac{1}{2} \end{bmatrix}  \right) 
+  .\] 
+\end{eg}
+
