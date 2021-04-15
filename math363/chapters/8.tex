@@ -323,3 +323,58 @@ If we are looking for the linearly independent solutions we need to do $A-\lambd
   This means that our vector is the same from before because we get $\begin{pmatrix} -4\\3\\3 \end{pmatrix} $.\newline
   $Av_1\to w_1$, while $\Lambda v_2\to w_2$.
 \end{eg}
+
+\lecture{4}{Monday April 12, 2021}{}
+
+\lecture{5}{Wednesday April 14, 2021}{}
+
+If we have an $n\times n$ matrix with $n$ distinct eigenvalues, we have $n$ linearly independent eigenvectors. \[
+\Lambda=S^{-1}AS
+.\] 
+If the matrix is real symmetric, then we can get a real eigenvector basis so we can diagonalize like \[
+S\Lambda S^{-1}=A
+.\] 
+If we do $A\cdot A$, then we get 
+\begin{align*}
+  S\Lambda S^{-1}S\Lambda S^{-1}\\
+  =S \Lambda S^{-1}\\
+  A^{k}=S \Lambda ^{k}S^{-1}
+.\end{align*}
+Let's look at an example where this is not going to work. 
+\begin{eg}
+  Let $M=\begin{bmatrix} 1&1&1\\0&1&0\\0&0&1 \end{bmatrix} $. This matrix only has one eigenvalue of $\lambda=1$. Let's find the eigenvectors.
+  \begin{align*}
+    \begin{bmatrix} 0&1&1\\0&0&0\\0&0&0 \end{bmatrix} \begin{bmatrix} x\\y\\z \end{bmatrix} =\begin{bmatrix} 0\\0\\0 \end{bmatrix} \\
+    y+z=0\to z=-y\\
+    \begin{bmatrix} x\\y\\-y \end{bmatrix} =x\begin{bmatrix} 1\\0\\0 \end{bmatrix} +y\begin{bmatrix} 0\\1\\-1 \end{bmatrix} 
+  .\end{align*}
+\end{eg}
+Now supposed instead, if we let $M=\begin{bmatrix} 1&0&0\\0&1&0\\0&0&1 \end{bmatrix} $. This matrix must have 3 linearly independent eigenvectors.
+\begin{align*}
+  |M- \lambda I|=0\\
+  \left| \begin{matrix} 1-\lambda &0&0\\0&1-\lambda&0\\0&0&1-\lambda \end{matrix} \right| =0\\
+  (M-\lambda I)\vec{v} = 0\\
+  \begin{bmatrix} 0&0&0\\0&0&0\\0&0&0 \end{bmatrix} \begin{bmatrix} x\\y\\z \end{bmatrix} =\begin{bmatrix} 0\\0\\0 \end{bmatrix} \\
+  \begin{bmatrix} x\\y\\z \end{bmatrix} =x\begin{bmatrix} 1\\0\\0 \end{bmatrix} +y\begin{bmatrix} 0\\1\\0 \end{bmatrix} +z\begin{bmatrix} 0\\0\\1 \end{bmatrix} 
+.\end{align*}
+
+\begin{theorem}
+  Let $A=A^{T}$ be an $n\times n$ real matrix. Let $\vec{v_1},\ldots,\vec{v_n}$ be an eigenvector basis such that $\vec{v_1},\ldots,\vec{v_r}$ correspond to nonzero eigenvalues and $\vec{v_{r+1}},\ldots,\vec{v_n}$ correspond to the zero eigenvalue. Then $r=rank(A)$, $\vec{v_1},\ldots,\vec{v_r}$ form an orthogonal basis for $IM(A)=coimg(A)$, and $\vec{v_{r+1}},\ldots,\vec{v_n}$ form an orthogonal basis for the $ker(A)=coker(A)$.
+\end{theorem}
+\begin{theorem}
+  The spectral theorem. Let $A$ be a real symmetric matrix. Then there exists an orthogonal matrix $Q$ such that $A=Q\Lambda Q^{-1}=Q\Lambda Q^{T}$, where $\Lambda $ is a real diagonal matrix. The eigenvalues of $A$ appear on the diagonal of $\Lambda $, while the columns of $Q$ are orthonormal eigenvectors of $A$.
+\end{theorem}
+\begin{eg}
+  Let $A=\begin{bmatrix} 1&-1&1\\-1&1&0\\1&01 \end{bmatrix} $. Our eigenvalues are $1+\sqrt{2},1,1-\sqrt{2}  $, which means our eigenvectors are \[
+  \begin{bmatrix} \sqrt{2} \\-1\\1 \end{bmatrix} ,\begin{bmatrix} 0\\1\\1 \end{bmatrix} ,\begin{bmatrix} -\sqrt{2} \\-1\\1 \end{bmatrix} 
+  .\] 
+  The orthonormal basis of the eigenvectors is 
+  \begin{align*}
+    \sqrt{(\sqrt{2} )^2+(-1)^2+1^2}\\
+    =\sqrt{6}\\
+    \begin{bmatrix} \frac{\sqrt{2} }{2}\\-\frac{1}{2}\\\frac{1}{2} \end{bmatrix} ,\begin{bmatrix} 0\\\frac{1}{\sqrt{2} }\\\frac{1}{\sqrt{2} } \end{bmatrix} ,\begin{bmatrix} \frac{1}{2}\\\frac{1}{2}\\\frac{1}{2} \end{bmatrix} 
+  .\end{align*}
+  Now if we let $S=\begin{bmatrix} \sqrt{2} &0&-\sqrt{2}\\-1&1&-1\\1&1&1  \end{bmatrix} $ and we do \[
+  S^{-1}AS= \Lambda=\begin{bmatrix} 1+\sqrt{2}&0&0\\0&1&0\\0&0&1-\sqrt{2}   \end{bmatrix} 
+  .\] 
+\end{eg}

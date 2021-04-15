@@ -360,4 +360,77 @@ How can we find a second linearly independent solution to $\vec{x}'=A\vec{x}$ if
     \vec{x}(t)=Ce^{-3t}\begin{bmatrix} 3\\1 \end{bmatrix} +C_2e^{-3t}\left( t\begin{bmatrix} 3\\1 \end{bmatrix} +\begin{bmatrix} 0\\\frac{1}{2} \end{bmatrix}  \right) 
   .\] 
 \end{eg}
-
+\begin{eg}
+  Let's solve $\vec{x}'=\begin{bmatrix} 0&1\\0&6 \end{bmatrix} \vec{x}$ for $\vec{x}(t)$. The first step we need to take is calculating the eigenvalues of the matrix.
+  \begin{align*}
+    det(A-\lambda I)=\left| \begin{matrix} 0-\lambda&1\\0&6-\lambda \end{matrix} \right| =0\\
+    -\lambda(6-\lambda)=0\\
+    \lambda=0,6
+  .\end{align*}
+  For $\lambda=0$:
+  \begin{align*}
+    \begin{bmatrix} 0&1\\0&6 \end{bmatrix} \begin{bmatrix} v_1\\v_2 \end{bmatrix} &=\begin{bmatrix} 0\\0 \end{bmatrix} \\
+    v_2&=0\\
+    6v_2&=0\\
+    \vec{v}=\begin{bmatrix} v_1\\0 \end{bmatrix} &=v_1\begin{bmatrix} 1\\0 \end{bmatrix} 
+  .\end{align*}
+  For $\lambda=6$
+  \begin{align*}
+    \begin{bmatrix} -6&1\\0&0 \end{bmatrix} \begin{bmatrix} v_1\\v_2 \end{bmatrix} &=\begin{bmatrix} 0\\0 \end{bmatrix} \\
+    -6v_1+v_2&=0\\
+    0&=0\\
+    v_2&=6v_1\\
+    \vec{v}&=\begin{bmatrix} v_1\\6v_1 \end{bmatrix}=v_1\begin{bmatrix} 1\\6 \end{bmatrix}  
+  .\end{align*}
+  This will make our general solution be \[
+    \vec{x}(t)=C_1e^{0t}\begin{bmatrix} 1\\0 \end{bmatrix} +C_2e^{6t}\begin{bmatrix} 1\\6 \end{bmatrix} = \begin{bmatrix} C_1+C_2e^{6t}\\6C_2e^{6t} \end{bmatrix} 
+  .\] 
+\end{eg}
+\subsection{Undetermined Coefficients for Linear Systems}
+\begin{eg}
+  Let's take a look at the differential equation \[
+    \vec{x}'=\begin{bmatrix} 3&-18\\2&-9 \end{bmatrix} \vec{x}+\begin{bmatrix} 2t\\0 \end{bmatrix} 
+  .\] 
+  This ordinary differential equation has the homogeneous solution of \[
+    \vec{x}_h(t)=C_1e^{-3t}\begin{bmatrix} 3\\1 \end{bmatrix} +C_2\left[ te^{-3t}\begin{bmatrix} 3\\1 \end{bmatrix} +e^{-3t}\begin{bmatrix} \frac{1}{2}\\0 \end{bmatrix}  \right] 
+  .\] 
+  If we were to make our initial $\vec{x}_p(t)$ guess, we should guess $\begin{bmatrix} At+B\\Ct+D \end{bmatrix} $. Now we need to find $\vec{x}_p'=\begin{bmatrix} A\\C \end{bmatrix}$ and plug it into the left hand side of the equation. The right hand side will now equal \[
+  \begin{bmatrix} 3&-18\\2&-9 \end{bmatrix} \begin{bmatrix} At+B\\Ct+D \end{bmatrix} +\begin{bmatrix} 2t\\0 \end{bmatrix} 
+  .\] This means that this should be equal \[
+  \begin{bmatrix} A\\C \end{bmatrix} =\begin{bmatrix} 3At+3B-18Ct-18D+2t\\2At+2B-9Ct-9D \end{bmatrix} 
+  .\] So 
+  \begin{align*}
+    A=3At+3B-18Ct-18D+2t\\
+    C=2At+2B-9Ct-9D\\
+  .\end{align*}
+  We can separate our coefficients with 1's and t's like so 
+  \begin{align*}
+    1:A&=3B-18D\\
+    C&=2B-9D\\
+    t: 0=3A-18C+2\\
+    0=2A-9C
+  .\end{align*} 
+  Aftering doing algebra and simplifying we get that $A=2,C=\frac{4}{9},B=-\frac{10}{9},D=-\frac{8}{27}$, so \[
+    \vec{x}_p=\begin{bmatrix} 2t&-\frac{10}{9}\\\frac{4}{9}t&-\frac{8}{27} \end{bmatrix} 
+  .\] 
+\end{eg}
+\subsection{Modeling with Systems}
+Let's start off by looking at an example.
+\begin{eg}
+  \begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{resource/images/4.4.2 Example 1.jpg}
+    \caption{}
+    \label{fig:}
+  \end{figure}
+  Tanks $A$ and $B$ both have 100 gallons of brine. $A$ concentration $0.2 \frac{lb}{gal}$ salt, $B$ concentration is $0.3 \frac{lb}{gal}$. Let $x(t)$ and $y(t)$ be the amounts of salt in tanks $A$ and $B$ in pounds at time $t$(min).
+  \begin{align*}
+    x'=0+\left( 2 \frac{gal}{min} \right) \left( \frac{y}{100} \frac{lb}{gal} \right)-5 \frac{x}{100} \\
+    y'=3 \frac{x}{100}- \frac{3y}{100}\\
+    x(0)=20\\
+    y(0)=30
+  .\end{align*}
+  This gives us that \[
+    \begin{bmatrix} x\\y \end{bmatrix} '=\begin{bmatrix} -\frac{1}{20}&\frac{1}{50}\\\frac{3}{100}&-\frac{3}{100} \end{bmatrix} \begin{bmatrix} x\\y \end{bmatrix} 
+  .\] 
+\end{eg}
