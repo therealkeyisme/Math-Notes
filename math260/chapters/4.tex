@@ -349,7 +349,7 @@ The two sides of the addition are considered $\vec{x}_3(t),\vec{x}_4(t)$ respect
 \end{eg}
 How can we find a second linearly independent solution to $\vec{x}'=A\vec{x}$ if $A$ only had 1 eigenpair?
 \begin{eg}
-  Consider the equation $B=\begin{bmatrix} 3*-18\\2&-9 \end{bmatrix} $, which has the eigenvalues $\lambda=-3,-3$ with an eigenvector of $\vec{v}=\begin{bmatrix} 3\\1 \end{bmatrix} $. We know that $\vec{x}_1=(t)e^{-3t}\begin{bmatrix} 3\\1 \end{bmatrix} $ is one solution. We need to find $\vec{x}_2$. We can say that $\vec{x}_2(t)=te^{\lambda t}\vec{v}+e^{\lambda t}\vec{w}$, where $(B-\lambda I)\vec{w}=\vec{v}$ Let's find our $\vec{w}$.
+  Consider the equation $B=\begin{bmatrix} 3&-18\\2&-9 \end{bmatrix} $, which has the eigenvalues $\lambda=-3,-3$ with an eigenvector of $\vec{v}=\begin{bmatrix} 3\\1 \end{bmatrix} $. We know that $\vec{x}_1=(t)e^{-3t}\begin{bmatrix} 3\\1 \end{bmatrix} $ is one solution. We need to find $\vec{x}_2$. We can say that $\vec{x}_2(t)=te^{\lambda t}\vec{v}+e^{\lambda t}\vec{w}$, where $(B-\lambda I)\vec{w}=\vec{v}$ Let's find our $\vec{w}$.
   \begin{align*}
     \begin{bmatrix} 3-(-3)&-18\\2&-9-(-3) \end{bmatrix} \begin{bmatrix} w_1\\w_2 \end{bmatrix} =\begin{bmatrix} 3\\1 \end{bmatrix} \\
     \begin{bmatrix} 6&-18\\2&-6 \end{bmatrix} \begin{bmatrix} w_1\\w_2 \end{bmatrix} =\begin{bmatrix} 3\\1 \end{bmatrix} \\
