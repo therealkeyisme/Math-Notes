@@ -5,3 +5,4 @@
 - [Applied Linear Algebra (In progress)](https://github.com/CameronSWilliamson/Math-Notes/tree/main/math363)
 - [Statistics for Experimentalists (Will Not Be Completed)](https://github.com/CameronSWilliamson/Math-Notes/tree/main/math321)
 - [Physics 2 (Complete)](https://github.com/CameronSWilliamson/Math-Notes/tree/main/physics204)
+-  [Misc Formulas (Will Always Be a Work in Progress)](https://github.com/CameronSWilliamson/math-notes/tree/main/misc)]
