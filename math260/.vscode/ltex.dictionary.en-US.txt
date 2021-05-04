@@ -1,8 +1,0 @@
-TTo
-sitll
-IVP
-wronskian
-Cramer
-Frobenius
-frobenius
-ODEs
