@@ -1,0 +1,43 @@
+\documentclass[letter]{article}
+
+\usepackage{amsmath, amssymb}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\arccosh}{arccosh}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\arcsech}{arcsech}
+\DeclareMathOperator{\arcsinh}{arcsinh}
+\DeclareMathOperator{\arccoth}{arccoth}
+\DeclareMathOperator{\arccsch}{arccsch}
+
+\title{Misc Math Properties}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Trigonometric Integrals}
+\begin{align*}
+  \int\tan(x)= -\ln|\cos(x)|+C
+.\end{align*}
+
+\section{Integrate Involving Inverse Trigonometric Functions}
+\begin{align*}
+  \int \frac{du}{\sqrt{a^2-u^2} }&= \arcsin\left( \frac{u}{a} \right) + C\\
+  \int \frac{du}{a^2+u^2}&=\frac{1}{a}\arctan\left( \frac{u}{a} \right) +C\\
+  \int \frac{du}{u\sqrt{u^2-a^2} }&=\frac{1}{a} \arcsec \left(\frac{|u|}{a}\right)+C
+.\end{align*}
+
+\section{Integrate Involving Hyperbolic Functions}
+\begin{align*}
+  \int \frac{1}{\sqrt{x^2-a^2} }dx = \arccosh\left( \frac{x}{a} \right) +C\\
+  \int \frac{1}{a^2-x^2}dx = \arctanh\left( \frac{x}{a} \right) +C\\
+  \int \frac{-1}{x\sqrt{x^2-a^2} }dx= \arcsech\left( \frac{x}{a} \right) +C\\
+  \int \frac{1}{\sqrt{x^2+a^2} }dx=\arcsinh\left( \frac{x}{a} \right) +C\\
+  \int \frac{1}{a^2-x^2}dx=\arccoth\left( \frac{x}{a} \right) +C\\
+  \int \frac{1}{|x|\sqrt{x^2+a^2} }dx=\arccsch\left( \frac{x}{a} \right) +C\\
+.\end{align*}
+\end{document}
